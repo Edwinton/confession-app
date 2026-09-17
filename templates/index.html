@@ -24,6 +24,7 @@
     --selected: #f0e8da;
     --danger: #b55a3a;
     --success: #487a4a;
+    --gentle: #7d6a4a;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -293,6 +294,91 @@
     font-family: 'Noto Sans Malayalam', 'Cormorant Garamond', serif;
   }
 
+  /* ---------- Pastoral guardrail notes ---------- */
+  .gentle-note {
+    font-family: 'Noto Sans Malayalam', 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--gentle);
+    background: #faf6ef;
+    border-left: 3px solid var(--accent-light);
+    border-radius: 0 6px 6px 0;
+    padding: 0.8rem 1rem;
+    margin: 1.2rem 0 0.4rem;
+  }
+  .gentle-note.section-note { margin: 1.4rem 0 0.2rem; }
+  .gentle-note.welcome-note {
+    max-width: 640px;
+    margin: 1.2rem auto 0;
+    text-align: left;
+  }
+  .gentle-note.summary-note {
+    margin: 1rem 0 1.4rem;
+  }
+  .gentle-note strong {
+    color: var(--accent);
+    font-style: normal;
+    font-weight: 600;
+  }
+
+  .about-howto {
+    margin-top: 1.5rem;
+    padding-top: 1.2rem;
+    border-top: 1px dashed var(--border);
+  }
+  .about-howto h4 {
+    font-family: 'Noto Sans Malayalam', 'Cormorant Garamond', serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--accent);
+    margin-bottom: 0.7rem;
+  }
+  .about-howto ol {
+    list-style: none;
+    counter-reset: howto;
+    padding-left: 0;
+    font-family: 'Noto Sans Malayalam', 'Cormorant Garamond', serif;
+  }
+  .about-howto ol li {
+    counter-increment: howto;
+    padding: 0.35rem 0 0.35rem 1.9rem;
+    position: relative;
+    font-size: 0.98rem;
+    line-height: 1.7;
+    color: var(--text);
+  }
+  .about-howto ol li::before {
+    content: counter(howto);
+    position: absolute;
+    left: 0;
+    top: 0.4rem;
+    width: 22px;
+    height: 22px;
+    background: var(--accent-light);
+    color: var(--accent);
+    border-radius: 50%;
+    font-family: system-ui, sans-serif;
+    font-size: 0.75rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .pdf-renderer .pdf-gentle-note {
+    font-family: 'Noto Sans Malayalam', 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 12.5px;
+    line-height: 1.7;
+    color: #78644b;
+    background: #faf6ef;
+    border-left: 3px solid #c9b69a;
+    padding: 8px 12px;
+    margin-bottom: 20px;
+    border-radius: 0 4px 4px 0;
+  }
+
   .sin-item.pulse-highlight {
     animation: pulse 1.8s ease;
     border-color: var(--accent) !important;
@@ -447,6 +533,7 @@
     .floating-nav { bottom: 12px; padding: 0.4rem; gap: 0.35rem; }
     .floating-nav button { padding: 0.55rem 0.9rem; font-size: 0.88rem; }
     .floating-nav .fn-page { font-size: 0.75rem; min-width: 60px; padding: 0 0.3rem; }
+    .gentle-note { font-size: 0.9rem; padding: 0.7rem 0.85rem; }
   }
 
   .nav-row {
@@ -546,7 +633,7 @@
   }
 
   /* =========================================================
-     HIDDEN PDF RENDERER — off-screen but still paint-able
+     HIDDEN PDF RENDERER
      ========================================================= */
   .pdf-renderer {
     position: fixed;
@@ -576,6 +663,18 @@
     text-align: center; color: #78644b;
     margin-bottom: 24px; padding-bottom: 14px;
     border-bottom: 1px solid #c8b496;
+  }
+  .pdf-renderer .pdf-gentle-note {
+    font-family: 'Noto Sans Malayalam', 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 12.5px;
+    line-height: 1.7;
+    color: #78644b;
+    background: #faf6ef;
+    border-left: 3px solid #c9b69a;
+    padding: 8px 12px;
+    margin-bottom: 20px;
+    border-radius: 0 4px 4px 0;
   }
   .pdf-renderer .pdf-sin { margin-bottom: 16px; padding-left: 6px; }
   .pdf-renderer .pdf-sin-en {
@@ -657,10 +756,7 @@
     border-radius: 50%;
     transition: all 0.15s;
   }
-  .about-close:hover {
-    background: #f8f2e8;
-    color: var(--danger);
-  }
+  .about-close:hover { background: #f8f2e8; color: var(--danger); }
   .about-logo {
     display: block;
     width: 70px;
@@ -670,16 +766,14 @@
   }
   .about-title {
     font-family: 'Noto Sans Malayalam', 'Cormorant Garamond', serif;
-    font-size: 1.5rem;
-    font-weight: 600;
+    font-size: 1.5rem; font-weight: 600;
     color: var(--accent);
     text-align: center;
     margin-bottom: 0.4rem;
   }
   .about-subtitle {
     font-family: 'Noto Sans Malayalam', 'Cormorant Garamond', serif;
-    font-size: 0.95rem;
-    font-style: italic;
+    font-size: 0.95rem; font-style: italic;
     color: var(--text-soft);
     text-align: center;
     margin-bottom: 1.8rem;
@@ -692,8 +786,7 @@
     white-space: pre-wrap;
   }
   .about-signature {
-    text-align: right;
-    font-style: italic;
+    text-align: right; font-style: italic;
     color: var(--accent);
     margin-top: 1.5rem;
     padding-top: 1rem;
@@ -702,8 +795,7 @@
     font-size: 0.98rem;
   }
   .about-verse {
-    text-align: center;
-    font-style: italic;
+    text-align: center; font-style: italic;
     color: var(--text-soft);
     font-size: 0.92rem;
     margin-top: 1.2rem;
@@ -785,6 +877,10 @@
     <div class="about-title" id="aboutTitle">About This App</div>
     <div class="about-subtitle" id="aboutSubtitle">A quiet place to prepare for confession</div>
     <div class="about-body" id="aboutBody"></div>
+    <div class="about-howto">
+      <h4 id="aboutHowtoTitle">How to use this tool well</h4>
+      <ol id="aboutHowtoList"></ol>
+    </div>
     <div class="about-signature" id="aboutSignature"></div>
     <div class="about-verse" id="aboutVerse"></div>
   </div>
@@ -894,6 +990,9 @@ const UI = {
     welcomeHeading: 'Welcome',
     welcomeBody: 'This is a quiet place to prepare for the Sacrament of Reconciliation. You will walk through the Ten Commandments and other examinations of conscience, then pray the prayers of the penitent before confession.\n\nEverything stays on your device. Nothing is sent to any server.',
     welcomeScripture: '"If we confess our sins, he is faithful and just, and will forgive our sins and cleanse us from all unrighteousness." — 1 John 1:9',
+    welcomeGuardrail: 'You do not need to remember every sin. The goal is to help you prepare your heart, not to produce a perfect list. If you forget something, that is okay — God already knows, and His mercy is greater than any list.',
+    sectionGuardrail: 'When you are ready, move on. You don\'t have to select every sin — only the ones that speak to your conscience. Skip freely.',
+    summaryGuardrail: 'This list is for your own preparation. You can add, remove, or ignore any part of it. What matters is a contrite heart, not a complete list.',
     beginBtn: 'Begin →', welcomeSkip: 'I know what to do — skip to prayers →',
     clearBtn: '🗑 Clear cache', clearConfirm: 'Clear all selections, notes, and start over?', clearDone: 'Cache cleared',
     aboutBtn: '✦ About',
@@ -908,6 +1007,15 @@ So I prayed. I sat with the thought for a long time. And gradually, step by step
 May this tool help you examine your conscience honestly, prepare your heart, and come to confession with peace.
 
 Everything stays on your device. Nothing is sent to any server. This is a private space between you and God.`,
+    aboutHowtoTitle: 'How to use this tool well',
+    aboutHowtoSteps: [
+      'Find a quiet place. Silence helps.',
+      'Pray briefly. Ask the Holy Spirit for light and honesty.',
+      'Walk through the sections slowly. You don\'t have to rush.',
+      'Select what applies. Skip what doesn\'t. Not every sin is yours.',
+      'Download the PDF if it helps — or don\'t. It is optional.',
+      'Take what you have to confession. The priest, not this app, is where mercy is given.'
+    ],
     aboutSignature: '— Built with prayer and patience',
     aboutVerse: '"Come to me, all you who labor and are burdened, and I will give you rest." — Matthew 11:28',
     prayersTitle: 'Prayers of the Penitent',
@@ -921,6 +1029,7 @@ Everything stays on your device. Nothing is sent to any server. This is a privat
     personalNotes: 'Personal Notes & Resolution', noSins: 'You have not selected any sins. That is okay — go in peace.',
     section: 'Section', of: 'of', summary: 'Summary', prayers: 'Prayers', selected: 'selected',
     pdfTitle: 'Confession Preparation', pdfNotes: 'Personal Notes & Resolution',
+    pdfGuardrail: 'A private preparation aid. Not every sin needs to be here — a contrite heart matters more than a complete list.',
     pdfFooter: 'Prepared privately · Not a substitute for the Sacrament of Reconciliation',
     generating: 'Generating PDF…', labelEn: 'English', labelMl: 'Malayalam',
     searchPlaceholder: 'Search all sins…', searchEmpty: 'No matching sins found.',
@@ -931,6 +1040,9 @@ Everything stays on your device. Nothing is sent to any server. This is a privat
     welcomeHeading: 'സ്വാഗതം',
     welcomeBody: 'കുമ്പസാരക്കൂദാശയ്ക്ക് ഒരുങ്ങാൻ ഇതൊരു ശാന്തമായ സ്ഥലമാണ്. പത്തു പ്രമാണങ്ങളും മറ്റു ആത്മശോധനകളും ചുറ്റി നടന്ന ശേഷം, കുമ്പസാരത്തിനു മുമ്പ് പശ്ചാത്താപിയുടെ പ്രാർത്ഥനകൾ ചൊല്ലാം.\n\nഎല്ലാം നിങ്ങളുടെ ഉപകരണത്തിൽ തന്നെ നിലനിൽക്കുന്നു. ഒന്നും ഒരു സെർവറിലേക്കും അയയ്ക്കുന്നില്ല.',
     welcomeScripture: '"നാം പാപങ്ങൾ ഏറ്റുപറയുന്നെങ്കിൽ, അവൻ വിശ്വസ്തനും നീതിമാനുമാകയാൽ, പാപങ്ങൾ ക്ഷമിക്കുകയും എല്ലാ അനീതികളിൽ നിന്നു നമ്മെ ശുദ്ധീകരിക്കുകയും ചെയ്യും." — 1 യോഹന്നാൻ 1:9',
+    welcomeGuardrail: 'എല്ലാ പാപവും ഓർത്തുവയ്ക്കേണ്ടതില്ല. ഹൃദയം ഒരുക്കാൻ സഹായിക്കുക എന്നതാണ് ലക്ഷ്യം — പൂർണ്ണമായ ഒരു പട്ടിക തയ്യാറാക്കുക എന്നതല്ല. എന്തെങ്കിലും മറന്നുപോയാൽ കുഴപ്പമില്ല — ദൈവം എല്ലാം അറിയുന്നു, അവിടുത്തെ കരുണ ഏതൊരു പട്ടികയെക്കാളും വലുതാണ്.',
+    sectionGuardrail: 'തയ്യാറാകുമ്പോൾ മുന്നോട്ട് പോകുക. എല്ലാ പാപവും തിരഞ്ഞെടുക്കേണ്ടതില്ല — നിങ്ങളുടെ മനസ്സാക്ഷിയെ തൊടുന്നവ മാത്രം മതി. സ്വതന്ത്രമായി ഒഴിവാക്കുക.',
+    summaryGuardrail: 'ഈ പട്ടിക നിങ്ങളുടെ സ്വന്തം തയ്യാറെടുപ്പിനുള്ളതാണ്. ഇതിൽ എന്തും ചേർക്കാം, ഒഴിവാക്കാം, അവഗണിക്കാം. പ്രധാനം മനസ്താപമുള്ള ഹൃദയമാണ് — പൂർണ്ണമായ ഒരു പട്ടികയല്ല.',
     beginBtn: 'ആരംഭിക്കുക →', welcomeSkip: 'എനിക്കറിയാം — പ്രാർത്ഥനകളിലേക്ക് പോകുക →',
     clearBtn: '🗑 കാഷെ മായ്ക്കുക', clearConfirm: 'എല്ലാ തിരഞ്ഞെടുപ്പുകളും കുറിപ്പുകളും മായ്ച്ച് വീണ്ടും തുടങ്ങണോ?', clearDone: 'കാഷെ മായ്ച്ചു',
     aboutBtn: '✦ ഈ ആപ്പിനെക്കുറിച്ച്',
@@ -945,6 +1057,15 @@ Everything stays on your device. Nothing is sent to any server. This is a privat
 ഈ ഉപകരണം നിങ്ങളെ സത്യസന്ധമായി മനസ്സാക്ഷി പരിശോധിക്കാനും ഹൃദയം ഒരുക്കാനും സമാധാനത്തോടെ കുമ്പസാരത്തിന് എത്താനും സഹായിക്കട്ടെ.
 
 എല്ലാം നിങ്ങളുടെ ഉപകരണത്തിൽ തന്നെ നിലനിൽക്കുന്നു. ഒന്നും ഒരു സെർവറിലേക്കും അയയ്ക്കുന്നില്ല. ഇത് നിങ്ങൾക്കും ദൈവത്തിനും ഇടയിലുള്ള ഒരു സ്വകാര്യ സ്ഥലമാണ്.`,
+    aboutHowtoTitle: 'ഈ ഉപകരണം നന്നായി ഉപയോഗിക്കാൻ',
+    aboutHowtoSteps: [
+      'ഒരു ശാന്തമായ സ്ഥലം കണ്ടെത്തുക. നിശ്ശബ്ദത സഹായിക്കും.',
+      'ചെറുതായി പ്രാർത്ഥിക്കുക. വെളിച്ചത്തിനും സത്യസന്ധതയ്ക്കും പരിശുദ്ധാത്മാവിനോട് അപേക്ഷിക്കുക.',
+      'വിഭാഗങ്ങളിലൂടെ സാവധാനം നടക്കുക. തിരക്കേണ്ടതില്ല.',
+      'ബാധകമായവ തിരഞ്ഞെടുക്കുക. ബാധകമല്ലാത്തവ ഒഴിവാക്കുക. എല്ലാ പാപവും നിങ്ങളുടേതല്ല.',
+      'സഹായകരമെങ്കിൽ PDF ഡൗൺലോഡ് ചെയ്യുക — അല്ലെങ്കിൽ വേണ്ട. ഇത് നിർബന്ധമല്ല.',
+      'നിങ്ങൾ തയ്യാറാക്കിയത് കുമ്പസാരത്തിലേക്ക് കൊണ്ടുപോകുക. കരുണ നൽകുന്നത് ഈ ആപ്പല്ല, വൈദികനാണ്.'
+    ],
     aboutSignature: '— പ്രാർത്ഥനയോടെയും ക്ഷമയോടെയും നിർമ്മിച്ചത്',
     aboutVerse: '"അദ്ധ്വാനിക്കുന്നവരും ഭാരം ചുമക്കുന്നവരുമായ എല്ലാവരും എന്റെ അടുത്തേക്ക് വരുവിൻ; ഞാൻ നിങ്ങൾക്ക് ആശ്വാസം നൽകാം." — മത്തായി 11:28',
     prayersTitle: 'പശ്ചാത്താപിയുടെ പ്രാർത്ഥനകൾ',
@@ -959,6 +1080,7 @@ Everything stays on your device. Nothing is sent to any server. This is a privat
     noSins: 'നിങ്ങൾ ഒരു പാപവും തിരഞ്ഞെടുത്തിട്ടില്ല. കുഴപ്പമില്ല — സമാധാനത്തോടെ പോകുക.',
     section: 'വിഭാഗം', of: '/', summary: 'സംഗ്രഹം', prayers: 'പ്രാർത്ഥനകൾ', selected: 'തിരഞ്ഞെടുത്തു',
     pdfTitle: 'കുമ്പസാര തയ്യാറെടുപ്പ്', pdfNotes: 'വ്യക്തിപരമായ കുറിപ്പുകളും പ്രതിജ്ഞയും',
+    pdfGuardrail: 'ഒരു സ്വകാര്യ തയ്യാറെടുപ്പ് സഹായി. എല്ലാ പാപവും ഇവിടെ വേണ്ട — മനസ്താപമുള്ള ഹൃദയമാണ് പൂർണ്ണമായ ഒരു പട്ടികയെക്കാൾ പ്രധാനം.',
     pdfFooter: 'സ്വകാര്യമായി തയ്യാറാക്കിയത് · കുമ്പസാരക്കൂദാശയ്ക്ക് പകരമല്ല',
     generating: 'PDF തയ്യാറാക്കുന്നു…', labelEn: 'ഇംഗ്ലീഷ്', labelMl: 'മലയാളം',
     searchPlaceholder: 'എല്ലാ പാപങ്ങളും തിരയുക…', searchEmpty: 'പൊരുത്തപ്പെടുന്ന പാപങ്ങൾ കണ്ടെത്തിയില്ല.',
@@ -1210,6 +1332,7 @@ function renderWelcome() {
   html += '<h2 class="welcome-heading">' + UI[t].welcomeHeading + '</h2>';
   html += '<p class="welcome-body">' + UI[t].welcomeBody.replace(/\n/g, '<br>') + '</p>';
   html += '<p class="scripture">' + UI[t].welcomeScripture + '</p>';
+  html += '<div class="gentle-note welcome-note">' + UI[t].welcomeGuardrail + '</div>';
   html += '<div class="welcome-actions">';
   html += '<button class="btn btn-primary" onclick="startFlow()">' + UI[t].beginBtn + '</button>';
   html += '<button class="btn btn-secondary" onclick="skipToPrayers()">' + UI[t].welcomeSkip + '</button>';
@@ -1243,6 +1366,7 @@ function renderSection() {
       title: section.title[currentLang],
       sub: section.sub[currentLang],
       verse: verseText,
+      guardrail: UI[currentLang].sectionGuardrail,
       groups: groups,
       isFirst: currentView === 0
     });
@@ -1537,6 +1661,9 @@ function renderSummaryContent() {
     });
   });
 
+  // Guardrail note first
+  html += '<div class="gentle-note summary-note">' + UI[t].summaryGuardrail + '</div>';
+
   if (selectedSins.length > 0) {
     totalSelected = selectedSins.length;
     html += '<ul class="summary-list">';
@@ -1555,7 +1682,7 @@ function renderSummaryContent() {
   }
 
   if (totalSelected === 0 && !customText.trim()) {
-    html = '<div class="no-sins">' + UI[t].noSins + '</div>';
+    html += '<div class="no-sins">' + UI[t].noSins + '</div>';
   }
 
   container.innerHTML = html;
@@ -1623,6 +1750,19 @@ function openAbout() {
   document.getElementById('aboutSignature').textContent = UI[t].aboutSignature;
   document.getElementById('aboutVerse').textContent = UI[t].aboutVerse;
 
+  const howtoTitle = document.getElementById('aboutHowtoTitle');
+  if (howtoTitle) howtoTitle.textContent = UI[t].aboutHowtoTitle;
+
+  const howtoList = document.getElementById('aboutHowtoList');
+  if (howtoList) {
+    howtoList.innerHTML = '';
+    UI[t].aboutHowtoSteps.forEach(step => {
+      const li = document.createElement('li');
+      li.textContent = step;
+      howtoList.appendChild(li);
+    });
+  }
+
   modal.classList.add('open');
   document.body.style.overflow = 'hidden';
 }
@@ -1673,7 +1813,7 @@ function togglePasswordFields() {
 }
 
 /* =========================================================
-   BUILD PDF HTML — flat list, no categories
+   BUILD PDF HTML — flat list + guardrail note
    ========================================================= */
 function buildRendererHtml() {
   const t = currentLang;
@@ -1682,6 +1822,7 @@ function buildRendererHtml() {
   html += '<div class="pdf-logo-wrap"><img src="/static/images/logo.png" class="pdf-logo" alt=""></div>';
   html += '<div class="pdf-title">' + UI[t].pdfTitle + '</div>';
   html += '<div class="pdf-date">' + new Date().toLocaleString() + '</div>';
+  html += '<div class="pdf-gentle-note">' + escapeHtml(UI[t].pdfGuardrail) + '</div>';
 
   SECTIONS.forEach(section => {
     if (section.type !== 'sins') return;

@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Confessional Centres · കുമ്പസാര കേന്ദ്രങ്ങൾ</title>
+
+<link rel="icon" type="image/svg+xml" href="/static/images/logo.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Malayalam:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --card: #fffdf9;
+    --border: #e8ddc9;
+    --text: #2c2416;
+    --text-soft: #6b5a40;
+    --accent: #6b5535;
+    --accent-hover: #55411f;
+    --accent-light: #c9b69a;
+    --success: #487a4a;
+    --danger: #b55a3a;
+    --warn: #b5893a;
+    --active-bg: #eef6ec;
+    --active-border: #a9c9a2;
+    --warn-bg: #fdf6e8;
+    --warn-border: #d9c08a;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: radial-gradient(circle at 20% 20%, #faf7f2 0%, #ede5da 100%);
+    min-height: 100vh;
+    font-family: 'Cormorant Garamond', 'Georgia', serif;
+    color: var(--text);
+    padding: 1.5rem 1rem 5rem;
+    display: flex;
+    justify-content: center;
+  }
+  .container { max-width: 900px; width: 100%; }
+
+  header { text-align: center; margin-bottom: 2rem; }
+  .logo-img {
+    display: block; width: 90px; height: auto;
+    margin: 0 auto 0.6rem;
+    filter: brightness(0) saturate(100%) invert(31%) sepia(16%) saturate(1088%) hue-rotate(349deg) brightness(94%) contrast(88%);
+  }
+  h1 { font-size: 2rem; font-weight: 500; letter-spacing: 0.02em; }
+  .subhead { color: var(--text-soft); font-style: italic; margin-top: 0.4rem; font-size: 1rem; }
+
+  .top-controls {
+    display: flex; justify-content: center; align-items: center;
+    gap: 0.75rem; margin: 1.2rem 0 1.8rem; flex-wrap: wrap;
+  }
+  .lang-toggle { display: flex; gap: 0.5rem; }
+  .lang-toggle button, .back-btn {
+    background: transparent; border: 1px solid var(--accent-light);
+    padding: 0.4rem 1.2rem; border-radius: 40px; cursor: pointer;
+    font-family: inherit; font-size: 0.95rem; color: var(--accent); transition: all 0.15s;
+    text-decoration: none; display: inline-block;
+  }
+  .lang-toggle button.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+  .lang-toggle button:hover, .back-btn:hover { background: #f8f2e8; }
+  .lang-toggle button.active:hover { background: var(--accent-hover); }
+
+  .section {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 10px; padding: 1.5rem 1.8rem;
+    box-shadow: 0 4px 20px rgba(90, 70, 40, 0.06);
+    margin-bottom: 1.8rem;
+  }
+  .section h2 {
+    font-size: 1.4rem; font-weight: 500;
+    margin-bottom: 1rem;
+    display: flex; align-items: center; gap: 0.6rem;
+  }
+  .section h2 .num {
+    display: inline-flex; justify-content: center; align-items: center;
+    width: 32px; height: 32px; background: var(--accent-light);
+    color: var(--accent); border-radius: 50%;
+    font-family: system-ui, sans-serif; font-size: 0.85rem;
+    font-weight: 600; flex-shrink: 0;
+  }
+
+  .notice {
+    background: #fdf6e8;
+    border: 1px solid #d9c08a;
+    border-left: 4px solid var(--warn);
+    border-radius: 6px;
+    padding: 0.8rem 1.1rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text);
+    font-family: 'Noto Sans Malayalam', 'Cormorant Garamond', serif;
+  }
+
+  .form-group { margin-bottom: 1rem; }
+  .form-group label {
+    display: block; font-size: 0.95rem;
+    color: var(--text-soft); margin-bottom: 0.35rem;
+    font-family: 'Noto Sans Malayalam', 'Cormorant Garamond', serif;
+  }
+  .form-group input,
+  .form-group textarea {
+    width: 100%; padding: 0.75rem 1rem;
+    font-family: 'Noto Sans Malayalam', 'Cormorant Garamond', serif;
+    font-size: 1rem;
+    border: 1px solid var(--accent-light); border-radius: 6px;
+    background: #fff; color: var(--text); outline: none;
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+  .form-group input:focus,
+  .form-group textarea:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(107, 85, 53, 0.12);
+  }
+
+  .time-row {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr auto;
+    gap: 0.5rem; margin-bottom: 0.5rem;
+    align-items: center;
+  }
+  .time-row input { padding: 0.6rem 0.8rem; font-size: 0.95rem; }
+  .remove-time {
+    background: transparent; border: 1px solid #e3c8bd;
+    color: var(--danger); border-radius: 6px;
+    padding: 0.5rem 0.7rem; cursor: pointer;
+    font-size: 0.85rem;
+  }
+  .remove-time:hover { background: #fff2ee; }
+
+  .add-time-btn {
+    background: transparent; border: 1px dashed var(--accent-light);
+    color: var(--accent); padding: 0.5rem 1rem;
+    border-radius: 6px; cursor: pointer;
+    font-family: inherit; font-size: 0.9rem;
+  }
+  .add-time-btn:hover { background: #f8f2e8; }
+
+  .form-actions {
+    display: flex; justify-content: flex-end;
+    gap: 0.75rem; margin-top: 1.2rem;
+  }
+  button.btn {
+    font-family: inherit; font-size: 1rem;
+    padding: 0.75rem 1.8rem; border-radius: 6px;
+    cursor: pointer; transition: all 0.15s;
+    border: 1px solid transparent;
+  }
+  .btn-primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+  .btn-primary:hover { background: var(--accent-hover); border-color: var(--accent-hover); }
+  .btn-secondary { background: transparent; color: var(--accent); border-color: var(--accent-light); }
+  .btn-secondary:hover { background: #f8f2e8; border-color: var(--accent-light); }
+  button.btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+  .form-message {
+    margin-top: 0.8rem; font-size: 0.95rem;
+    padding: 0.7rem 1rem; border-radius: 6px;
+    font-family: 'Noto Sans Malayalam', 'Cormorant Garamond', serif;
+    display: none;
+  }
+  .form-message.success {
+    display: block; background: #eef6ec; color: var(--success);
+    border-left: 3px solid var(--success);
+  }
+  .form-message.error {
+    display: block; background: #fff2ee; color: var(--danger);
+    border-left: 3px solid var(--danger);
+  }
+
+  /* Cards */
+  .centre-card {
+    background: #fff; border: 1px solid var(--border);
+    border-radius: 10px; padding: 1.3rem 1.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 10px rgba(90, 70, 40, 0.04);
+    transition: all 0.15s;
+  }
+  .centre-card:hover {
+    box-shadow: 0 6px 20px rgba(90, 70, 40, 0.09);
+    border-color: var(--accent-light);
+  }
+  .centre-card.expiring {
+    border-color: var(--warn-border);
+    background: linear-gradient(to bottom, #fffdf7, #fff);
+  }
+  .centre-header {
+    display: flex; justify-content: space-between;
+    align-items: flex-start; gap: 1rem;
+    margin-bottom: 0.6rem; flex-wrap: wrap;
+  }
+  .centre-place {
+    font-size: 1.2rem; font-weight: 600;
+    color: var(--accent);
+    font-family: 'Noto Sans Malayalam', 'Cormorant Garamond', serif;
+  }
+  .centre-church {
+    font-size: 0.98rem; color: var(--text-soft);
+    font-family: 'Noto Sans Malayalam', 'Cormorant Garamond', serif;
+    margin-bottom: 0.8rem;
+  }
+  .status-pill {
+    display: inline-block; padding: 0.25rem 0.85rem;
+    border-radius: 40px; font-size: 0.78rem;
+    font-family: system-ui, sans-serif; font-weight: 600;
+    letter-spacing: 0.04em; text-transform: uppercase;
+    white-space: nowrap;
+  }
+  .status-pill.active {
+    background: var(--active-bg); color: var(--success);
+    border: 1px solid var(--active-border);
+  }
+  .status-pill.expiring {
+    background: var(--warn-bg); color: var(--warn);
+    border: 1px solid var(--warn-border);
+  }
+
+  .validity-row {
+    display: flex; align-items: center; gap: 0.6rem;
+    font-size: 0.88rem; color: var(--text-soft);
+    font-family: system-ui, sans-serif;
+    margin-bottom: 0.4rem;
+  }
+  .validity-dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--success); flex-shrink: 0;
+  }
+  .validity-dot.warn { background: var(--warn); }
+
+  .times-list {
+    list-style: none; padding-left: 0;
+    margin: 0.6rem 0 1rem;
+    font-family: 'Noto Sans Malayalam', 'Cormorant Garamond', serif;
+  }
+  .times-list li {
+    padding: 0.3rem 0 0.3rem 1.4rem;
+    position: relative; font-size: 0.98rem;
+  }
+  .times-list li::before {
+    content: '🕐'; position: absolute; left: 0;
+    font-size: 0.85rem;
+  }
+
+  .centre-meta {
+    display: flex; gap: 1.5rem;
+    font-size: 0.88rem; color: var(--text-soft);
+    flex-wrap: wrap; margin-top: 0.5rem;
+  }
+  .centre-actions {
+    display: flex; gap: 0.6rem;
+    margin-top: 1rem; padding-top: 0.9rem;
+    border-top: 1px dashed var(--border);
+    flex-wrap: wrap;
+  }
+  .centre-actions a,
+  .centre-actions button {
+    font-family: inherit; font-size: 0.9rem;
+    padding: 0.45rem 1rem; border-radius: 40px;
+    text-decoration: none; cursor: pointer;
+    transition: all 0.15s; border: 1px solid var(--accent-light);
+    background: transparent; color: var(--accent);
+  }
+  .centre-actions a:hover,
+  .centre-actions button:hover { background: #f8f2e8; }
+  .centre-actions .danger { color: var(--danger); border-color: #e3c8bd; }
+  .centre-actions .danger:hover { background: #fff2ee; }
+  .centre-actions .renew {
+    background: var(--accent); color: #fff; border-color: var(--accent);
+  }
+  .centre-actions .renew:hover { background: var(--accent-hover); }
+
+  .empty-state {
+    text-align: center; padding: 2.5rem 1rem;
+    color: var(--text-soft); font-style: italic;
+    font-family: 'Noto Sans Malayalam', 'Cormorant Garamond', serif;
+    font-size: 1rem;
+  }
+
+  .loading {
+    text-align: center; padding: 2rem;
+    color: var(--text-soft); font-style: italic;
+  }
+
+  @media (max-width: 600px) {
+    h1 { font-size: 1.6rem; }
+    .section { padding: 1.2rem 1.1rem; }
+    .time-row {
+      grid-template-columns: 1fr 1fr;
+      gap: 0.4rem;
+    }
+    .time-row input:nth-child(1) { grid-column: 1 / -1; }
+    .remove-time { grid-column: 2; justify-self: end; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <header>
+    <img src="/static/images/logo.svg" alt="Mar Thoma Sleeva" class="logo-img">
+    <h1 id="pageTitle">Confessional Centres</h1>
+    <p class="subhead" id="pageSubtitle">Find a place for confession · Add a place to help others</p>
+  </header>
+
+  <div class="top-controls">
+    <div class="lang-toggle">
+      <button id="btn-en" class="active" onclick="setLang('en')">English</button>
+      <button id="btn-ml" onclick="setLang('ml')">മലയാളം</button>
+    </div>
+    <a href="/" class="back-btn" id="backBtn">← Back to app</a>
+  </div>
+
+  <div class="section">
+    <h2><span class="num">+</span> <span id="formHeading">Add a confessional centre</span></h2>
+
+    <div class="notice" id="validityNotice">
+      <strong>Note:</strong> Every entry stays visible for <strong>24 hours</strong>. After that it disappears from this list — unless the person who added it renews it. This keeps the directory accurate and current.
+    </div>
+
+    <div class="form-group">
+      <label id="lblPlaceName">Place name</label>
+      <input type="text" id="placeName" placeholder="e.g. St. Mary's Forane Church">
+    </div>
+
+    <div class="form-group">
+      <label id="lblChurch">Church or institution</label>
+      <input type="text" id="churchName" placeholder="e.g. St. Mary's Forane Church, Changanassery">
+    </div>
+
+    <div class="form-group">
+      <label id="lblLocation">Location link (Google Maps URL)</label>
+      <input type="url" id="locationLink" placeholder="https://maps.google.com/...">
+    </div>
+
+    <div class="form-group">
+      <label id="lblLanguage">Languages offered (optional)</label>
+      <input type="text" id="language" placeholder="e.g. Malayalam, English">
+    </div>
+
+    <div class="form-group">
+      <label id="lblTimes">Confession times</label>
+      <div id="timesContainer"></div>
+      <button type="button" class="add-time-btn" onclick="addTimeRow()" id="addTimeBtn">+ Add another time</button>
+    </div>
+
+    <div class="form-group">
+      <label id="lblPin">Choose a 4-digit PIN (needed to edit, renew, or delete later)</label>
+      <input type="password" id="pin" maxlength="6" inputmode="numeric" pattern="[0-9]*" placeholder="e.g. 1234">
+    </div>
+
+    <div class="form-actions">
+      <button class="btn btn-secondary" onclick="resetForm()" id="resetBtn">Clear</button>
+      <button class="btn btn-primary" onclick="submitCentre()" id="submitBtn">Save (24 hours)</button>
+    </div>
+
+    <div class="form-message" id="formMessage"></div>
+  </div>
+
+  <div class="section">
+    <h2><span class="num">📍</span> <span id="listHeading">Confessional centres near you</span></h2>
+    <div id="centresList" class="loading" data-i18n="loading">Loading…</div>
+  </div>
+
+</div>
+
+<script>
+/* =========================================================
+   Bilingual strings
+   ========================================================= */
+const I18N = {
+  en: {
+    pageTitle: 'Confessional Centres',
+    pageSubtitle: 'Find a place for confession · Add a place to help others',
+    backBtn: '← Back to app',
+    formHeading: 'Add a confessional centre',
+    listHeading: 'Confessional centres near you',
+    validityNotice: 'Note: Every entry stays visible for 24 hours. After that it disappears from this list — unless the person who added it renews it. This keeps the directory accurate and current.',
+    lblPlaceName: 'Place name',
+    lblChurch: 'Church or institution',
+    lblLocation: 'Location link (Google Maps URL)',
+    lblLanguage: 'Languages offered (optional)',
+    lblTimes: 'Confession times',
+    lblPin: 'Choose a 4-digit PIN (needed to edit, renew, or delete later)',
+    addTime: '+ Add another time',
+    resetBtn: 'Clear',
+    submitBtn: 'Save (24 hours)',
+    removeBtn: 'Remove',
+    day: 'Day',
+    from: 'From',
+    to: 'To',
+    loading: 'Loading…',
+    noCentres: 'No confessional centres right now. Add one and it will be visible for 24 hours.',
+    getDirections: 'Get directions',
+    editBtn: 'Edit',
+    deleteBtn: 'Delete',
+    reportBtn: 'Report',
+    renewBtn: 'Renew 24h',
+    activeLabel: 'Active',
+    expiringLabel: 'Expires soon',
+    hoursLeft: 'hours left',
+    minuteLeft: 'minutes left',
+    languagesLabel: 'Languages',
+    saved: 'Saved. Your entry is live for 24 hours. Save your PIN to renew or edit later.',
+    renewed: 'Renewed. Your entry is live for another 24 hours.',
+    deleted: 'Deleted.',
+    reported: 'Thank you. Reported to the moderator.',
+    errorGeneric: 'Something went wrong.',
+    errorPin: 'Incorrect PIN.',
+    errorRequired: 'Please fill in the place name and church.',
+    errorPinFormat: 'PIN must be at least 4 digits.',
+    errorTimes: 'Please add at least one time slot.',
+    confirmDelete: 'Are you sure you want to delete this entry?',
+    promptPin: 'Enter your PIN:',
+    editMode: 'Editing entry. Update the fields and click Save.',
+    cancelEdit: 'Cancel edit'
+  },
+  ml: {
+    pageTitle: 'കുമ്പസാര കേന്ദ്രങ്ങൾ',
+    pageSubtitle: 'കുമ്പസാരത്തിന് ഒരു സ്ഥലം കണ്ടെത്തുക · മറ്റുള്ളവരെ സഹായിക്കാൻ ഒന്ന് ചേർക്കുക',
+    backBtn: '← ആപ്പിലേക്ക് മടങ്ങുക',
+    formHeading: 'ഒരു കുമ്പസാര കേന്ദ്രം ചേർക്കുക',
+    listHeading: 'നിങ്ങൾക്ക് അടുത്തുള്ള കുമ്പസാര കേന്ദ്രങ്ങൾ',
+    validityNotice: 'ശ്രദ്ധിക്കുക: ഓരോ എൻട്രിയും 24 മണിക്കൂർ കാണാം. അതിനുശേഷം ചേർത്ത ആൾ പുതുക്കിയില്ലെങ്കിൽ ഇതിൽ നിന്ന് മാഞ്ഞുപോകും. ഇത് വിവരങ്ങൾ കൃത്യമായി നിലനിർത്താൻ സഹായിക്കുന്നു.',
+    lblPlaceName: 'സ്ഥലത്തിന്റെ പേര്',
+    lblChurch: 'പള്ളി അല്ലെങ്കിൽ സ്ഥാപനം',
+    lblLocation: 'ലൊക്കേഷൻ ലിങ്ക് (Google Maps URL)',
+    lblLanguage: 'ലഭ്യമായ ഭാഷകൾ (ഐച്ഛികം)',
+    lblTimes: 'കുമ്പസാര സമയങ്ങൾ',
+    lblPin: '4 അക്ക പിൻ തിരഞ്ഞെടുക്കുക (എഡിറ്റ്, പുതുക്കൽ, ഡിലീറ്റ് എന്നിവയ്ക്ക് ആവശ്യം)',
+    addTime: '+ മറ്റൊരു സമയം ചേർക്കുക',
+    resetBtn: 'മായ്ക്കുക',
+    submitBtn: 'സേവ് (24 മണിക്കൂർ)',
+    removeBtn: 'നീക്കുക',
+    day: 'ദിവസം',
+    from: 'മുതൽ',
+    to: 'വരെ',
+    loading: 'ലോഡ് ചെയ്യുന്നു…',
+    noCentres: 'ഇപ്പോൾ കുമ്പസാര കേന്ദ്രങ്ങൾ ഇല്ല. ഒന്ന് ചേർക്കുക, അത് 24 മണിക്കൂർ കാണാം.',
+    getDirections: 'വഴി കാണുക',
+    editBtn: 'എഡിറ്റ്',
+    deleteBtn: 'ഡിലീറ്റ്',
+    reportBtn: 'റിപ്പോർട്ട്',
+    renewBtn: '24 മണിക്കൂർ പുതുക്കുക',
+    activeLabel: 'സജീവം',
+    expiringLabel: 'ഉടൻ അവസാനിക്കും',
+    hoursLeft: 'മണിക്കൂർ ബാക്കി',
+    minuteLeft: 'മിനിറ്റ് ബാക്കി',
+    languagesLabel: 'ഭാഷകൾ',
+    saved: 'സേവ് ചെയ്തു. 24 മണിക്കൂർ കാണാം. പിൻ സൂക്ഷിക്കുക.',
+    renewed: 'പുതുക്കി. ഇനിയും 24 മണിക്കൂർ കാണാം.',
+    deleted: 'ഡിലീറ്റ് ചെയ്തു.',
+    reported: 'നന്ദി. മോഡറേറ്ററെ അറിയിച്ചു.',
+    errorGeneric: 'എന്തോ കുഴപ്പം സംഭവിച്ചു.',
+    errorPin: 'തെറ്റായ പിൻ.',
+    errorRequired: 'സ്ഥലത്തിന്റെ പേരും പള്ളിയും പൂരിപ്പിക്കുക.',
+    errorPinFormat: 'പിൻ കുറഞ്ഞത് 4 അക്കമായിരിക്കണം.',
+    errorTimes: 'കുറഞ്ഞത് ഒരു സമയ സ്ലോട്ട് ചേർക്കുക.',
+    confirmDelete: 'ഈ എൻട്രി ഡിലീറ്റ് ചെയ്യണമെന്ന് ഉറപ്പാണോ?',
+    promptPin: 'നിങ്ങളുടെ പിൻ നൽകുക:',
+    editMode: 'എഡിറ്റ് ചെയ്യുന്നു. ഫീൽഡുകൾ പുതുക്കി സേവ് ക്ലിക്ക് ചെയ്യുക.',
+    cancelEdit: 'എഡിറ്റ് റദ്ദാക്കുക'
+  }
+};
+
+let currentLang = 'en';
+let editingId = null;
+let centresCache = [];
+
+function t(key) {
+  return (I18N[currentLang] && I18N[currentLang][key]) || I18N.en[key] || key;
+}
+
+function escapeHtml(s) {
+  return String(s).replace(/[&<>"']/g, m => ({
+    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+  })[m]);
+}
+function escapeAttr(s) {
+  return String(s).replace(/"/g, '&quot;').replace(/</g, '&lt;');
+}
+
+/* =========================================================
+   Language
+   ========================================================= */
+function setLang(lang) {
+  currentLang = lang;
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  document.getElementById('btn-ml').classList.toggle('active', lang === 'ml');
+  document.documentElement.lang = lang;
+  document.getElementById('pageTitle').textContent = t('pageTitle');
+  document.getElementById('pageSubtitle').textContent = t('pageSubtitle');
+  document.getElementById('backBtn').textContent = t('backBtn');
+  document.getElementById('formHeading').textContent = editingId ? t('editMode') : t('formHeading');
+  document.getElementById('listHeading').textContent = t('listHeading');
+  document.getElementById('validityNotice').innerHTML = '<strong>' + (lang === 'en' ? 'Note:' : 'ശ്രദ്ധിക്കുക:') + '</strong> ' + t('validityNotice').replace(/^.*?:\s*/, '');
+  document.getElementById('lblPlaceName').textContent = t('lblPlaceName');
+  document.getElementById('lblChurch').textContent = t('lblChurch');
+  document.getElementById('lblLocation').textContent = t('lblLocation');
+  document.getElementById('lblLanguage').textContent = t('lblLanguage');
+  document.getElementById('lblTimes').textContent = t('lblTimes');
+  document.getElementById('lblPin').textContent = t('lblPin');
+  document.getElementById('addTimeBtn').textContent = t('addTime');
+  document.getElementById('resetBtn').textContent = editingId ? t('cancelEdit') : t('resetBtn');
+  document.getElementById('submitBtn').textContent = t('submitBtn');
+  document.querySelectorAll('.remove-time').forEach(b => b.textContent = t('removeBtn'));
+  renderList();
+}
+
+/* =========================================================
+   Time rows
+   ========================================================= */
+function addTimeRow(day = '', from = '', to = '') {
+  const container = document.getElementById('timesContainer');
+  const row = document.createElement('div');
+  row.className = 'time-row';
+  row.innerHTML = `
+    <input type="text" class="time-day" placeholder="${t('day')}" value="${escapeAttr(day)}">
+    <input type="time" class="time-from" value="${escapeAttr(from)}">
+    <input type="time" class="time-to" value="${escapeAttr(to)}">
+    <button type="button" class="remove-time" onclick="this.parentElement.remove()">${t('removeBtn')}</button>
+  `;
+  container.appendChild(row);
+}
+
+function getTimesFromForm() {
+  const rows = document.querySelectorAll('#timesContainer .time-row');
+  const times = [];
+  rows.forEach(r => {
+    const day = r.querySelector('.time-day').value.trim();
+    const from = r.querySelector('.time-from').value;
+    const to = r.querySelector('.time-to').value;
+    if (day && from && to) times.push({ day, from, to });
+  });
+  return times;
+}
+
+/* =========================================================
+   Form
+   ========================================================= */
+function resetForm() {
+  document.getElementById('placeName').value = '';
+  document.getElementById('churchName').value = '';
+  document.getElementById('locationLink').value = '';
+  document.getElementById('language').value = '';
+  document.getElementById('pin').value = '';
+  document.getElementById('timesContainer').innerHTML = '';
+  addTimeRow();
+  editingId = null;
+  document.getElementById('formHeading').textContent = t('formHeading');
+  document.getElementById('resetBtn').textContent = t('resetBtn');
+  hideMessage();
+}
+
+function showMessage(text, type) {
+  const el = document.getElementById('formMessage');
+  el.textContent = text;
+  el.className = 'form-message ' + type;
+}
+function hideMessage() {
+  const el = document.getElementById('formMessage');
+  el.className = 'form-message';
+  el.textContent = '';
+}
+
+async function submitCentre() {
+  const place_name = document.getElementById('placeName').value.trim();
+  const church = document.getElementById('churchName').value.trim();
+  const location_link = document.getElementById('locationLink').value.trim();
+  const language = document.getElementById('language').value.trim();
+  const times = getTimesFromForm();
+  const pin = document.getElementById('pin').value.trim();
+
+  if (!place_name || !church) { showMessage(t('errorRequired'), 'error'); return; }
+  if (pin.length < 4 || !/^\d+$/.test(pin)) { showMessage(t('errorPinFormat'), 'error'); return; }
+  if (!times.length) { showMessage(t('errorTimes'), 'error'); return; }
+
+  const payload = { place_name, church_or_institution: church, location_link, language, times, pin };
+
+  try {
+    let res;
+    if (editingId) {
+      res = await fetch('/api/centres/' + editingId, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+    } else {
+      res = await fetch('/api/centres', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+    }
+    const data = await res.json();
+    if (!res.ok) {
+      showMessage(res.status === 403 ? t('errorPin') : (data.error || t('errorGeneric')), 'error');
+      return;
+    }
+    showMessage(t('saved'), 'success');
+    resetForm();
+    await loadCentres();
+  } catch (e) {
+    showMessage(t('errorGeneric'), 'error');
+  }
+}
+
+/* =========================================================
+   Directory
+   ========================================================= */
+async function loadCentres() {
+  const list = document.getElementById('centresList');
+  list.className = 'loading';
+  list.textContent = t('loading');
+  try {
+    const res = await fetch('/api/centres');
+    centresCache = await res.json();
+    renderList();
+  } catch (e) {
+    list.textContent = t('errorGeneric');
+  }
+}
+
+function formatHours(h) {
+  if (h < 0.02) return 'just now';
+  if (h < 1) {
+    const m = Math.max(1, Math.round(h * 60));
+    return `${m} ${t('minuteLeft')}`;
+  }
+  return `${h.toFixed(1)} ${t('hoursLeft')}`;
+}
+
+function renderList() {
+  const list = document.getElementById('centresList');
+  list.className = '';
+
+  if (!centresCache.length) {
+    list.innerHTML = `<div class="empty-state">${t('noCentres')}</div>`;
+    return;
+  }
+
+  list.innerHTML = centresCache.map(c => {
+    const expiring = c.expiring_soon;
+    const pillClass = expiring ? 'expiring' : 'active';
+    const pillLabel = expiring ? t('expiringLabel') : t('activeLabel');
+    const cardClass = expiring ? 'centre-card expiring' : 'centre-card';
+
+    const timesHtml = c.times.map(tt =>
+      `<li>${escapeHtml(tt.day)}: ${escapeHtml(tt.from)} – ${escapeHtml(tt.to)}</li>`
+    ).join('');
+
+    const langHtml = c.language ? `<span>${t('languagesLabel')}: ${escapeHtml(c.language)}</span>` : '';
+    const directionsBtn = c.location_link
+      ? `<a href="${escapeAttr(c.location_link)}" target="_blank" rel="noopener">${t('getDirections')}</a>`
+      : '';
+
+    return `
+      <div class="${cardClass}">
+        <div class="centre-header">
+          <div>
+            <div class="centre-place">${escapeHtml(c.place_name)}</div>
+            <div class="centre-church">${escapeHtml(c.church_or_institution)}</div>
+          </div>
+          <span class="status-pill ${pillClass}">${pillLabel}</span>
+        </div>
+        <div class="validity-row">
+          <span class="validity-dot ${expiring ? 'warn' : ''}"></span>
+          <span>${formatHours(c.hours_left)}</span>
+        </div>
+        <ul class="times-list">${timesHtml}</ul>
+        <div class="centre-meta">${langHtml}</div>
+        <div class="centre-actions">
+          ${directionsBtn}
+          <button class="renew" onclick="renewCentre(${c.id})">${t('renewBtn')}</button>
+          <button onclick="editCentre(${c.id})">${t('editBtn')}</button>
+          <button class="danger" onclick="deleteCentre(${c.id})">${t('deleteBtn')}</button>
+          <button class="danger" onclick="reportCentre(${c.id})">${t('reportBtn')}</button>
+        </div>
+      </div>
+    `;
+  }).join('');
+}
+
+/* =========================================================
+   Actions
+   ========================================================= */
+async function renewCentre(id) {
+  const pin = prompt(t('promptPin'));
+  if (!pin) return;
+  try {
+    const res = await fetch('/api/centres/' + id + '/renew', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ pin })
+    });
+    if (res.status === 403) { alert(t('errorPin')); return; }
+    if (!res.ok) { alert(t('errorGeneric')); return; }
+    alert(t('renewed'));
+    await loadCentres();
+  } catch (e) {
+    alert(t('errorGeneric'));
+  }
+}
+
+function editCentre(id) {
+  const entry = centresCache.find(x => x.id === id);
+  if (!entry) return;
+  const pin = prompt(t('promptPin'));
+  if (!pin) return;
+
+  fetch('/api/centres/' + id, {
+    method: 'PUT',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      pin,
+      times: entry.times,
+      place_name: entry.place_name,
+      church_or_institution: entry.church_or_institution,
+      location_link: entry.location_link,
+      language: entry.language,
+      active: entry.active
+    })
+  }).then(res => {
+    if (res.status === 403) { alert(t('errorPin')); return; }
+    if (!res.ok) { alert(t('errorGeneric')); return; }
+    editingId = id;
+    document.getElementById('placeName').value = entry.place_name;
+    document.getElementById('churchName').value = entry.church_or_institution;
+    document.getElementById('locationLink').value = entry.location_link || '';
+    document.getElementById('language').value = entry.language || '';
+    document.getElementById('pin').value = pin;
+    document.getElementById('timesContainer').innerHTML = '';
+    entry.times.forEach(tt => addTimeRow(tt.day, tt.from, tt.to));
+    document.getElementById('formHeading').textContent = t('editMode');
+    document.getElementById('resetBtn').textContent = t('cancelEdit');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
+
+async function deleteCentre(id) {
+  if (!confirm(t('confirmDelete'))) return;
+  const pin = prompt(t('promptPin'));
+  if (!pin) return;
+  try {
+    const res = await fetch('/api/centres/' + id, {
+      method: 'DELETE',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ pin })
+    });
+    if (res.status === 403) { alert(t('errorPin')); return; }
+    if (!res.ok) { alert(t('errorGeneric')); return; }
+    await loadCentres();
+  } catch (e) {
+    alert(t('errorGeneric'));
+  }
+}
+
+async function reportCentre(id) {
+  try {
+    await fetch('/api/centres/' + id + '/report', { method: 'POST' });
+    alert(t('reported'));
+  } catch (e) {
+    alert(t('errorGeneric'));
+  }
+}
+
+/* =========================================================
+   Init
+   ========================================================= */
+addTimeRow('Saturday', '16:00', '18:00');
+loadCentres();
+</script>
+</body>
+</html>

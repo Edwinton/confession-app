@@ -51,20 +51,27 @@
   h1 { font-size: 2.2rem; font-weight: 500; letter-spacing: 0.02em; }
   .subhead { color: var(--text-soft); font-style: italic; margin-top: 0.4rem; font-size: 1rem; }
 
+  /* ==== TOP CONTROLS (fixed structure) ==== */
   .top-controls {
     display: flex; justify-content: center; align-items: center;
     gap: 0.75rem; margin: 1.2rem 0 1.8rem; flex-wrap: wrap;
   }
   .lang-toggle { display: flex; gap: 0.5rem; }
-  .lang-toggle button, .clear-btn, .about-btn {
+  .lang-toggle button,
+  .clear-btn,
+  .about-btn,
+  .centres-btn {
     background: transparent; border: 1px solid var(--accent-light);
     padding: 0.4rem 1.2rem; border-radius: 40px; cursor: pointer;
-    font-family: inherit; font-size: 0.95rem; color: var(--accent); transition: all 0.15s;
+    font-family: inherit; font-size: 0.95rem; color: var(--accent);
+    transition: all 0.15s; text-decoration: none; display: inline-flex;
+    align-items: center; gap: 0.3rem;
   }
   .lang-toggle button.active { background: var(--accent); color: #fff; border-color: var(--accent); }
   .lang-toggle button:hover { background: #f8f2e8; }
   .lang-toggle button.active:hover { background: var(--accent-hover); }
-  .about-btn:hover { background: #f8f2e8; border-color: var(--accent-light); }
+  .about-btn:hover,
+  .centres-btn:hover { background: #f8f2e8; border-color: var(--accent-light); }
   .clear-btn { color: var(--danger); border-color: #e3c8bd; }
   .clear-btn:hover { background: #fff2ee; border-color: var(--danger); }
 
@@ -125,7 +132,8 @@
     transition: background 0.1s;
   }
   .global-search-result:last-child { border-bottom: none; }
-  .global-search-result:hover { background: #faf6ef; }
+  .global-search-result:hover,
+  .global-search-result:focus { background: #faf6ef; outline: none; }
   .gsr-section {
     font-size: 0.72rem; color: var(--text-soft);
     text-transform: uppercase;
@@ -341,22 +349,15 @@
     margin-bottom: 0.6rem;
     display: block;
   }
-  .care-panel p {
-    margin-bottom: 0.6rem;
-  }
-  .care-panel p:last-child {
-    margin-bottom: 0;
-  }
+  .care-panel p { margin-bottom: 0.6rem; }
+  .care-panel p:last-child { margin-bottom: 0; }
   .care-panel .care-lines {
     font-family: system-ui, sans-serif;
     font-size: 0.92rem;
     color: var(--text-soft);
     margin-top: 0.5rem;
   }
-  .care-panel strong {
-    color: var(--care);
-    font-weight: 600;
-  }
+  .care-panel strong { color: var(--care); font-weight: 600; }
 
   .about-howto {
     margin-top: 1.5rem;
@@ -405,9 +406,9 @@
   /* Info icon + tooltip for sin notes */
   .sin-info {
     flex-shrink: 0;
-    width: 20px;
-    height: 20px;
-    margin-top: 2px;
+    width: 22px;
+    height: 22px;
+    margin-top: 1px;
     margin-left: 0.25rem;
     border-radius: 50%;
     border: 1.5px solid var(--accent-light);
@@ -454,10 +455,7 @@
     transition: opacity 0.15s ease;
     white-space: normal;
   }
-  .sin-tooltip.show {
-    opacity: 1;
-    pointer-events: auto;
-  }
+  .sin-tooltip.show { opacity: 1; pointer-events: auto; }
   .sin-tooltip::before,
   .sin-tooltip::after {
     content: '';
@@ -481,16 +479,14 @@
     border-bottom: 6px solid var(--card);
   }
   .sin-tooltip.below::before {
-    top: auto;
-    bottom: -14px;
+    top: auto; bottom: -14px;
     border-bottom: none;
     border-top: 7px solid var(--border);
     border-left: 7px solid transparent;
     border-right: 7px solid transparent;
   }
   .sin-tooltip.below::after {
-    top: auto;
-    bottom: -12px;
+    top: auto; bottom: -12px;
     border-bottom: none;
     border-top: 6px solid var(--card);
     border-left: 6px solid transparent;
@@ -581,8 +577,17 @@
     padding: 0.7rem 1rem; border: 1px solid transparent;
     border-radius: 6px; cursor: pointer; transition: all 0.15s;
     user-select: none;
+    background: transparent;
+    width: 100%;
+    text-align: left;
+    font: inherit;
+    color: inherit;
   }
   .sin-item:hover { background: #faf6ef; border-color: var(--border); }
+  .sin-item:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
   .sin-item.selected { background: var(--selected); border-color: var(--accent-light); }
   .sin-check {
     flex-shrink: 0; width: 20px; height: 20px;
@@ -594,7 +599,7 @@
   .sin-item.selected .sin-check::after {
     content: '✓'; color: #fff; font-size: 0.8rem; font-weight: 700; line-height: 1;
   }
-  .sin-label { flex: 1; font-size: 1rem; line-height: 1.4; color: var(--text); cursor: pointer; }
+  .sin-label { flex: 1; font-size: 1rem; line-height: 1.4; color: var(--text); }
   .sin-label .en { display: block; }
   .sin-label .ml {
     display: block; font-size: 0.95rem;
@@ -935,27 +940,31 @@
     <div class="font-status" id="font-status">Loading libraries…</div>
   </header>
 
+  <!-- Fixed: single .top-controls, proper nesting -->
   <div class="top-controls">
-    <div class="lang-toggle">
-      <button id="btn-en" class="active" onclick="setLang('en')">English</button>
-      <button id="btn-ml" onclick="setLang('ml')">മലയാളം</button>
+    <div class="lang-toggle" role="group" aria-label="Language">
+      <button id="btn-en" class="active" onclick="setLang('en')" aria-pressed="true">English</button>
+      <button id="btn-ml" onclick="setLang('ml')" aria-pressed="false">മലയാളം</button>
     </div>
     <button class="about-btn" onclick="openAbout()" id="aboutBtn">✦ About</button>
+    <a href="/centres" class="centres-btn">📍 Centres</a>
     <button class="clear-btn" onclick="clearCache()" id="clearBtn">🗑 Clear cache</button>
   </div>
 
   <div class="global-search-wrap" id="globalSearchWrap" style="display:none;">
-    <span class="global-search-icon">🔍</span>
+    <span class="global-search-icon" aria-hidden="true">🔍</span>
     <input type="text" id="globalSearch" class="global-search-input"
-           placeholder="Search all sins…" autocomplete="off">
-    <button type="button" id="globalSearchClear" class="global-search-clear">✕</button>
-    <div class="global-search-results" id="globalSearchResults"></div>
+           placeholder="Search all sins…" autocomplete="off"
+           aria-label="Search all sins">
+    <button type="button" id="globalSearchClear" class="global-search-clear" aria-label="Clear search">✕</button>
+    <div class="global-search-results" id="globalSearchResults" role="listbox"></div>
   </div>
 
   <div class="quick-jump-wrap" id="quickJumpWrap" style="display:none;">
-    <button type="button" class="quick-jump-toggle" id="quickJumpToggle" onclick="toggleQuickJump()">
+    <button type="button" class="quick-jump-toggle" id="quickJumpToggle" onclick="toggleQuickJump()"
+            aria-expanded="false" aria-controls="quickJumpPanel">
       <span id="quickJumpToggleLabel">📖 Jump to a section…</span>
-      <span class="qj-arrow">▶</span>
+      <span class="qj-arrow" aria-hidden="true">▶</span>
     </button>
     <div class="quick-jump-panel" id="quickJumpPanel">
       <div class="quick-jump-grid" id="quickJumpGrid"></div>
@@ -987,10 +996,11 @@
 
 <div class="sin-tooltip" id="sinTooltip" role="tooltip" aria-hidden="true"></div>
 
-<div class="about-modal" id="aboutModal" onclick="if(event.target===this) closeAbout()">
+<div class="about-modal" id="aboutModal" role="dialog" aria-modal="true" aria-labelledby="aboutTitle"
+     onclick="if(event.target===this) closeAbout()">
   <div class="about-modal-inner">
     <button class="about-close" onclick="closeAbout()" aria-label="Close">✕</button>
-    <img src="/static/images/logo.svg" alt="Mar Thoma Sleeva" class="about-logo">
+    <img src="/static/images/logo.svg" alt="" class="about-logo">
     <div class="about-title" id="aboutTitle">About This App</div>
     <div class="about-subtitle" id="aboutSubtitle">A quiet place to prepare for confession</div>
     <div class="about-body" id="aboutBody"></div>
@@ -1003,9 +1013,87 @@
   </div>
 </div>
 
-{% include 'partials/section_sins.html' %}
-{% include 'partials/section_custom.html' %}
-{% include 'partials/summary.html' %}
+<!-- =========================================================
+     TEMPLATES
+     These replace the Jinja partials. The app-data script
+     below carries the sections from the backend.
+     ========================================================= -->
+
+<script id="tpl-section-sins" type="text/template">
+<div class="section" data-section-id="{{sectionId}}">
+  <h2><span class="num">{{num}}</span> {{title}}</h2>
+  <p class="sub">{{sub}}</p>
+  {{#if verse}}<p class="section-verse">{{verse}}</p>{{/if}}
+  {{#each groups}}
+  <div class="group">
+    <div class="group-title">{{title}}</div>
+    <div class="sin-list">
+      {{#each sins}}
+      <div class="sin-item"
+           role="checkbox"
+           aria-checked="false"
+           tabindex="0"
+           data-sin-key="{{../../sectionId}}::{{groupIndex}}::{{@index}}"
+           onclick="toggleSin(this)"
+           onkeydown="if(event.key===' '||event.key==='Enter'){event.preventDefault();toggleSin(this);}">
+        <span class="sin-check" aria-hidden="true"></span>
+        <span class="sin-label">
+          <span class="en">{{en}}</span>
+          {{#if ml}}<span class="ml">{{ml}}</span>{{/if}}
+        </span>
+        {{#if note}}
+        <button type="button" class="sin-info"
+                aria-label="More info"
+                data-note-en="{{noteEn}}"
+                data-note-ml="{{noteMl}}"
+                onclick="event.stopPropagation(); toggleSinNote(this)"></button>
+        {{/if}}
+      </div>
+      {{/each}}
+    </div>
+  </div>
+  {{/each}}
+  <div class="gentle-note section-note">{{guardrail}}</div>
+</div>
+</script>
+
+<script id="tpl-section-custom" type="text/template">
+<div class="section" data-section-id="{{sectionId}}">
+  <h2><span class="num">{{num}}</span> {{title}}</h2>
+  <p class="sub">{{sub}}</p>
+  <textarea id="customInput" class="custom-textarea" maxlength="{{maxlength}}"
+            placeholder="{{placeholder}}"></textarea>
+  <div class="char-counter" id="customCounter">0 / {{maxlength}}</div>
+</div>
+</script>
+
+<script id="tpl-summary" type="text/template">
+<div class="summary-section">
+  <h2 data-i18n="summaryTitle">Your Confession Summary</h2>
+  <p class="sub" data-i18n="summarySub">Review your selected sins, then download as PDF</p>
+  <div id="summaryContent"></div>
+
+  <div class="protect-panel">
+    <div class="protect-row">
+      <input type="checkbox" id="protectCheckbox" onchange="togglePasswordFields()">
+      <label for="protectCheckbox" data-i18n="protectLabel">🔒 Protect PDF with a password</label>
+    </div>
+    <div class="password-fields" id="passwordFields">
+      <input type="password" id="pdfPassword" data-i18n-placeholder="passwordPlaceholder"
+             placeholder="Enter password" autocomplete="new-password">
+      <input type="password" id="pdfPasswordConfirm" data-i18n-placeholder="passwordConfirmPlaceholder"
+             placeholder="Confirm password" autocomplete="new-password">
+      <p class="password-hint" data-i18n="passwordHint">This password will be required to open the PDF. Please remember it — it cannot be recovered.</p>
+      <p class="password-error" id="passwordError"></p>
+    </div>
+  </div>
+
+  <div class="download-row">
+    <button class="btn btn-primary" id="downloadBtn" onclick="downloadPDF()"
+            data-i18n="downloadBtn">Download PDF</button>
+  </div>
+</div>
+</script>
 
 <script id="app-data" type="application/json">{{ data | tojson }}</script>
 
@@ -1055,7 +1143,6 @@
 })();
 </script>
 
-{% raw %}
 <script>
 /* =========================================================
    DATA + STATE
@@ -1248,8 +1335,9 @@ async function ensureFontsLoaded() {
    TEMPLATE ENGINE
    ========================================================= */
 function renderTemplate(tplId, ctx) {
-  const raw = document.getElementById(tplId).innerHTML;
-  return renderBlock(raw, ctx);
+  const tplEl = document.getElementById(tplId);
+  if (!tplEl) { console.warn('Template not found:', tplId); return ''; }
+  return renderBlock(tplEl.innerHTML, ctx);
 }
 
 function renderBlock(template, ctx) {
@@ -1345,8 +1433,13 @@ function resolveKey(path, ctx) {
    ========================================================= */
 function setLang(lang) {
   currentLang = lang;
-  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
-  document.getElementById('btn-ml').classList.toggle('active', lang === 'ml');
+  const btnEn = document.getElementById('btn-en');
+  const btnMl = document.getElementById('btn-ml');
+  btnEn.classList.toggle('active', lang === 'en');
+  btnMl.classList.toggle('active', lang === 'ml');
+  btnEn.setAttribute('aria-pressed', lang === 'en' ? 'true' : 'false');
+  btnMl.setAttribute('aria-pressed', lang === 'ml' ? 'true' : 'false');
+
   document.getElementById('title').textContent = UI[lang].title;
   document.getElementById('subhead').textContent = UI[lang].subhead;
   document.getElementById('clearBtn').textContent = UI[lang].clearBtn;
@@ -1417,8 +1510,6 @@ function updateFloatingNav() {
 
   if (currentView === VIEW_SUMMARY) nextBtn.style.display = 'none';
   else nextBtn.style.display = '';
-
-  if (currentView === 0) prevBtn.disabled = false;
 }
 
 /* =========================================================
@@ -1517,7 +1608,10 @@ function renderSection() {
 
     container.querySelectorAll('.sin-item').forEach(el => {
       const key = el.dataset.sinKey;
-      if (selections[key]) el.classList.add('selected');
+      if (selections[key]) {
+        el.classList.add('selected');
+        el.setAttribute('aria-checked', 'true');
+      }
     });
   } else if (section.type === 'custom') {
     const html = renderTemplate('tpl-section-custom', {
@@ -1610,7 +1704,7 @@ function showSearchResults(results, query) {
   let html = '';
   results.forEach((r) => {
     const sectionLabel = (t === 'en') ? r.sectionTitle : r.sectionTitleMl;
-    html += '<div class="global-search-result" data-key="' + r.key + '" data-section-index="' + r.sectionIndex + '">';
+    html += '<div class="global-search-result" role="option" tabindex="0" data-key="' + r.key + '" data-section-index="' + r.sectionIndex + '">';
     html += '<div class="gsr-section">' + escapeHtml(sectionLabel) + '</div>';
     html += '<div class="gsr-en">' + highlightMatch(r.en, query) + '</div>';
     html += '<div class="gsr-ml">' + highlightMatch(r.ml, query) + '</div>';
@@ -1620,10 +1714,14 @@ function showSearchResults(results, query) {
   box.classList.add('show');
 
   box.querySelectorAll('.global-search-result').forEach(el => {
-    el.addEventListener('click', () => {
+    const activate = () => {
       const key = el.dataset.key;
       const si = parseInt(el.dataset.sectionIndex, 10);
       jumpToSin(si, key);
+    };
+    el.addEventListener('click', activate);
+    el.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); activate(); }
     });
   });
 }
@@ -1693,8 +1791,9 @@ function toggleQuickJump() {
   const panel = document.getElementById('quickJumpPanel');
   const toggle = document.getElementById('quickJumpToggle');
   if (!panel || !toggle) return;
-  panel.classList.toggle('open');
-  toggle.classList.toggle('open');
+  const open = panel.classList.toggle('open');
+  toggle.classList.toggle('open', open);
+  toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
 }
 
 function buildQuickJump() {
@@ -1739,7 +1838,10 @@ function jumpToSection(index) {
   const panel = document.getElementById('quickJumpPanel');
   const toggle = document.getElementById('quickJumpToggle');
   if (panel) panel.classList.remove('open');
-  if (toggle) toggle.classList.remove('open');
+  if (toggle) {
+    toggle.classList.remove('open');
+    toggle.setAttribute('aria-expanded', 'false');
+  }
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
@@ -1831,8 +1933,8 @@ function renderSummaryContent() {
 }
 
 function escapeHtml(str) {
-  return String(str).replace(/[&<>"]/g, m => ({
-    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'
+  return String(str).replace(/[&<>"']/g, m => ({
+    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
   })[m]);
 }
 
@@ -1844,9 +1946,11 @@ function toggleSin(el) {
   if (selections[key]) {
     delete selections[key];
     el.classList.remove('selected');
+    el.setAttribute('aria-checked', 'false');
   } else {
     selections[key] = true;
     el.classList.add('selected');
+    el.setAttribute('aria-checked', 'true');
   }
   updateSelectedCount();
 }
@@ -2003,6 +2107,8 @@ function openAbout() {
 
   modal.classList.add('open');
   document.body.style.overflow = 'hidden';
+  const closeBtn = modal.querySelector('.about-close');
+  if (closeBtn) closeBtn.focus();
 }
 
 function closeAbout() {
@@ -2092,6 +2198,8 @@ function createDebugStatusEl() {
 
 /* =========================================================
    PDF GENERATION
+   Fixed pagination: draw slices of the canvas onto each page,
+   so page 1 doesn't overflow the bottom margin.
    ========================================================= */
 async function downloadPDF() {
   const t = currentLang;
@@ -2160,8 +2268,6 @@ async function downloadPDF() {
     });
     setStatus('Step 6: Captured ' + canvas.width + '×' + canvas.height);
 
-    const imgData = canvas.toDataURL('image/png');
-
     setStatus('Step 7: Creating PDF…');
     const { jsPDF } = window.jspdf;
 
@@ -2181,19 +2287,35 @@ async function downloadPDF() {
     const pageH = pdf.internal.pageSize.getHeight();
     const margin = 8;
     const usableW = pageW - margin * 2;
-    const imgHeight = canvas.height * usableW / canvas.width;
+    const usableH = pageH - margin * 2;
 
-    let heightLeft = imgHeight;
-    let position = margin;
+    // Ratio: how many pixels of the source canvas per mm of PDF
+    const pxPerMm = canvas.width / usableW;
+    const pageHeightPx = usableH * pxPerMm;
 
-    pdf.addImage(imgData, 'PNG', margin, position, usableW, imgHeight, undefined, 'FAST');
-    heightLeft -= (pageH - margin * 2);
+    let renderedPx = 0;
 
-    while (heightLeft > 0) {
-      position = margin - (imgHeight - heightLeft);
-      pdf.addPage();
-      pdf.addImage(imgData, 'PNG', margin, position, usableW, imgHeight, undefined, 'FAST');
-      heightLeft -= (pageH - margin * 2);
+    while (renderedPx < canvas.height) {
+      const sliceHeightPx = Math.min(pageHeightPx, canvas.height - renderedPx);
+
+      // Create a temporary canvas holding only this slice, scaled to full width
+      const sliceCanvas = document.createElement('canvas');
+      sliceCanvas.width = canvas.width;
+      sliceCanvas.height = Math.ceil(sliceHeightPx);
+      const sctx = sliceCanvas.getContext('2d');
+      sctx.drawImage(
+        canvas,
+        0, renderedPx, canvas.width, sliceHeightPx,
+        0, 0, canvas.width, sliceHeightPx
+      );
+
+      const sliceData = sliceCanvas.toDataURL('image/png');
+      const sliceHeightMm = sliceHeightPx / pxPerMm;
+
+      if (renderedPx > 0) pdf.addPage();
+      pdf.addImage(sliceData, 'PNG', margin, margin, usableW, sliceHeightMm, undefined, 'FAST');
+
+      renderedPx += sliceHeightPx;
     }
 
     renderer.innerHTML = '';
@@ -2229,6 +2351,5 @@ initGlobalSearch();
 buildQuickJump();
 renderView();
 </script>
-{% endraw %}
 </body>
 </html>

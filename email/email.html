@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Request for Pastoral Review · Confession Preparation</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --card: #fffdf9;
+    --border: #e8ddc9;
+    --text: #2c2416;
+    --text-soft: #6b5a40;
+    --accent: #6b5535;
+    --accent-hover: #55411f;
+    --accent-light: #c9b69a;
+    --care: #8a5a3a;
+    --care-bg: #fff5ee;
+    --care-border: #e3c0a8;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: radial-gradient(circle at 20% 20%, #faf7f2 0%, #ede5da 100%);
+    min-height: 100vh;
+    font-family: 'Cormorant Garamond', 'Georgia', serif;
+    color: var(--text);
+    padding: 2rem 1rem 4rem;
+    display: flex;
+    justify-content: center;
+    line-height: 1.75;
+  }
+
+  .container {
+    max-width: 760px;
+    width: 100%;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 3rem 3rem 2.5rem;
+    box-shadow: 0 12px 40px rgba(90, 70, 40, 0.08);
+  }
+
+  header {
+    text-align: center;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 2.5rem;
+  }
+
+  /* Mar Thoma Sleeva logo */
+  .sleeva-logo {
+    display: block;
+    width: 100px;
+    height: auto;
+    margin: 0 auto 1rem;
+    /* Warm-brown tint to match the app's palette */
+    filter: brightness(0) saturate(100%) invert(31%) sepia(16%) saturate(1088%) hue-rotate(349deg) brightness(94%) contrast(88%);
+  }
+
+  h1 {
+    font-size: 2.1rem;
+    font-weight: 600;
+    color: var(--accent);
+    letter-spacing: 0.01em;
+    margin-bottom: 0.4rem;
+  }
+
+  .subtitle {
+    font-size: 1.05rem;
+    font-style: italic;
+    color: var(--text-soft);
+  }
+
+  section {
+    margin-bottom: 2rem;
+  }
+
+  h2 {
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: var(--accent);
+    margin-bottom: 0.9rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  p {
+    font-size: 1.05rem;
+    color: var(--text);
+    margin-bottom: 0.8rem;
+  }
+
+  p.lead {
+    font-size: 1.15rem;
+    color: var(--text);
+    margin-bottom: 1.2rem;
+  }
+
+  .muted {
+    color: var(--text-soft);
+    font-style: italic;
+    font-size: 1rem;
+  }
+
+  .cta-wrap {
+    text-align: center;
+    margin: 2rem 0;
+  }
+  .cta-btn {
+    display: inline-block;
+    font-family: inherit;
+    font-size: 1.15rem;
+    font-weight: 600;
+    background: var(--accent);
+    color: #fff;
+    padding: 0.95rem 2.5rem;
+    border-radius: 60px;
+    text-decoration: none;
+    transition: all 0.15s;
+    box-shadow: 0 6px 20px rgba(107, 85, 53, 0.25);
+    letter-spacing: 0.02em;
+  }
+  .cta-btn:hover {
+    background: var(--accent-hover);
+    transform: translateY(-1px);
+    box-shadow: 0 8px 24px rgba(107, 85, 53, 0.3);
+  }
+  .cta-url {
+    display: block;
+    margin-top: 0.9rem;
+    font-size: 0.9rem;
+    color: var(--text-soft);
+    font-family: system-ui, monospace;
+    word-break: break-all;
+  }
+
+  .care-panel {
+    background: var(--care-bg);
+    border: 1px solid var(--care-border);
+    border-left: 4px solid var(--care);
+    border-radius: 8px;
+    padding: 1.3rem 1.5rem;
+    margin: 1.5rem 0;
+    line-height: 1.8;
+  }
+  .care-panel .care-title {
+    display: block;
+    font-weight: 600;
+    color: var(--care);
+    font-size: 1.05rem;
+    margin-bottom: 0.6rem;
+  }
+  .care-panel p {
+    margin-bottom: 0.6rem;
+    font-size: 1rem;
+  }
+  .care-panel p:last-child {
+    margin-bottom: 0;
+  }
+
+  .features {
+    list-style: none;
+    padding-left: 0;
+    margin: 1rem 0;
+  }
+  .features li {
+    padding: 0.45rem 0 0.45rem 1.8rem;
+    position: relative;
+    font-size: 1.02rem;
+    line-height: 1.6;
+  }
+  .features li::before {
+    content: '✦';
+    position: absolute;
+    left: 0;
+    top: 0.7rem;
+    color: var(--accent-light);
+    font-size: 0.85rem;
+  }
+
+  .signature {
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--border);
+    text-align: right;
+    font-style: italic;
+    color: var(--text-soft);
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+  .signature strong {
+    color: var(--accent);
+    font-style: normal;
+    font-weight: 600;
+  }
+
+  footer {
+    margin-top: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px dashed var(--border);
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--text-soft);
+    font-style: italic;
+    line-height: 1.7;
+  }
+
+  @media (max-width: 600px) {
+    .container { padding: 2rem 1.4rem 1.8rem; }
+    h1 { font-size: 1.7rem; }
+    h2 { font-size: 1.15rem; }
+    p, .features li { font-size: 1rem; }
+    .cta-btn { padding: 0.85rem 1.8rem; font-size: 1rem; }
+    .sleeva-logo { width: 80px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <header>
+    <img src="logo.png" alt="Mar Thoma Sleeva" class="sleeva-logo">
+    <h1>Request for Pastoral Review</h1>
+    <p class="subtitle">A bilingual confession preparation website</p>
+  </header>
+
+  <section>
+    <p class="lead">Dear Father,</p>
+    <p>
+      I have built a small bilingual (English + Malayalam) website to help the faithful
+      prepare for the Sacrament of Reconciliation. It walks a person through the Ten
+      Commandments, the Seven Capital Sins, and a short reflection on bad confession
+      itself.
+    </p>
+    <p>
+      Everything runs privately in the user's browser. Nothing they type or select is
+      sent to any server.
+    </p>
+  </section>
+
+  <div class="cta-wrap">
+    <a class="cta-btn" href="https://confession-app-production.up.railway.app" target="_blank" rel="noopener">
+      Open the website →
+    </a>
+    <span class="cta-url">confession-app-production.up.railway.app</span>
+  </div>
+
+  <section>
+    <h2>What I am asking</h2>
+    <p>
+      Before I share it more widely, I would be grateful if you could review the
+      <strong>content</strong> — not the code. Specifically:
+    </p>
+    <ul class="features">
+      <li><strong>The examination-of-conscience list</strong> — any items to remove, rephrase, or add.</li>
+      <li><strong>Three sensitive categories</strong> — how I have handled suicidal thoughts, abuse, and doubts about faith.</li>
+      <li><strong>The pastoral guardrails</strong> — short messages reminding the user that a contrite heart matters more than a perfect list.</li>
+      <li><strong>The prayers</strong> — that the Malayalam text is the correct traditional version.</li>
+    </ul>
+    <p class="muted">
+      I am not asking you to test the website or review the code. Only the content and
+      the pastoral framing.
+    </p>
+  </section>
+
+  <section>
+    <h2>How I have handled three sensitive areas</h2>
+
+    <p>
+      <strong>Suicidal thoughts.</strong> I originally had these as tickable items on the
+      sin list. I have removed them entirely, because a checkbox is not the right medium
+      for someone in crisis. They are now covered by a safeguarding panel with crisis
+      line numbers.
+    </p>
+
+    <p>
+      <strong>Abuse and rape.</strong> The risk is that a victim may tick these as if they
+      were their own. I have reworded the abuse entries as perpetrator-direction
+      ("Have I abused a child in any way?", "Have I sexually harassed or pressured
+      another person?"), with a note clarifying that victims are not culpable. The
+      "Rape" entry has been removed entirely.
+    </p>
+
+    <p>
+      <strong>Pride, anxiety, doubts about faith.</strong> These are easy to misunderstand.
+      Each carries a short note making clear that a passing thought or feeling is not a
+      sin — only deliberate consent is.
+    </p>
+  </section>
+
+  <div class="care-panel">
+    <span class="care-title">For anyone who is suffering</span>
+    <p>
+      If you are thinking about harming yourself, if you have been abused, or if you are
+      carrying a wound that feels too heavy to bear alone — please do not go through it
+      alone. Speak to a priest, a doctor, a counsellor, or someone you trust.
+    </p>
+    <p>
+      You are not alone, and what happened to you is not your sin.
+    </p>
+  </div>
+
+  <div class="signature">
+    Thank you, Father, for your time and your care for the faithful.<br><br>
+    With respect,<br>
+    <strong>Edwin</strong>
+  </div>
+
+  <footer>
+    This page is a review request, not the tool itself. The website is separate.
+  </footer>
+
+</div>
+
+</body>
+</html>

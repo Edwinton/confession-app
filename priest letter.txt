@@ -1,0 +1,150 @@
+================================================================
+REQUEST FOR PASTORAL REVIEW
+Bilingual Confession Preparation Website
+================================================================
+
+
+Dear Father,
+
+I have built a small bilingual (English + Malayalam) website to 
+help the faithful prepare for the Sacrament of Reconciliation. 
+It walks a person through the Ten Commandments, the Seven 
+Capital Sins, and a short reflection on bad confession itself. 
+Everything runs privately in the user's browser — no data is 
+sent to any server.
+
+The site is live at:
+
+    https://confession-app-production.up.railway.app
+
+
+Before I share it more widely, I would be grateful if you could 
+review the CONTENT — not the code. Specifically, four things:
+
+
+----------------------------------------------------------------
+1. THE EXAMINATION-OF-CONSCIENCE LIST ITSELF
+----------------------------------------------------------------
+
+The full list is in the app. Tap "Begin" on the welcome page, 
+then step through the sections. It is also available in a single 
+file (data/sins.json) in the source code.
+
+I have tried to be faithful to traditional Catholic teaching, 
+but I expect there are items that are too broad, mis-categorized, 
+redundant, or missing.
+
+What I would value: any items you would remove, any you would 
+rephrase, any categories I have overlooked.
+
+
+----------------------------------------------------------------
+2. THREE CATEGORIES I HAVE TREATED WITH SPECIAL CARE
+----------------------------------------------------------------
+
+These three gave me the most pause:
+
+(a) SUICIDAL THOUGHTS AND ATTEMPTED SUICIDE
+
+I originally had these as items a user could tick. I have since 
+removed them from the sin list entirely, because a checkbox is 
+not the right medium for someone in crisis.
+
+They are now covered by a safeguarding panel on the Welcome 
+page with crisis line numbers (iCall, AASRA).
+
+What I would value: confirmation that this is the right pastoral 
+approach, and whether the crisis line numbers and wording of the 
+panel are appropriate.
+
+(b) SEXUAL ABUSE, CHILD ABUSE, RAPE
+
+The risk is that a victim of these sins may tick them as if they 
+were their own. I have reworded the two abuse entries as 
+perpetrator-direction:
+
+    "Have I sexually harassed or pressured another person?"
+    "Have I abused a child in any way?"
+
+...each with a note clarifying that victims are not culpable. 
+The "Rape" entry has been removed entirely.
+
+What I would value: your judgment on whether this framing is 
+right, and whether any victim of abuse might still accidentally 
+confess something done TO them.
+
+(c) PRIDE, ANXIETY, DOUBTS ABOUT FAITH, "ATHEISTIC THOUGHTS"
+
+These are easy to misunderstand. I have attached short 
+explanatory notes to each, making clear that a passing thought 
+or feeling is not a sin — only deliberate consent is.
+
+What I would value: confirmation that the notes are 
+theologically precise, and whether any other items in the list 
+deserve a similar clarification.
+
+
+----------------------------------------------------------------
+3. THE PASTORAL GUARDRAILS
+----------------------------------------------------------------
+
+The app displays short messages at four moments — the welcome 
+page, each section, the summary page, and inside the generated 
+PDF — reminding the user that a contrite heart matters more 
+than a complete list.
+
+Sample text:
+
+    "You do not need to remember every sin. The goal is to help 
+     you prepare your heart, not to produce a perfect list. If 
+     you forget something, that is okay — God already knows, 
+     and His mercy is greater than any list."
+
+What I would value: whether this tone is appropriate. I have 
+tried to keep the seriousness of sin while guarding against 
+scrupulosity. If any wording feels too casual or too heavy, 
+please tell me.
+
+
+----------------------------------------------------------------
+4. THE PRAYERS
+----------------------------------------------------------------
+
+The Act of Contrition, Confiteor, and Opening of Confession 
+are shown in English and Malayalam side by side, so the user 
+can see both.
+
+What I would value: confirmation that the Malayalam is the 
+correct traditional text, and that no wording has shifted 
+theologically in translation.
+
+
+----------------------------------------------------------------
+WHAT I AM NOT ASKING
+----------------------------------------------------------------
+
+I am not asking you to test the website, review the code, or 
+comment on its design. Only the content and the pastoral 
+framing.
+
+Any feedback, however brief, will be received with gratitude.
+
+If it is easier for you to review on paper, I can print and 
+deliver the full list. Please let me know what form is most 
+convenient.
+
+
+Thank you, Father, for your time and your care for the 
+faithful.
+
+
+With respect,
+
+Edwin
+edwinveedon@gmail.com
+
+
+================================================================
+Live site:  https://confession-app-production.up.railway.app
+Source:     https://github.com/Edwinton/confession-app
+================================================================

@@ -52,7 +52,7 @@
     gap: 0.75rem; margin: 1.2rem 0 1.8rem; flex-wrap: wrap;
   }
   .lang-toggle { display: flex; gap: 0.5rem; }
-  .lang-toggle button, .clear-btn {
+  .lang-toggle button, .clear-btn, .about-btn {
     background: transparent; border: 1px solid var(--accent-light);
     padding: 0.4rem 1.2rem; border-radius: 40px; cursor: pointer;
     font-family: inherit; font-size: 0.95rem; color: var(--accent); transition: all 0.15s;
@@ -60,15 +60,12 @@
   .lang-toggle button.active { background: var(--accent); color: #fff; border-color: var(--accent); }
   .lang-toggle button:hover { background: #f8f2e8; }
   .lang-toggle button.active:hover { background: var(--accent-hover); }
+  .about-btn:hover { background: #f8f2e8; border-color: var(--accent-light); }
   .clear-btn { color: var(--danger); border-color: #e3c8bd; }
   .clear-btn:hover { background: #fff2ee; border-color: var(--danger); }
 
   /* Global search */
-  .global-search-wrap {
-    position: relative;
-    max-width: 640px;
-    margin: 0 auto 1rem;
-  }
+  .global-search-wrap { position: relative; max-width: 640px; margin: 0 auto 1rem; }
   .global-search-input {
     width: 100%;
     padding: 0.85rem 2.8rem 0.85rem 2.9rem;
@@ -547,13 +544,23 @@
     min-height: 1.5em; padding: 0.5rem;
   }
 
+  /* =========================================================
+     HIDDEN PDF RENDERER — off-screen but still paint-able
+     ========================================================= */
   .pdf-renderer {
-    position: fixed; left: -10000px; top: 0;
-    width: 794px; min-height: 1123px;
-    box-sizing: border-box; padding: 55px;
-    background: #ffffff; color: #111;
-    font-family: 'Cormorant Garamond', Georgia, serif;
-    z-index: -1;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 794px;
+    min-height: 1123px;
+    box-sizing: border-box;
+    padding: 55px;
+    background: #ffffff;
+    color: #111;
+    font-family: 'Noto Sans Malayalam', 'Cormorant Garamond', Georgia, sans-serif;
+    visibility: hidden;
+    pointer-events: none;
+    z-index: -100;
   }
   .pdf-renderer .pdf-logo-wrap { text-align: center; margin-bottom: 18px; }
   .pdf-renderer .pdf-logo { width: 100px; height: auto; display: inline-block; }
@@ -561,6 +568,7 @@
     font-family: 'Noto Sans Malayalam', Georgia, serif;
     font-size: 26px; font-weight: 700;
     text-align: center; color: #3c2d19; margin-bottom: 6px;
+    line-height: 1.4;
   }
   .pdf-renderer .pdf-date {
     font-family: 'Cormorant Garamond', Georgia, serif;
@@ -575,17 +583,18 @@
     color: #5a4620;
     margin-top: 22px; margin-bottom: 10px;
     padding-bottom: 5px; border-bottom: 1px solid #e0d2b8;
+    line-height: 1.5;
   }
-  .pdf-renderer .pdf-sin { margin-bottom: 14px; padding-left: 6px; }
+  .pdf-renderer .pdf-sin { margin-bottom: 16px; padding-left: 6px; }
   .pdf-renderer .pdf-sin-en {
     font-family: 'Cormorant Garamond', Georgia, serif;
     font-size: 15px; color: #1a1208;
-    margin-bottom: 3px; line-height: 1.4;
+    margin-bottom: 4px; line-height: 1.5;
   }
   .pdf-renderer .pdf-sin-ml {
     font-family: 'Noto Sans Malayalam', sans-serif;
     font-size: 17px; font-weight: 500;
-    color: #000; line-height: 1.85;
+    color: #000; line-height: 2;
     padding-left: 18px;
   }
   .pdf-renderer .pdf-notes-title {
@@ -594,11 +603,12 @@
     color: #5a4620;
     margin-top: 22px; margin-bottom: 10px;
     padding-bottom: 5px; border-bottom: 1px solid #e0d2b8;
+    line-height: 1.5;
   }
   .pdf-renderer .pdf-notes-body {
     font-family: 'Noto Sans Malayalam', 'Cormorant Garamond', serif;
     font-size: 15px; color: #1a1208;
-    line-height: 1.8; white-space: pre-wrap;
+    line-height: 1.9; white-space: pre-wrap;
   }
   .pdf-renderer .pdf-footer {
     font-family: 'Noto Sans Malayalam', 'Cormorant Garamond', serif;
@@ -606,6 +616,112 @@
     color: #78644b; text-align: center;
     margin-top: 40px; padding-top: 14px;
     border-top: 1px solid #d0c1a6;
+  }
+
+  /* ---------- About modal ---------- */
+  .about-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(44, 36, 22, 0.55);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    padding: 1rem;
+    animation: fadeIn 0.2s ease;
+  }
+  .about-modal.open { display: flex; }
+
+  .about-modal-inner {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    max-width: 620px;
+    width: 100%;
+    max-height: 85vh;
+    overflow-y: auto;
+    padding: 2rem 2.2rem 1.8rem;
+    box-shadow: 0 25px 50px rgba(60, 45, 25, 0.35);
+    position: relative;
+    animation: slideUp 0.25s ease;
+  }
+  @keyframes slideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .about-close {
+    position: absolute;
+    top: 0.9rem;
+    right: 1rem;
+    background: transparent;
+    border: none;
+    font-size: 1.4rem;
+    color: var(--text-soft);
+    cursor: pointer;
+    line-height: 1;
+    padding: 0.3rem 0.6rem;
+    border-radius: 50%;
+    transition: all 0.15s;
+  }
+  .about-close:hover {
+    background: #f8f2e8;
+    color: var(--danger);
+  }
+  .about-logo {
+    display: block;
+    width: 70px;
+    height: auto;
+    margin: 0 auto 1rem;
+    filter: brightness(0) saturate(100%) invert(31%) sepia(16%) saturate(1088%) hue-rotate(349deg) brightness(94%) contrast(88%);
+  }
+  .about-title {
+    font-family: 'Noto Sans Malayalam', 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--accent);
+    text-align: center;
+    margin-bottom: 0.4rem;
+  }
+  .about-subtitle {
+    font-family: 'Noto Sans Malayalam', 'Cormorant Garamond', serif;
+    font-size: 0.95rem;
+    font-style: italic;
+    color: var(--text-soft);
+    text-align: center;
+    margin-bottom: 1.8rem;
+  }
+  .about-body {
+    font-family: 'Noto Sans Malayalam', 'Cormorant Garamond', serif;
+    font-size: 1.02rem;
+    line-height: 1.85;
+    color: var(--text);
+    white-space: pre-wrap;
+  }
+  .about-signature {
+    text-align: right;
+    font-style: italic;
+    color: var(--accent);
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px dashed var(--border);
+    font-family: 'Noto Sans Malayalam', 'Cormorant Garamond', serif;
+    font-size: 0.98rem;
+  }
+  .about-verse {
+    text-align: center;
+    font-style: italic;
+    color: var(--text-soft);
+    font-size: 0.92rem;
+    margin-top: 1.2rem;
+    font-family: 'Noto Sans Malayalam', 'Cormorant Garamond', serif;
+  }
+
+  @media (max-width: 560px) {
+    .about-modal-inner { padding: 1.5rem 1.3rem 1.3rem; }
+    .about-title { font-size: 1.25rem; }
+    .about-body { font-size: 0.96rem; }
   }
 </style>
 </head>
@@ -624,6 +740,7 @@
       <button id="btn-en" class="active" onclick="setLang('en')">English</button>
       <button id="btn-ml" onclick="setLang('ml')">മലയാളം</button>
     </div>
+    <button class="about-btn" onclick="openAbout()" id="aboutBtn">✦ About</button>
     <button class="clear-btn" onclick="clearCache()" id="clearBtn">🗑 Clear cache</button>
   </div>
 
@@ -667,6 +784,19 @@
 </div>
 
 <div id="pdf-renderer" class="pdf-renderer" aria-hidden="true"></div>
+
+<!-- About modal -->
+<div class="about-modal" id="aboutModal" onclick="if(event.target===this) closeAbout()">
+  <div class="about-modal-inner">
+    <button class="about-close" onclick="closeAbout()" aria-label="Close">✕</button>
+    <img src="/static/images/logo.svg" alt="Mar Thoma Sleeva" class="about-logo">
+    <div class="about-title" id="aboutTitle">About This App</div>
+    <div class="about-subtitle" id="aboutSubtitle">A quiet place to prepare for confession</div>
+    <div class="about-body" id="aboutBody"></div>
+    <div class="about-signature" id="aboutSignature"></div>
+    <div class="about-verse" id="aboutVerse"></div>
+  </div>
+</div>
 
 {% include 'partials/section_sins.html' %}
 {% include 'partials/section_custom.html' %}
@@ -774,6 +904,20 @@ const UI = {
     welcomeScripture: '"If we confess our sins, he is faithful and just, and will forgive our sins and cleanse us from all unrighteousness." — 1 John 1:9',
     beginBtn: 'Begin →', welcomeSkip: 'I know what to do — skip to prayers →',
     clearBtn: '🗑 Clear cache', clearConfirm: 'Clear all selections, notes, and start over?', clearDone: 'Cache cleared',
+    aboutBtn: '✦ About',
+    aboutTitle: 'About This App',
+    aboutSubtitle: 'A quiet place to prepare for confession',
+    aboutBody: `This app was born out of a simple thought: "I want to confess, but I don't have the right medium."
+
+We have so many digital tools around us — apps for everything — yet none of them felt right for something as personal and sacred as preparing for the Sacrament of Reconciliation.
+
+So I prayed. I sat with the thought for a long time. And gradually, step by step, I began to build. What you are using today is the answer to that prayer.
+
+May this tool help you examine your conscience honestly, prepare your heart, and come to confession with peace.
+
+Everything stays on your device. Nothing is sent to any server. This is a private space between you and God.`,
+    aboutSignature: '— Built with prayer and patience',
+    aboutVerse: '"Come to me, all you who labor and are burdened, and I will give you rest." — Matthew 11:28',
     prayersTitle: 'Prayers of the Penitent',
     prayersSub: 'Pray these before and during confession · Both languages shown side by side',
     summaryTitle: 'Your Confession Summary', summarySub: 'Review your selected sins, then download as PDF',
@@ -797,6 +941,20 @@ const UI = {
     welcomeScripture: '"നാം പാപങ്ങൾ ഏറ്റുപറയുന്നെങ്കിൽ, അവൻ വിശ്വസ്തനും നീതിമാനുമാകയാൽ, പാപങ്ങൾ ക്ഷമിക്കുകയും എല്ലാ അനീതികളിൽ നിന്നു നമ്മെ ശുദ്ധീകരിക്കുകയും ചെയ്യും." — 1 യോഹന്നാൻ 1:9',
     beginBtn: 'ആരംഭിക്കുക →', welcomeSkip: 'എനിക്കറിയാം — പ്രാർത്ഥനകളിലേക്ക് പോകുക →',
     clearBtn: '🗑 കാഷെ മായ്ക്കുക', clearConfirm: 'എല്ലാ തിരഞ്ഞെടുപ്പുകളും കുറിപ്പുകളും മായ്ച്ച് വീണ്ടും തുടങ്ങണോ?', clearDone: 'കാഷെ മായ്ച്ചു',
+    aboutBtn: '✦ ഈ ആപ്പിനെക്കുറിച്ച്',
+    aboutTitle: 'ഈ ആപ്പിനെക്കുറിച്ച്',
+    aboutSubtitle: 'കുമ്പസാരത്തിന് ഒരുങ്ങാൻ ഒരു ശാന്തമായ സ്ഥലം',
+    aboutBody: `ഈ ആപ്പ് ഉണ്ടായത് ഒരു ചെറിയ ചിന്തയിൽ നിന്നാണ്: "എനിക്ക് കുമ്പസാരിക്കണം, പക്ഷേ അതിന് ഒരു മാധ്യമം ഇല്ല."
+
+നമ്മുടെ ചുറ്റും എത്രയോ ഡിജിറ്റൽ ഉപകരണങ്ങൾ ഉണ്ട് — എല്ലാ കാര്യത്തിനും ആപ്പുകൾ. എന്നാൽ കുമ്പസാരക്കൂദാശയ്ക്ക് ഒരുങ്ങുന്നത് പോലെ വ്യക്തിപരവും വിശുദ്ധവുമായ ഒരു കാര്യത്തിന് അവയൊന്നും ഉചിതമായിരുന്നില്ല.
+
+അതുകൊണ്ട് ഞാൻ പ്രാർത്ഥിച്ചു. ആ ചിന്തയുമായി ഏറെ നേരം ഇരുന്നു. ക്രമേണ, ഓരോ ചുവടായി, ഞാൻ നിർമ്മാണം തുടങ്ങി. ഇന്ന് നിങ്ങൾ ഉപയോഗിക്കുന്നത് ആ പ്രാർത്ഥനയുടെ ഉത്തരമാണ്.
+
+ഈ ഉപകരണം നിങ്ങളെ സത്യസന്ധമായി മനസ്സാക്ഷി പരിശോധിക്കാനും ഹൃദയം ഒരുക്കാനും സമാധാനത്തോടെ കുമ്പസാരത്തിന് എത്താനും സഹായിക്കട്ടെ.
+
+എല്ലാം നിങ്ങളുടെ ഉപകരണത്തിൽ തന്നെ നിലനിൽക്കുന്നു. ഒന്നും ഒരു സെർവറിലേക്കും അയയ്ക്കുന്നില്ല. ഇത് നിങ്ങൾക്കും ദൈവത്തിനും ഇടയിലുള്ള ഒരു സ്വകാര്യ സ്ഥലമാണ്.`,
+    aboutSignature: '— പ്രാർത്ഥനയോടെയും ക്ഷമയോടെയും നിർമ്മിച്ചത്',
+    aboutVerse: '"അദ്ധ്വാനിക്കുന്നവരും ഭാരം ചുമക്കുന്നവരുമായ എല്ലാവരും എന്റെ അടുത്തേക്ക് വരുവിൻ; ഞാൻ നിങ്ങൾക്ക് ആശ്വാസം നൽകാം." — മത്തായി 11:28',
     prayersTitle: 'പശ്ചാത്താപിയുടെ പ്രാർത്ഥനകൾ',
     prayersSub: 'കുമ്പസാരത്തിനു മുമ്പും സമയത്തും ഇവ ചൊല്ലുക · രണ്ടു ഭാഷകളും ഒപ്പം കാണിച്ചിരിക്കുന്നു',
     summaryTitle: 'നിങ്ങളുടെ കുമ്പസാര സംഗ്രഹം', summarySub: 'നിങ്ങൾ തിരഞ്ഞെടുത്ത പാപങ്ങൾ പരിശോധിച്ച് PDF ആയി ഡൗൺലോഡ് ചെയ്യുക',
@@ -831,7 +989,10 @@ async function ensureFontsLoaded() {
       await Promise.all([
         document.fonts.load('400 16px "Noto Sans Malayalam"'),
         document.fonts.load('500 16px "Noto Sans Malayalam"'),
-        document.fonts.load('700 16px "Noto Sans Malayalam"')
+        document.fonts.load('700 16px "Noto Sans Malayalam"'),
+        document.fonts.load('400 16px "Cormorant Garamond"'),
+        document.fonts.load('500 16px "Cormorant Garamond"'),
+        document.fonts.load('700 16px "Cormorant Garamond"')
       ]);
     }
     if (document.fonts && document.fonts.ready) await document.fonts.ready;
@@ -948,6 +1109,8 @@ function setLang(lang) {
   document.getElementById('title').textContent = UI[lang].title;
   document.getElementById('subhead').textContent = UI[lang].subhead;
   document.getElementById('clearBtn').textContent = UI[lang].clearBtn;
+  const aboutBtn = document.getElementById('aboutBtn');
+  if (aboutBtn) aboutBtn.textContent = UI[lang].aboutBtn;
   const gs = document.getElementById('globalSearch');
   if (gs) gs.placeholder = UI[lang].searchPlaceholder;
   const qjLabel = document.getElementById('quickJumpToggleLabel');
@@ -1453,6 +1616,36 @@ function clearCache() {
 }
 
 /* =========================================================
+   ABOUT MODAL
+   ========================================================= */
+function openAbout() {
+  const modal = document.getElementById('aboutModal');
+  const t = currentLang;
+
+  document.getElementById('aboutTitle').textContent = UI[t].aboutTitle;
+  document.getElementById('aboutSubtitle').textContent = UI[t].aboutSubtitle;
+  document.getElementById('aboutBody').textContent = UI[t].aboutBody;
+  document.getElementById('aboutSignature').textContent = UI[t].aboutSignature;
+  document.getElementById('aboutVerse').textContent = UI[t].aboutVerse;
+
+  modal.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeAbout() {
+  const modal = document.getElementById('aboutModal');
+  modal.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    const modal = document.getElementById('aboutModal');
+    if (modal && modal.classList.contains('open')) closeAbout();
+  }
+});
+
+/* =========================================================
    APPLY UI TRANSLATIONS
    ========================================================= */
 function applyUILang() {
@@ -1536,7 +1729,7 @@ function createDebugStatusEl() {
 }
 
 /* =========================================================
-   PDF GENERATION
+   PDF GENERATION — improved for Malayalam
    ========================================================= */
 async function downloadPDF() {
   const t = currentLang;
@@ -1584,6 +1777,7 @@ async function downloadPDF() {
 
     setStatus('Step 3: Loading fonts…');
     await ensureFontsLoaded();
+    await new Promise(r => setTimeout(r, 150));
 
     setStatus('Step 4: Rendering HTML…');
     const renderer = document.getElementById('pdf-renderer');
@@ -1591,17 +1785,20 @@ async function downloadPDF() {
     renderer.innerHTML = buildRendererHtml();
 
     await new Promise(r => requestAnimationFrame(() => requestAnimationFrame(r)));
-    await new Promise(r => setTimeout(r, 300));
+    await new Promise(r => setTimeout(r, 400));
 
     setStatus('Step 5: Capturing image…');
     const canvas = await html2canvas(renderer, {
-      scale: 2, backgroundColor: '#ffffff',
-      useCORS: true, logging: false,
-      windowWidth: 794, width: 794
+      scale: 2.5,
+      backgroundColor: '#ffffff',
+      useCORS: true,
+      logging: false,
+      windowWidth: 794,
+      width: 794
     });
     setStatus('Step 6: Captured ' + canvas.width + '×' + canvas.height);
 
-    const imgData = canvas.toDataURL('image/jpeg', 0.9);
+    const imgData = canvas.toDataURL('image/png');
 
     setStatus('Step 7: Creating PDF…');
     const { jsPDF } = window.jspdf;
@@ -1610,7 +1807,7 @@ async function downloadPDF() {
     if (usePassword && password) {
       pdfOptions.encryption = {
         userPassword: password,
-        ownerPassword: password + '-owner',
+        ownerPassword: password,
         userPermissions: ['print', 'modify', 'copy', 'annot-forms']
       };
     }
@@ -1627,13 +1824,13 @@ async function downloadPDF() {
     let heightLeft = imgHeight;
     let position = margin;
 
-    pdf.addImage(imgData, 'JPEG', margin, position, usableW, imgHeight);
+    pdf.addImage(imgData, 'PNG', margin, position, usableW, imgHeight, undefined, 'FAST');
     heightLeft -= (pageH - margin * 2);
 
     while (heightLeft > 0) {
       position = margin - (imgHeight - heightLeft);
       pdf.addPage();
-      pdf.addImage(imgData, 'JPEG', margin, position, usableW, imgHeight);
+      pdf.addImage(imgData, 'PNG', margin, position, usableW, imgHeight, undefined, 'FAST');
       heightLeft -= (pageH - margin * 2);
     }
 

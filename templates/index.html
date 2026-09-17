@@ -25,6 +25,9 @@
     --danger: #b55a3a;
     --success: #487a4a;
     --gentle: #7d6a4a;
+    --care: #8a5a3a;
+    --care-bg: #fff5ee;
+    --care-border: #e3c0a8;
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -315,6 +318,46 @@
   }
   .gentle-note.summary-note { margin: 1rem 0 1.4rem; }
 
+  /* Safeguarding / care panel */
+  .care-panel {
+    font-family: 'Noto Sans Malayalam', 'Cormorant Garamond', serif;
+    background: var(--care-bg);
+    border: 1px solid var(--care-border);
+    border-left: 4px solid var(--care);
+    border-radius: 8px;
+    padding: 1.1rem 1.3rem 1.2rem;
+    margin: 1.5rem auto 0;
+    max-width: 640px;
+    text-align: left;
+    color: var(--text);
+    line-height: 1.75;
+    font-size: 0.98rem;
+  }
+  .care-panel .care-title {
+    font-family: 'Noto Sans Malayalam', 'Cormorant Garamond', serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--care);
+    margin-bottom: 0.6rem;
+    display: block;
+  }
+  .care-panel p {
+    margin-bottom: 0.6rem;
+  }
+  .care-panel p:last-child {
+    margin-bottom: 0;
+  }
+  .care-panel .care-lines {
+    font-family: system-ui, sans-serif;
+    font-size: 0.92rem;
+    color: var(--text-soft);
+    margin-top: 0.5rem;
+  }
+  .care-panel strong {
+    color: var(--care);
+    font-weight: 600;
+  }
+
   .about-howto {
     margin-top: 1.5rem;
     padding-top: 1.2rem;
@@ -396,7 +439,7 @@
   .sin-tooltip {
     position: fixed;
     z-index: 1500;
-    max-width: 320px;
+    max-width: 300px;
     background: var(--card);
     border: 1px solid var(--border);
     border-radius: 8px;
@@ -610,6 +653,7 @@
     .floating-nav .fn-page { font-size: 0.75rem; min-width: 60px; padding: 0 0.3rem; }
     .gentle-note { font-size: 0.9rem; padding: 0.7rem 0.85rem; }
     .sin-tooltip { max-width: 260px; font-size: 0.85rem; }
+    .care-panel { padding: 0.95rem 1rem; font-size: 0.93rem; }
   }
 
   .nav-row {
@@ -1064,6 +1108,11 @@ const UI = {
     welcomeBody: 'This is a quiet place to prepare for the Sacrament of Reconciliation. You will walk through the Ten Commandments and other examinations of conscience, then pray the prayers of the penitent before confession.\n\nEverything stays on your device. Nothing is sent to any server.',
     welcomeScripture: '"If we confess our sins, he is faithful and just, and will forgive our sins and cleanse us from all unrighteousness." — 1 John 1:9',
     welcomeGuardrail: 'You do not need to remember every sin. The goal is to help you prepare your heart, not to produce a perfect list. If you forget something, that is okay — God already knows, and His mercy is greater than any list.',
+    careTitle: 'If you are suffering, please read this',
+    careBody: 'This tool is for preparing for confession. It is not a substitute for professional help or pastoral care.',
+    careBody2: 'If you are thinking about harming yourself, if you have been abused, or if you are carrying a wound that feels too heavy to bear alone — please do not go through it alone. Speak to a priest, a doctor, a counsellor, or someone you trust. You are not alone, and what happened to you is not your sin.',
+    careLines: 'In India, you can reach iCall at 9152987821, or the AASRA helpline at 9820466726. If you are outside India, search for a local crisis line in your area.',
+    careClose: 'You are loved. Please reach out.',
     sectionGuardrail: 'When you are ready, move on. You don\'t have to select every sin — only the ones that speak to your conscience. Skip freely.',
     summaryGuardrail: 'This list is for your own preparation. You can add, remove, or ignore any part of it. What matters is a contrite heart, not a complete list.',
     beginBtn: 'Begin →', welcomeSkip: 'I know what to do — skip to prayers →',
@@ -1079,7 +1128,7 @@ So I prayed. I sat with the thought for a long time. And gradually, step by step
 
 May this tool help you examine your conscience honestly, prepare your heart, and come to confession with peace.
 
-Everything stays on your device. Nothing is sent to any server. This is a private space between you and God.`,
+Your selections, notes, and generated PDF are processed on your device and are not sent to the app's server. This is a private space between you and God.`,
     aboutHowtoTitle: 'How to use this tool well',
     aboutHowtoSteps: [
       'Find a quiet place. Silence helps.',
@@ -1114,6 +1163,11 @@ Everything stays on your device. Nothing is sent to any server. This is a privat
     welcomeBody: 'കുമ്പസാരക്കൂദാശയ്ക്ക് ഒരുങ്ങാൻ ഇതൊരു ശാന്തമായ സ്ഥലമാണ്. പത്തു പ്രമാണങ്ങളും മറ്റു ആത്മശോധനകളും ചുറ്റി നടന്ന ശേഷം, കുമ്പസാരത്തിനു മുമ്പ് പശ്ചാത്താപിയുടെ പ്രാർത്ഥനകൾ ചൊല്ലാം.\n\nഎല്ലാം നിങ്ങളുടെ ഉപകരണത്തിൽ തന്നെ നിലനിൽക്കുന്നു. ഒന്നും ഒരു സെർവറിലേക്കും അയയ്ക്കുന്നില്ല.',
     welcomeScripture: '"നാം പാപങ്ങൾ ഏറ്റുപറയുന്നെങ്കിൽ, അവൻ വിശ്വസ്തനും നീതിമാനുമാകയാൽ, പാപങ്ങൾ ക്ഷമിക്കുകയും എല്ലാ അനീതികളിൽ നിന്നു നമ്മെ ശുദ്ധീകരിക്കുകയും ചെയ്യും." — 1 യോഹന്നാൻ 1:9',
     welcomeGuardrail: 'എല്ലാ പാപവും ഓർത്തുവയ്ക്കേണ്ടതില്ല. ഹൃദയം ഒരുക്കാൻ സഹായിക്കുക എന്നതാണ് ലക്ഷ്യം — പൂർണ്ണമായ ഒരു പട്ടിക തയ്യാറാക്കുക എന്നതല്ല. എന്തെങ്കിലും മറന്നുപോയാൽ കുഴപ്പമില്ല — ദൈവം എല്ലാം അറിയുന്നു, അവിടുത്തെ കരുണ ഏതൊരു പട്ടികയെക്കാളും വലുതാണ്.',
+    careTitle: 'നിങ്ങൾ കഷ്ടത അനുഭവിക്കുന്നുണ്ടെങ്കിൽ, ഇത് വായിക്കുക',
+    careBody: 'ഈ ഉപകരണം കുമ്പസാരത്തിന് ഒരുങ്ങാനുള്ളതാണ്. ഇത് വൈദ്യസഹായത്തിനോ ആത്മീയ പരിചരണത്തിനോ പകരമല്ല.',
+    careBody2: 'സ്വയം ഹാനി വരുത്താൻ ചിന്തിക്കുന്നുണ്ടെങ്കിൽ, നിങ്ങൾ ദുരുപയോഗത്തിന് ഇരയായിട്ടുണ്ടെങ്കിൽ, അല്ലെങ്കിൽ തനിച്ച് ചുമക്കാൻ കഴിയാത്ത ഒരു മുറിവ് നിങ്ങൾ വഹിക്കുന്നുണ്ടെങ്കിൽ — ഒരിക്കലും തനിച്ച് ഇതിലൂടെ കടന്നുപോകരുത്. ഒരു വൈദികനെയോ, ഡോക്ടറെയോ, കൗൺസിലറെയോ, അല്ലെങ്കിൽ നിങ്ങൾ വിശ്വസിക്കുന്ന ഒരാളെയോ സമീപിക്കുക. നിങ്ങൾ ഒറ്റയ്ക്കല്ല, നിങ്ങൾക്ക് സംഭവിച്ചത് നിങ്ങളുടെ പാപമല്ല.',
+    careLines: 'ഇന്ത്യയിൽ, iCall: 9152987821, അല്ലെങ്കിൽ AASRA: 9820466726. ഇന്ത്യയ്ക്ക് പുറത്താണെങ്കിൽ, നിങ്ങളുടെ പ്രദേശത്തെ ഒരു ക്രൈസിസ് ഹെൽപ്‌ലൈൻ കണ്ടെത്തുക.',
+    careClose: 'നിങ്ങൾ സ്നേഹിക്കപ്പെടുന്നവരാണ്. ദയവായി സഹായം തേടുക.',
     sectionGuardrail: 'തയ്യാറാകുമ്പോൾ മുന്നോട്ട് പോകുക. എല്ലാ പാപവും തിരഞ്ഞെടുക്കേണ്ടതില്ല — നിങ്ങളുടെ മനസ്സാക്ഷിയെ തൊടുന്നവ മാത്രം മതി. സ്വതന്ത്രമായി ഒഴിവാക്കുക.',
     summaryGuardrail: 'ഈ പട്ടിക നിങ്ങളുടെ സ്വന്തം തയ്യാറെടുപ്പിനുള്ളതാണ്. ഇതിൽ എന്തും ചേർക്കാം, ഒഴിവാക്കാം, അവഗണിക്കാം. പ്രധാനം മനസ്താപമുള്ള ഹൃദയമാണ് — പൂർണ്ണമായ ഒരു പട്ടികയല്ല.',
     beginBtn: 'ആരംഭിക്കുക →', welcomeSkip: 'എനിക്കറിയാം — പ്രാർത്ഥനകളിലേക്ക് പോകുക →',
@@ -1129,7 +1183,7 @@ Everything stays on your device. Nothing is sent to any server. This is a privat
 
 ഈ ഉപകരണം നിങ്ങളെ സത്യസന്ധമായി മനസ്സാക്ഷി പരിശോധിക്കാനും ഹൃദയം ഒരുക്കാനും സമാധാനത്തോടെ കുമ്പസാരത്തിന് എത്താനും സഹായിക്കട്ടെ.
 
-എല്ലാം നിങ്ങളുടെ ഉപകരണത്തിൽ തന്നെ നിലനിൽക്കുന്നു. ഒന്നും ഒരു സെർവറിലേക്കും അയയ്ക്കുന്നില്ല. ഇത് നിങ്ങൾക്കും ദൈവത്തിനും ഇടയിലുള്ള ഒരു സ്വകാര്യ സ്ഥലമാണ്.`,
+നിങ്ങളുടെ തിരഞ്ഞെടുപ്പുകളും കുറിപ്പുകളും തയ്യാറാക്കിയ PDF-ഉം പൂർണ്ണമായും നിങ്ങളുടെ ഉപകരണത്തിൽ തന്നെ പ്രോസസ്സ് ചെയ്യുന്നു. അവ ഞങ്ങളുടെ സെർവറിലേക്ക് അയയ്ക്കുന്നില്ല. ഇത് നിങ്ങൾക്കും ദൈവത്തിനും ഇടയിലുള്ള ഒരു സ്വകാര്യ സ്ഥലമാണ്.`,
     aboutHowtoTitle: 'ഈ ഉപകരണം നന്നായി ഉപയോഗിക്കാൻ',
     aboutHowtoSteps: [
       'ഒരു ശാന്തമായ സ്ഥലം കണ്ടെത്തുക. നിശ്ശബ്ദത സഹായിക്കും.',
@@ -1407,6 +1461,15 @@ function renderWelcome() {
   html += '<p class="welcome-body">' + UI[t].welcomeBody.replace(/\n/g, '<br>') + '</p>';
   html += '<p class="scripture">' + UI[t].welcomeScripture + '</p>';
   html += '<div class="gentle-note welcome-note">' + UI[t].welcomeGuardrail + '</div>';
+
+  html += '<div class="care-panel">';
+  html += '<span class="care-title">' + UI[t].careTitle + '</span>';
+  html += '<p>' + UI[t].careBody + '</p>';
+  html += '<p>' + UI[t].careBody2 + '</p>';
+  html += '<p class="care-lines">' + UI[t].careLines + '</p>';
+  html += '<p><strong>' + UI[t].careClose + '</strong></p>';
+  html += '</div>';
+
   html += '<div class="welcome-actions">';
   html += '<button class="btn btn-primary" onclick="startFlow()">' + UI[t].beginBtn + '</button>';
   html += '<button class="btn btn-secondary" onclick="skipToPrayers()">' + UI[t].welcomeSkip + '</button>';
@@ -1826,10 +1889,8 @@ function toggleSinNote(btn) {
   const tooltipW = tooltipRect.width;
   const tooltipH = tooltipRect.height;
 
-  // Desired left so the tooltip centers on the icon
   let left = rect.left + (rect.width / 2) - (tooltipW / 2);
 
-  // Vertical placement: prefer above, flip below if not enough room
   let top = rect.top - tooltipH - 14;
   let placeBelow = false;
   if (top < 8) {
@@ -1837,7 +1898,6 @@ function toggleSinNote(btn) {
     placeBelow = true;
   }
 
-  // Keep the tooltip inside the viewport horizontally
   const margin = 12;
   const maxLeft = window.innerWidth - tooltipW - margin;
   if (left < margin) left = margin;

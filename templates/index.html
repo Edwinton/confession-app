@@ -491,12 +491,13 @@
   }
   .summary-list { list-style: none; padding-left: 0; }
   .summary-list li {
-    padding: 0.35rem 0 0.35rem 1.3rem; position: relative;
-    font-size: 0.98rem; line-height: 1.5; color: var(--text);
+    padding: 0.5rem 0 0.5rem 1.5rem; position: relative;
+    font-size: 1.02rem; line-height: 1.6; color: var(--text);
+    font-family: 'Noto Sans Malayalam', 'Cormorant Garamond', serif;
   }
   .summary-list li::before {
-    content: '✦'; position: absolute; left: 0; top: 0.45rem;
-    color: var(--accent-light); font-size: 0.75rem;
+    content: '✦'; position: absolute; left: 0; top: 0.6rem;
+    color: var(--accent-light); font-size: 0.85rem;
   }
   .no-sins {
     text-align: center; color: var(--text-soft);
@@ -575,14 +576,6 @@
     text-align: center; color: #78644b;
     margin-bottom: 24px; padding-bottom: 14px;
     border-bottom: 1px solid #c8b496;
-  }
-  .pdf-renderer .pdf-group-title {
-    font-family: 'Noto Sans Malayalam', Georgia, serif;
-    font-size: 18px; font-weight: 700;
-    color: #5a4620;
-    margin-top: 22px; margin-bottom: 10px;
-    padding-bottom: 5px; border-bottom: 1px solid #e0d2b8;
-    line-height: 1.5;
   }
   .pdf-renderer .pdf-sin { margin-bottom: 16px; padding-left: 6px; }
   .pdf-renderer .pdf-sin-en {
@@ -1515,7 +1508,7 @@ function renderPrayers() {
 }
 
 /* =========================================================
-   SUMMARY
+   SUMMARY VIEW
    ========================================================= */
 function renderSummaryView() {
   const container = document.getElementById('sections-container');
@@ -1532,19 +1525,26 @@ function renderSummaryContent() {
   let html = '';
   let totalSelected = 0;
 
+  const selectedSins = [];
   SECTIONS.forEach(section => {
     if (section.type !== 'sins') return;
     section.groups.forEach((group, gi) => {
       group.sins.forEach((sin, si) => {
         if (selections[section.id + '::' + gi + '::' + si]) {
-          html += '<div class="pdf-sin">';
-          if (t === 'en') html += '<div class="pdf-sin-en">• ' + escapeHtml(sin.en) + '</div>';
-          else html += '<div class="pdf-sin-ml">• ' + escapeHtml(sin.ml) + '</div>';
-          html += '</div>';
+          selectedSins.push(sin);
         }
       });
     });
   });
+
+  if (selectedSins.length > 0) {
+    totalSelected = selectedSins.length;
+    html += '<ul class="summary-list">';
+    selectedSins.forEach(sin => {
+      html += '<li>' + escapeHtml(sin[t]) + '</li>';
+    });
+    html += '</ul>';
+  }
 
   const customText = localStorage.getItem('confession_custom_text') || '';
   if (customText.trim()) {
@@ -1673,7 +1673,7 @@ function togglePasswordFields() {
 }
 
 /* =========================================================
-   BUILD PDF HTML
+   BUILD PDF HTML — flat list, no categories
    ========================================================= */
 function buildRendererHtml() {
   const t = currentLang;
@@ -1686,19 +1686,14 @@ function buildRendererHtml() {
   SECTIONS.forEach(section => {
     if (section.type !== 'sins') return;
     section.groups.forEach((group, gi) => {
-      const selected = [];
       group.sins.forEach((sin, si) => {
-        if (selections[section.id + '::' + gi + '::' + si]) selected.push(sin);
-      });
-      if (selected.length) {
-        html += '<div class="pdf-group-title">' + group.title[t] + '</div>';
-        selected.forEach(sin => {
+        if (selections[section.id + '::' + gi + '::' + si]) {
           html += '<div class="pdf-sin">';
           if (t === 'en') html += '<div class="pdf-sin-en">• ' + escapeHtml(sin.en) + '</div>';
           else html += '<div class="pdf-sin-ml">• ' + escapeHtml(sin.ml) + '</div>';
           html += '</div>';
-        });
-      }
+        }
+      });
     });
   });
 
@@ -1724,7 +1719,7 @@ function createDebugStatusEl() {
 }
 
 /* =========================================================
-   PDF GENERATION — improved for Malayalam
+   PDF GENERATION
    ========================================================= */
 async function downloadPDF() {
   const t = currentLang;

@@ -1,0 +1,34 @@
+{% raw %}
+<script type="text/template" id="tpl-section-sins">
+  <div class="section active" data-section-id="{{sectionId}}">
+    <h2>
+      <span class="num">{{num}}</span>
+      <span>{{title}}</span>
+    </h2>
+    <p class="sub">{{sub}}</p>
+
+    {{#if verse}}
+    <p class="section-verse">{{verse}}</p>
+    {{/if}}
+
+    <div class="groups-container">
+      {{#each groups}}
+        <div class="group" data-group-index="{{groupIndex}}">
+          <h3 class="group-title">{{title}}</h3>
+          <div class="sin-list">
+            {{#each sins}}
+              <div class="sin-item" data-sin-key="{{sectionId}}::{{groupIndex}}::{{@index}}" onclick="toggleSin(this)">
+                <div class="sin-check"></div>
+                <div class="sin-label">
+                  <span class="en">{{en}}</span>
+                  <span class="ml">{{ml}}</span>
+                </div>
+              </div>
+            {{/each}}
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+</script>
+{% endraw %}

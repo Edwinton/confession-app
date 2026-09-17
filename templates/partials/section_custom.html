@@ -1,0 +1,27 @@
+{% raw %}
+<script type="text/template" id="tpl-section-custom">
+  <div class="section active" data-section-id="{{sectionId}}">
+    <h2>
+      <span class="num">{{num}}</span>
+      <span>{{title}}</span>
+    </h2>
+    <p class="sub">{{sub}}</p>
+
+    <textarea
+      id="customInput"
+      maxlength="{{maxlength}}"
+      placeholder="{{placeholder}}"
+      class="custom-textarea"></textarea>
+    <div class="char-counter" id="customCounter">0 / {{maxlength}}</div>
+
+    <div class="nav-row">
+      <button class="btn btn-secondary" onclick="prevSection()">
+        <span data-i18n="back">← Back</span>
+      </button>
+      <button class="btn btn-primary" onclick="nextSection()">
+        <span data-i18n="next">Next →</span>
+      </button>
+    </div>
+  </div>
+</script>
+{% endraw %}

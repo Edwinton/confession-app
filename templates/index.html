@@ -1,0 +1,1675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Confession Preparation · കുമ്പസാര തയ്യാറെടുപ്പ്</title>
+
+<link rel="icon" type="image/svg+xml" href="/static/images/logo.svg">
+<link rel="apple-touch-icon" href="/static/images/logo.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Malayalam:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --card: #fffdf9;
+    --border: #e8ddc9;
+    --text: #2c2416;
+    --text-soft: #6b5a40;
+    --accent: #6b5535;
+    --accent-hover: #55411f;
+    --accent-light: #c9b69a;
+    --selected: #f0e8da;
+    --danger: #b55a3a;
+    --success: #487a4a;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: radial-gradient(circle at 20% 20%, #faf7f2 0%, #ede5da 100%);
+    min-height: 100vh;
+    font-family: 'Cormorant Garamond', 'Georgia', serif;
+    color: var(--text);
+    padding: 1.5rem 1rem 8rem;
+    display: flex;
+    justify-content: center;
+  }
+  .container { max-width: 900px; width: 100%; }
+
+  header { text-align: center; margin-bottom: 2rem; }
+  .logo-img {
+    display: block; width: 110px; height: auto;
+    margin: 0 auto 0.7rem;
+    filter: brightness(0) saturate(100%) invert(31%) sepia(16%) saturate(1088%) hue-rotate(349deg) brightness(94%) contrast(88%);
+  }
+  h1 { font-size: 2.2rem; font-weight: 500; letter-spacing: 0.02em; }
+  .subhead { color: var(--text-soft); font-style: italic; margin-top: 0.4rem; font-size: 1rem; }
+
+  .top-controls {
+    display: flex; justify-content: center; align-items: center;
+    gap: 0.75rem; margin: 1.2rem 0 1.8rem; flex-wrap: wrap;
+  }
+  .lang-toggle { display: flex; gap: 0.5rem; }
+  .lang-toggle button, .clear-btn {
+    background: transparent; border: 1px solid var(--accent-light);
+    padding: 0.4rem 1.2rem; border-radius: 40px; cursor: pointer;
+    font-family: inherit; font-size: 0.95rem; color: var(--accent); transition: all 0.15s;
+  }
+  .lang-toggle button.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+  .lang-toggle button:hover { background: #f8f2e8; }
+  .lang-toggle button.active:hover { background: var(--accent-hover); }
+  .clear-btn { color: var(--danger); border-color: #e3c8bd; }
+  .clear-btn:hover { background: #fff2ee; border-color: var(--danger); }
+
+  /* Global search */
+  .global-search-wrap {
+    position: relative;
+    max-width: 640px;
+    margin: 0 auto 1rem;
+  }
+  .global-search-input {
+    width: 100%;
+    padding: 0.85rem 2.8rem 0.85rem 2.9rem;
+    font-family: 'Noto Sans Malayalam', 'Cormorant Garamond', serif;
+    font-size: 1rem;
+    border: 1px solid var(--accent-light);
+    border-radius: 40px;
+    background: var(--card);
+    color: var(--text);
+    outline: none;
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+  .global-search-input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(107, 85, 53, 0.12);
+  }
+  .global-search-icon {
+    position: absolute; left: 1.1rem; top: 50%;
+    transform: translateY(-50%);
+    font-size: 1rem; color: var(--accent-light);
+    pointer-events: none;
+  }
+  .global-search-clear {
+    position: absolute; right: 0.9rem; top: 50%;
+    transform: translateY(-50%);
+    background: transparent; border: none;
+    cursor: pointer; font-size: 1.1rem;
+    color: var(--text-soft);
+    padding: 0.2rem 0.5rem;
+    display: none; line-height: 1;
+  }
+  .global-search-clear.visible { display: block; }
+  .global-search-clear:hover { color: var(--danger); }
+
+  .global-search-results {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0; right: 0;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(90, 70, 40, 0.12);
+    max-height: 420px;
+    overflow-y: auto;
+    z-index: 900;
+    display: none;
+  }
+  .global-search-results.show { display: block; }
+  .global-search-result {
+    padding: 0.7rem 1rem;
+    cursor: pointer;
+    border-bottom: 1px solid #f5ede0;
+    transition: background 0.1s;
+  }
+  .global-search-result:last-child { border-bottom: none; }
+  .global-search-result:hover { background: #faf6ef; }
+  .gsr-section {
+    font-size: 0.72rem; color: var(--text-soft);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 0.2rem;
+    font-family: system-ui, sans-serif;
+  }
+  .gsr-en {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1rem; color: var(--text); line-height: 1.35;
+  }
+  .gsr-ml {
+    font-family: 'Noto Sans Malayalam', serif;
+    font-size: 0.92rem; color: var(--text-soft);
+    line-height: 1.5; margin-top: 0.15rem;
+  }
+  .gsr-en mark, .gsr-ml mark {
+    background: #ffe9b8; color: #4a3d2c;
+    border-radius: 3px; padding: 0 2px;
+  }
+  .gsr-empty {
+    padding: 1.2rem 1rem;
+    text-align: center;
+    color: var(--text-soft);
+    font-style: italic;
+    font-family: 'Noto Sans Malayalam', 'Cormorant Garamond', serif;
+    font-size: 0.95rem;
+  }
+
+  /* Quick Jump panel */
+  .quick-jump-wrap { max-width: 900px; margin: 0 auto 1.5rem; }
+  .quick-jump-toggle {
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 0.75rem; width: 100%;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 40px;
+    padding: 0.65rem 1.2rem;
+    cursor: pointer;
+    font-family: 'Noto Sans Malayalam', 'Cormorant Garamond', serif;
+    font-size: 0.98rem;
+    color: var(--accent);
+    transition: background 0.15s, border-color 0.15s;
+    text-align: left;
+  }
+  .quick-jump-toggle:hover { background: #faf6ef; border-color: var(--accent-light); }
+  .quick-jump-toggle .qj-arrow {
+    font-size: 0.75rem; color: var(--accent-light);
+    transition: transform 0.2s;
+  }
+  .quick-jump-toggle.open .qj-arrow { transform: rotate(90deg); }
+  .quick-jump-panel {
+    display: none;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 0.9rem;
+    margin-top: 0.6rem;
+    box-shadow: 0 6px 18px rgba(90, 70, 40, 0.08);
+  }
+  .quick-jump-panel.open { display: block; }
+  .quick-jump-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+    gap: 0.5rem;
+  }
+  .qj-item {
+    display: flex; align-items: center; gap: 0.7rem;
+    padding: 0.65rem 0.9rem;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.15s;
+    font-family: 'Noto Sans Malayalam', 'Cormorant Garamond', serif;
+    text-align: left;
+    min-height: 58px;
+  }
+  .qj-item:hover {
+    background: #faf6ef; border-color: var(--accent-light);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(90, 70, 40, 0.08);
+  }
+  .qj-item.current { background: var(--selected); border-color: var(--accent); }
+  .qj-num {
+    flex-shrink: 0;
+    width: 30px; height: 30px;
+    background: var(--accent-light);
+    color: var(--accent);
+    border-radius: 50%;
+    display: inline-flex; align-items: center; justify-content: center;
+    font-family: system-ui, sans-serif;
+    font-size: 0.82rem; font-weight: 700;
+  }
+  .qj-item.current .qj-num { background: var(--accent); color: #fff; }
+  .qj-label {
+    flex: 1; font-size: 0.94rem; line-height: 1.35;
+    color: var(--text);
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+  .qj-count {
+    flex-shrink: 0;
+    font-size: 0.72rem;
+    color: var(--text-soft);
+    font-family: system-ui, sans-serif;
+    padding: 0.1rem 0.5rem;
+    background: #f0e8da;
+    border-radius: 40px;
+    margin-left: auto;
+  }
+  @media (max-width: 560px) {
+    .quick-jump-grid { grid-template-columns: 1fr; }
+    .qj-item { min-height: 52px; padding: 0.55rem 0.75rem; }
+    .qj-label { font-size: 0.9rem; }
+  }
+
+  .progress-wrap {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 40px; padding: 0.6rem 1.2rem;
+    display: flex; justify-content: space-between; align-items: center;
+    margin-bottom: 1.5rem; font-size: 0.9rem; color: var(--text-soft);
+  }
+  .progress-bar-bg {
+    flex: 1; height: 8px; background: #ede5da; border-radius: 40px;
+    margin: 0 1rem; overflow: hidden;
+  }
+  .progress-bar-fill {
+    height: 100%; width: 0%; background: var(--accent);
+    transition: width 0.3s ease; border-radius: 40px;
+  }
+
+  .section, .summary-section, .welcome-section, .prayers-section {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 8px; padding: 1.5rem 1.8rem;
+    box-shadow: 0 4px 20px rgba(90, 70, 40, 0.06);
+    animation: fadeIn 0.25s ease;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .section h2, .summary-section h2, .welcome-section h2, .prayers-section h2 {
+    font-size: 1.4rem; font-weight: 500; color: var(--text);
+    margin-bottom: 0.3rem; display: flex; align-items: center; gap: 0.6rem;
+  }
+  .section h2 .num {
+    display: inline-flex; justify-content: center; align-items: center;
+    width: 32px; height: 32px; background: var(--accent-light);
+    color: var(--accent); border-radius: 50%;
+    font-family: system-ui, sans-serif; font-size: 0.85rem;
+    font-weight: 600; flex-shrink: 0;
+  }
+  .section .sub, .summary-section .sub, .welcome-section .sub, .prayers-section .sub {
+    color: var(--text-soft); font-style: italic;
+    font-size: 0.95rem; margin-bottom: 1.2rem;
+  }
+
+  .section-verse {
+    font-style: italic;
+    color: var(--accent);
+    font-size: 1rem;
+    line-height: 1.7;
+    border-left: 3px solid var(--accent-light);
+    padding: 0.5rem 0 0.5rem 1rem;
+    margin: 0.6rem 0 1.4rem;
+    font-family: 'Noto Sans Malayalam', 'Cormorant Garamond', serif;
+  }
+
+  .sin-item.pulse-highlight {
+    animation: pulse 1.8s ease;
+    border-color: var(--accent) !important;
+    background: #fff3d9 !important;
+  }
+  @keyframes pulse {
+    0%, 100% { background: #fff3d9; }
+    50% { background: #ffe9b8; }
+  }
+
+  .welcome-section { text-align: center; }
+  .welcome-section .welcome-heading {
+    font-size: 1.9rem; font-weight: 500; margin-bottom: 1rem;
+    font-family: 'Noto Sans Malayalam', 'Cormorant Garamond', serif;
+  }
+  .welcome-section .welcome-body {
+    font-size: 1.08rem; line-height: 1.8; color: var(--text-soft);
+    max-width: 640px; margin: 0 auto 1.4rem;
+    font-family: 'Noto Sans Malayalam', 'Cormorant Garamond', serif;
+  }
+  .welcome-section .scripture {
+    font-style: italic; color: var(--accent); font-size: 1rem;
+    border-left: 3px solid var(--accent-light);
+    padding-left: 1rem; margin: 1.4rem auto;
+    max-width: 560px; text-align: left; line-height: 1.7;
+    font-family: 'Noto Sans Malayalam', 'Cormorant Garamond', serif;
+  }
+  .welcome-actions {
+    display: flex; justify-content: center;
+    gap: 0.75rem; margin-top: 1.5rem; flex-wrap: wrap;
+  }
+
+  .prayers-section { text-align: left; }
+  .prayer-block {
+    margin-bottom: 2rem; padding-bottom: 1.5rem;
+    border-bottom: 1px dashed var(--border);
+  }
+  .prayer-block:last-of-type { border-bottom: none; }
+  .prayer-title {
+    font-size: 1.15rem; font-weight: 600;
+    color: var(--accent); margin-bottom: 0.8rem;
+    padding-bottom: 0.4rem; border-bottom: 2px solid var(--accent-light);
+    font-family: 'Noto Sans Malayalam', 'Cormorant Garamond', serif;
+  }
+  .prayer-lang-pair {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 1.5rem; align-items: start;
+  }
+  @media (max-width: 680px) {
+    .prayer-lang-pair { grid-template-columns: 1fr; gap: 1rem; }
+  }
+  .prayer-lang-col {
+    font-size: 0.98rem; line-height: 1.75;
+    color: var(--text); white-space: pre-wrap;
+  }
+  .prayer-lang-col.ml {
+    font-family: 'Noto Sans Malayalam', 'Cormorant Garamond', serif;
+    font-size: 1.02rem; line-height: 1.9;
+  }
+  .prayer-lang-col.en {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 1rem;
+  }
+  .prayer-lang-label {
+    display: inline-block; font-size: 0.72rem;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    font-weight: 600; color: var(--text-soft);
+    margin-bottom: 0.5rem; padding: 0.15rem 0.6rem;
+    background: #f0e8da; border-radius: 40px;
+    font-family: system-ui, sans-serif;
+  }
+
+  .group { margin-bottom: 1.4rem; }
+  .group-title {
+    font-size: 1.05rem; font-weight: 600;
+    color: var(--accent); margin-bottom: 0.5rem;
+    padding-bottom: 0.3rem; border-bottom: 1px solid var(--border);
+  }
+  .sin-list { display: flex; flex-direction: column; gap: 0.35rem; }
+  .sin-item {
+    display: flex; align-items: flex-start; gap: 0.75rem;
+    padding: 0.7rem 1rem; border: 1px solid transparent;
+    border-radius: 6px; cursor: pointer; transition: all 0.15s;
+    user-select: none;
+  }
+  .sin-item:hover { background: #faf6ef; border-color: var(--border); }
+  .sin-item.selected { background: var(--selected); border-color: var(--accent-light); }
+  .sin-check {
+    flex-shrink: 0; width: 20px; height: 20px;
+    border: 1.5px solid var(--accent-light); border-radius: 4px;
+    margin-top: 2px; display: flex; align-items: center;
+    justify-content: center; transition: all 0.15s; background: #fff;
+  }
+  .sin-item.selected .sin-check { background: var(--accent); border-color: var(--accent); }
+  .sin-item.selected .sin-check::after {
+    content: '✓'; color: #fff; font-size: 0.8rem; font-weight: 700; line-height: 1;
+  }
+  .sin-label { flex: 1; font-size: 1rem; line-height: 1.4; color: var(--text); }
+  .sin-label .en { display: block; }
+  .sin-label .ml {
+    display: block; font-size: 0.95rem;
+    color: var(--text-soft); margin-top: 0.15rem;
+    font-family: 'Noto Sans Malayalam', 'Cormorant Garamond', serif;
+  }
+
+  .floating-nav {
+    position: fixed; left: 50%; bottom: 20px;
+    transform: translateX(-50%);
+    display: flex; align-items: center; gap: 0.6rem;
+    background: rgba(255, 253, 249, 0.95);
+    backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+    border: 1px solid var(--border); border-radius: 60px;
+    padding: 0.5rem 0.6rem;
+    box-shadow: 0 10px 30px rgba(90, 70, 40, 0.15), 0 4px 10px rgba(90, 70, 40, 0.08);
+    z-index: 1000;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+  }
+  .floating-nav.hidden {
+    opacity: 0; pointer-events: none;
+    transform: translateX(-50%) translateY(20px);
+  }
+  .floating-nav button {
+    font-family: inherit; font-size: 0.95rem;
+    padding: 0.6rem 1.2rem; border-radius: 40px;
+    border: 1px solid transparent; cursor: pointer;
+    transition: all 0.15s; display: inline-flex;
+    align-items: center; gap: 0.4rem;
+    letter-spacing: 0.02em; white-space: nowrap;
+  }
+  .floating-nav .fn-prev {
+    background: transparent; color: var(--accent); border-color: var(--accent-light);
+  }
+  .floating-nav .fn-prev:hover { background: #f8f2e8; border-color: var(--accent-light); }
+  .floating-nav .fn-next {
+    background: var(--accent); color: #fff; border-color: var(--accent);
+  }
+  .floating-nav .fn-next:hover { background: var(--accent-hover); border-color: var(--accent-hover); }
+  .floating-nav .fn-prev:disabled,
+  .floating-nav .fn-next:disabled { opacity: 0.35; cursor: not-allowed; }
+  .floating-nav .fn-page {
+    font-family: system-ui, sans-serif; font-size: 0.82rem;
+    color: var(--text-soft); padding: 0 0.6rem;
+    min-width: 80px; text-align: center;
+    letter-spacing: 0.04em; user-select: none;
+  }
+
+  @media (max-width: 560px) {
+    h1 { font-size: 1.7rem; }
+    .logo-img { width: 85px; }
+    .section, .summary-section, .welcome-section, .prayers-section { padding: 1.2rem 1.1rem; }
+    .sin-item { padding: 0.6rem 0.8rem; }
+    .floating-nav { bottom: 12px; padding: 0.4rem; gap: 0.35rem; }
+    .floating-nav button { padding: 0.55rem 0.9rem; font-size: 0.88rem; }
+    .floating-nav .fn-page { font-size: 0.75rem; min-width: 60px; padding: 0 0.3rem; }
+  }
+
+  .nav-row {
+    display: flex; justify-content: space-between;
+    gap: 0.75rem; margin-top: 1.5rem;
+  }
+  button.btn {
+    font-family: inherit; font-size: 1rem;
+    padding: 0.75rem 1.8rem; border-radius: 6px;
+    cursor: pointer; transition: all 0.15s;
+    border: 1px solid transparent; letter-spacing: 0.02em;
+  }
+  .btn-primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+  .btn-primary:hover { background: var(--accent-hover); border-color: var(--accent-hover); }
+  .btn-secondary { background: transparent; color: var(--accent); border-color: var(--accent-light); }
+  .btn-secondary:hover { background: #f8f2e8; border-color: var(--accent-light); }
+  button.btn:disabled { opacity: 0.4; cursor: not-allowed; }
+
+  .custom-textarea {
+    width: 100%; min-height: 180px; padding: 1rem;
+    font-family: inherit; font-size: 1rem; line-height: 1.7;
+    border: 1px solid var(--accent-light); border-radius: 6px;
+    background: #fff; color: var(--text); resize: vertical; outline: none;
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+  .custom-textarea:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(107, 85, 53, 0.12);
+  }
+  .char-counter {
+    text-align: right; font-size: 0.85rem; color: var(--text-soft);
+    margin-top: 0.4rem; font-family: system-ui, sans-serif;
+  }
+
+  .summary-category {
+    margin-bottom: 1.3rem; border-left: 3px solid var(--accent-light);
+    padding-left: 1rem;
+  }
+  .summary-category h3 {
+    font-size: 1.05rem; font-weight: 600;
+    color: var(--accent); margin-bottom: 0.5rem;
+  }
+  .summary-list { list-style: none; padding-left: 0; }
+  .summary-list li {
+    padding: 0.35rem 0 0.35rem 1.3rem; position: relative;
+    font-size: 0.98rem; line-height: 1.5; color: var(--text);
+  }
+  .summary-list li::before {
+    content: '✦'; position: absolute; left: 0; top: 0.45rem;
+    color: var(--accent-light); font-size: 0.75rem;
+  }
+  .no-sins {
+    text-align: center; color: var(--text-soft);
+    font-style: italic; padding: 2rem 1rem;
+    border: 2px dashed var(--border); border-radius: 8px;
+  }
+
+  .protect-panel {
+    background: #faf6ef; border: 1px solid var(--border);
+    border-radius: 8px; padding: 1.2rem 1.4rem; margin-top: 1.5rem;
+  }
+  .protect-row { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.8rem; }
+  .protect-row input[type="checkbox"] { width: 18px; height: 18px; accent-color: var(--accent); cursor: pointer; }
+  .protect-row label { cursor: pointer; font-size: 1rem; color: var(--text); font-weight: 600; }
+  .password-fields {
+    display: none; flex-direction: column; gap: 0.6rem;
+    margin-top: 0.6rem; padding-top: 0.8rem; border-top: 1px dashed var(--border);
+  }
+  .password-fields.show { display: flex; }
+  .password-fields input {
+    padding: 0.7rem 1rem; font-family: inherit; font-size: 1rem;
+    border: 1px solid var(--accent-light); border-radius: 6px;
+    background: #fff; color: var(--text); outline: none;
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+  .password-fields input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px rgba(107, 85, 53, 0.12);
+  }
+  .password-hint { font-size: 0.82rem; color: var(--text-soft); font-style: italic; }
+  .password-error { color: var(--danger); font-size: 0.85rem; display: none; }
+  .password-error.show { display: block; }
+
+  .download-row { display: flex; justify-content: center; margin-top: 1.8rem; }
+
+  .font-status {
+    text-align: center; font-size: 0.8rem;
+    color: var(--text-soft); margin-top: 0.5rem;
+    font-style: italic; min-height: 1rem;
+  }
+  .pdf-debug-status {
+    text-align: center; margin-top: 1rem;
+    font-size: 0.9rem; color: var(--text-soft);
+    font-family: system-ui, sans-serif;
+    min-height: 1.5em; padding: 0.5rem;
+  }
+
+  .pdf-renderer {
+    position: fixed; left: -10000px; top: 0;
+    width: 794px; min-height: 1123px;
+    box-sizing: border-box; padding: 55px;
+    background: #ffffff; color: #111;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    z-index: -1;
+  }
+  .pdf-renderer .pdf-logo-wrap { text-align: center; margin-bottom: 18px; }
+  .pdf-renderer .pdf-logo { width: 100px; height: auto; display: inline-block; }
+  .pdf-renderer .pdf-title {
+    font-family: 'Noto Sans Malayalam', Georgia, serif;
+    font-size: 26px; font-weight: 700;
+    text-align: center; color: #3c2d19; margin-bottom: 6px;
+  }
+  .pdf-renderer .pdf-date {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; font-size: 13px;
+    text-align: center; color: #78644b;
+    margin-bottom: 24px; padding-bottom: 14px;
+    border-bottom: 1px solid #c8b496;
+  }
+  .pdf-renderer .pdf-group-title {
+    font-family: 'Noto Sans Malayalam', Georgia, serif;
+    font-size: 18px; font-weight: 700;
+    color: #5a4620;
+    margin-top: 22px; margin-bottom: 10px;
+    padding-bottom: 5px; border-bottom: 1px solid #e0d2b8;
+  }
+  .pdf-renderer .pdf-sin { margin-bottom: 14px; padding-left: 6px; }
+  .pdf-renderer .pdf-sin-en {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 15px; color: #1a1208;
+    margin-bottom: 3px; line-height: 1.4;
+  }
+  .pdf-renderer .pdf-sin-ml {
+    font-family: 'Noto Sans Malayalam', sans-serif;
+    font-size: 17px; font-weight: 500;
+    color: #000; line-height: 1.85;
+    padding-left: 18px;
+  }
+  .pdf-renderer .pdf-notes-title {
+    font-family: 'Noto Sans Malayalam', Georgia, serif;
+    font-size: 18px; font-weight: 700;
+    color: #5a4620;
+    margin-top: 22px; margin-bottom: 10px;
+    padding-bottom: 5px; border-bottom: 1px solid #e0d2b8;
+  }
+  .pdf-renderer .pdf-notes-body {
+    font-family: 'Noto Sans Malayalam', 'Cormorant Garamond', serif;
+    font-size: 15px; color: #1a1208;
+    line-height: 1.8; white-space: pre-wrap;
+  }
+  .pdf-renderer .pdf-footer {
+    font-family: 'Noto Sans Malayalam', 'Cormorant Garamond', serif;
+    font-style: italic; font-size: 12px;
+    color: #78644b; text-align: center;
+    margin-top: 40px; padding-top: 14px;
+    border-top: 1px solid #d0c1a6;
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <header>
+    <img src="/static/images/logo.svg" alt="Mar Thoma Sleeva" class="logo-img">
+    <h1 id="title">Confession Preparation</h1>
+    <p class="subhead" id="subhead">Examine your conscience · Prepare your heart</p>
+    <div class="font-status" id="font-status">Loading libraries…</div>
+  </header>
+
+  <div class="top-controls">
+    <div class="lang-toggle">
+      <button id="btn-en" class="active" onclick="setLang('en')">English</button>
+      <button id="btn-ml" onclick="setLang('ml')">മലയാളം</button>
+    </div>
+    <button class="clear-btn" onclick="clearCache()" id="clearBtn">🗑 Clear cache</button>
+  </div>
+
+  <div class="global-search-wrap" id="globalSearchWrap" style="display:none;">
+    <span class="global-search-icon">🔍</span>
+    <input type="text" id="globalSearch" class="global-search-input"
+           placeholder="Search all sins…" autocomplete="off">
+    <button type="button" id="globalSearchClear" class="global-search-clear">✕</button>
+    <div class="global-search-results" id="globalSearchResults"></div>
+  </div>
+
+  <div class="quick-jump-wrap" id="quickJumpWrap" style="display:none;">
+    <button type="button" class="quick-jump-toggle" id="quickJumpToggle" onclick="toggleQuickJump()">
+      <span id="quickJumpToggleLabel">📖 Jump to a section…</span>
+      <span class="qj-arrow">▶</span>
+    </button>
+    <div class="quick-jump-panel" id="quickJumpPanel">
+      <div class="quick-jump-grid" id="quickJumpGrid"></div>
+    </div>
+  </div>
+
+  <div class="progress-wrap" id="progressWrap" style="display:none;">
+    <span id="progress-text">Section 1</span>
+    <div class="progress-bar-bg">
+      <div class="progress-bar-fill" id="progress-fill"></div>
+    </div>
+    <span id="selected-count">0 selected</span>
+  </div>
+
+  <div id="sections-container"></div>
+</div>
+
+<div class="floating-nav hidden" id="floatingNav">
+  <button class="fn-prev" id="fnPrev" onclick="prevSection()">
+    <span id="fnPrevLabel">← Back</span>
+  </button>
+  <span class="fn-page" id="fnPage">1 / 14</span>
+  <button class="fn-next" id="fnNext" onclick="nextSection()">
+    <span id="fnNextLabel">Next →</span>
+  </button>
+</div>
+
+<div id="pdf-renderer" class="pdf-renderer" aria-hidden="true"></div>
+
+{% include 'partials/section_sins.html' %}
+{% include 'partials/section_custom.html' %}
+{% include 'partials/summary.html' %}
+
+<script id="app-data" type="application/json">{{ data | tojson }}</script>
+
+<script>
+(function loadLibraries() {
+  const status = document.getElementById('font-status');
+  const setStatus = (msg) => { if (status) status.textContent = msg; };
+
+  const JS_PDF_URLS = [
+    'https://cdn.jsdelivr.net/npm/jspdf@2.5.1/dist/jspdf.umd.min.js',
+    'https://unpkg.com/jspdf@2.5.1/dist/jspdf.umd.min.js',
+    'https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js'
+  ];
+  const HTML2CANVAS_URLS = [
+    'https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js',
+    'https://unpkg.com/html2canvas@1.4.1/dist/html2canvas.min.js',
+    'https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js'
+  ];
+
+  function tryLoad(urls, checkFn, label) {
+    return new Promise((resolve, reject) => {
+      let i = 0;
+      function attempt() {
+        if (i >= urls.length) { reject(new Error(label + ' failed to load')); return; }
+        const url = urls[i++];
+        const s = document.createElement('script');
+        s.src = url;
+        s.async = false;
+        s.onload = () => { if (checkFn()) resolve(url); else attempt(); };
+        s.onerror = () => attempt();
+        document.head.appendChild(s);
+      }
+      attempt();
+    });
+  }
+
+  Promise.all([
+    tryLoad(JS_PDF_URLS, () => window.jspdf && window.jspdf.jsPDF, 'jsPDF'),
+    tryLoad(HTML2CANVAS_URLS, () => typeof window.html2canvas === 'function', 'html2canvas')
+  ]).then(() => {
+    setStatus('✓ Libraries ready');
+    window.dispatchEvent(new Event('libs-ready'));
+  }).catch(err => {
+    setStatus('⚠️ ' + err.message);
+    console.error(err);
+  });
+})();
+</script>
+
+{% raw %}
+<script>
+/* =========================================================
+   DATA + STATE
+   ========================================================= */
+const APP_DATA = JSON.parse(document.getElementById('app-data').textContent);
+const SECTIONS = APP_DATA.sections;
+
+const VIEW_WELCOME = -2;
+const VIEW_PRAYERS = SECTIONS.length;
+const VIEW_SUMMARY = SECTIONS.length + 1;
+const TOTAL_STEPS = SECTIONS.length + 1;
+
+let currentLang = 'en';
+let currentView = VIEW_WELCOME;
+let selections = {};
+
+(function preloadLogo() {
+  const img = new Image();
+  img.src = '/static/images/logo.png';
+})();
+
+/* =========================================================
+   PENITENT'S PRAYERS
+   ========================================================= */
+const PRAYERS = [
+  { en_title: 'Sign of the Cross', ml_title: 'കുരിശടയാളം',
+    en: 'In the name of the Father, and of the Son, and of the Holy Spirit. Amen.',
+    ml: 'പിതാവിന്റെയും പുത്രന്റെയും പരിശുദ്ധാത്മാവിന്റെയും നാമത്തിൽ. ആമേൻ.' },
+  { en_title: 'Opening of Confession', ml_title: 'കുമ്പസാരത്തിന്റെ ആമുഖം',
+    en: 'Bless me, Father, for I have sinned.\nIt has been ___ since my last confession.\nThese are my sins…',
+    ml: 'പിതാവേ, ഞാൻ പാപം ചെയ്തിരിക്കുന്നു, എന്നെ അനുഗ്രഹിക്കണമേ.\nഎന്റെ അവസാന കുമ്പസാരം മുതൽ ___ കാലമായി.\nഎന്റെ പാപങ്ങൾ ഇവയാകുന്നു…' },
+  { en_title: 'I Confess (The Confiteor)', ml_title: 'ഞാൻ ഏറ്റുപറയുന്നു',
+    en: 'I confess to almighty God, and to you, my brothers and sisters, that I have greatly sinned, in my thoughts and in my words, in what I have done and in what I have failed to do, through my fault, through my fault, through my most grievous fault; therefore I ask blessed Mary ever-Virgin, all the Angels and Saints, and you, my brothers and sisters, to pray for me to the Lord our God.',
+    ml: 'സർവ്വശക്തനായ ദൈവത്തോടും, നിത്യകന്യകയായ പരിശുദ്ധ മറിയത്തോടും, പ്രധാന മാലാഖയായ വിശുദ്ധ മിഖായേലിനോടും, വിശുദ്ധ സ്നാപക യോഹന്നാനോടും, ശ്ലീഹന്മാരായ വിശുദ്ധ പത്രോസിനോടും, വിശുദ്ധ പൗലോസിനോടും, വിശുദ്ധ തോമായോടും, പിതാവേ അങ്ങയോടും, ഞാൻ ഏറ്റുപറയുന്നു. വിചാരത്താലും, വാക്കാലും, പ്രവൃത്തിയാലും ഞാൻ വളരെ പാപം ചെയ്തു പോയി. എന്റെ പിഴ, എന്റെ പിഴ, എന്റെ വലിയ പിഴ.\n\nആകയാൽ, നിത്യകന്യകയായ പരിശുദ്ധ മറിയത്തോടും, പ്രധാന മാലാഖയായ വിശുദ്ധ മിഖായേലിനോടും, വിശുദ്ധ സ്നാപക യോഹന്നാനോടും, ശ്ലീഹന്മാരായ വിശുദ്ധ പത്രോസിനോടും വിശുദ്ധ പൗലോസിനോടും, വിശുദ്ധ തോമായോടും സകലവിശുദ്ധരോടും, പിതാവേ, അങ്ങയോടും, നമ്മുടെ കർത്താവായ ദൈവത്തോട് എനിക്ക് വേണ്ടി പ്രാർത്ഥിക്കണമേ എന്ന് ഞാൻ അപേക്ഷിക്കുന്നു. ആമേൻ.' },
+  { en_title: 'Act of Contrition (Manasthapa Pragadanam)', ml_title: 'മനസ്താപ പ്രകടനം',
+    en: 'O my God, I am heartily sorry for having offended Thee, and I detest all my sins because of Thy just punishments, but most of all because they offend Thee, my God, who art all-good and deserving of all my love. I firmly resolve, with the help of Thy grace, to sin no more and to avoid the near occasions of sin. Amen.',
+    ml: 'എന്റെ ദൈവമേ, ഏറ്റവും നല്ലവനും എല്ലാറ്റിനും ഉപരിയായി സ്നേഹിക്കപ്പെടാൻ യോഗ്യനുമായ അങ്ങേക്ക് എതിരായി പാപം ചെയ്തുപോയതിനാൽ പൂർണ്ണഹൃദയത്തോടെ ഞാൻ മനസ്തപിക്കുകയും പാപങ്ങളെ വെറുക്കുകയും ചെയ്യുന്നു.\n\nഅങ്ങയെ ഞാൻ സ്നേഹിക്കുന്നു. എന്റെ പാപങ്ങളാൽ എന്റെ ആത്മാവിനെ നഷ്ടപ്പെടുത്തി നരകത്തിന് അർഹനായി തീർന്നതിനാലും ഞാൻ ഖേദിക്കുന്നു.\n\nഅങ്ങയുടെ പ്രസാദവര സഹായത്താൽ പാപസഹചാര്യങ്ങളെ ഉപേക്ഷിക്കുമെന്നും മേലിൽ പാപം ചെയ്യുകയില്ലെന്നും ഞാൻ പ്രതിജ്ഞ ചെയ്യുന്നു.\n\nഎതെങ്കിലും ഒരു പാപം ചെയ്യുക എന്നതിനെക്കാൾ മരിക്കുവാനും ഞാൻ സന്നദ്ധനാണ്. ആമേൻ.' },
+  { en_title: 'Thanksgiving after Confession', ml_title: 'കുമ്പസാരത്തിനുശേഷമുള്ള നന്ദി',
+    en: 'O my God, I thank Thee for the grace of this confession. Help me to keep my resolution, and to grow in Thy love. Mary, my Mother, and all you saints of God, pray for me. Amen.',
+    ml: 'എന്റെ ദൈവമേ, ഈ കുമ്പസാരത്തിന്റെ കൃപയ്ക്കായി അങ്ങേക്ക് നന്ദി പറയുന്നു. എന്റെ പ്രതിജ്ഞ പാലിക്കാനും അങ്ങയുടെ സ്നേഹത്തിൽ വളരാനും എന്നെ സഹായിക്കണമേ. മറിയമേ, എന്റെ അമ്മേ, ദൈവത്തിന്റെ എല്ലാ വിശുദ്ധരേ, എനിക്കുവേണ്ടി പ്രാർത്ഥിക്കണമേ. ആമേൻ.' }
+];
+
+/* =========================================================
+   UI STRINGS
+   ========================================================= */
+const UI = {
+  en: {
+    title: 'Confession Preparation', subhead: 'Examine your conscience · Prepare your heart',
+    welcomeHeading: 'Welcome',
+    welcomeBody: 'This is a quiet place to prepare for the Sacrament of Reconciliation. You will walk through the Ten Commandments and other examinations of conscience, then pray the prayers of the penitent before confession.\n\nEverything stays on your device. Nothing is sent to any server.',
+    welcomeScripture: '"If we confess our sins, he is faithful and just, and will forgive our sins and cleanse us from all unrighteousness." — 1 John 1:9',
+    beginBtn: 'Begin →', welcomeSkip: 'I know what to do — skip to prayers →',
+    clearBtn: '🗑 Clear cache', clearConfirm: 'Clear all selections, notes, and start over?', clearDone: 'Cache cleared',
+    prayersTitle: 'Prayers of the Penitent',
+    prayersSub: 'Pray these before and during confession · Both languages shown side by side',
+    summaryTitle: 'Your Confession Summary', summarySub: 'Review your selected sins, then download as PDF',
+    protectLabel: '🔒 Protect PDF with a password',
+    passwordPlaceholder: 'Enter password', passwordConfirmPlaceholder: 'Confirm password',
+    passwordHint: 'This password will be required to open the PDF. Please remember it — it cannot be recovered.',
+    passwordError: 'Passwords do not match.', passwordErrorShort: 'Password must be at least 4 characters.',
+    downloadBtn: 'Download PDF', back: '← Back', next: 'Next →', startOver: 'Start Over',
+    personalNotes: 'Personal Notes & Resolution', noSins: 'You have not selected any sins. That is okay — go in peace.',
+    section: 'Section', of: 'of', summary: 'Summary', prayers: 'Prayers', selected: 'selected',
+    pdfTitle: 'Confession Preparation', pdfNotes: 'Personal Notes & Resolution',
+    pdfFooter: 'Prepared privately · Not a substitute for the Sacrament of Reconciliation',
+    generating: 'Generating PDF…', labelEn: 'English', labelMl: 'Malayalam',
+    searchPlaceholder: 'Search all sins…', searchEmpty: 'No matching sins found.',
+    jumpLabel: '📖 Jump to a section…'
+  },
+  ml: {
+    title: 'കുമ്പസാര തയ്യാറെടുപ്പ്', subhead: 'മനസ്സാക്ഷി പരിശോധിക്കുക · ഹൃദയം ഒരുക്കുക',
+    welcomeHeading: 'സ്വാഗതം',
+    welcomeBody: 'കുമ്പസാരക്കൂദാശയ്ക്ക് ഒരുങ്ങാൻ ഇതൊരു ശാന്തമായ സ്ഥലമാണ്. പത്തു പ്രമാണങ്ങളും മറ്റു ആത്മശോധനകളും ചുറ്റി നടന്ന ശേഷം, കുമ്പസാരത്തിനു മുമ്പ് പശ്ചാത്താപിയുടെ പ്രാർത്ഥനകൾ ചൊല്ലാം.\n\nഎല്ലാം നിങ്ങളുടെ ഉപകരണത്തിൽ തന്നെ നിലനിൽക്കുന്നു. ഒന്നും ഒരു സെർവറിലേക്കും അയയ്ക്കുന്നില്ല.',
+    welcomeScripture: '"നാം പാപങ്ങൾ ഏറ്റുപറയുന്നെങ്കിൽ, അവൻ വിശ്വസ്തനും നീതിമാനുമാകയാൽ, പാപങ്ങൾ ക്ഷമിക്കുകയും എല്ലാ അനീതികളിൽ നിന്നു നമ്മെ ശുദ്ധീകരിക്കുകയും ചെയ്യും." — 1 യോഹന്നാൻ 1:9',
+    beginBtn: 'ആരംഭിക്കുക →', welcomeSkip: 'എനിക്കറിയാം — പ്രാർത്ഥനകളിലേക്ക് പോകുക →',
+    clearBtn: '🗑 കാഷെ മായ്ക്കുക', clearConfirm: 'എല്ലാ തിരഞ്ഞെടുപ്പുകളും കുറിപ്പുകളും മായ്ച്ച് വീണ്ടും തുടങ്ങണോ?', clearDone: 'കാഷെ മായ്ച്ചു',
+    prayersTitle: 'പശ്ചാത്താപിയുടെ പ്രാർത്ഥനകൾ',
+    prayersSub: 'കുമ്പസാരത്തിനു മുമ്പും സമയത്തും ഇവ ചൊല്ലുക · രണ്ടു ഭാഷകളും ഒപ്പം കാണിച്ചിരിക്കുന്നു',
+    summaryTitle: 'നിങ്ങളുടെ കുമ്പസാര സംഗ്രഹം', summarySub: 'നിങ്ങൾ തിരഞ്ഞെടുത്ത പാപങ്ങൾ പരിശോധിച്ച് PDF ആയി ഡൗൺലോഡ് ചെയ്യുക',
+    protectLabel: '🔒 പാസ്‌വേഡ് ഉപയോഗിച്ച് PDF സംരക്ഷിക്കുക',
+    passwordPlaceholder: 'പാസ്‌വേഡ് നൽകുക', passwordConfirmPlaceholder: 'പാസ്‌വേഡ് സ്ഥിരീകരിക്കുക',
+    passwordHint: 'PDF തുറക്കാൻ ഈ പാസ്‌വേഡ് ആവശ്യമായിരിക്കും. ഇത് ഓർത്തുവയ്ക്കുക — വീണ്ടെടുക്കാൻ കഴിയില്ല.',
+    passwordError: 'പാസ്‌വേഡുകൾ പൊരുത്തപ്പെടുന്നില്ല.', passwordErrorShort: 'പാസ്‌വേഡ് കുറഞ്ഞത് 4 അക്ഷരങ്ങൾ ഉണ്ടായിരിക്കണം.',
+    downloadBtn: 'PDF ഡൗൺലോഡ് ചെയ്യുക', back: '← പിന്നോട്ട്', next: 'അടുത്തത് →', startOver: 'വീണ്ടും തുടങ്ങുക',
+    personalNotes: 'വ്യക്തിപരമായ കുറിപ്പുകളും പ്രതിജ്ഞയും',
+    noSins: 'നിങ്ങൾ ഒരു പാപവും തിരഞ്ഞെടുത്തിട്ടില്ല. കുഴപ്പമില്ല — സമാധാനത്തോടെ പോകുക.',
+    section: 'വിഭാഗം', of: '/', summary: 'സംഗ്രഹം', prayers: 'പ്രാർത്ഥനകൾ', selected: 'തിരഞ്ഞെടുത്തു',
+    pdfTitle: 'കുമ്പസാര തയ്യാറെടുപ്പ്', pdfNotes: 'വ്യക്തിപരമായ കുറിപ്പുകളും പ്രതിജ്ഞയും',
+    pdfFooter: 'സ്വകാര്യമായി തയ്യാറാക്കിയത് · കുമ്പസാരക്കൂദാശയ്ക്ക് പകരമല്ല',
+    generating: 'PDF തയ്യാറാക്കുന്നു…', labelEn: 'ഇംഗ്ലീഷ്', labelMl: 'മലയാളം',
+    searchPlaceholder: 'എല്ലാ പാപങ്ങളും തിരയുക…', searchEmpty: 'പൊരുത്തപ്പെടുന്ന പാപങ്ങൾ കണ്ടെത്തിയില്ല.',
+    jumpLabel: '📖 ഒരു വിഭാഗത്തിലേക്ക് പോകുക…'
+  }
+};
+
+/* =========================================================
+   FONTS
+   ========================================================= */
+function setFontStatus(text) {
+  const el = document.getElementById('font-status');
+  if (el) el.textContent = text;
+}
+
+async function ensureFontsLoaded() {
+  setFontStatus('Loading Malayalam font…');
+  try {
+    if (document.fonts && document.fonts.load) {
+      await Promise.all([
+        document.fonts.load('400 16px "Noto Sans Malayalam"'),
+        document.fonts.load('500 16px "Noto Sans Malayalam"'),
+        document.fonts.load('700 16px "Noto Sans Malayalam"')
+      ]);
+    }
+    if (document.fonts && document.fonts.ready) await document.fonts.ready;
+    setFontStatus('✓ Fonts ready');
+  } catch (e) {
+    console.warn('Font preload warning:', e);
+    setFontStatus('Font warning (continuing)');
+  }
+}
+
+/* =========================================================
+   TEMPLATE ENGINE
+   ========================================================= */
+function renderTemplate(tplId, ctx) {
+  const raw = document.getElementById(tplId).innerHTML;
+  return renderBlock(raw, ctx);
+}
+
+function renderBlock(template, ctx) {
+  let result = '';
+  let i = 0;
+
+  while (i < template.length) {
+    const eachStart = template.indexOf('{{#each ', i);
+    const ifStart = template.indexOf('{{#if ', i);
+
+    let nextTag = -1, isEach = false;
+    if (eachStart !== -1 && ifStart !== -1) {
+      if (eachStart < ifStart) { nextTag = eachStart; isEach = true; }
+      else { nextTag = ifStart; isEach = false; }
+    } else if (eachStart !== -1) { nextTag = eachStart; isEach = true; }
+    else if (ifStart !== -1) { nextTag = ifStart; isEach = false; }
+
+    if (nextTag === -1) { result += template.slice(i); break; }
+    result += template.slice(i, nextTag);
+
+    if (isEach) {
+      const tagMatch = template.slice(nextTag).match(/^\{\{#each\s+([\w.]+)\}\}/);
+      if (!tagMatch) { result += template[nextTag]; i = nextTag + 1; continue; }
+      const key = tagMatch[1];
+      const innerStart = nextTag + tagMatch[0].length;
+
+      let depth = 1, j = innerStart, innerEnd = -1;
+      while (j < template.length) {
+        const open = template.indexOf('{{#each ', j);
+        const close = template.indexOf('{{/each}}', j);
+        if (close === -1) break;
+        if (open !== -1 && open < close) { depth++; j = open + 8; }
+        else { depth--; if (depth === 0) { innerEnd = close; break; } j = close + 9; }
+      }
+      if (innerEnd === -1) { i = template.length; break; }
+
+      const innerTemplate = template.slice(innerStart, innerEnd);
+      const afterClose = innerEnd + '{{/each}}'.length;
+
+      let arr = resolveKey(key, ctx);
+      if (!Array.isArray(arr)) arr = [];
+
+      arr.forEach((item, idx) => {
+        const childCtx = Object.assign({}, ctx, item, { '@index': idx });
+        result += renderBlock(innerTemplate, childCtx);
+      });
+
+      i = afterClose;
+    } else {
+      const tagMatch = template.slice(nextTag).match(/^\{\{#if\s+([\w.]+)\}\}/);
+      if (!tagMatch) { result += template[nextTag]; i = nextTag + 1; continue; }
+      const key = tagMatch[1];
+      const innerStart = nextTag + tagMatch[0].length;
+
+      let depth = 1, j = innerStart, innerEnd = -1;
+      while (j < template.length) {
+        const open = template.indexOf('{{#if ', j);
+        const close = template.indexOf('{{/if}}', j);
+        if (close === -1) break;
+        if (open !== -1 && open < close) { depth++; j = open + 6; }
+        else { depth--; if (depth === 0) { innerEnd = close; break; } j = close + 7; }
+      }
+      if (innerEnd === -1) { i = template.length; break; }
+
+      const innerTemplate = template.slice(innerStart, innerEnd);
+      const afterClose = innerEnd + '{{/if}}'.length;
+
+      if (resolveKey(key, ctx)) result += renderBlock(innerTemplate, ctx);
+      i = afterClose;
+    }
+  }
+
+  result = result.replace(/\{\{([^#\/][^}]*)\}\}/g, (_, key) => {
+    const k = key.trim();
+    if (k === '@index') return ctx['@index'] !== undefined ? ctx['@index'] : '';
+    const val = resolveKey(k, ctx);
+    return val !== undefined && val !== null ? String(val) : '';
+  });
+
+  return result;
+}
+
+function resolveKey(path, ctx) {
+  if (!path) return undefined;
+  const parts = path.split('.');
+  let cur = ctx;
+  for (const p of parts) { if (cur == null) return undefined; cur = cur[p]; }
+  return cur;
+}
+
+/* =========================================================
+   LANGUAGE
+   ========================================================= */
+function setLang(lang) {
+  currentLang = lang;
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  document.getElementById('btn-ml').classList.toggle('active', lang === 'ml');
+  document.getElementById('title').textContent = UI[lang].title;
+  document.getElementById('subhead').textContent = UI[lang].subhead;
+  document.getElementById('clearBtn').textContent = UI[lang].clearBtn;
+  const gs = document.getElementById('globalSearch');
+  if (gs) gs.placeholder = UI[lang].searchPlaceholder;
+  const qjLabel = document.getElementById('quickJumpToggleLabel');
+  if (qjLabel) qjLabel.textContent = UI[lang].jumpLabel;
+  document.documentElement.lang = lang;
+  buildQuickJump();
+  renderView();
+}
+
+/* =========================================================
+   PROGRESS + FLOATING NAV
+   ========================================================= */
+function updateProgress() {
+  const wrap = document.getElementById('progressWrap');
+  const progressText = document.getElementById('progress-text');
+  const fill = document.getElementById('progress-fill');
+
+  if (currentView === VIEW_WELCOME) { wrap.style.display = 'none'; return; }
+  wrap.style.display = 'flex';
+
+  if (currentView === VIEW_SUMMARY) {
+    progressText.textContent = UI[currentLang].summary + ' · ' + TOTAL_STEPS + ' ' + UI[currentLang].of + ' ' + TOTAL_STEPS;
+    fill.style.width = '100%';
+  } else if (currentView === VIEW_PRAYERS) {
+    progressText.textContent = UI[currentLang].prayers + ' · ' + TOTAL_STEPS + ' ' + UI[currentLang].of + ' ' + TOTAL_STEPS;
+    fill.style.width = '100%';
+  } else {
+    const num = currentView + 1;
+    progressText.textContent = UI[currentLang].section + ' ' + num + ' ' + UI[currentLang].of + ' ' + TOTAL_STEPS;
+    fill.style.width = ((num) / TOTAL_STEPS) * 100 + '%';
+  }
+  updateSelectedCount();
+}
+
+function updateSelectedCount() {
+  const count = Object.keys(selections).length;
+  const label = document.getElementById('selected-count');
+  if (label) label.textContent = count + ' ' + UI[currentLang].selected;
+}
+
+function updateFloatingNav() {
+  const nav = document.getElementById('floatingNav');
+  const pageLabel = document.getElementById('fnPage');
+  const prevBtn = document.getElementById('fnPrev');
+  const nextBtn = document.getElementById('fnNext');
+  const prevLabel = document.getElementById('fnPrevLabel');
+  const nextLabel = document.getElementById('fnNextLabel');
+  const t = UI[currentLang];
+
+  if (currentView === VIEW_WELCOME) { nav.classList.add('hidden'); return; }
+  nav.classList.remove('hidden');
+
+  prevLabel.textContent = t.back;
+  nextLabel.textContent = t.next;
+
+  if (currentView === VIEW_SUMMARY) pageLabel.textContent = t.summary;
+  else if (currentView === VIEW_PRAYERS) pageLabel.textContent = t.prayers;
+  else pageLabel.textContent = (currentView + 1) + ' / ' + TOTAL_STEPS;
+
+  prevBtn.disabled = currentView <= VIEW_WELCOME;
+  nextBtn.disabled = currentView >= VIEW_SUMMARY;
+
+  if (currentView === VIEW_SUMMARY) nextBtn.style.display = 'none';
+  else nextBtn.style.display = '';
+
+  if (currentView === 0) prevBtn.disabled = false;
+}
+
+/* =========================================================
+   VIEW ROUTER
+   ========================================================= */
+function renderView() {
+  updateProgress();
+  updateFloatingNav();
+
+  const gsWrap = document.getElementById('globalSearchWrap');
+  if (gsWrap) {
+    gsWrap.style.display = (currentView === VIEW_WELCOME) ? 'none' : 'block';
+    if (currentView === VIEW_WELCOME) {
+      const gs = document.getElementById('globalSearch');
+      if (gs) { gs.value = ''; hideSearchResults(); }
+    }
+  }
+
+  const qjWrap = document.getElementById('quickJumpWrap');
+  if (qjWrap) {
+    qjWrap.style.display = (currentView === VIEW_WELCOME) ? 'none' : 'block';
+  }
+  updateQuickJumpCurrent();
+
+  if (currentView === VIEW_WELCOME) renderWelcome();
+  else if (currentView === VIEW_PRAYERS) renderPrayers();
+  else if (currentView >= VIEW_SUMMARY) renderSummaryView();
+  else renderSection();
+}
+
+/* =========================================================
+   WELCOME
+   ========================================================= */
+function renderWelcome() {
+  const container = document.getElementById('sections-container');
+  const t = currentLang;
+
+  let html = '<div class="welcome-section">';
+  html += '<h2 class="welcome-heading">' + UI[t].welcomeHeading + '</h2>';
+  html += '<p class="welcome-body">' + UI[t].welcomeBody.replace(/\n/g, '<br>') + '</p>';
+  html += '<p class="scripture">' + UI[t].welcomeScripture + '</p>';
+  html += '<div class="welcome-actions">';
+  html += '<button class="btn btn-primary" onclick="startFlow()">' + UI[t].beginBtn + '</button>';
+  html += '<button class="btn btn-secondary" onclick="skipToPrayers()">' + UI[t].welcomeSkip + '</button>';
+  html += '</div></div>';
+
+  container.innerHTML = html;
+}
+
+function startFlow() { currentView = 0; renderView(); window.scrollTo({ top: 0, behavior: 'smooth' }); }
+function skipToPrayers() { currentView = VIEW_PRAYERS; renderView(); window.scrollTo({ top: 0, behavior: 'smooth' }); }
+
+/* =========================================================
+   SECTIONS
+   ========================================================= */
+function renderSection() {
+  const container = document.getElementById('sections-container');
+  const section = SECTIONS[currentView];
+
+  if (section.type === 'sins') {
+    const groups = section.groups.map((g, gi) => ({
+      title: g.title[currentLang],
+      groupIndex: gi,
+      sins: g.sins.map(s => ({ en: s.en, ml: s.ml }))
+    }));
+
+    const verseText = section.verse ? (section.verse[currentLang] || section.verse.en || '') : '';
+
+    const html = renderTemplate('tpl-section-sins', {
+      sectionId: section.id,
+      num: currentView + 1,
+      title: section.title[currentLang],
+      sub: section.sub[currentLang],
+      verse: verseText,
+      groups: groups,
+      isFirst: currentView === 0
+    });
+    container.innerHTML = html;
+
+    container.querySelectorAll('.sin-item').forEach(el => {
+      const key = el.dataset.sinKey;
+      if (selections[key]) el.classList.add('selected');
+    });
+  } else if (section.type === 'custom') {
+    const html = renderTemplate('tpl-section-custom', {
+      sectionId: section.id,
+      num: currentView + 1,
+      title: section.title[currentLang],
+      sub: section.sub[currentLang],
+      maxlength: section.maxlength,
+      placeholder: section.placeholder[currentLang]
+    });
+    container.innerHTML = html;
+
+    const ta = document.getElementById('customInput');
+    const saved = localStorage.getItem('confession_custom_text') || '';
+    ta.value = saved;
+    document.getElementById('customCounter').textContent = saved.length + ' / ' + section.maxlength;
+    ta.addEventListener('input', () => {
+      document.getElementById('customCounter').textContent = ta.value.length + ' / ' + section.maxlength;
+      localStorage.setItem('confession_custom_text', ta.value);
+    });
+  }
+
+  applyUILang();
+}
+
+/* =========================================================
+   GLOBAL SEARCH
+   ========================================================= */
+function buildGlobalIndex() {
+  const index = [];
+  SECTIONS.forEach((section, si) => {
+    if (section.type !== 'sins') return;
+    section.groups.forEach((group, gi) => {
+      group.sins.forEach((sin, si2) => {
+        index.push({
+          sectionId: section.id,
+          sectionIndex: si,
+          sectionTitle: section.title.en,
+          sectionTitleMl: section.title.ml,
+          groupIndex: gi,
+          sinIndex: si2,
+          key: section.id + '::' + gi + '::' + si2,
+          en: sin.en,
+          ml: sin.ml
+        });
+      });
+    });
+  });
+  return index;
+}
+
+const GLOBAL_INDEX = buildGlobalIndex();
+
+function highlightMatch(text, query) {
+  if (!query) return escapeHtml(text);
+  const lower = text.toLowerCase();
+  const q = query.toLowerCase();
+  const idx = lower.indexOf(q);
+  if (idx === -1) return escapeHtml(text);
+  const before = text.slice(0, idx);
+  const match = text.slice(idx, idx + q.length);
+  const after = text.slice(idx + q.length);
+  return escapeHtml(before) + '<mark>' + escapeHtml(match) + '</mark>' + escapeHtml(after);
+}
+
+function runGlobalSearch(query) {
+  const q = (query || '').trim().toLowerCase();
+  if (!q) return [];
+  const results = [];
+  for (const item of GLOBAL_INDEX) {
+    const enMatch = item.en.toLowerCase().indexOf(q) !== -1;
+    const mlMatch = item.ml.toLowerCase().indexOf(q) !== -1;
+    if (enMatch || mlMatch) results.push(item);
+    if (results.length >= 40) break;
+  }
+  return results;
+}
+
+function showSearchResults(results, query) {
+  const box = document.getElementById('globalSearchResults');
+  if (!box) return;
+
+  if (!results.length) {
+    box.innerHTML = '<div class="gsr-empty">' + escapeHtml(UI[currentLang].searchEmpty) + '</div>';
+    box.classList.add('show');
+    return;
+  }
+
+  const t = currentLang;
+  let html = '';
+  results.forEach((r) => {
+    const sectionLabel = (t === 'en') ? r.sectionTitle : r.sectionTitleMl;
+    html += '<div class="global-search-result" data-key="' + r.key + '" data-section-index="' + r.sectionIndex + '">';
+    html += '<div class="gsr-section">' + escapeHtml(sectionLabel) + '</div>';
+    html += '<div class="gsr-en">' + highlightMatch(r.en, query) + '</div>';
+    html += '<div class="gsr-ml">' + highlightMatch(r.ml, query) + '</div>';
+    html += '</div>';
+  });
+  box.innerHTML = html;
+  box.classList.add('show');
+
+  box.querySelectorAll('.global-search-result').forEach(el => {
+    el.addEventListener('click', () => {
+      const key = el.dataset.key;
+      const si = parseInt(el.dataset.sectionIndex, 10);
+      jumpToSin(si, key);
+    });
+  });
+}
+
+function hideSearchResults() {
+  const box = document.getElementById('globalSearchResults');
+  if (box) box.classList.remove('show');
+}
+
+function jumpToSin(sectionIndex, sinKey) {
+  currentView = sectionIndex;
+  renderView();
+  hideSearchResults();
+  const gs = document.getElementById('globalSearch');
+  if (gs) gs.value = '';
+  const clearBtn = document.getElementById('globalSearchClear');
+  if (clearBtn) clearBtn.classList.remove('visible');
+
+  setTimeout(() => {
+    const el = document.querySelector('.sin-item[data-sin-key="' + sinKey + '"]');
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      el.classList.add('pulse-highlight');
+      setTimeout(() => el.classList.remove('pulse-highlight'), 2000);
+    }
+  }, 120);
+}
+
+function initGlobalSearch() {
+  const input = document.getElementById('globalSearch');
+  const clearBtn = document.getElementById('globalSearchClear');
+  if (!input) return;
+
+  input.addEventListener('input', () => {
+    const q = input.value;
+    clearBtn.classList.toggle('visible', q.length > 0);
+    if (!q.trim()) { hideSearchResults(); return; }
+    const results = runGlobalSearch(q);
+    showSearchResults(results, q);
+  });
+
+  input.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      input.value = '';
+      clearBtn.classList.remove('visible');
+      hideSearchResults();
+    }
+  });
+
+  clearBtn.addEventListener('click', () => {
+    input.value = '';
+    clearBtn.classList.remove('visible');
+    hideSearchResults();
+    input.focus();
+  });
+
+  document.addEventListener('click', (e) => {
+    const wrap = document.getElementById('globalSearchWrap');
+    if (wrap && !wrap.contains(e.target)) hideSearchResults();
+  });
+}
+
+/* =========================================================
+   QUICK JUMP
+   ========================================================= */
+function toggleQuickJump() {
+  const panel = document.getElementById('quickJumpPanel');
+  const toggle = document.getElementById('quickJumpToggle');
+  if (!panel || !toggle) return;
+  panel.classList.toggle('open');
+  toggle.classList.toggle('open');
+}
+
+function buildQuickJump() {
+  const grid = document.getElementById('quickJumpGrid');
+  if (!grid) return;
+  const t = currentLang;
+
+  let html = '';
+  SECTIONS.forEach((section, index) => {
+    const sectionTitle = section.title[t] || section.title.en;
+    let sinCount = 0;
+    if (section.type === 'sins') {
+      section.groups.forEach(g => sinCount += g.sins.length);
+    } else {
+      sinCount = '—';
+    }
+
+    const numLabel = (index + 1).toString().padStart(2, '0');
+
+    html += '<button type="button" class="qj-item" data-section-index="' + index + '" onclick="jumpToSection(' + index + ')">';
+    html += '  <span class="qj-num">' + numLabel + '</span>';
+    html += '  <span class="qj-label">' + escapeHtml(sectionTitle) + '</span>';
+    html += '  <span class="qj-count">' + sinCount + '</span>';
+    html += '</button>';
+  });
+
+  grid.innerHTML = html;
+  updateQuickJumpCurrent();
+}
+
+function updateQuickJumpCurrent() {
+  const items = document.querySelectorAll('.qj-item');
+  items.forEach(el => {
+    const idx = parseInt(el.dataset.sectionIndex, 10);
+    el.classList.toggle('current', idx === currentView);
+  });
+}
+
+function jumpToSection(index) {
+  currentView = index;
+  renderView();
+  const panel = document.getElementById('quickJumpPanel');
+  const toggle = document.getElementById('quickJumpToggle');
+  if (panel) panel.classList.remove('open');
+  if (toggle) toggle.classList.remove('open');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+/* =========================================================
+   PRAYERS
+   ========================================================= */
+function renderPrayers() {
+  const container = document.getElementById('sections-container');
+  const t = currentLang;
+
+  let html = '<div class="prayers-section">';
+  html += '<h2>' + UI[t].prayersTitle + '</h2>';
+  html += '<p class="sub">' + UI[t].prayersSub + '</p>';
+
+  PRAYERS.forEach(p => {
+    const title = t === 'en' ? p.en_title : p.ml_title;
+    html += '<div class="prayer-block">';
+    html += '<div class="prayer-title">' + title + '</div>';
+    html += '<div class="prayer-lang-pair">';
+    html += '<div>';
+    html += '<span class="prayer-lang-label">' + UI[t].labelEn + '</span>';
+    html += '<div class="prayer-lang-col en">' + escapeHtml(p.en) + '</div>';
+    html += '</div>';
+    html += '<div>';
+    html += '<span class="prayer-lang-label">' + UI[t].labelMl + '</span>';
+    html += '<div class="prayer-lang-col ml">' + escapeHtml(p.ml) + '</div>';
+    html += '</div>';
+    html += '</div></div>';
+  });
+
+  html += '</div>';
+  container.innerHTML = html;
+}
+
+/* =========================================================
+   SUMMARY
+   ========================================================= */
+function renderSummaryView() {
+  const container = document.getElementById('sections-container');
+  const html = renderTemplate('tpl-summary', {});
+  container.innerHTML = html;
+  applyUILang();
+  renderSummaryContent();
+}
+
+function renderSummaryContent() {
+  const container = document.getElementById('summaryContent');
+  if (!container) return;
+  const t = currentLang;
+  let html = '';
+  let totalSelected = 0;
+
+  SECTIONS.forEach(section => {
+    if (section.type !== 'sins') return;
+    section.groups.forEach((group, gi) => {
+      const selected = [];
+      group.sins.forEach((sin, si) => {
+        if (selections[section.id + '::' + gi + '::' + si]) selected.push(sin);
+      });
+      if (selected.length) {
+        totalSelected += selected.length;
+        html += '<div class="summary-category">';
+        html += '<h3>' + group.title[t] + '</h3>';
+        html += '<ul class="summary-list">';
+        selected.forEach(sin => { html += '<li>' + sin[t] + '</li>'; });
+        html += '</ul></div>';
+      }
+    });
+  });
+
+  const customText = localStorage.getItem('confession_custom_text') || '';
+  if (customText.trim()) {
+    html += '<div class="summary-category">';
+    html += '<h3>' + UI[t].personalNotes + '</h3>';
+    html += '<p style="white-space:pre-wrap;font-size:0.98rem;line-height:1.6;color:var(--text);">' + escapeHtml(customText) + '</p>';
+    html += '</div>';
+  }
+
+  if (totalSelected === 0 && !customText.trim()) {
+    html = '<div class="no-sins">' + UI[t].noSins + '</div>';
+  }
+
+  container.innerHTML = html;
+}
+
+function escapeHtml(str) {
+  return String(str).replace(/[&<>"]/g, m => ({
+    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'
+  })[m]);
+}
+
+/* =========================================================
+   TOGGLE / NAV
+   ========================================================= */
+function toggleSin(el) {
+  const key = el.dataset.sinKey;
+  if (selections[key]) {
+    delete selections[key];
+    el.classList.remove('selected');
+  } else {
+    selections[key] = true;
+    el.classList.add('selected');
+  }
+  updateSelectedCount();
+}
+
+function nextSection() {
+  if (currentView < VIEW_SUMMARY) {
+    currentView++; renderView();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+}
+function prevSection() {
+  if (currentView > VIEW_WELCOME) {
+    currentView--; renderView();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+}
+
+function clearCache() {
+  if (!confirm(UI[currentLang].clearConfirm)) return;
+  selections = {};
+  localStorage.removeItem('confession_custom_text');
+  localStorage.removeItem('confession_prep');
+  currentView = VIEW_WELCOME;
+  const gs = document.getElementById('globalSearch');
+  if (gs) gs.value = '';
+  hideSearchResults();
+  renderView();
+  setFontStatus(UI[currentLang].clearDone);
+  setTimeout(() => setFontStatus('✓ Libraries ready'), 1800);
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+/* =========================================================
+   APPLY UI TRANSLATIONS
+   ========================================================= */
+function applyUILang() {
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.dataset.i18n;
+    if (UI[currentLang][key]) el.textContent = UI[currentLang][key];
+  });
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+    const key = el.dataset.i18nPlaceholder;
+    if (UI[currentLang][key]) el.placeholder = UI[currentLang][key];
+  });
+}
+
+/* =========================================================
+   PASSWORD
+   ========================================================= */
+function togglePasswordFields() {
+  const cb = document.getElementById('protectCheckbox');
+  const fields = document.getElementById('passwordFields');
+  if (!cb || !fields) return;
+  fields.classList.toggle('show', cb.checked);
+  if (!cb.checked) {
+    const p1 = document.getElementById('pdfPassword');
+    const p2 = document.getElementById('pdfPasswordConfirm');
+    if (p1) p1.value = '';
+    if (p2) p2.value = '';
+    const err = document.getElementById('passwordError');
+    if (err) err.classList.remove('show');
+  }
+}
+
+/* =========================================================
+   BUILD PDF HTML
+   ========================================================= */
+function buildRendererHtml() {
+  const t = currentLang;
+  let html = '';
+
+  html += '<div class="pdf-logo-wrap"><img src="/static/images/logo.png" class="pdf-logo" alt=""></div>';
+  html += '<div class="pdf-title">' + UI[t].pdfTitle + '</div>';
+  html += '<div class="pdf-date">' + new Date().toLocaleString() + '</div>';
+
+  SECTIONS.forEach(section => {
+    if (section.type !== 'sins') return;
+    section.groups.forEach((group, gi) => {
+      const selected = [];
+      group.sins.forEach((sin, si) => {
+        if (selections[section.id + '::' + gi + '::' + si]) selected.push(sin);
+      });
+      if (selected.length) {
+        html += '<div class="pdf-group-title">' + group.title[t] + '</div>';
+        selected.forEach(sin => {
+          html += '<div class="pdf-sin">';
+          if (t === 'en') html += '<div class="pdf-sin-en">• ' + escapeHtml(sin.en) + '</div>';
+          else html += '<div class="pdf-sin-ml">• ' + escapeHtml(sin.ml) + '</div>';
+          html += '</div>';
+        });
+      }
+    });
+  });
+
+  const customText = localStorage.getItem('confession_custom_text') || '';
+  if (customText.trim()) {
+    html += '<div class="pdf-notes-title">' + UI[t].pdfNotes + '</div>';
+    html += '<div class="pdf-notes-body">' + escapeHtml(customText) + '</div>';
+  }
+
+  html += '<div class="pdf-footer">' + UI[t].pdfFooter + '</div>';
+  return html;
+}
+
+function createDebugStatusEl() {
+  let el = document.getElementById('pdf-debug-status');
+  if (!el) {
+    el = document.createElement('div');
+    el.id = 'pdf-debug-status';
+    el.className = 'pdf-debug-status';
+    document.querySelector('.container').appendChild(el);
+  }
+  return el;
+}
+
+/* =========================================================
+   PDF GENERATION
+   ========================================================= */
+async function downloadPDF() {
+  const t = currentLang;
+  const status = createDebugStatusEl();
+  const setStatus = (msg, color) => {
+    console.log('[PDF]', msg);
+    status.textContent = msg;
+    status.style.color = color || '#6b5a40';
+  };
+
+  const btn = document.getElementById('downloadBtn');
+  const originalHtml = btn ? btn.innerHTML : '';
+
+  try {
+    setStatus('Step 1: Starting…');
+    if (!window.jspdf || !window.jspdf.jsPDF) throw new Error('jsPDF not loaded — refresh the page');
+    if (typeof window.html2canvas !== 'function') throw new Error('html2canvas not loaded — refresh the page');
+
+    const cb = document.getElementById('protectCheckbox');
+    const usePassword = cb && cb.checked;
+    const errEl = document.getElementById('passwordError');
+    if (errEl) errEl.classList.remove('show');
+
+    let password = '';
+    if (usePassword) {
+      const p1 = (document.getElementById('pdfPassword') || {}).value || '';
+      const p2 = (document.getElementById('pdfPasswordConfirm') || {}).value || '';
+      if (p1.length < 4) {
+        if (errEl) { errEl.textContent = UI[t].passwordErrorShort; errEl.classList.add('show'); }
+        setStatus('❌ Password must be at least 4 characters', '#b55a3a');
+        return;
+      }
+      if (p1 !== p2) {
+        if (errEl) { errEl.textContent = UI[t].passwordError; errEl.classList.add('show'); }
+        setStatus('❌ Passwords do not match', '#b55a3a');
+        return;
+      }
+      password = p1;
+      setStatus('Step 2: Password set');
+    } else {
+      setStatus('Step 2: No password');
+    }
+
+    if (btn) { btn.disabled = true; btn.innerHTML = UI[t].generating; }
+
+    setStatus('Step 3: Loading fonts…');
+    await ensureFontsLoaded();
+
+    setStatus('Step 4: Rendering HTML…');
+    const renderer = document.getElementById('pdf-renderer');
+    if (!renderer) throw new Error('pdf-renderer div missing');
+    renderer.innerHTML = buildRendererHtml();
+
+    await new Promise(r => requestAnimationFrame(() => requestAnimationFrame(r)));
+    await new Promise(r => setTimeout(r, 300));
+
+    setStatus('Step 5: Capturing image…');
+    const canvas = await html2canvas(renderer, {
+      scale: 2, backgroundColor: '#ffffff',
+      useCORS: true, logging: false,
+      windowWidth: 794, width: 794
+    });
+    setStatus('Step 6: Captured ' + canvas.width + '×' + canvas.height);
+
+    const imgData = canvas.toDataURL('image/jpeg', 0.9);
+
+    setStatus('Step 7: Creating PDF…');
+    const { jsPDF } = window.jspdf;
+
+    const pdfOptions = { orientation: 'portrait', unit: 'mm', format: 'a4' };
+    if (usePassword && password) {
+      pdfOptions.encryption = {
+        userPassword: password,
+        ownerPassword: password + '-owner',
+        userPermissions: ['print', 'modify', 'copy', 'annot-forms']
+      };
+    }
+
+    const pdf = new jsPDF(pdfOptions);
+    setStatus(usePassword ? 'Step 8: Encrypted PDF created' : 'Step 8: PDF created');
+
+    const pageW = pdf.internal.pageSize.getWidth();
+    const pageH = pdf.internal.pageSize.getHeight();
+    const margin = 8;
+    const usableW = pageW - margin * 2;
+    const imgHeight = canvas.height * usableW / canvas.width;
+
+    let heightLeft = imgHeight;
+    let position = margin;
+
+    pdf.addImage(imgData, 'JPEG', margin, position, usableW, imgHeight);
+    heightLeft -= (pageH - margin * 2);
+
+    while (heightLeft > 0) {
+      position = margin - (imgHeight - heightLeft);
+      pdf.addPage();
+      pdf.addImage(imgData, 'JPEG', margin, position, usableW, imgHeight);
+      heightLeft -= (pageH - margin * 2);
+    }
+
+    renderer.innerHTML = '';
+
+    setStatus('Step 9: Generating blob…');
+    const pdfBlob = pdf.output('blob');
+
+    setStatus('Step 10: Downloading…');
+    const url = URL.createObjectURL(pdfBlob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'confession-preparation.pdf';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    setTimeout(() => URL.revokeObjectURL(url), 2000);
+
+    setStatus(usePassword ? '✅ Password-protected PDF downloaded' : '✅ PDF downloaded', '#487a4a');
+  } catch (e) {
+    console.error('[PDF] Fatal:', e);
+    setStatus('❌ Error: ' + (e.message || e), '#b55a3a');
+    alert('PDF generation failed:\n\n' + (e.message || e));
+  } finally {
+    if (btn) { btn.disabled = false; btn.innerHTML = originalHtml; }
+  }
+}
+
+/* =========================================================
+   INIT
+   ========================================================= */
+window.addEventListener('libs-ready', () => { ensureFontsLoaded(); });
+initGlobalSearch();
+buildQuickJump();
+renderView();
+</script>
+{% endraw %}
+</body>
+</html>

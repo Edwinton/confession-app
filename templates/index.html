@@ -1826,8 +1826,10 @@ function toggleSinNote(btn) {
   const tooltipW = tooltipRect.width;
   const tooltipH = tooltipRect.height;
 
+  // Desired left so the tooltip centers on the icon
   let left = rect.left + (rect.width / 2) - (tooltipW / 2);
 
+  // Vertical placement: prefer above, flip below if not enough room
   let top = rect.top - tooltipH - 14;
   let placeBelow = false;
   if (top < 8) {
@@ -1835,8 +1837,10 @@ function toggleSinNote(btn) {
     placeBelow = true;
   }
 
-  const maxLeft = window.innerWidth - tooltipW - 12;
-  if (left < 12) left = 12;
+  // Keep the tooltip inside the viewport horizontally
+  const margin = 12;
+  const maxLeft = window.innerWidth - tooltipW - margin;
+  if (left < margin) left = margin;
   if (left > maxLeft) left = maxLeft;
 
   if (placeBelow) tooltip.classList.add('below');

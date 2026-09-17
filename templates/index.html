@@ -294,7 +294,7 @@
     font-family: 'Noto Sans Malayalam', 'Cormorant Garamond', serif;
   }
 
-  /* ---------- Pastoral guardrail notes ---------- */
+  /* Pastoral guardrail notes */
   .gentle-note {
     font-family: 'Noto Sans Malayalam', 'Cormorant Garamond', serif;
     font-style: italic;
@@ -313,14 +313,7 @@
     margin: 1.2rem auto 0;
     text-align: left;
   }
-  .gentle-note.summary-note {
-    margin: 1rem 0 1.4rem;
-  }
-  .gentle-note strong {
-    color: var(--accent);
-    font-style: normal;
-    font-weight: 600;
-  }
+  .gentle-note.summary-note { margin: 1rem 0 1.4rem; }
 
   .about-howto {
     margin-top: 1.5rem;
@@ -366,17 +359,92 @@
     justify-content: center;
   }
 
-  .pdf-renderer .pdf-gentle-note {
-    font-family: 'Noto Sans Malayalam', 'Cormorant Garamond', serif;
+  /* Info icon + tooltip for sin notes */
+  .sin-info {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    margin-top: 2px;
+    margin-left: 0.25rem;
+    border-radius: 50%;
+    border: 1.5px solid var(--accent-light);
+    background: #fff;
+    color: var(--accent);
+    font-family: Georgia, serif;
     font-style: italic;
-    font-size: 12.5px;
-    line-height: 1.7;
-    color: #78644b;
-    background: #faf6ef;
-    border-left: 3px solid #c9b69a;
-    padding: 8px 12px;
-    margin-bottom: 20px;
-    border-radius: 0 4px 4px 0;
+    font-weight: 600;
+    font-size: 0.78rem;
+    line-height: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.15s;
+    user-select: none;
+    padding: 0;
+  }
+  .sin-info:hover,
+  .sin-info:focus,
+  .sin-info.active {
+    background: var(--accent);
+    color: #fff;
+    border-color: var(--accent);
+    outline: none;
+  }
+  .sin-info::after { content: 'i'; }
+
+  .sin-tooltip {
+    position: fixed;
+    z-index: 1500;
+    max-width: 320px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.75rem 0.95rem;
+    font-family: 'Noto Sans Malayalam', 'Cormorant Garamond', serif;
+    font-size: 0.9rem;
+    line-height: 1.65;
+    color: var(--text);
+    box-shadow: 0 8px 24px rgba(90, 70, 40, 0.18);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.15s ease;
+    white-space: normal;
+  }
+  .sin-tooltip.show {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .sin-tooltip::before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: var(--arrow-offset, 16px);
+    border: 7px solid transparent;
+    border-bottom-color: var(--border);
+  }
+  .sin-tooltip::after {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: calc(var(--arrow-offset, 16px) + 1px);
+    border: 6px solid transparent;
+    border-bottom-color: var(--card);
+    margin-bottom: -1px;
+  }
+  .sin-tooltip.below::before {
+    bottom: auto;
+    top: 100%;
+    border-bottom-color: transparent;
+    border-top-color: var(--border);
+  }
+  .sin-tooltip.below::after {
+    bottom: auto;
+    top: 100%;
+    border-bottom-color: transparent;
+    border-top-color: var(--card);
+    margin-top: -1px;
+    margin-bottom: 0;
   }
 
   .sin-item.pulse-highlight {
@@ -476,7 +544,7 @@
   .sin-item.selected .sin-check::after {
     content: '✓'; color: #fff; font-size: 0.8rem; font-weight: 700; line-height: 1;
   }
-  .sin-label { flex: 1; font-size: 1rem; line-height: 1.4; color: var(--text); }
+  .sin-label { flex: 1; font-size: 1rem; line-height: 1.4; color: var(--text); cursor: pointer; }
   .sin-label .en { display: block; }
   .sin-label .ml {
     display: block; font-size: 0.95rem;
@@ -534,6 +602,7 @@
     .floating-nav button { padding: 0.55rem 0.9rem; font-size: 0.88rem; }
     .floating-nav .fn-page { font-size: 0.75rem; min-width: 60px; padding: 0 0.3rem; }
     .gentle-note { font-size: 0.9rem; padding: 0.7rem 0.85rem; }
+    .sin-tooltip { max-width: 260px; font-size: 0.85rem; }
   }
 
   .nav-row {
@@ -632,9 +701,6 @@
     min-height: 1.5em; padding: 0.5rem;
   }
 
-  /* =========================================================
-     HIDDEN PDF RENDERER
-     ========================================================= */
   .pdf-renderer {
     position: fixed;
     left: -10000px;
@@ -709,7 +775,7 @@
     border-top: 1px solid #d0c1a6;
   }
 
-  /* ---------- About modal ---------- */
+  /* About modal */
   .about-modal {
     position: fixed;
     inset: 0;
@@ -868,6 +934,9 @@
 </div>
 
 <div id="pdf-renderer" class="pdf-renderer" aria-hidden="true"></div>
+
+<!-- Sin note tooltip (single shared element) -->
+<div class="sin-tooltip" id="sinTooltip" role="tooltip" aria-hidden="true"></div>
 
 <!-- About modal -->
 <div class="about-modal" id="aboutModal" onclick="if(event.target===this) closeAbout()">
@@ -1230,6 +1299,7 @@ function setLang(lang) {
   const qjLabel = document.getElementById('quickJumpToggleLabel');
   if (qjLabel) qjLabel.textContent = UI[lang].jumpLabel;
   document.documentElement.lang = lang;
+  hideSinNote();
   buildQuickJump();
   renderView();
 }
@@ -1355,7 +1425,13 @@ function renderSection() {
     const groups = section.groups.map((g, gi) => ({
       title: g.title[currentLang],
       groupIndex: gi,
-      sins: g.sins.map(s => ({ en: s.en, ml: s.ml }))
+      sins: g.sins.map(s => ({
+        en: s.en,
+        ml: s.ml,
+        note: s.note || null,
+        noteEn: s.note ? s.note.en : '',
+        noteMl: s.note ? s.note.ml : ''
+      }))
     }));
 
     const verseText = section.verse ? (section.verse[currentLang] || section.verse.en || '') : '';
@@ -1661,7 +1737,6 @@ function renderSummaryContent() {
     });
   });
 
-  // Guardrail note first
   html += '<div class="gentle-note summary-note">' + UI[t].summaryGuardrail + '</div>';
 
   if (selectedSins.length > 0) {
@@ -1709,6 +1784,98 @@ function toggleSin(el) {
   updateSelectedCount();
 }
 
+/* =========================================================
+   INFO TOOLTIP
+   ========================================================= */
+let activeInfoBtn = null;
+
+function toggleSinNote(btn) {
+  const tooltip = document.getElementById('sinTooltip');
+  if (!tooltip) return;
+
+  if (activeInfoBtn === btn && tooltip.classList.contains('show')) {
+    hideSinNote();
+    return;
+  }
+
+  if (activeInfoBtn) activeInfoBtn.classList.remove('active');
+
+  const noteText = (currentLang === 'ml')
+    ? (btn.dataset.noteMl || btn.dataset.noteEn || '')
+    : (btn.dataset.noteEn || btn.dataset.noteMl || '');
+
+  if (!noteText) return;
+
+  tooltip.textContent = noteText;
+  tooltip.classList.add('show');
+  tooltip.setAttribute('aria-hidden', 'false');
+  btn.classList.add('active');
+  activeInfoBtn = btn;
+
+  const rect = btn.getBoundingClientRect();
+  const tooltipRect = tooltip.getBoundingClientRect();
+
+  tooltip.classList.remove('below');
+
+  let top = rect.top - tooltipRect.height - 12;
+  let left = rect.left - 16;
+  let placeBelow = false;
+
+  if (top < 8) {
+    top = rect.bottom + 12;
+    placeBelow = true;
+  }
+
+  const maxLeft = window.innerWidth - tooltipRect.width - 12;
+  if (left < 12) left = 12;
+  if (left > maxLeft) left = maxLeft;
+
+  if (placeBelow) tooltip.classList.add('below');
+
+  tooltip.style.top = top + 'px';
+  tooltip.style.left = left + 'px';
+
+  const arrowLeft = rect.left - left + rect.width / 2;
+  tooltip.style.setProperty('--arrow-offset', Math.max(8, arrowLeft - 8) + 'px');
+}
+
+function hideSinNote() {
+  const tooltip = document.getElementById('sinTooltip');
+  if (tooltip) {
+    tooltip.classList.remove('show');
+    tooltip.setAttribute('aria-hidden', 'true');
+  }
+  if (activeInfoBtn) {
+    activeInfoBtn.classList.remove('active');
+    activeInfoBtn = null;
+  }
+}
+
+document.addEventListener('click', (e) => {
+  if (!activeInfoBtn) return;
+  if (e.target.classList && e.target.classList.contains('sin-info')) return;
+  hideSinNote();
+});
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    if (activeInfoBtn) hideSinNote();
+    const modal = document.getElementById('aboutModal');
+    if (modal && modal.classList.contains('open')) closeAbout();
+  }
+});
+
+window.addEventListener('scroll', () => {
+  if (activeInfoBtn) hideSinNote();
+}, { passive: true });
+
+window.addEventListener('resize', () => {
+  if (activeInfoBtn) hideSinNote();
+});
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
 function nextSection() {
   if (currentView < VIEW_SUMMARY) {
     currentView++; renderView();
@@ -1731,6 +1898,7 @@ function clearCache() {
   const gs = document.getElementById('globalSearch');
   if (gs) gs.value = '';
   hideSearchResults();
+  hideSinNote();
   renderView();
   setFontStatus(UI[currentLang].clearDone);
   setTimeout(() => setFontStatus('✓ Libraries ready'), 1800);
@@ -1773,13 +1941,6 @@ function closeAbout() {
   document.body.style.overflow = '';
 }
 
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape') {
-    const modal = document.getElementById('aboutModal');
-    if (modal && modal.classList.contains('open')) closeAbout();
-  }
-});
-
 /* =========================================================
    APPLY UI TRANSLATIONS
    ========================================================= */
@@ -1813,7 +1974,7 @@ function togglePasswordFields() {
 }
 
 /* =========================================================
-   BUILD PDF HTML — flat list + guardrail note
+   BUILD PDF HTML
    ========================================================= */
 function buildRendererHtml() {
   const t = currentLang;

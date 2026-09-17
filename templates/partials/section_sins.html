@@ -17,12 +17,20 @@
           <h3 class="group-title">{{title}}</h3>
           <div class="sin-list">
             {{#each sins}}
-              <div class="sin-item" data-sin-key="{{sectionId}}::{{groupIndex}}::{{@index}}" onclick="toggleSin(this)">
-                <div class="sin-check"></div>
-                <div class="sin-label">
+              <div class="sin-item" data-sin-key="{{sectionId}}::{{groupIndex}}::{{@index}}">
+                <div class="sin-check" onclick="toggleSin(this.closest('.sin-item'))"></div>
+                <div class="sin-label" onclick="toggleSin(this.closest('.sin-item'))">
                   <span class="en">{{en}}</span>
                   <span class="ml">{{ml}}</span>
                 </div>
+                {{#if note}}
+                  <button type="button"
+                          class="sin-info"
+                          aria-label="More information"
+                          onclick="event.stopPropagation(); toggleSinNote(this);"
+                          data-note-en="{{noteEn}}"
+                          data-note-ml="{{noteMl}}"></button>
+                {{/if}}
               </div>
             {{/each}}
           </div>

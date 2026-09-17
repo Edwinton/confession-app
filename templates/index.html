@@ -549,7 +549,7 @@
      ========================================================= */
   .pdf-renderer {
     position: fixed;
-    left: 0;
+    left: -10000px;
     top: 0;
     width: 794px;
     min-height: 1123px;
@@ -558,9 +558,8 @@
     background: #ffffff;
     color: #111;
     font-family: 'Noto Sans Malayalam', 'Cormorant Garamond', Georgia, sans-serif;
-    visibility: hidden;
     pointer-events: none;
-    z-index: -100;
+    z-index: 1;
   }
   .pdf-renderer .pdf-logo-wrap { text-align: center; margin-bottom: 18px; }
   .pdf-renderer .pdf-logo { width: 100px; height: auto; display: inline-block; }

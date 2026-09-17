@@ -997,15 +997,12 @@
   </div>
 </div>
 
-{# Client-side templates. Each partial is wrapped in {% raw %} so Jinja
-   leaves the {{#if}}/{{#each}}/{{var}} syntax alone for the in-page engine. #}
 {% include 'partials/section_sins.html' %}
 {% include 'partials/section_custom.html' %}
 {% include 'partials/summary.html' %}
 
-{# This one is intentionally NOT raw — Jinja must inject the data. #}
 <script id="app-data" type="application/json">{{ data | tojson }}</script>
-{% raw %}
+
 <script>
 (function loadLibraries() {
   const status = document.getElementById('font-status');
@@ -1052,6 +1049,7 @@
 })();
 </script>
 
+{% raw %}
 <script>
 /* =========================================================
    DATA + STATE
@@ -1719,6 +1717,15 @@ function buildQuickJump() {
     html += '</button>';
   });
 
+  // Append the Summary as the final entry
+  const summaryLabel = UI[t].summary;
+  const summaryNum = (SECTIONS.length + 1).toString().padStart(2, '0');
+  html += '<button type="button" class="qj-item" data-view="summary" onclick="jumpToSummary()">';
+  html += '  <span class="qj-num">' + summaryNum + '</span>';
+  html += '  <span class="qj-label">' + escapeHtml(summaryLabel) + '</span>';
+  html += '  <span class="qj-count">—</span>';
+  html += '</button>';
+
   grid.innerHTML = html;
   updateQuickJumpCurrent();
 }
@@ -1726,13 +1733,27 @@ function buildQuickJump() {
 function updateQuickJumpCurrent() {
   const items = document.querySelectorAll('.qj-item');
   items.forEach(el => {
-    const idx = parseInt(el.dataset.sectionIndex, 10);
-    el.classList.toggle('current', idx === currentView);
+    if (el.dataset.view === 'summary') {
+      el.classList.toggle('current', currentView === VIEW_SUMMARY);
+    } else {
+      const idx = parseInt(el.dataset.sectionIndex, 10);
+      el.classList.toggle('current', idx === currentView);
+    }
   });
 }
 
 function jumpToSection(index) {
   currentView = index;
+  renderView();
+  const panel = document.getElementById('quickJumpPanel');
+  const toggle = document.getElementById('quickJumpToggle');
+  if (panel) panel.classList.remove('open');
+  if (toggle) toggle.classList.remove('open');
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function jumpToSummary() {
+  currentView = VIEW_SUMMARY;
   renderView();
   const panel = document.getElementById('quickJumpPanel');
   const toggle = document.getElementById('quickJumpToggle');
@@ -2119,12 +2140,12 @@ async function downloadPDF() {
       const p2 = (document.getElementById('pdfPasswordConfirm') || {}).value || '';
       if (p1.length < 4) {
         if (errEl) { errEl.textContent = UI[t].passwordErrorShort; errEl.classList.add('show'); }
-        setStatus('❌ Password must be at least 4 characters', '#b55a3a');
+        setStatus('Password must be at least 4 characters', '#b55a3a');
         return;
       }
       if (p1 !== p2) {
         if (errEl) { errEl.textContent = UI[t].passwordError; errEl.classList.add('show'); }
-        setStatus('❌ Passwords do not match', '#b55a3a');
+        setStatus('Passwords do not match', '#b55a3a');
         return;
       }
       password = p1;
@@ -2209,10 +2230,10 @@ async function downloadPDF() {
     document.body.removeChild(a);
     setTimeout(() => URL.revokeObjectURL(url), 2000);
 
-    setStatus(usePassword ? '✅ Password-protected PDF downloaded' : '✅ PDF downloaded', '#487a4a');
+    setStatus(usePassword ? 'Password-protected PDF downloaded' : 'PDF downloaded', '#487a4a');
   } catch (e) {
     console.error('[PDF] Fatal:', e);
-    setStatus('❌ Error: ' + (e.message || e), '#b55a3a');
+    setStatus('Error: ' + (e.message || e), '#b55a3a');
     alert('PDF generation failed:\n\n' + (e.message || e));
   } finally {
     if (btn) { btn.disabled = false; btn.innerHTML = originalHtml; }

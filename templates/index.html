@@ -2111,6 +2111,8 @@ function createDebugStatusEl() {
 
 /* =========================================================
    PDF GENERATION
+   Slices the rendered canvas into per-page chunks so each
+   page shows a distinct vertical band of the document.
    ========================================================= */
 async function downloadPDF() {
   const t = currentLang;
@@ -2179,8 +2181,6 @@ async function downloadPDF() {
     });
     setStatus('Step 6: Captured ' + canvas.width + '×' + canvas.height);
 
-    const imgData = canvas.toDataURL('image/png');
-
     setStatus('Step 7: Creating PDF…');
     const { jsPDF } = window.jspdf;
 
@@ -2200,19 +2200,35 @@ async function downloadPDF() {
     const pageH = pdf.internal.pageSize.getHeight();
     const margin = 8;
     const usableW = pageW - margin * 2;
-    const imgHeight = canvas.height * usableW / canvas.width;
+    const usableH = pageH - margin * 2;
 
-    let heightLeft = imgHeight;
-    let position = margin;
+    // How many pixels of the source canvas per mm of PDF width
+    const pxPerMm = canvas.width / usableW;
+    const pageHeightPx = usableH * pxPerMm;
 
-    pdf.addImage(imgData, 'PNG', margin, position, usableW, imgHeight, undefined, 'FAST');
-    heightLeft -= (pageH - margin * 2);
+    let renderedPx = 0;
 
-    while (heightLeft > 0) {
-      position = margin - (imgHeight - heightLeft);
-      pdf.addPage();
-      pdf.addImage(imgData, 'PNG', margin, position, usableW, imgHeight, undefined, 'FAST');
-      heightLeft -= (pageH - margin * 2);
+    while (renderedPx < canvas.height) {
+      const sliceHeightPx = Math.min(pageHeightPx, canvas.height - renderedPx);
+
+      // Copy this vertical band into a temporary canvas
+      const sliceCanvas = document.createElement('canvas');
+      sliceCanvas.width = canvas.width;
+      sliceCanvas.height = Math.ceil(sliceHeightPx);
+      const sctx = sliceCanvas.getContext('2d');
+      sctx.drawImage(
+        canvas,
+        0, renderedPx, canvas.width, sliceHeightPx,
+        0, 0, canvas.width, sliceHeightPx
+      );
+
+      const sliceData = sliceCanvas.toDataURL('image/png');
+      const sliceHeightMm = sliceHeightPx / pxPerMm;
+
+      if (renderedPx > 0) pdf.addPage();
+      pdf.addImage(sliceData, 'PNG', margin, margin, usableW, sliceHeightMm, undefined, 'FAST');
+
+      renderedPx += sliceHeightPx;
     }
 
     renderer.innerHTML = '';

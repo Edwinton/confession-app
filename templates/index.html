@@ -1535,18 +1535,14 @@ function renderSummaryContent() {
   SECTIONS.forEach(section => {
     if (section.type !== 'sins') return;
     section.groups.forEach((group, gi) => {
-      const selected = [];
       group.sins.forEach((sin, si) => {
-        if (selections[section.id + '::' + gi + '::' + si]) selected.push(sin);
+        if (selections[section.id + '::' + gi + '::' + si]) {
+          html += '<div class="pdf-sin">';
+          if (t === 'en') html += '<div class="pdf-sin-en">• ' + escapeHtml(sin.en) + '</div>';
+          else html += '<div class="pdf-sin-ml">• ' + escapeHtml(sin.ml) + '</div>';
+          html += '</div>';
+        }
       });
-      if (selected.length) {
-        totalSelected += selected.length;
-        html += '<div class="summary-category">';
-        html += '<h3>' + group.title[t] + '</h3>';
-        html += '<ul class="summary-list">';
-        selected.forEach(sin => { html += '<li>' + sin[t] + '</li>'; });
-        html += '</ul></div>';
-      }
     });
   });
 

@@ -51,7 +51,6 @@
   h1 { font-size: 2.2rem; font-weight: 500; letter-spacing: 0.02em; }
   .subhead { color: var(--text-soft); font-style: italic; margin-top: 0.4rem; font-size: 1rem; }
 
-  /* ==== TOP CONTROLS (fixed structure) ==== */
   .top-controls {
     display: flex; justify-content: center; align-items: center;
     gap: 0.75rem; margin: 1.2rem 0 1.8rem; flex-wrap: wrap;
@@ -59,8 +58,7 @@
   .lang-toggle { display: flex; gap: 0.5rem; }
   .lang-toggle button,
   .clear-btn,
-  .about-btn,
-  .centres-btn {
+  .about-btn {
     background: transparent; border: 1px solid var(--accent-light);
     padding: 0.4rem 1.2rem; border-radius: 40px; cursor: pointer;
     font-family: inherit; font-size: 0.95rem; color: var(--accent);
@@ -70,12 +68,10 @@
   .lang-toggle button.active { background: var(--accent); color: #fff; border-color: var(--accent); }
   .lang-toggle button:hover { background: #f8f2e8; }
   .lang-toggle button.active:hover { background: var(--accent-hover); }
-  .about-btn:hover,
-  .centres-btn:hover { background: #f8f2e8; border-color: var(--accent-light); }
+  .about-btn:hover { background: #f8f2e8; border-color: var(--accent-light); }
   .clear-btn { color: var(--danger); border-color: #e3c8bd; }
   .clear-btn:hover { background: #fff2ee; border-color: var(--danger); }
 
-  /* Global search */
   .global-search-wrap { position: relative; max-width: 640px; margin: 0 auto 1rem; }
   .global-search-input {
     width: 100%;
@@ -163,7 +159,6 @@
     font-size: 0.95rem;
   }
 
-  /* Quick Jump panel */
   .quick-jump-wrap { max-width: 900px; margin: 0 auto 1.5rem; }
   .quick-jump-toggle {
     display: flex; align-items: center; justify-content: space-between;
@@ -305,7 +300,6 @@
     font-family: 'Noto Sans Malayalam', 'Cormorant Garamond', serif;
   }
 
-  /* Pastoral guardrail notes */
   .gentle-note {
     font-family: 'Noto Sans Malayalam', 'Cormorant Garamond', serif;
     font-style: italic;
@@ -326,7 +320,6 @@
   }
   .gentle-note.summary-note { margin: 1rem 0 1.4rem; }
 
-  /* Safeguarding / care panel */
   .care-panel {
     font-family: 'Noto Sans Malayalam', 'Cormorant Garamond', serif;
     background: var(--care-bg);
@@ -403,7 +396,6 @@
     justify-content: center;
   }
 
-  /* Info icon + tooltip for sin notes */
   .sin-info {
     flex-shrink: 0;
     width: 22px;
@@ -584,10 +576,6 @@
     color: inherit;
   }
   .sin-item:hover { background: #faf6ef; border-color: var(--border); }
-  .sin-item:focus-visible {
-    outline: 2px solid var(--accent);
-    outline-offset: 2px;
-  }
   .sin-item.selected { background: var(--selected); border-color: var(--accent-light); }
   .sin-check {
     flex-shrink: 0; width: 20px; height: 20px;
@@ -940,31 +928,28 @@
     <div class="font-status" id="font-status">Loading libraries…</div>
   </header>
 
-  <!-- Fixed: single .top-controls, proper nesting -->
   <div class="top-controls">
-    <div class="lang-toggle" role="group" aria-label="Language">
-      <button id="btn-en" class="active" onclick="setLang('en')" aria-pressed="true">English</button>
-      <button id="btn-ml" onclick="setLang('ml')" aria-pressed="false">മലയാളം</button>
+    <div class="lang-toggle">
+      <button id="btn-en" class="active" onclick="setLang('en')">English</button>
+      <button id="btn-ml" onclick="setLang('ml')">മലയാളം</button>
     </div>
     <button class="about-btn" onclick="openAbout()" id="aboutBtn">✦ About</button>
-    <a href="/centres" class="centres-btn">📍 Centres</a>
+    <a href="/centres" class="about-btn" style="text-decoration:none;">Centres</a>
     <button class="clear-btn" onclick="clearCache()" id="clearBtn">🗑 Clear cache</button>
   </div>
 
   <div class="global-search-wrap" id="globalSearchWrap" style="display:none;">
-    <span class="global-search-icon" aria-hidden="true">🔍</span>
+    <span class="global-search-icon">🔍</span>
     <input type="text" id="globalSearch" class="global-search-input"
-           placeholder="Search all sins…" autocomplete="off"
-           aria-label="Search all sins">
-    <button type="button" id="globalSearchClear" class="global-search-clear" aria-label="Clear search">✕</button>
-    <div class="global-search-results" id="globalSearchResults" role="listbox"></div>
+           placeholder="Search all sins…" autocomplete="off">
+    <button type="button" id="globalSearchClear" class="global-search-clear">✕</button>
+    <div class="global-search-results" id="globalSearchResults"></div>
   </div>
 
   <div class="quick-jump-wrap" id="quickJumpWrap" style="display:none;">
-    <button type="button" class="quick-jump-toggle" id="quickJumpToggle" onclick="toggleQuickJump()"
-            aria-expanded="false" aria-controls="quickJumpPanel">
+    <button type="button" class="quick-jump-toggle" id="quickJumpToggle" onclick="toggleQuickJump()">
       <span id="quickJumpToggleLabel">📖 Jump to a section…</span>
-      <span class="qj-arrow" aria-hidden="true">▶</span>
+      <span class="qj-arrow">▶</span>
     </button>
     <div class="quick-jump-panel" id="quickJumpPanel">
       <div class="quick-jump-grid" id="quickJumpGrid"></div>
@@ -996,11 +981,10 @@
 
 <div class="sin-tooltip" id="sinTooltip" role="tooltip" aria-hidden="true"></div>
 
-<div class="about-modal" id="aboutModal" role="dialog" aria-modal="true" aria-labelledby="aboutTitle"
-     onclick="if(event.target===this) closeAbout()">
+<div class="about-modal" id="aboutModal" onclick="if(event.target===this) closeAbout()">
   <div class="about-modal-inner">
     <button class="about-close" onclick="closeAbout()" aria-label="Close">✕</button>
-    <img src="/static/images/logo.svg" alt="" class="about-logo">
+    <img src="/static/images/logo.svg" alt="Mar Thoma Sleeva" class="about-logo">
     <div class="about-title" id="aboutTitle">About This App</div>
     <div class="about-subtitle" id="aboutSubtitle">A quiet place to prepare for confession</div>
     <div class="about-body" id="aboutBody"></div>
@@ -1013,90 +997,15 @@
   </div>
 </div>
 
-<!-- =========================================================
-     TEMPLATES
-     These replace the Jinja partials. The app-data script
-     below carries the sections from the backend.
-     ========================================================= -->
+{# Client-side templates. Each partial is wrapped in {% raw %} so Jinja
+   leaves the {{#if}}/{{#each}}/{{var}} syntax alone for the in-page engine. #}
+{% include 'partials/section_sins.html' %}
+{% include 'partials/section_custom.html' %}
+{% include 'partials/summary.html' %}
 
-<script id="tpl-section-sins" type="text/template">
-<div class="section" data-section-id="{{sectionId}}">
-  <h2><span class="num">{{num}}</span> {{title}}</h2>
-  <p class="sub">{{sub}}</p>
-  {{#if verse}}<p class="section-verse">{{verse}}</p>{{/if}}
-  {{#each groups}}
-  <div class="group">
-    <div class="group-title">{{title}}</div>
-    <div class="sin-list">
-      {{#each sins}}
-      <div class="sin-item"
-           role="checkbox"
-           aria-checked="false"
-           tabindex="0"
-           data-sin-key="{{../../sectionId}}::{{groupIndex}}::{{@index}}"
-           onclick="toggleSin(this)"
-           onkeydown="if(event.key===' '||event.key==='Enter'){event.preventDefault();toggleSin(this);}">
-        <span class="sin-check" aria-hidden="true"></span>
-        <span class="sin-label">
-          <span class="en">{{en}}</span>
-          {{#if ml}}<span class="ml">{{ml}}</span>{{/if}}
-        </span>
-        {{#if note}}
-        <button type="button" class="sin-info"
-                aria-label="More info"
-                data-note-en="{{noteEn}}"
-                data-note-ml="{{noteMl}}"
-                onclick="event.stopPropagation(); toggleSinNote(this)"></button>
-        {{/if}}
-      </div>
-      {{/each}}
-    </div>
-  </div>
-  {{/each}}
-  <div class="gentle-note section-note">{{guardrail}}</div>
-</div>
-</script>
-
-<script id="tpl-section-custom" type="text/template">
-<div class="section" data-section-id="{{sectionId}}">
-  <h2><span class="num">{{num}}</span> {{title}}</h2>
-  <p class="sub">{{sub}}</p>
-  <textarea id="customInput" class="custom-textarea" maxlength="{{maxlength}}"
-            placeholder="{{placeholder}}"></textarea>
-  <div class="char-counter" id="customCounter">0 / {{maxlength}}</div>
-</div>
-</script>
-
-<script id="tpl-summary" type="text/template">
-<div class="summary-section">
-  <h2 data-i18n="summaryTitle">Your Confession Summary</h2>
-  <p class="sub" data-i18n="summarySub">Review your selected sins, then download as PDF</p>
-  <div id="summaryContent"></div>
-
-  <div class="protect-panel">
-    <div class="protect-row">
-      <input type="checkbox" id="protectCheckbox" onchange="togglePasswordFields()">
-      <label for="protectCheckbox" data-i18n="protectLabel">🔒 Protect PDF with a password</label>
-    </div>
-    <div class="password-fields" id="passwordFields">
-      <input type="password" id="pdfPassword" data-i18n-placeholder="passwordPlaceholder"
-             placeholder="Enter password" autocomplete="new-password">
-      <input type="password" id="pdfPasswordConfirm" data-i18n-placeholder="passwordConfirmPlaceholder"
-             placeholder="Confirm password" autocomplete="new-password">
-      <p class="password-hint" data-i18n="passwordHint">This password will be required to open the PDF. Please remember it — it cannot be recovered.</p>
-      <p class="password-error" id="passwordError"></p>
-    </div>
-  </div>
-
-  <div class="download-row">
-    <button class="btn btn-primary" id="downloadBtn" onclick="downloadPDF()"
-            data-i18n="downloadBtn">Download PDF</button>
-  </div>
-</div>
-</script>
-
+{# This one is intentionally NOT raw — Jinja must inject the data. #}
 <script id="app-data" type="application/json">{{ data | tojson }}</script>
-
+{% raw %}
 <script>
 (function loadLibraries() {
   const status = document.getElementById('font-status');
@@ -1433,13 +1342,8 @@ function resolveKey(path, ctx) {
    ========================================================= */
 function setLang(lang) {
   currentLang = lang;
-  const btnEn = document.getElementById('btn-en');
-  const btnMl = document.getElementById('btn-ml');
-  btnEn.classList.toggle('active', lang === 'en');
-  btnMl.classList.toggle('active', lang === 'ml');
-  btnEn.setAttribute('aria-pressed', lang === 'en' ? 'true' : 'false');
-  btnMl.setAttribute('aria-pressed', lang === 'ml' ? 'true' : 'false');
-
+  document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+  document.getElementById('btn-ml').classList.toggle('active', lang === 'ml');
   document.getElementById('title').textContent = UI[lang].title;
   document.getElementById('subhead').textContent = UI[lang].subhead;
   document.getElementById('clearBtn').textContent = UI[lang].clearBtn;
@@ -1583,9 +1487,12 @@ function renderSection() {
     const groups = section.groups.map((g, gi) => ({
       title: g.title[currentLang],
       groupIndex: gi,
-      sins: g.sins.map(s => ({
+      sins: g.sins.map((s, si) => ({
         en: s.en,
         ml: s.ml,
+        sectionId: section.id,
+        groupIndex: gi,
+        sinIndex: si,
         note: s.note || null,
         noteEn: s.note ? s.note.en : '',
         noteMl: s.note ? s.note.ml : ''
@@ -1608,10 +1515,7 @@ function renderSection() {
 
     container.querySelectorAll('.sin-item').forEach(el => {
       const key = el.dataset.sinKey;
-      if (selections[key]) {
-        el.classList.add('selected');
-        el.setAttribute('aria-checked', 'true');
-      }
+      if (selections[key]) el.classList.add('selected');
     });
   } else if (section.type === 'custom') {
     const html = renderTemplate('tpl-section-custom', {
@@ -1704,7 +1608,7 @@ function showSearchResults(results, query) {
   let html = '';
   results.forEach((r) => {
     const sectionLabel = (t === 'en') ? r.sectionTitle : r.sectionTitleMl;
-    html += '<div class="global-search-result" role="option" tabindex="0" data-key="' + r.key + '" data-section-index="' + r.sectionIndex + '">';
+    html += '<div class="global-search-result" data-key="' + r.key + '" data-section-index="' + r.sectionIndex + '">';
     html += '<div class="gsr-section">' + escapeHtml(sectionLabel) + '</div>';
     html += '<div class="gsr-en">' + highlightMatch(r.en, query) + '</div>';
     html += '<div class="gsr-ml">' + highlightMatch(r.ml, query) + '</div>';
@@ -1714,14 +1618,10 @@ function showSearchResults(results, query) {
   box.classList.add('show');
 
   box.querySelectorAll('.global-search-result').forEach(el => {
-    const activate = () => {
+    el.addEventListener('click', () => {
       const key = el.dataset.key;
       const si = parseInt(el.dataset.sectionIndex, 10);
       jumpToSin(si, key);
-    };
-    el.addEventListener('click', activate);
-    el.addEventListener('keydown', (e) => {
-      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); activate(); }
     });
   });
 }
@@ -1791,9 +1691,8 @@ function toggleQuickJump() {
   const panel = document.getElementById('quickJumpPanel');
   const toggle = document.getElementById('quickJumpToggle');
   if (!panel || !toggle) return;
-  const open = panel.classList.toggle('open');
-  toggle.classList.toggle('open', open);
-  toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  panel.classList.toggle('open');
+  toggle.classList.toggle('open');
 }
 
 function buildQuickJump() {
@@ -1838,10 +1737,7 @@ function jumpToSection(index) {
   const panel = document.getElementById('quickJumpPanel');
   const toggle = document.getElementById('quickJumpToggle');
   if (panel) panel.classList.remove('open');
-  if (toggle) {
-    toggle.classList.remove('open');
-    toggle.setAttribute('aria-expanded', 'false');
-  }
+  if (toggle) toggle.classList.remove('open');
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
@@ -1933,8 +1829,8 @@ function renderSummaryContent() {
 }
 
 function escapeHtml(str) {
-  return String(str).replace(/[&<>"']/g, m => ({
-    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+  return String(str).replace(/[&<>"]/g, m => ({
+    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'
   })[m]);
 }
 
@@ -1946,11 +1842,9 @@ function toggleSin(el) {
   if (selections[key]) {
     delete selections[key];
     el.classList.remove('selected');
-    el.setAttribute('aria-checked', 'false');
   } else {
     selections[key] = true;
     el.classList.add('selected');
-    el.setAttribute('aria-checked', 'true');
   }
   updateSelectedCount();
 }
@@ -2107,8 +2001,6 @@ function openAbout() {
 
   modal.classList.add('open');
   document.body.style.overflow = 'hidden';
-  const closeBtn = modal.querySelector('.about-close');
-  if (closeBtn) closeBtn.focus();
 }
 
 function closeAbout() {
@@ -2198,8 +2090,6 @@ function createDebugStatusEl() {
 
 /* =========================================================
    PDF GENERATION
-   Fixed pagination: draw slices of the canvas onto each page,
-   so page 1 doesn't overflow the bottom margin.
    ========================================================= */
 async function downloadPDF() {
   const t = currentLang;
@@ -2268,6 +2158,8 @@ async function downloadPDF() {
     });
     setStatus('Step 6: Captured ' + canvas.width + '×' + canvas.height);
 
+    const imgData = canvas.toDataURL('image/png');
+
     setStatus('Step 7: Creating PDF…');
     const { jsPDF } = window.jspdf;
 
@@ -2287,35 +2179,19 @@ async function downloadPDF() {
     const pageH = pdf.internal.pageSize.getHeight();
     const margin = 8;
     const usableW = pageW - margin * 2;
-    const usableH = pageH - margin * 2;
+    const imgHeight = canvas.height * usableW / canvas.width;
 
-    // Ratio: how many pixels of the source canvas per mm of PDF
-    const pxPerMm = canvas.width / usableW;
-    const pageHeightPx = usableH * pxPerMm;
+    let heightLeft = imgHeight;
+    let position = margin;
 
-    let renderedPx = 0;
+    pdf.addImage(imgData, 'PNG', margin, position, usableW, imgHeight, undefined, 'FAST');
+    heightLeft -= (pageH - margin * 2);
 
-    while (renderedPx < canvas.height) {
-      const sliceHeightPx = Math.min(pageHeightPx, canvas.height - renderedPx);
-
-      // Create a temporary canvas holding only this slice, scaled to full width
-      const sliceCanvas = document.createElement('canvas');
-      sliceCanvas.width = canvas.width;
-      sliceCanvas.height = Math.ceil(sliceHeightPx);
-      const sctx = sliceCanvas.getContext('2d');
-      sctx.drawImage(
-        canvas,
-        0, renderedPx, canvas.width, sliceHeightPx,
-        0, 0, canvas.width, sliceHeightPx
-      );
-
-      const sliceData = sliceCanvas.toDataURL('image/png');
-      const sliceHeightMm = sliceHeightPx / pxPerMm;
-
-      if (renderedPx > 0) pdf.addPage();
-      pdf.addImage(sliceData, 'PNG', margin, margin, usableW, sliceHeightMm, undefined, 'FAST');
-
-      renderedPx += sliceHeightPx;
+    while (heightLeft > 0) {
+      position = margin - (imgHeight - heightLeft);
+      pdf.addPage();
+      pdf.addImage(imgData, 'PNG', margin, position, usableW, imgHeight, undefined, 'FAST');
+      heightLeft -= (pageH - margin * 2);
     }
 
     renderer.innerHTML = '';
@@ -2351,5 +2227,6 @@ initGlobalSearch();
 buildQuickJump();
 renderView();
 </script>
+{% endraw %}
 </body>
 </html>

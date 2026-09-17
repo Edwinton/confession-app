@@ -17,7 +17,7 @@
           <h3 class="group-title">{{title}}</h3>
           <div class="sin-list">
             {{#each sins}}
-              <div class="sin-item" data-sin-key="{{sectionId}}::{{groupIndex}}::{{@index}}">
+              <div class="sin-item" data-sin-key="{{sectionId}}::{{groupIndex}}::{{sinIndex}}">
                 <div class="sin-check" onclick="toggleSin(this.closest('.sin-item'))"></div>
                 <div class="sin-label" onclick="toggleSin(this.closest('.sin-item'))">
                   <span class="en">{{en}}</span>

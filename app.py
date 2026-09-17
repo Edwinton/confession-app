@@ -13,10 +13,8 @@ SINS_PATH = os.path.join(DATA_DIR, 'sins.json')
 DB_PATH = os.path.join(DATA_DIR, 'centres.db')
 
 VALIDITY_HOURS = 24
-GRACE_HOURS = 1  # Show "expires soon" for this long past expiry
+GRACE_HOURS = 1
 
-
-# ---------- Database ----------
 
 def get_db():
     conn = sqlite3.connect(DB_PATH)
@@ -44,10 +42,8 @@ def init_db():
         )
     ''')
 
-    # Auto-migrate: add expires_at column if it's missing from an older DB
     cols = [r['name'] for r in conn.execute('PRAGMA table_info(centres)').fetchall()]
     if 'expires_at' not in cols:
-        # Add column with a default that treats all existing entries as already expired
         conn.execute("ALTER TABLE centres ADD COLUMN expires_at TEXT NOT NULL DEFAULT '1970-01-01T00:00:00Z'")
 
     conn.commit()
@@ -98,8 +94,6 @@ def row_to_dict(row):
     }
 
 
-# ---------- Main pages ----------
-
 @app.route('/')
 def index():
     with open(SINS_PATH, 'r', encoding='utf-8') as f:
@@ -112,11 +106,8 @@ def centres_page():
     return render_template('centres.html')
 
 
-# ---------- API ----------
-
 @app.route('/api/centres', methods=['GET'])
 def list_centres():
-    """Return only non-expired entries. Expired ones are hidden but kept in DB."""
     conn = get_db()
     now_iso = iso_now()
     rows = conn.execute('''
@@ -217,7 +208,6 @@ def update_centre(centre_id):
 
 @app.route('/api/centres/<int:centre_id>/renew', methods=['POST'])
 def renew_centre(centre_id):
-    """Owner renews the entry for another 24 hours using their PIN."""
     body = request.get_json(silent=True) or {}
     pin = str(body.get('pin') or '').strip()
 
@@ -275,8 +265,6 @@ def report_centre(centre_id):
     conn.close()
     return jsonify({'ok': True})
 
-
-# ---------- Init ----------
 
 init_db()
 

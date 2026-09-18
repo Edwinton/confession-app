@@ -32,23 +32,142 @@
             "ml": "ഒന്നാം പ്രമാണത്തിന് എതിരായ പാപങ്ങൾ"
           },
           "sins": [
-            { "en": "Worshipping other gods", "ml": "അന്യദേവന്മാരെ ആരാധിക്കുക" },
-            { "en": "Calling on the names of other gods", "ml": "അന്യദേവന്മാരുടെ നാമം വിളിക്കുക" },
-            { "en": "Bowing to the temples of other gods", "ml": "അന്യദേവന്മാരുടെ ആരാധനാലയങ്ങളെ വണങ്ങുക" },
-            { "en": "Horoscopes / Astrology", "ml": "ജാതകം" },
-            { "en": "Palmistry", "ml": "കൈനോട്ടം" },
-            { "en": "Weekly predictions", "ml": "വാരഫലം" },
-            { "en": "Rahu Kalam (inauspicious times)", "ml": "രാഹുകാലം" },
-            { "en": "Bird omens / Ornithomancy", "ml": "പക്ഷിശാസ്ത്രം" },
-            { "en": "Numerology", "ml": "സംഖ്യാശാസ്ത്രം" },
-            { "en": "Face reading / Physiognomy", "ml": "മുഖലക്ഷണം" },
-            { "en": "Auspicious day observance", "ml": "നാൾനോട്ടം" },
-            { "en": "Star predictions / Astrology", "ml": "നക്ഷത്രഫലം" },
-            { "en": "Almanac / Panchangam", "ml": "പഞ്ചാംഗം" },
-            { "en": "Omens", "ml": "ശകുനം" },
-            { "en": "Witchcraft / Sorcery", "ml": "മന്ത്രവാദം" },
-            { "en": "Black magic", "ml": "ആഭിചാരം" },
-            { "en": "Eating food offered to idols / prasadam", "ml": "വിഗ്രഹങ്ങൾക്ക് അർപ്പിച്ച ഭക്ഷ്യവസ്തുക്കൾ / നൈവേദ്യം തുടങ്ങിയവ ഭക്ഷിക്കുക" },
+            {
+              "en": "Worshipping other gods",
+              "ml": "അന്യദേവന്മാരെ ആരാധിക്കുക",
+              "note": {
+                "en": "This applies to actually offering worship or devotion elsewhere, not to studying or respecting other faiths.",
+                "ml": "മറ്റൊരിടത്ത് യഥാർത്ഥത്തിൽ ആരാധന അർപ്പിക്കുന്നതിനെ സൂചിപ്പിക്കുന്നു, മറ്റു മതങ്ങളെ പഠിക്കുന്നതോ ബഹുമാനിക്കുന്നതോ അല്ല."
+              }
+            },
+            {
+              "en": "Calling on the names of other gods",
+              "ml": "അന്യദേവന്മാരുടെ നാമം വിളിക്കുക",
+              "note": {
+                "en": "A casual greeting or figure of speech is not this sin; deliberately invoking another god's name in prayer or worship is.",
+                "ml": "സാധാരണ അഭിവാദനമോ ഭാഷാശൈലിയോ ഇതല്ല; ബോധപൂർവ്വം പ്രാർത്ഥനയിലോ ആരാധനയിലോ അന്യദേവന്റെ നാമം വിളിക്കുന്നതാണ്."
+              }
+            },
+            {
+              "en": "Bowing to the temples of other gods",
+              "ml": "അന്യദേവന്മാരുടെ ആരാധനാലയങ്ങളെ വണങ്ങുക",
+              "note": {
+                "en": "Bowing out of social courtesy at a function differs from bowing as an act of worship or faith.",
+                "ml": "ഒരു ചടങ്ങിൽ മര്യാദയ്ക്കായി വണങ്ങുന്നത് ആരാധനയായോ വിശ്വാസത്തിന്റെ പ്രവൃത്തിയായോ വണങ്ങുന്നതിൽ നിന്ന് വ്യത്യസ്തമാണ്."
+              }
+            },
+            {
+              "en": "Horoscopes / Astrology",
+              "ml": "ജാതകം",
+              "note": {
+                "en": "Reading it out of curiosity is not the same as trusting it to guide real decisions or believing it controls your fate.",
+                "ml": "കൗതുകത്തിന് വായിക്കുന്നത് യഥാർത്ഥ തീരുമാനങ്ങൾക്കായി അതിനെ ആശ്രയിക്കുന്നതോ വിധി നിയന്ത്രിക്കുന്നെന്ന് വിശ്വസിക്കുന്നതോ അല്ല."
+              }
+            },
+            {
+              "en": "Palmistry",
+              "ml": "കൈനോട്ടം",
+              "note": {
+                "en": "Curiosity about it is not the sin; placing real trust in it to know or shape one's future is.",
+                "ml": "കൗതുകം പാപമല്ല; ഭാവി അറിയാനോ രൂപപ്പെടുത്താനോ അതിൽ യഥാർത്ഥ വിശ്വാസം അർപ്പിക്കുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Weekly predictions",
+              "ml": "വാരഫലം",
+              "note": {
+                "en": "Glancing at these for fun differs from relying on them as true guidance for your week.",
+                "ml": "രസത്തിനായി നോക്കുന്നത്, അവ ആഴ്ചയ്ക്കുള്ള യഥാർത്ഥ മാർഗ്ഗനിർദ്ദേശമായി കണക്കാക്കി ആശ്രയിക്കുന്നതിൽ നിന്ന് വ്യത്യസ്തമാണ്."
+              }
+            },
+            {
+              "en": "Rahu Kalam (inauspicious times)",
+              "ml": "രാഹുകാലം",
+              "note": {
+                "en": "Following it as a family habit without belief differs from avoiding activities because you truly believe it controls outcomes.",
+                "ml": "വിശ്വാസമില്ലാതെ കുടുംബശീലമായി പിന്തുടരുന്നത്, അത് ഫലങ്ങളെ നിയന്ത്രിക്കുന്നെന്ന് യഥാർത്ഥത്തിൽ വിശ്വസിച്ച് പ്രവർത്തനങ്ങൾ ഒഴിവാക്കുന്നതിൽ നിന്ന് വ്യത്യസ്തമാണ്."
+              }
+            },
+            {
+              "en": "Bird omens / Ornithomancy",
+              "ml": "പക്ഷിശാസ്ത്രം",
+              "note": {
+                "en": "Knowing the traditional saying is not the sin; acting out of fear or belief that it predicts the future is.",
+                "ml": "പരമ്പരാഗത ചൊല്ല് അറിയുന്നത് പാപമല്ല; ഭയത്തിലോ വിശ്വാസത്തിലോ അധിഷ്ഠിതമായി പ്രവർത്തിക്കുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Numerology",
+              "ml": "സംഖ്യാശാസ്ത്രം",
+              "note": {
+                "en": "This applies if you genuinely rely on numbers to make decisions, not if you simply find the idea interesting.",
+                "ml": "തീരുമാനങ്ങൾക്കായി അക്കങ്ങളിൽ യഥാർത്ഥത്തിൽ ആശ്രയിച്ചാൽ ബാധകം, വെറും താല്പര്യം തോന്നിയാൽ അല്ല."
+              }
+            },
+            {
+              "en": "Face reading / Physiognomy",
+              "ml": "മുഖലക്ഷണം",
+              "note": {
+                "en": "Curiosity about the practice differs from trusting it to judge a person's character or destiny.",
+                "ml": "ഈ രീതിയിലുള്ള കൗതുകം, ഒരാളുടെ സ്വഭാവമോ വിധിയോ വിലയിരുത്താൻ അതിനെ വിശ്വസിക്കുന്നതിൽ നിന്ന് വ്യത്യസ്തമാണ്."
+              }
+            },
+            {
+              "en": "Auspicious day observance",
+              "ml": "നാൾനോട്ടം",
+              "note": {
+                "en": "Choosing a convenient date is not the sin; believing the day itself brings luck or misfortune is.",
+                "ml": "സൗകര്യമുള്ള ദിവസം തിരഞ്ഞെടുക്കുന്നത് പാപമല്ല; ആ ദിവസം തന്നെ ഭാഗ്യമോ ദൗർഭാഗ്യമോ കൊണ്ടുവരുന്നെന്ന് വിശ്വസിക്കുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Star predictions / Astrology",
+              "ml": "നക്ഷത്രഫലം",
+              "note": {
+                "en": "As with horoscopes, occasional curiosity differs from genuinely trusting star predictions over God's providence.",
+                "ml": "ജാതകം പോലെ, ഇടയ്ക്കിടെയുള്ള കൗതുകം, ദൈവപരിപാലനയേക്കാൾ നക്ഷത്രഫലങ്ങളിൽ യഥാർത്ഥത്തിൽ വിശ്വസിക്കുന്നതിൽ നിന്ന് വ്യത്യസ്തമാണ്."
+              }
+            },
+            {
+              "en": "Almanac / Panchangam",
+              "ml": "പഞ്ചാംഗം",
+              "note": {
+                "en": "Using it for calendar or farming information differs from believing it governs your fate.",
+                "ml": "കലണ്ടർ വിവരത്തിനോ കൃഷിക്കോ ഉപയോഗിക്കുന്നത്, അത് നിങ്ങളുടെ വിധി നിയന്ത്രിക്കുന്നെന്ന് വിശ്വസിക്കുന്നതിൽ നിന്ന് വ്യത്യസ്തമാണ്."
+              }
+            },
+            {
+              "en": "Omens",
+              "ml": "ശകുനം",
+              "note": {
+                "en": "Noticing a coincidence is not the sin; acting out of fear or belief that it foretells the future is.",
+                "ml": "ഒരു യാദൃശ്ചികത ശ്രദ്ധിക്കുന്നത് പാപമല്ല; ഭയത്തിലോ വിശ്വാസത്തിലോ അധിഷ്ഠിതമായി പ്രവർത്തിക്കുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Witchcraft / Sorcery",
+              "ml": "മന്ത്രവാദം",
+              "note": {
+                "en": "Being frightened by others practicing this is not the sin; deliberately seeking or using such powers yourself is.",
+                "ml": "മറ്റുള്ളവർ ഇത് ചെയ്യുന്നതിൽ ഭയപ്പെടുന്നത് പാപമല്ല; സ്വയം ബോധപൂർവ്വം ഇത്തരം ശക്തികൾ തേടുകയോ ഉപയോഗിക്കുകയോ ചെയ്യുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Black magic",
+              "ml": "ആഭിചാരം",
+              "note": {
+                "en": "As with sorcery, fear of it is not the sin; deliberately practicing or commissioning it is.",
+                "ml": "മന്ത്രവാദം പോലെ, ഇതിനെ ഭയപ്പെടുന്നത് പാപമല്ല; ബോധപൂർവ്വം ഇത് പ്രയോഗിക്കുകയോ ചെയ്യിക്കുകയോ ചെയ്യുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Eating food offered to idols / prasadam",
+              "ml": "വിഗ്രഹങ്ങൾക്ക് അർപ്പിച്ച ഭക്ഷ്യവസ്തുക്കൾ / നൈവേദ്യം തുടങ്ങിയവ ഭക്ഷിക്കുക",
+              "note": {
+                "en": "Unknowingly eating it, or accepting it out of politeness without any act of worship, differs from eating it as a sign of faith in the idol.",
+                "ml": "അറിയാതെ കഴിക്കുന്നതോ മര്യാദയ്ക്കായി ആരാധനയില്ലാതെ സ്വീകരിക്കുന്നതോ, വിഗ്രഹത്തിലുള്ള വിശ്വാസത്തിന്റെ അടയാളമായി കഴിക്കുന്നതിൽ നിന്ന് വ്യത്യസ്തമാണ്."
+              }
+            },
             {
               "en": "Believing in charms, amulets, and various rituals",
               "ml": "ഏലസ് തകിട് വിവിധ പൂജകൾ എന്നിവയിൽ വിശ്വസിക്കുക",
@@ -57,9 +176,30 @@
                 "ml": "ദൈവത്തിനു പകരമോ ദൈവത്തിനൊപ്പമോ ഇവയിൽ ആശ്രയം വച്ചാൽ ബാധകം. വിശ്വാസമില്ലാത്ത സാംസ്കാരിക ശീലങ്ങൾ അതല്ല."
               }
             },
-            { "en": "Believing in human gods / god-men", "ml": "ആൾ ദൈവങ്ങളിൽ വിശ്വസിക്കുക" },
-            { "en": "Worshipping natural forces", "ml": "പ്രകൃതിശക്തികളെ ആരാധിക്കുക" },
-            { "en": "Giving more importance to things and people than to God", "ml": "ദൈവത്തെക്കാൾ അധികമായി വസ്തുക്കൾക്കും വ്യക്തികൾക്കും സ്ഥാനം നൽകുന്നത്" },
+            {
+              "en": "Believing in human gods / god-men",
+              "ml": "ആൾ ദൈവങ്ങളിൽ വിശ്വസിക്കുക",
+              "note": {
+                "en": "Respecting someone's wisdom or holiness differs from believing they hold the place of God himself.",
+                "ml": "ഒരാളുടെ ജ്ഞാനത്തെയോ വിശുദ്ധിയെയോ ബഹുമാനിക്കുന്നത്, അവർ ദൈവത്തിന്റെ സ്ഥാനം വഹിക്കുന്നെന്ന് വിശ്വസിക്കുന്നതിൽ നിന്ന് വ്യത്യസ്തമാണ്."
+              }
+            },
+            {
+              "en": "Worshipping natural forces",
+              "ml": "പ്രകൃതിശക്തികളെ ആരാധിക്കുക",
+              "note": {
+                "en": "Admiring nature's beauty is not the sin; offering it worship or treating it as divine is.",
+                "ml": "പ്രകൃതിയുടെ സൗന്ദര്യം ആസ്വദിക്കുന്നത് പാപമല്ല; അതിന് ആരാധന അർപ്പിക്കുകയോ ദിവ്യമായി കണക്കാക്കുകയോ ചെയ്യുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Giving more importance to things and people than to God",
+              "ml": "ദൈവത്തെക്കാൾ അധികമായി വസ്തുക്കൾക്കും വ്യക്തികൾക്കും സ്ഥാനം നൽകുന്നത്",
+              "note": {
+                "en": "Loving people and enjoying good things is natural; the sin is deliberately placing them above God in your choices.",
+                "ml": "ആളുകളെ സ്നേഹിക്കുന്നതും നല്ല വസ്തുക്കൾ ആസ്വദിക്കുന്നതും സ്വാഭാവികമാണ്; ബോധപൂർവ്വം അവയെ ദൈവത്തിന് മീതെ വയ്ക്കുന്നതാണ് പാപം."
+              }
+            },
             {
               "en": "Pride",
               "ml": "അഹങ്കാരം",
@@ -84,12 +224,54 @@
                 "ml": "ഒരു ക്ഷണിക ചിന്തയോ ചോദ്യമോ പാപമല്ല. പൂർണ്ണ അറിവോടും സമ്മതത്തോടും കൂടിയ ബോധപൂർവ്വ നിഷേധം മാത്രമാണ്."
               }
             },
-            { "en": "Rationalism (atheistic)", "ml": "യുക്തിചിന്ത" },
-            { "en": "Worshipping demonic powers", "ml": "പൈശാചിക ശക്തികളെ ആരാധിക്കുന്നത്" },
-            { "en": "Participating in demonic worship", "ml": "പൈശാചിക ആരാധനകളിൽ പങ്കെടുക്കുന്നത്" },
-            { "en": "All forms of worship and prayer not directed to the true God", "ml": "സത്യ ദൈവത്തോടല്ലാത്ത എല്ലാവിധ ആരാധനകളും പ്രാർഥനകളും" },
-            { "en": "Lack of faith in God and the sacraments", "ml": "ദൈവത്തിലും കൂദാശകളിലും വിശ്വാസമില്ലായ്മ" },
-            { "en": "Not loving God with all one's soul, heart, and strength", "ml": "ദൈവത്തെ പൂർണ ആത്മാവോടും പൂർണ്ണ ഹൃദയത്തോടും പൂർണ്ണ ശക്തിയോടും കൂടെ സ്നേഹിക്കാത്തത്" },
+            {
+              "en": "Rationalism (atheistic)",
+              "ml": "യുക്തിചിന്ത",
+              "note": {
+                "en": "Using reason to understand your faith is good; rejecting truths of faith simply because they exceed reason is what's meant here.",
+                "ml": "വിശ്വാസം മനസ്സിലാക്കാൻ യുക്തി ഉപയോഗിക്കുന്നത് നല്ലതാണ്; യുക്തിക്ക് അതീതമായതിനാൽ മാത്രം വിശ്വാസസത്യങ്ങളെ നിഷേധിക്കുന്നതാണ് ഇവിടെ ഉദ്ദേശിക്കുന്നത്."
+              }
+            },
+            {
+              "en": "Worshipping demonic powers",
+              "ml": "പൈശാചിക ശക്തികളെ ആരാധിക്കുന്നത്",
+              "note": {
+                "en": "Coming across such content is not the sin; deliberately offering worship or submission to demonic power is.",
+                "ml": "ഇത്തരം കാര്യങ്ങൾ കാണുകയോ കേൾക്കുകയോ ചെയ്യുന്നത് പാപമല്ല; ബോധപൂർവ്വം പൈശാചിക ശക്തിക്ക് ആരാധനയോ കീഴടങ്ങലോ അർപ്പിക്കുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Participating in demonic worship",
+              "ml": "പൈശാചിക ആരാധനകളിൽ പങ്കെടുക്കുന്നത്",
+              "note": {
+                "en": "Being present without any willing participation differs from knowingly and freely taking part.",
+                "ml": "ഇഷ്ടപ്പെട്ട് പങ്കെടുക്കാതെ കേവലം ഹാജരാകുന്നത്, അറിഞ്ഞും സ്വതന്ത്രമായും പങ്കെടുക്കുന്നതിൽ നിന്ന് വ്യത്യസ്തമാണ്."
+              }
+            },
+            {
+              "en": "All forms of worship and prayer not directed to the true God",
+              "ml": "സത്യ ദൈവത്തോടല്ലാത്ത എല്ലാവിധ ആരാധനകളും പ്രാർഥനകളും",
+              "note": {
+                "en": "This concerns deliberately directing worship elsewhere, not merely being curious about how others pray.",
+                "ml": "മറ്റുള്ളവർ എങ്ങനെ പ്രാർത്ഥിക്കുന്നു എന്നറിയാനുള്ള കൗതുകമല്ല, ബോധപൂർവ്വം ആരാധന മറ്റൊരിടത്തേക്ക് തിരിക്കുന്നതാണ് ഇവിടെ ഉദ്ദേശിക്കുന്നത്."
+              }
+            },
+            {
+              "en": "Lack of faith in God and the sacraments",
+              "ml": "ദൈവത്തിലും കൂദാശകളിലും വിശ്വാസമില്ലായ്മ",
+              "note": {
+                "en": "Struggling with doubt is not the same as a deliberate refusal to believe or receive the sacraments.",
+                "ml": "സംശയവുമായി മല്ലിടുന്നത്, വിശ്വസിക്കാനോ കൂദാശകൾ സ്വീകരിക്കാനോ ബോധപൂർവ്വം വിസമ്മതിക്കുന്നതിൽ നിന്ന് വ്യത്യസ്തമാണ്."
+              }
+            },
+            {
+              "en": "Not loving God with all one's soul, heart, and strength",
+              "ml": "ദൈവത്തെ പൂർണ ആത്മാവോടും പൂർണ്ണ ഹൃദയത്തോടും പൂർണ്ണ ശക്തിയോടും കൂടെ സ്നേഹിക്കാത്തത്",
+              "note": {
+                "en": "We all grow gradually in love for God; this refers to deliberately holding back or putting God last by choice.",
+                "ml": "ദൈവസ്നേഹത്തിൽ എല്ലാവരും ക്രമേണ വളരുന്നു; ബോധപൂർവ്വം പിന്തിരിയുകയോ ദൈവത്തെ അവസാനം വയ്ക്കുകയോ ചെയ്യുന്നതാണ് ഇവിടെ ഉദ്ദേശിക്കുന്നത്."
+              }
+            },
             {
               "en": "Love of comfort / Luxury",
               "ml": "സുഖലോലുപത",
@@ -114,8 +296,22 @@
                 "ml": "ഉത്കണ്ഠ അനുഭവിക്കുന്നത് പാപമല്ല. ബോധപൂർവ്വം നിരാശയിൽ തുടരുന്നതോ വഴികളുണ്ടായിട്ടും ദൈവത്തിൽ ആശ്രയിക്കാൻ വിസമ്മതിക്കുന്നതോ മാത്രമാണ്."
               }
             },
-            { "en": "Greed for wealth", "ml": "ധനമോഹം" },
-            { "en": "The \"I\" feeling / Egoism", "ml": "ഞാനെന്ന ഭാവം" },
+            {
+              "en": "Greed for wealth",
+              "ml": "ധനമോഹം",
+              "note": {
+                "en": "Working to provide for your family is good; making wealth the true goal of life, even by unjust means, is the sin.",
+                "ml": "കുടുംബത്തിനുവേണ്ടി അധ്വാനിക്കുന്നത് നല്ലതാണ്; അന്യായമായ മാർഗ്ഗങ്ങളിലൂടെപ്പോലും സമ്പത്തിനെ ജീവിതലക്ഷ്യമാക്കുന്നതാണ് പാപം."
+              }
+            },
+            {
+              "en": "The \"I\" feeling / Egoism",
+              "ml": "ഞാനെന്ന ഭാവം",
+              "note": {
+                "en": "Healthy self-respect is not the sin; deliberately centering everything on yourself while disregarding God and others is.",
+                "ml": "ആരോഗ്യകരമായ ആത്മാഭിമാനം പാപമല്ല; ദൈവത്തെയും മറ്റുള്ളവരെയും അവഗണിച്ചുകൊണ്ട് ബോധപൂർവ്വം സ്വയത്തെ കേന്ദ്രീകരിക്കുന്നതാണ് ബാധകം."
+              }
+            },
             {
               "en": "Atheism",
               "ml": "നിരീശ്വരവാദം",
@@ -132,12 +328,54 @@
                 "ml": "ദൈവത്തെക്കുറിച്ചുള്ള ചോദ്യങ്ങൾ പാപമല്ല. അലസതയോടെ തുടരാനും സത്യം അന്വേഷിക്കാൻ വിസമ്മതിക്കാനും തീരുമാനിക്കുന്നത് ആകാം."
               }
             },
-            { "en": "Blind faith / Superstition", "ml": "അന്ധ വിശ്വാസം" },
-            { "en": "Giving to creatures the worship due to God", "ml": "ദൈവത്തിന് അർഹമായ ആരാധന മറ്റു സൃഷ്ടികൾക്ക് നൽകുന്നത്" },
-            { "en": "Worshipping according to the rites of non-Christian religions", "ml": "അക്രൈസ്തവ മതങ്ങളുടെ ആചാര രീതികളിൽ ആരാധന നടത്തുന്നത്" },
-            { "en": "Treating created things as God and seeking blessings from them", "ml": "സൃഷ്ട വസ്തുക്കളെ ദൈവത്തെ പോലെ കണക്കാക്കി അവയിൽ നിന്ന് അനുഗ്രഹം പ്രാപിക്കാൻ നടത്തുന്ന ശ്രമങ്ങൾ" },
-            { "en": "Relying on future predictions", "ml": "ഭാവി പ്രവചനങ്ങളിൽ ആശ്രയിക്കുന്നത്" },
-            { "en": "Misusing holy objects", "ml": "വിശുദ്ധ വസ്തുക്കളെ ദുരുപയോഗം ചെയ്യുന്നത്" },
+            {
+              "en": "Blind faith / Superstition",
+              "ml": "അന്ധ വിശ്വാസം",
+              "note": {
+                "en": "Simple trust in God's providence is a virtue; adopting fear-based practices without regard to reason or faith is what's meant here.",
+                "ml": "ദൈവപരിപാലനയിലുള്ള ലളിതമായ വിശ്വാസം ഒരു സദ്ഗുണമാണ്; യുക്തിയോ വിശ്വാസമോ പരിഗണിക്കാതെ ഭയത്തിൽ അധിഷ്ഠിതമായ ശീലങ്ങൾ സ്വീകരിക്കുന്നതാണ് ഇവിടെ ഉദ്ദേശിക്കുന്നത്."
+              }
+            },
+            {
+              "en": "Giving to creatures the worship due to God",
+              "ml": "ദൈവത്തിന് അർഹമായ ആരാധന മറ്റു സൃഷ്ടികൾക്ക് നൽകുന്നത്",
+              "note": {
+                "en": "Respecting a person or thing is not the sin; deliberately offering it the worship that belongs to God alone is.",
+                "ml": "ഒരാളെയോ വസ്തുവിനെയോ ബഹുമാനിക്കുന്നത് പാപമല്ല; ദൈവത്തിന് മാത്രം അർഹമായ ആരാധന ബോധപൂർവ്വം അതിന് നൽകുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Worshipping according to the rites of non-Christian religions",
+              "ml": "അക്രൈസ്തവ മതങ്ങളുടെ ആചാര രീതികളിൽ ആരാധന നടത്തുന്നത്",
+              "note": {
+                "en": "Respectfully attending another's ceremony as a guest differs from knowingly taking part in its acts of worship.",
+                "ml": "അതിഥിയായി മറ്റൊരാളുടെ ചടങ്ങിൽ ബഹുമാനത്തോടെ പങ്കെടുക്കുന്നത്, അതിന്റെ ആരാധനാപ്രവൃത്തികളിൽ അറിഞ്ഞുകൊണ്ട് പങ്കുചേരുന്നതിൽ നിന്ന് വ്യത്യസ്തമാണ്."
+              }
+            },
+            {
+              "en": "Treating created things as God and seeking blessings from them",
+              "ml": "സൃഷ്ട വസ്തുക്കളെ ദൈവത്തെ പോലെ കണക്കാക്കി അവയിൽ നിന്ന് അനുഗ്രഹം പ്രാപിക്കാൻ നടത്തുന്ന ശ്രമങ്ങൾ",
+              "note": {
+                "en": "This applies if you have placed real trust in a created thing instead of God, not if you merely appreciate it.",
+                "ml": "ദൈവത്തിനു പകരം ഒരു സൃഷ്ട വസ്തുവിൽ യഥാർത്ഥ ആശ്രയം വച്ചാൽ ബാധകം, വെറും വിലമതിപ്പ് ആണെങ്കിൽ അല്ല."
+              }
+            },
+            {
+              "en": "Relying on future predictions",
+              "ml": "ഭാവി പ്രവചനങ്ങളിൽ ആശ്രയിക്കുന്നത്",
+              "note": {
+                "en": "Occasional curiosity about predictions differs from truly relying on them instead of trusting God's providence.",
+                "ml": "പ്രവചനങ്ങളിലുള്ള ഇടയ്ക്കിടെയുള്ള കൗതുകം, ദൈവപരിപാലനയ്ക്ക് പകരം അവയിൽ യഥാർത്ഥത്തിൽ ആശ്രയിക്കുന്നതിൽ നിന്ന് വ്യത്യസ്തമാണ്."
+              }
+            },
+            {
+              "en": "Misusing holy objects",
+              "ml": "വിശുദ്ധ വസ്തുക്കളെ ദുരുപയോഗം ചെയ്യുന്നത്",
+              "note": {
+                "en": "Accidentally mishandling a holy object is not the sin; deliberately disrespecting or misusing it is.",
+                "ml": "ഒരു വിശുദ്ധ വസ്തു അബദ്ധത്തിൽ കൈകാര്യം ചെയ്യുന്നത് പാപമല്ല; ബോധപൂർവ്വം അതിനെ അനാദരിക്കുകയോ ദുരുപയോഗം ചെയ്യുകയോ ചെയ്യുന്നതാണ് ബാധകം."
+              }
+            },
             {
               "en": "Testing God",
               "ml": "ദൈവത്തെ പരീക്ഷിക്കുന്നത്",
@@ -146,14 +384,70 @@
                 "ml": "വിശ്വാസത്തിന്റെ നിബന്ധനയായി ദൈവത്തോട് അടയാളം ആവശ്യപ്പെടുന്നതിനെ സൂചിപ്പിക്കുന്നു — സഹായം ചോദിക്കുന്നതല്ല."
               }
             },
-            { "en": "Participating in Satanism / being a member of a Satanic sect", "ml": "സാത്താൻസേവയിൽ പങ്കെടുക്കുകയോ / സാത്താൻസഭയിൽ അംഗമാവുകയോ ചെയ്താൽ" },
-            { "en": "Participating in Black Mass / desecrating the Eucharist", "ml": "ബ്ലാക്ക് മാസിൽ പങ്കെടുത്തിട്ടുണ്ടെങ്കിൽ / തിരുവോസ്തി ഇത്തരം കാര്യങ്ങൾക്ക് വേണ്ടി ദുരുപയോഗം ചെയ്താൽ" },
-            { "en": "Using an Ouija board or believing in such things", "ml": "ഓജോ ബോർഡ് ഉപയോഗിക്കുകയോ അത്തരം കാര്യങ്ങളിൽ വിശ്വസിക്കുകയോ ചെയ്താൽ" },
-            { "en": "Wearing lockets, rings, stickers, clothes with Satanic symbols", "ml": "സാത്താനെ സൂചിപ്പിക്കുന്ന അടയാളങ്ങളോ, ചിത്രങ്ങളോ പതിച്ച ലോക്കറ്റുകൾ, മോതിരങ്ങൾ, സ്റ്റിക്കറുകൾ, വസ്ത്രങ്ങൾ എന്നിവ ധരിച്ചിട്ടുണ്ടെങ്കിൽ" },
-            { "en": "Worshipping other gods or encouraging others to do so", "ml": "അന്യ ദേവ ആരാധന നടത്തുകയോ അതിനായി മറ്റുള്ളവരെ പ്രേരിപ്പിക്കുകയോ ചെയ്താൽ" },
-            { "en": "Fearing or venerating saints or other things more than God", "ml": "ദൈവത്തെക്കാള് അധികമായി വിശുദ്ധരെയോ മറ്റ് കാര്യങ്ങളെയോ ഭയപ്പെടുകയോ വണങ്ങുകയോ ചെയ്താൽ" },
-            { "en": "Harming, insulting, or humiliating those consecrated to God", "ml": "ദൈവത്തിന് പ്രത്യേകം പ്രതിഷ്ഠിച്ചിരിക്കുന്നവരെ ഉപദ്രവിച്ചിട്ടുണ്ടെങ്കിൽ / നിന്ദിച്ചിട്ടുണ്ടെങ്കിൽ / അപമാനിച്ചിട്ടുണ്ടെങ്കിൽ" },
-            { "en": "Participating in Halloween celebrations", "ml": "ഹാലോവീൻ ആഘോഷങ്ങളിൽ പങ്കെടുത്തിട്ടുണ്ട്" }
+            {
+              "en": "Participating in Satanism / being a member of a Satanic sect",
+              "ml": "സാത്താൻസേവയിൽ പങ്കെടുക്കുകയോ / സാത്താൻസഭയിൽ അംഗമാവുകയോ ചെയ്താൽ",
+              "note": {
+                "en": "Curiosity from a movie or documentary is not the sin; deliberately joining or taking part in such a group is.",
+                "ml": "സിനിമയിലോ ഡോക്യുമെന്ററിയിലോ കാണുന്ന കൗതുകം പാപമല്ല; ബോധപൂർവ്വം അത്തരം സംഘത്തിൽ ചേരുകയോ പങ്കെടുക്കുകയോ ചെയ്യുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Participating in Black Mass / desecrating the Eucharist",
+              "ml": "ബ്ലാക്ക് മാസിൽ പങ്കെടുത്തിട്ടുണ്ടെങ്കിൽ / തിരുവോസ്തി ഇത്തരം കാര്യങ്ങൾക്ക് വേണ്ടി ദുരുപയോഗം ചെയ്താൽ",
+              "note": {
+                "en": "An accidental mishap with the Eucharist is not this sin; deliberately profaning it is a grave matter.",
+                "ml": "ദിവ്യകാരുണ്യവുമായി ബന്ധപ്പെട്ട അബദ്ധം ഈ പാപമല്ല; ബോധപൂർവ്വം അതിനെ അശുദ്ധമാക്കുന്നത് ഗുരുതരമായ കാര്യമാണ്."
+              }
+            },
+            {
+              "en": "Using an Ouija board or believing in such things",
+              "ml": "ഓജോ ബോർഡ് ഉപയോഗിക്കുകയോ അത്തരം കാര്യങ്ങളിൽ വിശ്വസിക്കുകയോ ചെയ്താൽ",
+              "note": {
+                "en": "This applies to actually using it or believing in it, not simply having heard of the practice.",
+                "ml": "ഇത് ഉപയോഗിക്കുന്നതിനോ വിശ്വസിക്കുന്നതിനോ ബാധകം, വെറും കേട്ടറിവിന് അല്ല."
+              }
+            },
+            {
+              "en": "Wearing lockets, rings, stickers, clothes with Satanic symbols",
+              "ml": "സാത്താനെ സൂചിപ്പിക്കുന്ന അടയാളങ്ങളോ, ചിത്രങ്ങളോ പതിച്ച ലോക്കറ്റുകൾ, മോതിരങ്ങൾ, സ്റ്റിക്കറുകൾ, വസ്ത്രങ്ങൾ എന്നിവ ധരിച്ചിട്ടുണ്ടെങ്കിൽ",
+              "note": {
+                "en": "Wearing something as fashion, unaware of its meaning, differs from deliberately wearing it to express allegiance to such symbols.",
+                "ml": "അർത്ഥമറിയാതെ ഫാഷനായി ധരിക്കുന്നത്, ബോധപൂർവ്വം അത്തരം ചിഹ്നങ്ങളോടുള്ള കൂറ് പ്രകടിപ്പിക്കാൻ ധരിക്കുന്നതിൽ നിന്ന് വ്യത്യസ്തമാണ്."
+              }
+            },
+            {
+              "en": "Worshipping other gods or encouraging others to do so",
+              "ml": "അന്യ ദേവ ആരാധന നടത്തുകയോ അതിനായി മറ്റുള്ളവരെ പ്രേരിപ്പിക്കുകയോ ചെയ്താൽ",
+              "note": {
+                "en": "Sharing factual information about another faith is not the sin; urging someone to abandon the true faith for another is.",
+                "ml": "മറ്റൊരു വിശ്വാസത്തെക്കുറിച്ചുള്ള വിവരം പങ്കിടുന്നത് പാപമല്ല; സത്യവിശ്വാസം ഉപേക്ഷിച്ച് മറ്റൊന്നിലേക്ക് പോകാൻ പ്രേരിപ്പിക്കുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Fearing or venerating saints or other things more than God",
+              "ml": "ദൈവത്തെക്കാള് അധികമായി വിശുദ്ധരെയോ മറ്റ് കാര്യങ്ങളെയോ ഭയപ്പെടുകയോ വണങ്ങുകയോ ചെയ്താൽ",
+              "note": {
+                "en": "Proper devotion to the saints as intercessors is good; letting fear or veneration of them overshadow your trust in God is what's meant here.",
+                "ml": "മധ്യസ്ഥരായി വിശുദ്ധരോടുള്ള ശരിയായ ഭക്തി നല്ലതാണ്; അവരോടുള്ള ഭയമോ ആരാധനയോ ദൈവത്തിലുള്ള ആശ്രയത്തെ മറികടക്കുന്നതാണ് ഇവിടെ ഉദ്ദേശിക്കുന്നത്."
+              }
+            },
+            {
+              "en": "Harming, insulting, or humiliating those consecrated to God",
+              "ml": "ദൈവത്തിന് പ്രത്യേകം പ്രതിഷ്ഠിച്ചിരിക്കുന്നവരെ ഉപദ്രവിച്ചിട്ടുണ്ടെങ്കിൽ / നിന്ദിച്ചിട്ടുണ്ടെങ്കിൽ / അപമാനിച്ചിട്ടുണ്ടെങ്കിൽ",
+              "note": {
+                "en": "Honestly reporting genuine wrongdoing is not this sin; harming or mocking someone out of contempt or malice is.",
+                "ml": "യഥാർത്ഥ തെറ്റ് സത്യസന്ധമായി അറിയിക്കുന്നത് ഈ പാപമല്ല; പുച്ഛത്തോടെയോ ദ്വേഷത്തോടെയോ ഹാനി വരുത്തുകയോ പരിഹസിക്കുകയോ ചെയ്യുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Participating in Halloween celebrations",
+              "ml": "ഹാലോവീൻ ആഘോഷങ്ങളിൽ പങ്കെടുത്തിട്ടുണ്ട്",
+              "note": {
+                "en": "Innocent costume fun with children differs from deliberately engaging in its occult-themed practices with real belief or intent.",
+                "ml": "കുട്ടികളുമായുള്ള നിഷ്കളങ്കമായ വേഷംകെട്ടൽ വിനോദം, യഥാർത്ഥ വിശ്വാസത്തോടെയോ ഉദ്ദേശ്യത്തോടെയോ അതിന്റെ ഗൂഢ ആചാരങ്ങളിൽ ബോധപൂർവ്വം ഏർപ്പെടുന്നതിൽ നിന്ന് വ്യത്യസ്തമാണ്."
+              }
+            }
           ]
         }
       ]
@@ -165,7 +459,10 @@
         "en": "Second Commandment — Lord's name in vain",
         "ml": "രണ്ടാം പ്രമാണം — ദൈവത്തിൻറെ നാമം വൃഥാ പ്രയോഗിക്കരുത്"
       },
-      "sub": { "en": "Exodus 20:7", "ml": "പുറപ്പാട് 20:7" },
+      "sub": {
+        "en": "Exodus 20:7",
+        "ml": "പുറപ്പാട് 20:7"
+      },
       "verse": {
         "en": "\"You shall not take the name of the Lord your God in vain.\" — Exodus 20:7",
         "ml": "\"നിന്റെ ദൈവമായ കർത്താവിന്റെ നാമം വ്യർത്ഥമായി ഉച്ചരിക്കരുത്.\" — പുറപ്പാട് 20:7"
@@ -177,26 +474,166 @@
             "ml": "രണ്ടാം പ്രമാണത്തിന് എതിരായ പാപങ്ങൾ"
           },
           "sins": [
-            { "en": "Using the name of God / saints with contempt", "ml": "നിന്ദാപൂർവ്വം ദൈവത്തിൻറെ / വിശുദ്ധരുടെ നാമം ഉപയോഗിക്കുക" },
-            { "en": "Swearing falsely", "ml": "വ്യാജമായി ആണ ഇടുന്നത്" },
-            { "en": "Taking oaths unnecessarily", "ml": "അത്യാവശ്യ സന്ദർഭങ്ങളിൽ അല്ലാതെ സത്യം ചെയ്യുന്നത്" },
-            { "en": "Blasphemy", "ml": "ദൈവദൂഷണം പറയുന്നത്" },
-            { "en": "Speaking against the Holy Spirit", "ml": "പരിശുദ്ധാത്മാവിനെതിരായി സംസാരിക്കുന്നത്" },
-            { "en": "Bearing false witness", "ml": "കള്ളസാക്ഷ്യം പറയുന്നത്" },
-            { "en": "Making vows and oaths but not fulfilling them", "ml": "നേർച്ച നേരുന്നതും ശപഥം ചെയ്യുന്നതും നിറവേറ്റാതിരിക്കുന്നത്" },
-            { "en": "Swearing falsely (perjury)", "ml": "കള്ളസത്യം ചെയുന്നത്" },
-            { "en": "Making vows to be fulfilled by others", "ml": "മറ്റുള്ളവരെക്കൊണ്ട് നിറവേറ്റുന്നതിനു വേണ്ടി നേർച്ചകൾ നേരുന്നത്" },
-            { "en": "Vain / meaningless prayer", "ml": "വ്യർത്ഥമായ പ്രാർത്ഥന" },
-            { "en": "Conducting unnecessary celebrations in God's name", "ml": "ദൈവനാമത്തിൽ അനാവശ്യമായ ആഘോഷങ്ങൾ നടത്തുന്നത്" },
-            { "en": "Insulting Church authorities", "ml": "സഭാധികാരികളെ അപമാനിക്കുന്നത്" },
-            { "en": "Insulting priests / consecrated persons", "ml": "വൈദികരെ / സമർപ്പിതരെ അപമാനിക്കുന്നത്" },
-            { "en": "Mocking the Word / preachers / spiritual workers", "ml": "വചനത്തെ / വചനപ്രഘോഷകരെ / ആത്മീയ പ്രവർത്തകരെ കളിയാക്കുന്നത്" },
-            { "en": "Misinterpreting the Word of God", "ml": "ദൈവവചനം തെറ്റായി വ്യാഖ്യാനിക്കുന്നത്" },
-            { "en": "Considering oneself as God", "ml": "തന്നെ തന്നെ ദൈവമായി പരിഗണിക്കുന്നത്" },
-            { "en": "Deliberately skipping personal prayer", "ml": "വ്യക്തിപരമായ പ്രാർത്ഥന മനഃപൂർവം ഒഴിവാക്കിയത്" },
-            { "en": "Deliberately skipping family prayer", "ml": "കുടുംബ പ്രാർത്ഥന മനഃപൂർവം ഒഴിവാക്കിയത്" },
-            { "en": "Register marriage / having a wedding in another place of worship", "ml": "രജിസ്റ്റർ മാര്യേജ് / മറ്റു ആരാധനാലയങ്ങളിൽ വിവാഹം നടത്തിയത്" },
-            { "en": "Obstructing the preaching of the Word", "ml": "വചനപ്രഘോഷണം തടസപ്പെടുത്തിയിട്ടുണ്ട്" }
+            {
+              "en": "Using the name of God / saints with contempt",
+              "ml": "നിന്ദാപൂർവ്വം ദൈവത്തിൻറെ / വിശുദ്ധരുടെ നാമം ഉപയോഗിക്കുക",
+              "note": {
+                "en": "Using God's name in ordinary speech without malice is not the sin; using it with scorn or contempt is.",
+                "ml": "സാധാരണ സംസാരത്തിൽ വിദ്വേഷമില്ലാതെ ദൈവനാമം പറയുന്നത് പാപമല്ല; പുച്ഛത്തോടെ ഉപയോഗിക്കുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Swearing falsely",
+              "ml": "വ്യാജമായി ആണ ഇടുന്നത്",
+              "note": {
+                "en": "This applies to knowingly calling on God to witness a lie, not to an honest promise that circumstances later prevent.",
+                "ml": "അറിഞ്ഞുകൊണ്ട് ഒരു കള്ളത്തിന് ദൈവത്തെ സാക്ഷിയാക്കുന്നതിനെ സൂചിപ്പിക്കുന്നു, സാഹചര്യങ്ങൾ പിന്നീട് തടസ്സപ്പെടുത്തുന്ന സത്യസന്ധമായ വാഗ്ദാനത്തെയല്ല."
+              }
+            },
+            {
+              "en": "Taking oaths unnecessarily",
+              "ml": "അത്യാവശ്യ സന്ദർഭങ്ങളിൽ അല്ലാതെ സത്യം ചെയ്യുന്നത്",
+              "note": {
+                "en": "A required legal oath is not the sin; casually swearing by God's name for trivial matters is.",
+                "ml": "ആവശ്യമായ നിയമപരമായ സത്യപ്രതിജ്ഞ പാപമല്ല; നിസ്സാര കാര്യങ്ങൾക്ക് ദൈവനാമത്തിൽ അശ്രദ്ധമായി സത്യം ചെയ്യുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Blasphemy",
+              "ml": "ദൈവദൂഷണം പറയുന്നത്",
+              "note": {
+                "en": "An involuntary outburst in pain or shock is not the same as deliberately speaking contempt against God.",
+                "ml": "വേദനയിലോ ഞെട്ടലിലോ അറിയാതെ വരുന്ന വാക്കുകൾ, ബോധപൂർവ്വം ദൈവത്തിനെതിരെ പുച്ഛം പറയുന്നതിൽ നിന്ന് വ്യത്യസ്തമാണ്."
+              }
+            },
+            {
+              "en": "Speaking against the Holy Spirit",
+              "ml": "പരിശുദ്ധാത്മാവിനെതിരായി സംസാരിക്കുന്നത്",
+              "note": {
+                "en": "This refers to the deliberate, persistent rejection of God's mercy and grace, not a moment of doubt or frustration.",
+                "ml": "ദൈവകൃപയെയും കരുണയെയും ബോധപൂർവ്വം, സ്ഥിരമായി നിഷേധിക്കുന്നതിനെ സൂചിപ്പിക്കുന്നു, ഒരു ക്ഷണിക സംശയത്തെയോ നിരാശയെയോ അല്ല."
+              }
+            },
+            {
+              "en": "Bearing false witness",
+              "ml": "കള്ളസാക്ഷ്യം പറയുന്നത്",
+              "note": {
+                "en": "An honest mistake in recollection is not the sin; knowingly giving false testimony against someone is.",
+                "ml": "ഓർമ്മയിലെ സത്യസന്ധമായ പിഴവ് പാപമല്ല; അറിഞ്ഞുകൊണ്ട് ഒരാൾക്കെതിരെ കള്ളസാക്ഷ്യം പറയുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Making vows and oaths but not fulfilling them",
+              "ml": "നേർച്ച നേരുന്നതും ശപഥം ചെയ്യുന്നതും നിറവേറ്റാതിരിക്കുന്നത്",
+              "note": {
+                "en": "Failing to fulfill a vow due to a genuinely changed or impossible circumstance differs from neglecting it through carelessness or a free change of heart.",
+                "ml": "സാഹചര്യം യഥാർത്ഥത്തിൽ മാറിയോ അസാധ്യമായോ കാരണം നേർച്ച നിറവേറ്റാതിരിക്കുന്നത്, അശ്രദ്ധയാലോ സ്വതന്ത്ര മനംമാറ്റത്താലോ അവഗണിക്കുന്നതിൽ നിന്ന് വ്യത്യസ്തമാണ്."
+              }
+            },
+            {
+              "en": "Swearing falsely (perjury)",
+              "ml": "കള്ളസത്യം ചെയുന്നത്",
+              "note": {
+                "en": "As above, this concerns a knowing, deliberate false oath, especially before a court or authority, not an honest error.",
+                "ml": "മുകളിൽ പറഞ്ഞതുപോലെ, ഒരു കോടതിക്കോ അധികാരത്തിനോ മുന്നിൽ അറിഞ്ഞും ബോധപൂർവ്വവുമായ കള്ളസത്യത്തെ സൂചിപ്പിക്കുന്നു, സത്യസന്ധമായ പിഴവല്ല."
+              }
+            },
+            {
+              "en": "Making vows to be fulfilled by others",
+              "ml": "മറ്റുള്ളവരെക്കൊണ്ട് നിറവേറ്റുന്നതിനു വേണ്ടി നേർച്ചകൾ നേരുന്നത്",
+              "note": {
+                "en": "Asking for help to carry out a vow is not the sin; deliberately shifting your own vowed obligation onto someone else without their free consent is.",
+                "ml": "നേർച്ച നിറവേറ്റാൻ സഹായം ചോദിക്കുന്നത് പാപമല്ല; സ്വന്തം നേർച്ചയുടെ ബാധ്യത മറ്റൊരാളുടെ സ്വതന്ത്ര സമ്മതമില്ലാതെ ബോധപൂർവ്വം അവരിലേക്ക് മാറ്റുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Vain / meaningless prayer",
+              "ml": "വ്യർത്ഥമായ പ്രാർത്ഥന",
+              "note": {
+                "en": "Struggling with distraction during prayer is not the sin; deliberately reciting words without any intention of praying is.",
+                "ml": "പ്രാർത്ഥനയിൽ ശ്രദ്ധ തെറ്റുന്നത് പാപമല്ല; പ്രാർത്ഥിക്കാനുള്ള ഉദ്ദേശ്യമേ ഇല്ലാതെ ബോധപൂർവ്വം വാക്കുകൾ ഉരുവിടുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Conducting unnecessary celebrations in God's name",
+              "ml": "ദൈവനാമത്തിൽ അനാവശ്യമായ ആഘോഷങ്ങൾ നടത്തുന്നത്",
+              "note": {
+                "en": "Genuine occasions of thanksgiving are good; using God's name as a pretext for extravagant or self-serving celebrations is what's meant here.",
+                "ml": "യഥാർത്ഥ നന്ദിപ്രകടന അവസരങ്ങൾ നല്ലതാണ്; ദൈവനാമം ഒരു കാരണമാക്കി ആഡംബര അല്ലെങ്കിൽ സ്വാർത്ഥ ആഘോഷങ്ങൾ നടത്തുന്നതാണ് ഇവിടെ ഉദ്ദേശിക്കുന്നത്."
+              }
+            },
+            {
+              "en": "Insulting Church authorities",
+              "ml": "സഭാധികാരികളെ അപമാനിക്കുന്നത്",
+              "note": {
+                "en": "Respectfully raising a genuine concern or criticism is not the sin; insulting them out of contempt or malice is.",
+                "ml": "യഥാർത്ഥ ആശങ്ക ബഹുമാനത്തോടെ ഉന്നയിക്കുന്നത് പാപമല്ല; പുച്ഛത്തോടെയോ ദ്വേഷത്തോടെയോ അധിക്ഷേപിക്കുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Insulting priests / consecrated persons",
+              "ml": "വൈദികരെ / സമർപ്പിതരെ അപമാനിക്കുന്നത്",
+              "note": {
+                "en": "As above, honest criticism of real wrongdoing is not the sin; contemptuous insult is.",
+                "ml": "മുകളിൽ പറഞ്ഞതുപോലെ, യഥാർത്ഥ തെറ്റിനെക്കുറിച്ചുള്ള സത്യസന്ധമായ വിമർശനം പാപമല്ല; പുച്ഛത്തോടെയുള്ള അധിക്ഷേപമാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Mocking the Word / preachers / spiritual workers",
+              "ml": "വചനത്തെ / വചനപ്രഘോഷകരെ / ആത്മീയ പ്രവർത്തകരെ കളിയാക്കുന്നത്",
+              "note": {
+                "en": "Disagreeing respectfully with a homily's point is not the sin; mocking the Word of God or those who preach it is.",
+                "ml": "ഒരു പ്രസംഗത്തിലെ ഒരു കാര്യത്തോട് ബഹുമാനത്തോടെ വിയോജിക്കുന്നത് പാപമല്ല; ദൈവവചനത്തെയോ പ്രസംഗകരെയോ പരിഹസിക്കുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Misinterpreting the Word of God",
+              "ml": "ദൈവവചനം തെറ്റായി വ്യാഖ്യാനിക്കുന്നത്",
+              "note": {
+                "en": "An honest, humble misunderstanding is not the sin; deliberately twisting Scripture to justify oneself or mislead others is.",
+                "ml": "സത്യസന്ധമായ, വിനയപൂർവ്വമായ തെറ്റിദ്ധാരണ പാപമല്ല; സ്വയം ന്യായീകരിക്കാനോ മറ്റുള്ളവരെ വഴിതെറ്റിക്കാനോ ബോധപൂർവ്വം തിരുവചനത്തെ വളച്ചൊടിക്കുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Considering oneself as God",
+              "ml": "തന്നെ തന്നെ ദൈവമായി പരിഗണിക്കുന്നത്",
+              "note": {
+                "en": "This refers to a deliberate, prideful claim to divine authority or infallibility, not ordinary self-confidence.",
+                "ml": "ദിവ്യമായ അധികാരമോ അപ്രമാദിത്വമോ ബോധപൂർവ്വം, അഹങ്കാരത്തോടെ അവകാശപ്പെടുന്നതിനെ സൂചിപ്പിക്കുന്നു, സാധാരണ ആത്മവിശ്വാസത്തെയല്ല."
+              }
+            },
+            {
+              "en": "Deliberately skipping personal prayer",
+              "ml": "വ്യക്തിപരമായ പ്രാർത്ഥന മനഃപൂർവം ഒഴിവാക്കിയത്",
+              "note": {
+                "en": "Occasionally missing prayer due to tiredness or an emergency is not the same as freely and habitually neglecting it out of indifference.",
+                "ml": "ക്ഷീണം കൊണ്ടോ അടിയന്തരാവസ്ഥ കൊണ്ടോ ഇടയ്ക്ക് പ്രാർത്ഥന മുടങ്ങുന്നത്, നിസ്സംഗതയാൽ സ്വതന്ത്രമായും ശീലമായും അവഗണിക്കുന്നതിൽ നിന്ന് വ്യത്യസ്തമാണ്."
+              }
+            },
+            {
+              "en": "Deliberately skipping family prayer",
+              "ml": "കുടുംബ പ്രാർത്ഥന മനഃപൂർവം ഒഴിവാക്കിയത്",
+              "note": {
+                "en": "As above, this concerns habitually and freely neglecting it, not occasional lapses due to circumstance.",
+                "ml": "മുകളിൽ പറഞ്ഞതുപോലെ, ശീലമായും സ്വതന്ത്രമായും അവഗണിക്കുന്നതിനെ സൂചിപ്പിക്കുന്നു, സാഹചര്യം മൂലമുള്ള ഇടയ്ക്കുള്ള മുടക്കത്തെയല്ല."
+              }
+            },
+            {
+              "en": "Register marriage / having a wedding in another place of worship",
+              "ml": "രജിസ്റ്റർ മാര്യേജ് / മറ്റു ആരാധനാലയങ്ങളിൽ വിവാഹം നടത്തിയത്",
+              "note": {
+                "en": "This concerns knowingly and freely entering marriage outside the Church's requirements, not situations forced by law or circumstance beyond one's control.",
+                "ml": "സഭയുടെ ആവശ്യകതകൾക്ക് പുറത്ത് അറിഞ്ഞും സ്വതന്ത്രമായും വിവാഹം കഴിക്കുന്നതിനെ സൂചിപ്പിക്കുന്നു, നിയമമോ സാഹചര്യമോ നിർബന്ധിതമാക്കുന്നതിനെയല്ല."
+              }
+            },
+            {
+              "en": "Obstructing the preaching of the Word",
+              "ml": "വചനപ്രഘോഷണം തടസപ്പെടുത്തിയിട്ടുണ്ട്",
+              "note": {
+                "en": "Asking honest questions is not the sin; deliberately preventing others from hearing or receiving the Gospel is.",
+                "ml": "സത്യസന്ധമായ ചോദ്യങ്ങൾ ചോദിക്കുന്നത് പാപമല്ല; സുവിശേഷം കേൾക്കുന്നതിൽ നിന്നോ സ്വീകരിക്കുന്നതിൽ നിന്നോ മറ്റുള്ളവരെ ബോധപൂർവ്വം തടയുന്നതാണ് ബാധകം."
+              }
+            }
           ]
         }
       ]
@@ -208,7 +645,10 @@
         "en": "Third Commandment — Keep holy the Lord's Day",
         "ml": "മൂന്നാം പ്രമാണം — കർത്താവിൻറെ ദിവസം പരിശുദ്ധമായി ആചരിക്കണം"
       },
-      "sub": { "en": "Exodus 20:8-10", "ml": "പുറപ്പാട് 20:8-10" },
+      "sub": {
+        "en": "Exodus 20:8-10",
+        "ml": "പുറപ്പാട് 20:8-10"
+      },
       "verse": {
         "en": "\"Remember the Sabbath day, to keep it holy.\" — Exodus 20:8",
         "ml": "\"സാബത്ത് ദിവസം പരിശുദ്ധമായി ആചരിക്കണം.\" — പുറപ്പാട് 20:8"
@@ -220,26 +660,166 @@
             "ml": "മൂന്നാം പ്രമാണത്തിന് എതിരായ പാപങ്ങൾ"
           },
           "sins": [
-            { "en": "Not attending Holy Mass on Sundays and obligatory feast days", "ml": "ഞായറാഴ്ചകളിലും കടമുള്ള തിരുനാളുകളും വിശുദ്ധ കുർബാനയിൽ സംബന്ധിക്കാതിരിക്കുക" },
-            { "en": "Missing Holy Mass for personal interests and pleasures", "ml": "സ്വന്തം താല്പര്യങ്ങൾക്കും ഇഷ്ടങ്ങൾക്കും വേണ്ടി വിശുദ്ധ കുർബാന മുടക്കുക" },
-            { "en": "Working or making others work on Sundays", "ml": "ഞായറാഴ്ച ജോലി ചെയ്യുക അല്ലെങ്കിൽ ചെയ്യിപ്പിക്കുക" },
-            { "en": "Participating in activities unbecoming of holiness", "ml": "വിശുദ്ധിക്ക് ചേരാത്ത പ്രവർത്തികളിൽ പങ്കെടുക്കുക" },
-            { "en": "Questioning the Word of God", "ml": "ദൈവവചനത്തെ ചോദ്യംചെയ്യുക" },
-            { "en": "Not confessing at least once a year", "ml": "വർഷത്തിലൊരിക്കലെങ്കിലും കുമ്പസാരിക്കാതിരിക്കുക" },
-            { "en": "Not receiving Holy Communion during the Paschal season", "ml": "പെസഹകാലത്ത് വിശുദ്ധകുർബാന ഉൾക്കൊള്ളാതിരിക്കുക" },
-            { "en": "Receiving Holy Communion without proper preparation and in a state of sin", "ml": "വേണ്ടത്ര ഒരുക്കമില്ലാതെയും പാപാവസ്ഥയിലും വിശുദ്ധ കുർബാന സ്വീകരിക്കുക" },
-            { "en": "Not fasting on appointed days", "ml": "നിശ്ചയിക്കപ്പെട്ട ദിവസങ്ങളിൽ ഉപവസിക്കാതിരിക്കുക" },
-            { "en": "Not abstaining from forbidden foods", "ml": "വിലക്കപ്പെട്ട ഭക്ഷണസാധനങ്ങൾ വർജിക്കാതിരിക്കുക" },
-            { "en": "Doing acts unbecoming of the sanctity of the church", "ml": "ദേവാലയ പരിശുദ്ധിക്ക് യോജിക്കാത്ത പ്രവർത്തനങ്ങൾ ചെയ്യുക" },
-            { "en": "Not giving importance to Scripture study", "ml": "വേദ പഠനത്തിന് പ്രാധാന്യം കൊടുക്കാതിരിക്കുന്നത്" },
-            { "en": "Not avoiding work that hinders divine worship", "ml": "ദൈവാരാധനയ്ക്ക് തടസമായേക്കുന്ന ജോലി / വ്യവഹാരം / വ്യപാരങ്ങൾ എന്നിവയിൽ നിന്ന് വിട്ടുനിൽക്കാത്തത്" },
-            { "en": "Causing obstacles to another person's Sunday observance", "ml": "മറ്റൊരു വ്യക്തിയുടെ ഞായറാഴ്ച ആചരണത്തിന് തടസ്സം സൃഷ്ടിക്കുന്നത്" },
-            { "en": "Living with despair, believing salvation is impossible", "ml": "മോക്ഷം കിട്ടുകയില്ലെന്നുള്ള വിചാരം അഥവാ നിരാശയോടെ ജീവിച്ചിട്ടുണ്ട്" },
-            { "en": "Living in false hope of salvation without good works", "ml": "സത്പ്രവൃത്തി കുടാതെ മോക്ഷം പ്രാപിക്കാമെന്ന മിഥ്യാപ്രതീക്ഷയിൽ ജീവിചിട്ടുണ്ട്" },
-            { "en": "Denying a truth even after knowing it is true", "ml": "ഒരുകാര്യം സത്യമാണെന്നറിഞ്ഞിട്ടും അതിനെ നിഷേധിച്ചിട്ടുണ്ട്" },
-            { "en": "Being envious of others' goodness", "ml": "അന്യരുടെ നന്മയിൽ അസൂയപെട്ടിട്ടുണ്ട്" },
-            { "en": "After sinning, living in sin without repentance", "ml": "പാപം ചെയ്തതിനുശേഷം, അനുതപിക്കാതെ പാപത്തിൽത്തന്നെ ജീവിച്ചിട്ടുണ്ട്" },
-            { "en": "Thinking that one can die in sin without repentance", "ml": "അന്ത്യസമയത്തുപോലും അനുതപിക്കാതെ പാപത്തോടുകൂടി മരിക്കാം എന്ന് കരുതിയിട്ടുണ്ട്" }
+            {
+              "en": "Not attending Holy Mass on Sundays and obligatory feast days",
+              "ml": "ഞായറാഴ്ചകളിലും കടമുള്ള തിരുനാളുകളും വിശുദ്ധ കുർബാനയിൽ സംബന്ധിക്കാതിരിക്കുക",
+              "note": {
+                "en": "Missing Mass due to illness, distance, or genuine necessity is not the sin; freely skipping it without a serious reason is.",
+                "ml": "രോഗം, ദൂരം, യഥാർത്ഥ ആവശ്യകത എന്നിവ മൂലം കുർബാനയിൽ പങ്കെടുക്കാതിരിക്കുന്നത് പാപമല്ല; ഗുരുതരമായ കാരണമില്ലാതെ സ്വതന്ത്രമായി ഒഴിവാക്കുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Missing Holy Mass for personal interests and pleasures",
+              "ml": "സ്വന്തം താല്പര്യങ്ങൾക്കും ഇഷ്ടങ്ങൾക്കും വേണ്ടി വിശുദ്ധ കുർബാന മുടക്കുക",
+              "note": {
+                "en": "This applies when you freely chose leisure or convenience over Mass, not when a genuine obligation prevented you.",
+                "ml": "വിശ്രമമോ സൗകര്യമോ കുർബാനയേക്കാൾ സ്വതന്ത്രമായി തിരഞ്ഞെടുത്താൽ ബാധകം, യഥാർത്ഥ ബാധ്യത തടസ്സപ്പെടുത്തിയാൽ അല്ല."
+              }
+            },
+            {
+              "en": "Working or making others work on Sundays",
+              "ml": "ഞായറാഴ്ച ജോലി ചെയ്യുക അല്ലെങ്കിൽ ചെയ്യിപ്പിക്കുക",
+              "note": {
+                "en": "Necessary work (care of the sick, essential services) is not the sin; needlessly denying rest and worship to yourself or others is.",
+                "ml": "ആവശ്യമായ ജോലി (രോഗീപരിചരണം, അവശ്യ സേവനങ്ങൾ) പാപമല്ല; അനാവശ്യമായി സ്വയത്തിനോ മറ്റുള്ളവർക്കോ വിശ്രമവും ആരാധനയും നിഷേധിക്കുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Participating in activities unbecoming of holiness",
+              "ml": "വിശുദ്ധിക്ക് ചേരാത്ത പ്രവർത്തികളിൽ പങ്കെടുക്കുക",
+              "note": {
+                "en": "This concerns knowingly engaging in activities that mock or trivialize what is sacred, not innocent recreation on a holy day.",
+                "ml": "വിശുദ്ധമായതിനെ പരിഹസിക്കുകയോ നിസ്സാരമാക്കുകയോ ചെയ്യുന്ന പ്രവർത്തനങ്ങളിൽ അറിഞ്ഞുകൊണ്ട് ഏർപ്പെടുന്നതിനെ സൂചിപ്പിക്കുന്നു, ഒരു വിശുദ്ധ ദിനത്തിലെ നിഷ്കളങ്കമായ വിനോദത്തെയല്ല."
+              }
+            },
+            {
+              "en": "Questioning the Word of God",
+              "ml": "ദൈവവചനത്തെ ചോദ്യംചെയ്യുക",
+              "note": {
+                "en": "Honest questions asked in a search for understanding are not the sin; a stubborn, deliberate refusal to accept it is.",
+                "ml": "മനസ്സിലാക്കാനുള്ള അന്വേഷണത്തിൽ ചോദിക്കുന്ന സത്യസന്ധമായ ചോദ്യങ്ങൾ പാപമല്ല; ബോധപൂർവ്വം, ശാഠ്യത്തോടെ അത് അംഗീകരിക്കാൻ വിസമ്മതിക്കുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Not confessing at least once a year",
+              "ml": "വർഷത്തിലൊരിക്കലെങ്കിലും കുമ്പസാരിക്കാതിരിക്കുക",
+              "note": {
+                "en": "A delay due to genuine difficulty in finding a priest is not the same as freely neglecting this duty out of indifference.",
+                "ml": "വൈദികനെ കണ്ടെത്താനുള്ള യഥാർത്ഥ ബുദ്ധിമുട്ട് മൂലമുള്ള കാലതാമസം, നിസ്സംഗതയാൽ സ്വതന്ത്രമായി ഈ കടമ അവഗണിക്കുന്നതിൽ നിന്ന് വ്യത്യസ്തമാണ്."
+              }
+            },
+            {
+              "en": "Not receiving Holy Communion during the Paschal season",
+              "ml": "പെസഹകാലത്ത് വിശുദ്ധകുർബാന ഉൾക്കൊള്ളാതിരിക്കുക",
+              "note": {
+                "en": "As above, a genuine hindrance differs from freely and habitually neglecting this obligation.",
+                "ml": "മുകളിൽ പറഞ്ഞതുപോലെ, യഥാർത്ഥ തടസ്സം, ഈ കടമ സ്വതന്ത്രമായും ശീലമായും അവഗണിക്കുന്നതിൽ നിന്ന് വ്യത്യസ്തമാണ്."
+              }
+            },
+            {
+              "en": "Receiving Holy Communion without proper preparation and in a state of sin",
+              "ml": "വേണ്ടത്ര ഒരുക്കമില്ലാതെയും പാപാവസ്ഥയിലും വിശുദ്ധ കുർബാന സ്വീകരിക്കുക",
+              "note": {
+                "en": "Ordinary imperfections do not bar Communion; knowingly receiving it while conscious of grave, unconfessed sin does.",
+                "ml": "സാധാരണ ബലഹീനതകൾ കുർബാന സ്വീകരണത്തിന് തടസ്സമല്ല; ഗുരുതരവും ഏറ്റുപറയാത്തതുമായ പാപത്തിന്റെ ബോധത്തോടെ അറിഞ്ഞുകൊണ്ട് സ്വീകരിക്കുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Not fasting on appointed days",
+              "ml": "നിശ്ചയിക്കപ്പെട്ട ദിവസങ്ങളിൽ ഉപവസിക്കാതിരിക്കുക",
+              "note": {
+                "en": "A genuine health reason excusing you from fasting is not the sin; freely disregarding the Church's fasting discipline is.",
+                "ml": "ഉപവാസത്തിൽ നിന്ന് ഒഴിവാക്കുന്ന യഥാർത്ഥ ആരോഗ്യകാരണം പാപമല്ല; സഭയുടെ ഉപവാസ അച്ചടക്കം സ്വതന്ത്രമായി അവഗണിക്കുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Not abstaining from forbidden foods",
+              "ml": "വിലക്കപ്പെട്ട ഭക്ഷണസാധനങ്ങൾ വർജിക്കാതിരിക്കുക",
+              "note": {
+                "en": "As above, a genuine necessity excuses; freely disregarding this discipline out of indifference does not.",
+                "ml": "മുകളിൽ പറഞ്ഞതുപോലെ, യഥാർത്ഥ ആവശ്യകത ഒഴിവാക്കുന്നു; നിസ്സംഗതയാൽ ഈ അച്ചടക്കം സ്വതന്ത്രമായി അവഗണിക്കുന്നത് ഒഴിവാക്കുന്നില്ല."
+              }
+            },
+            {
+              "en": "Doing acts unbecoming of the sanctity of the church",
+              "ml": "ദേവാലയ പരിശുദ്ധിക്ക് യോജിക്കാത്ത പ്രവർത്തനങ്ങൾ ചെയ്യുക",
+              "note": {
+                "en": "An accidental disturbance is not the sin; deliberately behaving disrespectfully in a sacred place is.",
+                "ml": "ആകസ്മികമായ അലോസരം പാപമല്ല; ബോധപൂർവ്വം ഒരു വിശുദ്ധ സ്ഥലത്ത് അനാദരവോടെ പെരുമാറുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Not giving importance to Scripture study",
+              "ml": "വേദ പഠനത്തിന് പ്രാധാന്യം കൊടുക്കാതിരിക്കുന്നത്",
+              "note": {
+                "en": "Struggling to find time is not the sin; freely and habitually treating God's Word as unimportant is.",
+                "ml": "സമയം കണ്ടെത്താൻ ബുദ്ധിമുട്ടുന്നത് പാപമല്ല; ദൈവവചനത്തെ പ്രാധാന്യമില്ലാത്തതായി സ്വതന്ത്രമായും ശീലമായും കണക്കാക്കുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Not avoiding work that hinders divine worship",
+              "ml": "ദൈവാരാധനയ്ക്ക് തടസമായേക്കുന്ന ജോലി / വ്യവഹാരം / വ്യപാരങ്ങൾ എന്നിവയിൽ നിന്ന് വിട്ടുനിൽക്കാത്തത്",
+              "note": {
+                "en": "Unavoidable necessary work is not the sin; freely choosing tasks that could be postponed over worship is.",
+                "ml": "ഒഴിവാക്കാനാവാത്ത ആവശ്യമായ ജോലി പാപമല്ല; മാറ്റിവയ്ക്കാവുന്ന കാര്യങ്ങൾ ആരാധനയേക്കാൾ സ്വതന്ത്രമായി തിരഞ്ഞെടുക്കുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Causing obstacles to another person's Sunday observance",
+              "ml": "മറ്റൊരു വ്യക്തിയുടെ ഞായറാഴ്ച ആചരണത്തിന് തടസ്സം സൃഷ്ടിക്കുന്നത്",
+              "note": {
+                "en": "An unavoidable request for help is not the sin; deliberately preventing someone from worship for your own convenience is.",
+                "ml": "സഹായത്തിനുള്ള ഒഴിവാക്കാനാവാത്ത അഭ്യർത്ഥന പാപമല്ല; സ്വന്തം സൗകര്യത്തിനായി ബോധപൂർവ്വം ഒരാളെ ആരാധനയിൽ നിന്ന് തടയുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Living with despair, believing salvation is impossible",
+              "ml": "മോക്ഷം കിട്ടുകയില്ലെന്നുള്ള വിചാരം അഥവാ നിരാശയോടെ ജീവിച്ചിട്ടുണ്ട്",
+              "note": {
+                "en": "A passing feeling of discouragement is not the sin; a deliberate, settled conviction that God's mercy cannot reach you is.",
+                "ml": "ക്ഷണിക നിരാശ പാപമല്ല; ദൈവകരുണ നിങ്ങളിലേക്ക് എത്തില്ലെന്ന ബോധപൂർവ്വവും സ്ഥിരവുമായ ബോധ്യമാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Living in false hope of salvation without good works",
+              "ml": "സത്പ്രവൃത്തി കുടാതെ മോക്ഷം പ്രാപിക്കാമെന്ന മിഥ്യാപ്രതീക്ഷയിൽ ജീവിചിട്ടുണ്ട്",
+              "note": {
+                "en": "Trusting in God's mercy is good; presuming salvation as automatic while deliberately refusing to live accordingly is the sin.",
+                "ml": "ദൈവകരുണയിൽ ആശ്രയിക്കുന്നത് നല്ലതാണ്; അതനുസരിച്ച് ജീവിക്കാൻ ബോധപൂർവ്വം വിസമ്മതിച്ചുകൊണ്ട് രക്ഷ സ്വയമേവ ലഭിക്കുമെന്ന് കരുതുന്നതാണ് പാപം."
+              }
+            },
+            {
+              "en": "Denying a truth even after knowing it is true",
+              "ml": "ഒരുകാര്യം സത്യമാണെന്നറിഞ്ഞിട്ടും അതിനെ നിഷേധിച്ചിട്ടുണ്ട്",
+              "note": {
+                "en": "Taking time to be convinced is not the sin; stubbornly denying what you already know to be true is.",
+                "ml": "ബോധ്യപ്പെടാൻ സമയമെടുക്കുന്നത് പാപമല്ല; ഇതിനകം സത്യമെന്നറിയാവുന്ന കാര്യം ശാഠ്യത്തോടെ നിഷേധിക്കുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Being envious of others' goodness",
+              "ml": "അന്യരുടെ നന്മയിൽ അസൂയപെട്ടിട്ടുണ്ട്",
+              "note": {
+                "en": "Being inspired by someone's virtue is good; feeling resentment or sorrow at their goodness is the sin.",
+                "ml": "ഒരാളുടെ സദ്ഗുണത്താൽ പ്രചോദിതരാകുന്നത് നല്ലതാണ്; അവരുടെ നന്മയിൽ വിദ്വേഷമോ ദുഃഖമോ തോന്നുന്നതാണ് പാപം."
+              }
+            },
+            {
+              "en": "After sinning, living in sin without repentance",
+              "ml": "പാപം ചെയ്തതിനുശേഷം, അനുതപിക്കാതെ പാപത്തിൽത്തന്നെ ജീവിച്ചിട്ടുണ്ട്",
+              "note": {
+                "en": "Falling again after a genuine effort to change is not the same as freely choosing to remain in sin without any intention to repent.",
+                "ml": "മാറാൻ യഥാർത്ഥ ശ്രമം നടത്തിയിട്ടും വീണ്ടും വീഴുന്നത്, അനുതപിക്കാൻ ഒരു ഉദ്ദേശ്യവുമില്ലാതെ സ്വതന്ത്രമായി പാപത്തിൽ തുടരുന്നതിൽ നിന്ന് വ്യത്യസ്തമാണ്."
+              }
+            },
+            {
+              "en": "Thinking that one can die in sin without repentance",
+              "ml": "അന്ത്യസമയത്തുപോലും അനുതപിക്കാതെ പാപത്തോടുകൂടി മരിക്കാം എന്ന് കരുതിയിട്ടുണ്ട്",
+              "note": {
+                "en": "A momentary careless thought is not the sin; a settled presumption that you can delay repentance indefinitely is.",
+                "ml": "ക്ഷണിക അശ്രദ്ധമായ ചിന്ത പാപമല്ല; അനുതാപം അനിശ്ചിതമായി വൈകിപ്പിക്കാമെന്ന സ്ഥിരമായ ധാരണയാണ് ബാധകം."
+              }
+            }
           ]
         }
       ]
@@ -266,28 +846,182 @@
             "ml": "നാലാം പ്രമാണത്തിന് എതിരായ പാപങ്ങൾ"
           },
           "sins": [
-            { "en": "Not honoring parents", "ml": "മാതാപിതാക്കളെ ബഹുമാനിക്കാതിരിക്കുക" },
-            { "en": "Not obeying parents", "ml": "മാതാപിതാക്കളെ അനുസരിക്കാതിരിക്കുക" },
-            { "en": "Not loving parents", "ml": "മാതാപിതാക്കളെ സ്നേഹിക്കാതിരിക്കുക" },
-            { "en": "Hurting parents", "ml": "മാതാപിതാക്കളെ വേദനിപ്പിക്കുക" },
-            { "en": "Cursing parents (Lev 20:9)", "ml": "മാതാപിതാക്കളെ ശപിക്കുക (ലേവ്യർ 20:9)" },
-            { "en": "Not providing care / denying / neglecting parents", "ml": "മാതാപിതാക്കൾക്ക് സംരക്ഷണം നൽകാതിരിക്കുക / നിഷേധിക്കുക / അവഗണിക്കുക" },
-            { "en": "Not fulfilling parents' wishes", "ml": "മാതാപിതാക്കളുടെ ആഗ്രഹങ്ങൾ സാധിച്ചു കൊടുക്കാതിരിക്കുക" },
-            { "en": "Physically or mentally harming parents", "ml": "മാതാപിതാക്കളെ ശാരീരികമായോ മാനസികമായോ ഉപദ്രവിക്കുക" },
-            { "en": "Speaking about parents' faults and weaknesses", "ml": "മാതാപിതാക്കളുടെ കുറവുകളെയും ബലഹീനതകളും കുറിച്ച് കുറ്റം പറയുക" },
-            { "en": "Speaking to parents with contempt", "ml": "പുച്ഛത്തോടെ മാതാപിതാക്കളോട് സംസാരിക്കുക" },
-            { "en": "Not obeying elders and authorities", "ml": "മുതിർന്നവരെയും മേലധികാരികളെയും അനുസരിക്കാതിരിക്കുക" },
-            { "en": "Not respecting authorities, teachers, elder siblings", "ml": "മേലധികാരികൾ, അധ്യാപകർ, ജേഷ്ഠ സഹോദരീസഹോദരന്മാർ എന്നിവരെ ബഹുമാനിക്കാതിരിക്കുക" },
-            { "en": "Showing disrespect to parents or elders", "ml": "മാതാപിതാക്കളോടോ, മുതിർന്നവരോടോ അനാദരവ് കാണിക്കുക" },
-            { "en": "Not loving one's spouse", "ml": "ജീവിതപങ്കാളിയെ സ്നേഹിക്കാതിരിക്കുക" },
-            { "en": "Hurting one's spouse (Eph 5:22-25)", "ml": "പങ്കാളിയെ വേദനിപ്പിക്കുക (എഫേസോസ് 5:22-25)" },
-            { "en": "Not respecting spouse's parents", "ml": "പങ്കാളിയുടെ മാതാപിതാക്കളെ ബഹുമാനിക്കാതിരിക്കുക" },
-            { "en": "Showing partiality / favoritism", "ml": "പക്ഷപാതം കാണിക്കുക" },
-            { "en": "Not raising children in the Lord's discipline and instruction", "ml": "മക്കളെ കർത്താവിൻറെ ശിക്ഷണത്തിലും ഉപദേശത്തിലും വളർത്താതിരിക്കുക" },
-            { "en": "Failures in relationship with children", "ml": "മക്കളുമായുള്ള ബന്ധത്തിലുള്ള വീഴ്ചകൾ സംഭവിച്ചിട്ടുണ്ടെങ്കിൽ" },
-            { "en": "Neglecting children, thinking of them as a burden", "ml": "മക്കളെ അവഗണിക്കുകയും, മക്കൾ ശല്യമാണെന്ന ചിന്ത ഉണ്ടെങ്കിൽ" },
-            { "en": "Denying children their rights", "ml": "മക്കൾക്ക് അവകാശങ്ങൾ നിഷേധിച്ചിട്ടുണ്ടെങ്കിൽ" },
-            { "en": "Not loving, neglecting, harming, denying rights, blaming, mentally tormenting daughters/sons-in-law", "ml": "മരുമക്കളെ സ്നേഹിക്കാതിരിക്കുക, അവഗണിക്കുക, ഉപദ്രവിക്കുക, അവകാശങ്ങൾ നിഷേധിക്കുക, കുറ്റപ്പെടുത്തുക, മാനസികമായി പീഡിപ്പിക്കുക" }
+            {
+              "en": "Not honoring parents",
+              "ml": "മാതാപിതാക്കളെ ബഹുമാനിക്കാതിരിക്കുക",
+              "note": {
+                "en": "Disagreeing with a parent's decision is not the sin; a settled attitude of contempt or dishonor toward them is.",
+                "ml": "മാതാപിതാക്കളുടെ തീരുമാനത്തോട് വിയോജിക്കുന്നത് പാപമല്ല; അവരോട് സ്ഥിരമായ പുച്ഛമോ അനാദരവോ ഉള്ള മനോഭാവമാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Not obeying parents",
+              "ml": "മാതാപിതാക്കളെ അനുസരിക്കാതിരിക്കുക",
+              "note": {
+                "en": "Declining a request that is unreasonable or against your conscience is not the sin; freely disobeying just and reasonable requests is.",
+                "ml": "ന്യായമല്ലാത്തതോ മനസ്സാക്ഷിക്ക് വിരുദ്ധമോ ആയ അഭ്യർത്ഥന നിരസിക്കുന്നത് പാപമല്ല; ന്യായവും യുക്തവുമായ അഭ്യർത്ഥനകൾ സ്വതന്ത്രമായി അനുസരിക്കാതിരിക്കുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Not loving parents",
+              "ml": "മാതാപിതാക്കളെ സ്നേഹിക്കാതിരിക്കുക",
+              "note": {
+                "en": "Struggling with a difficult relationship is not the sin; a deliberate refusal to love or care for them is.",
+                "ml": "ബുദ്ധിമുട്ടേറിയ ബന്ധവുമായി മല്ലിടുന്നത് പാപമല്ല; അവരെ സ്നേഹിക്കാനോ കരുതാനോ ബോധപൂർവ്വം വിസമ്മതിക്കുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Hurting parents",
+              "ml": "മാതാപിതാക്കളെ വേദനിപ്പിക്കുക",
+              "note": {
+                "en": "An unintentional hurt is not the same as deliberately causing them pain by word or action.",
+                "ml": "അറിയാതെയുള്ള വേദനിപ്പിക്കൽ, വാക്കിലൂടെയോ പ്രവൃത്തിയിലൂടെയോ ബോധപൂർവ്വം അവരെ വേദനിപ്പിക്കുന്നതിൽ നിന്ന് വ്യത്യസ്തമാണ്."
+              }
+            },
+            {
+              "en": "Cursing parents (Lev 20:9)",
+              "ml": "മാതാപിതാക്കളെ ശപിക്കുക (ലേവ്യർ 20:9)",
+              "note": {
+                "en": "An outburst of frustration quickly regretted is not the same as deliberately wishing them harm or cursing them in anger.",
+                "ml": "പെട്ടെന്ന് പശ്ചാത്തപിക്കുന്ന നിരാശയുടെ പൊട്ടിത്തെറി, കോപത്തിൽ ബോധപൂർവ്വം അവർക്ക് ദോഷം ആശംസിക്കുന്നതിൽ നിന്നോ ശപിക്കുന്നതിൽ നിന്നോ വ്യത്യസ്തമാണ്."
+              }
+            },
+            {
+              "en": "Not providing care / denying / neglecting parents",
+              "ml": "മാതാപിതാക്കൾക്ക് സംരക്ഷണം നൽകാതിരിക്കുക / നിഷേധിക്കുക / അവഗണിക്കുക",
+              "note": {
+                "en": "Being genuinely unable to provide for them is not the sin; freely neglecting them while having the means to help is.",
+                "ml": "അവർക്കായി കരുതാൻ യഥാർത്ഥത്തിൽ കഴിയാതിരിക്കുന്നത് പാപമല്ല; സഹായിക്കാൻ കഴിവുണ്ടായിട്ടും സ്വതന്ത്രമായി അവഗണിക്കുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Not fulfilling parents' wishes",
+              "ml": "മാതാപിതാക്കളുടെ ആഗ്രഹങ്ങൾ സാധിച്ചു കൊടുക്കാതിരിക്കുക",
+              "note": {
+                "en": "Declining an unreasonable wish is not the sin; freely disregarding their legitimate, reasonable wishes out of indifference is.",
+                "ml": "ന്യായമല്ലാത്ത ആഗ്രഹം നിരസിക്കുന്നത് പാപമല്ല; അവരുടെ ന്യായവും ന്യായയുക്തവുമായ ആഗ്രഹങ്ങൾ നിസ്സംഗതയാൽ സ്വതന്ത്രമായി അവഗണിക്കുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Physically or mentally harming parents",
+              "ml": "മാതാപിതാക്കളെ ശാരീരികമായോ മാനസികമായോ ഉപദ്രവിക്കുക",
+              "note": {
+                "en": "This is always a grave matter when done deliberately and knowingly, regardless of provocation.",
+                "ml": "പ്രകോപനം എന്തുതന്നെയായാലും, ബോധപൂർവ്വവും അറിഞ്ഞുകൊണ്ടും ചെയ്യുമ്പോൾ ഇത് എപ്പോഴും ഗുരുതരമായ കാര്യമാണ്."
+              }
+            },
+            {
+              "en": "Speaking about parents' faults and weaknesses",
+              "ml": "മാതാപിതാക്കളുടെ കുറവുകളെയും ബലഹീനതകളും കുറിച്ച് കുറ്റം പറയുക",
+              "note": {
+                "en": "Speaking to someone in confidence out of genuine concern for their wellbeing differs from spreading it to shame them.",
+                "ml": "അവരുടെ ക്ഷേമത്തിനായി യഥാർത്ഥ ആശങ്കയോടെ വിശ്വാസത്തിലുള്ള ഒരാളോട് സംസാരിക്കുന്നത്, അപമാനിക്കാൻ അത് പരത്തുന്നതിൽ നിന്ന് വ്യത്യസ്തമാണ്."
+              }
+            },
+            {
+              "en": "Speaking to parents with contempt",
+              "ml": "പുച്ഛത്തോടെ മാതാപിതാക്കളോട് സംസാരിക്കുക",
+              "note": {
+                "en": "A moment of raised voices in frustration is not the same as habitually addressing them with scorn.",
+                "ml": "നിരാശയിൽ ശബ്ദമുയർത്തുന്ന ഒരു നിമിഷം, ശീലമായി പുച്ഛത്തോടെ സംസാരിക്കുന്നതിൽ നിന്ന് വ്യത്യസ്തമാണ്."
+              }
+            },
+            {
+              "en": "Not obeying elders and authorities",
+              "ml": "മുതിർന്നവരെയും മേലധികാരികളെയും അനുസരിക്കാതിരിക്കുക",
+              "note": {
+                "en": "Declining an unjust or unreasonable order is not the sin; freely disregarding legitimate authority is.",
+                "ml": "അന്യായമോ ന്യായമല്ലാത്തതോ ആയ കൽപ്പന നിരസിക്കുന്നത് പാപമല്ല; ന്യായമായ അധികാരത്തെ സ്വതന്ത്രമായി അവഗണിക്കുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Not respecting authorities, teachers, elder siblings",
+              "ml": "മേലധികാരികൾ, അധ്യാപകർ, ജേഷ്ഠ സഹോദരീസഹോദരന്മാർ എന്നിവരെ ബഹുമാനിക്കാതിരിക്കുക",
+              "note": {
+                "en": "Disagreeing with them respectfully is not the sin; a settled attitude of disrespect toward them is.",
+                "ml": "അവരോട് ബഹുമാനത്തോടെ വിയോജിക്കുന്നത് പാപമല്ല; അവരോട് സ്ഥിരമായ അനാദരവിന്റെ മനോഭാവമാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Showing disrespect to parents or elders",
+              "ml": "മാതാപിതാക്കളോടോ, മുതിർന്നവരോടോ അനാദരവ് കാണിക്കുക",
+              "note": {
+                "en": "An unintentional lapse in manners is not the same as a deliberate show of disrespect.",
+                "ml": "മര്യാദയിലെ അറിയാതെയുള്ള പിഴവ്, ബോധപൂർവ്വമായ അനാദരവിൽ നിന്ന് വ്യത്യസ്തമാണ്."
+              }
+            },
+            {
+              "en": "Not loving one's spouse",
+              "ml": "ജീവിതപങ്കാളിയെ സ്നേഹിക്കാതിരിക്കുക",
+              "note": {
+                "en": "Going through a difficult season in marriage is not the sin; a deliberate withdrawal of love and care is.",
+                "ml": "ദാമ്പത്യത്തിലെ ബുദ്ധിമുട്ടേറിയ ഘട്ടത്തിലൂടെ കടന്നുപോകുന്നത് പാപമല്ല; സ്നേഹവും കരുതലും ബോധപൂർവ്വം പിൻവലിക്കുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Hurting one's spouse (Eph 5:22-25)",
+              "ml": "പങ്കാളിയെ വേദനിപ്പിക്കുക (എഫേസോസ് 5:22-25)",
+              "note": {
+                "en": "An unintentional hurt is not the same as deliberately causing your spouse pain by word or action.",
+                "ml": "അറിയാതെയുള്ള വേദനിപ്പിക്കൽ, വാക്കിലൂടെയോ പ്രവൃത്തിയിലൂടെയോ ജീവിതപങ്കാളിയെ ബോധപൂർവ്വം വേദനിപ്പിക്കുന്നതിൽ നിന്ന് വ്യത്യസ്തമാണ്."
+              }
+            },
+            {
+              "en": "Not respecting spouse's parents",
+              "ml": "പങ്കാളിയുടെ മാതാപിതാക്കളെ ബഹുമാനിക്കാതിരിക്കുക",
+              "note": {
+                "en": "A natural difference in closeness is not the sin; deliberate disrespect toward them is.",
+                "ml": "അടുപ്പത്തിലെ സ്വാഭാവിക വ്യത്യാസം പാപമല്ല; ബോധപൂർവ്വമായ അനാദരവാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Showing partiality / favoritism",
+              "ml": "പക്ഷപാതം കാണിക്കുക",
+              "note": {
+                "en": "Naturally being closer to one person is not the sin; deliberately treating others unjustly because of it is.",
+                "ml": "ഒരാളോട് സ്വാഭാവികമായി കൂടുതൽ അടുപ്പം തോന്നുന്നത് പാപമല്ല; അതുമൂലം മറ്റുള്ളവരോട് ബോധപൂർവ്വം അന്യായമായി പെരുമാറുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Not raising children in the Lord's discipline and instruction",
+              "ml": "മക്കളെ കർത്താവിൻറെ ശിക്ഷണത്തിലും ഉപദേശത്തിലും വളർത്താതിരിക്കുക",
+              "note": {
+                "en": "Doing your imperfect best is not the sin; freely neglecting their formation in faith out of indifference is.",
+                "ml": "അപൂർണ്ണമായെങ്കിലും പരമാവധി ശ്രമിക്കുന്നത് പാപമല്ല; നിസ്സംഗതയാൽ അവരുടെ വിശ്വാസരൂപീകരണം സ്വതന്ത്രമായി അവഗണിക്കുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Failures in relationship with children",
+              "ml": "മക്കളുമായുള്ള ബന്ധത്തിലുള്ള വീഴ്ചകൾ സംഭവിച്ചിട്ടുണ്ടെങ്കിൽ",
+              "note": {
+                "en": "Ordinary parenting mistakes made in good faith are not the sin; deliberate neglect or harm is.",
+                "ml": "നല്ല മനസ്സോടെ സംഭവിക്കുന്ന സാധാരണ രക്ഷാകർതൃ പിഴവുകൾ പാപമല്ല; ബോധപൂർവ്വമായ അവഗണനയോ ഹാനിയോ ആണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Neglecting children, thinking of them as a burden",
+              "ml": "മക്കളെ അവഗണിക്കുകയും, മക്കൾ ശല്യമാണെന്ന ചിന്ത ഉണ്ടെങ്കിൽ",
+              "note": {
+                "en": "Feeling overwhelmed at times is human; a settled resentment that leads you to actually neglect them is the sin.",
+                "ml": "ചിലപ്പോൾ അമിതഭാരം തോന്നുന്നത് സ്വാഭാവികമാണ്; അത് യഥാർത്ഥത്തിൽ അവഗണനയിലേക്ക് നയിക്കുന്ന സ്ഥിരമായ വൈരാഗ്യമാണ് പാപം."
+              }
+            },
+            {
+              "en": "Denying children their rights",
+              "ml": "മക്കൾക്ക് അവകാശങ്ങൾ നിഷേധിച്ചിട്ടുണ്ടെങ്കിൽ",
+              "note": {
+                "en": "A reasonable limit set for their good is not the sin; unjustly withholding what is truly due to them is.",
+                "ml": "അവരുടെ നന്മയ്ക്കായി വയ്ക്കുന്ന ന്യായമായ പരിധി പാപമല്ല; അവർക്ക് യഥാർത്ഥത്തിൽ അർഹമായത് അന്യായമായി നിഷേധിക്കുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Not loving, neglecting, harming, denying rights, blaming, mentally tormenting daughters/sons-in-law",
+              "ml": "മരുമക്കളെ സ്നേഹിക്കാതിരിക്കുക, അവഗണിക്കുക, ഉപദ്രവിക്കുക, അവകാശങ്ങൾ നിഷേധിക്കുക, കുറ്റപ്പെടുത്തുക, മാനസികമായി പീഡിപ്പിക്കുക",
+              "note": {
+                "en": "Ordinary friction in adjusting to a new family member is not the sin; deliberate mistreatment or cruelty toward them is.",
+                "ml": "പുതിയ കുടുംബാംഗവുമായി പൊരുത്തപ്പെടുന്നതിലെ സാധാരണ ഘർഷണം പാപമല്ല; അവരോട് ബോധപൂർവ്വമായ ദുർവിനിയോഗമോ ക്രൂരതയോ ആണ് ബാധകം."
+              }
+            }
           ]
         }
       ]
@@ -299,7 +1033,10 @@
         "en": "Fifth Commandment — You shall not kill",
         "ml": "അഞ്ചാം പ്രമാണം — കൊല്ലരുത്"
       },
-      "sub": { "en": "Exodus 20:13", "ml": "പുറപ്പാട് 20:13" },
+      "sub": {
+        "en": "Exodus 20:13",
+        "ml": "പുറപ്പാട് 20:13"
+      },
       "verse": {
         "en": "\"You shall not kill.\" — Exodus 20:13",
         "ml": "\"കൊല്ലരുത്.\" — പുറപ്പാട് 20:13"
@@ -311,18 +1048,102 @@
             "ml": "അഞ്ചാം പ്രമാണത്തിന് എതിരായ പാപങ്ങൾ"
           },
           "sins": [
-            { "en": "Killing, injuring, or conspiring/supporting to kill someone", "ml": "ആരെയെങ്കിലും കൊല്ലുകയോ പരിക്കേൽക്കുകയോ അങ്ങനെ ചെയ്യാൻ ഗൂഢാലോചന നടത്തുകയോ അത് നടത്തുന്നതിന് കൂട്ടു നിൽക്കുകയോ ചെയ്യുക" },
-            { "en": "Any wrong action against human life", "ml": "മനുഷ്യ ജീവന് നേരെയുള്ള തെറ്റായ ഏത് പ്രവർത്തിയും" },
-            { "en": "Committing abortion / encouraging abortion", "ml": "ഭ്രൂണഹത്യ നടത്തുക / പ്രേരിപ്പിക്കുക" },
-            { "en": "Euthanasia / mercy killing", "ml": "ദയാവധം നടത്തുക" },
-            { "en": "Hatred", "ml": "വെറുപ്പ്" },
-            { "en": "Enmity", "ml": "വൈരാഗ്യം" },
-            { "en": "Vengeance / Grudge", "ml": "പക" },
-            { "en": "Hostility / Malice", "ml": "വിദ്വേഷം" },
-            { "en": "Stubbornness / Holding a grudge", "ml": "വാശി" },
-            { "en": "Envy", "ml": "അസൂയ" },
-            { "en": "Unforgiveness", "ml": "ക്ഷമ ഇല്ലായ്മ" },
-            { "en": "Division / Discord", "ml": "ഭിന്നത" },
+            {
+              "en": "Killing, injuring, or conspiring/supporting to kill someone",
+              "ml": "ആരെയെങ്കിലും കൊല്ലുകയോ പരിക്കേൽക്കുകയോ അങ്ങനെ ചെയ്യാൻ ഗൂഢാലോചന നടത്തുകയോ അത് നടത്തുന്നതിന് കൂട്ടു നിൽക്കുകയോ ചെയ്യുക",
+              "note": {
+                "en": "Genuine self-defense proportionate to a real threat is not the sin; deliberately taking or plotting to take a life is a grave matter.",
+                "ml": "യഥാർത്ഥ ഭീഷണിക്ക് ആനുപാതികമായ ന്യായമായ ആത്മരക്ഷ പാപമല്ല; ബോധപൂർവ്വം ഒരാളുടെ ജീവൻ എടുക്കുകയോ അതിന് ഗൂഢാലോചന നടത്തുകയോ ചെയ്യുന്നത് ഗുരുതരമായ കാര്യമാണ്."
+              }
+            },
+            {
+              "en": "Any wrong action against human life",
+              "ml": "മനുഷ്യ ജീവന് നേരെയുള്ള തെറ്റായ ഏത് പ്രവർത്തിയും",
+              "note": {
+                "en": "An unavoidable accident is not the sin; a knowing, deliberate act against human life or dignity is.",
+                "ml": "ഒഴിവാക്കാനാവാത്ത അപകടം പാപമല്ല; മനുഷ്യജീവനെതിരെയോ അന്തസ്സിനെതിരെയോ അറിഞ്ഞും ബോധപൂർവ്വവുമായ പ്രവൃത്തിയാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Committing abortion / encouraging abortion",
+              "ml": "ഭ്രൂണഹത്യ നടത്തുക / പ്രേരിപ്പിക്കുക",
+              "note": {
+                "en": "This is a grave matter whenever done knowingly and freely, including deliberately urging or assisting someone else toward it.",
+                "ml": "അറിഞ്ഞും സ്വതന്ത്രമായും ചെയ്യുമ്പോൾ ഇത് എപ്പോഴും ഗുരുതരമായ കാര്യമാണ്, മറ്റൊരാളെ അതിന് ബോധപൂർവ്വം പ്രേരിപ്പിക്കുകയോ സഹായിക്കുകയോ ചെയ്യുന്നതും ഉൾപ്പെടെ."
+              }
+            },
+            {
+              "en": "Euthanasia / mercy killing",
+              "ml": "ദയാവധം നടത്തുക",
+              "note": {
+                "en": "Withholding extraordinary, disproportionate treatment at the end of life is not the sin; deliberately acting or intending to end a life is.",
+                "ml": "ജീവിതാവസാനത്തിൽ അസാധാരണവും ആനുപാതികമല്ലാത്തതുമായ ചികിത്സ ഒഴിവാക്കുന്നത് പാപമല്ല; ഒരു ജീവൻ അവസാനിപ്പിക്കാൻ ബോധപൂർവ്വം പ്രവർത്തിക്കുകയോ ഉദ്ദേശിക്കുകയോ ചെയ്യുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Hatred",
+              "ml": "വെറുപ്പ്",
+              "note": {
+                "en": "A passing feeling of anger or hurt is not the sin; a settled desire to see someone suffer or be destroyed is.",
+                "ml": "കോപത്തിന്റെയോ വേദനയുടെയോ ക്ഷണിക വികാരം പാപമല്ല; ഒരാൾ കഷ്ടപ്പെടണം എന്ന സ്ഥിരമായ ആഗ്രഹമാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Enmity",
+              "ml": "വൈരാഗ്യം",
+              "note": {
+                "en": "A natural clash of personalities is not the sin; deliberately nursing hostility toward someone is.",
+                "ml": "വ്യക്തിത്വങ്ങൾ തമ്മിലുള്ള സ്വാഭാവിക ഘർഷണം പാപമല്ല; ബോധപൂർവ്വം ഒരാളോട് ശത്രുത വളർത്തുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Vengeance / Grudge",
+              "ml": "പക",
+              "note": {
+                "en": "Wanting justice through proper means is not the sin; personally seeking to make someone suffer for a wrong is.",
+                "ml": "ശരിയായ മാർഗ്ഗത്തിലൂടെ നീതി ആഗ്രഹിക്കുന്നത് പാപമല്ല; ഒരു തെറ്റിന് സ്വയം ഒരാളെ കഷ്ടപ്പെടുത്താൻ ശ്രമിക്കുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Hostility / Malice",
+              "ml": "വിദ്വേഷം",
+              "note": {
+                "en": "Disliking someone's behavior is not the sin; deliberately wishing them ill or acting to harm them is.",
+                "ml": "ഒരാളുടെ പെരുമാറ്റം ഇഷ്ടപ്പെടാതിരിക്കുന്നത് പാപമല്ല; അവർക്ക് ദോഷം ആശംസിക്കുകയോ ഹാനി വരുത്താൻ പ്രവർത്തിക്കുകയോ ബോധപൂർവ്വം ചെയ്യുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Stubbornness / Holding a grudge",
+              "ml": "വാശി",
+              "note": {
+                "en": "Needing time to heal from hurt is not the sin; freely refusing to ever let go of resentment is.",
+                "ml": "വേദനയിൽ നിന്ന് സുഖപ്പെടാൻ സമയം വേണ്ടിവരുന്നത് പാപമല്ല; വൈരാഗ്യം ഒരിക്കലും ഉപേക്ഷിക്കാൻ സ്വതന്ത്രമായി വിസമ്മതിക്കുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Envy",
+              "ml": "അസൂയ",
+              "note": {
+                "en": "Being inspired by someone's success is good; feeling resentment or sorrow at their good fortune is the sin.",
+                "ml": "ഒരാളുടെ വിജയത്താൽ പ്രചോദിതരാകുന്നത് നല്ലതാണ്; അവരുടെ നല്ല ഭാഗ്യത്തിൽ വിദ്വേഷമോ ദുഃഖമോ തോന്നുന്നതാണ് പാപം."
+              }
+            },
+            {
+              "en": "Unforgiveness",
+              "ml": "ക്ഷമ ഇല്ലായ്മ",
+              "note": {
+                "en": "Needing time to process real hurt is not the sin; a settled, deliberate refusal to ever forgive is.",
+                "ml": "യഥാർത്ഥ വേദന ഉൾക്കൊള്ളാൻ സമയം വേണ്ടിവരുന്നത് പാപമല്ല; ക്ഷമിക്കാൻ ഒരിക്കലും ബോധപൂർവ്വം വിസമ്മതിക്കുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Division / Discord",
+              "ml": "ഭിന്നത",
+              "note": {
+                "en": "Honest disagreement is not the sin; deliberately sowing conflict or turning people against each other is.",
+                "ml": "സത്യസന്ധമായ അഭിപ്രായവ്യത്യാസം പാപമല്ല; ബോധപൂർവ്വം കലഹം വിതയ്ക്കുകയോ ആളുകളെ പരസ്പരം എതിർപ്പിക്കുകയോ ചെയ്യുന്നതാണ് ബാധകം."
+              }
+            },
             {
               "en": "Smoking",
               "ml": "പുകവലി",
@@ -331,16 +1152,86 @@
                 "ml": "ഇത് ആരോഗ്യത്തിന്റെ വിഷയമാണ്, പാപമാകണമെന്നില്ല. മറ്റുള്ളവരെ ഹനിക്കുമ്പോഴോ കുടുംബത്തിന്റെ വിഭവങ്ങൾ ദുരുപയോഗിക്കുമ്പോഴോ ആത്മീയ ജീവിതത്തെ ഇരുളാക്കുമ്പോഴോ പാപമാകും."
               }
             },
-            { "en": "Use of drugs / intoxicating substances", "ml": "മയക്കുമരുന്ന് / ലഹരി പദാർത്ഥങ്ങൾ എന്നിവയുടെ ഉപയോഗം" },
-            { "en": "Being prideful", "ml": "അഹങ്കരിക്കുക" },
-            { "en": "Judging / hating / mocking others", "ml": "മറ്റുള്ളവരെ വിധിക്കുക / വെറുക്കുക / പരിഹസിക്കുക" },
-            { "en": "Speaking about others' faults and shortcomings", "ml": "മറ്റുള്ളവരുടെ കുറ്റങ്ങളും കുറവുകളും പറയുക" },
-            { "en": "Damaging another's good name / reputation", "ml": "അപരൻ്റെ സൽപ്പേരിന് ഭംഗം വരുത്തുക" },
-            { "en": "Cursing", "ml": "ശപിക്കുക" },
-            { "en": "Showing partiality / favoritism", "ml": "പക്ഷപാതം കാണിക്കുക" },
-            { "en": "Encouraging others to sin", "ml": "പാപം ചെയ്യാൻ പ്രേരിപ്പിക്കുക" },
-            { "en": "Not using the talents God has given", "ml": "ദൈവം തന്ന കഴിവുകൾ ഉപയോഗിക്കാതിരിക്കുക" },
-            { "en": "Treating the poor and weak without mercy", "ml": "ദരിദ്രരോടും സാധുക്കളോടും കരുണയില്ലാതെ പെരുമാറുക" },
+            {
+              "en": "Use of drugs / intoxicating substances",
+              "ml": "മയക്കുമരുന്ന് / ലഹരി പദാർത്ഥങ്ങൾ എന്നിവയുടെ ഉപയോഗം",
+              "note": {
+                "en": "The illness or compulsion of addiction is not the sin. Free choices that harm yourself or others because of substance use are what need confession.",
+                "ml": "ലഹരി ആസക്തിയോ ബലപ്രയോഗമോ പാപമല്ല. ലഹരി ഉപയോഗം നിമിത്തം സ്വയത്തെയോ മറ്റുള്ളവരെയോ ഹനിക്കുന്ന സ്വതന്ത്ര തീരുമാനങ്ങളാണ് ഏറ്റുപറയേണ്ടത്."
+              }
+            },
+            {
+              "en": "Being prideful",
+              "ml": "അഹങ്കരിക്കുക",
+              "note": {
+                "en": "A moment of self-satisfaction is not the sin; deliberately elevating yourself above others is.",
+                "ml": "ഒരു ക്ഷണിക ആത്മസംതൃപ്തി പാപമല്ല; ബോധപൂർവ്വം സ്വയത്തെ മറ്റുള്ളവർക്ക് മീതെ വയ്ക്കുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Judging / hating / mocking others",
+              "ml": "മറ്റുള്ളവരെ വിധിക്കുക / വെറുക്കുക / പരിഹസിക്കുക",
+              "note": {
+                "en": "Recognizing that an action is wrong is not the sin; condemning the person's soul or mocking them with contempt is.",
+                "ml": "ഒരു പ്രവൃത്തി തെറ്റാണെന്ന് തിരിച്ചറിയുന്നത് പാപമല്ല; വ്യക്തിയുടെ ആത്മാവിനെ വിധിക്കുകയോ പുച്ഛത്തോടെ പരിഹസിക്കുകയോ ചെയ്യുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Speaking about others' faults and shortcomings",
+              "ml": "മറ്റുള്ളവരുടെ കുറ്റങ്ങളും കുറവുകളും പറയുക",
+              "note": {
+                "en": "Raising a concern to someone who can help is not the sin; spreading it without necessity or out of malice is.",
+                "ml": "സഹായിക്കാൻ കഴിയുന്ന ഒരാളോട് ആശങ്ക പങ്കുവയ്ക്കുന്നത് പാപമല്ല; ആവശ്യമില്ലാതെയോ ദ്വേഷത്തോടെയോ അത് പരത്തുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Damaging another's good name / reputation",
+              "ml": "അപരൻ്റെ സൽപ്പേരിന് ഭംഗം വരുത്തുക",
+              "note": {
+                "en": "Honestly reporting a real wrong to someone with authority to act is not the sin; spreading it to harm their reputation is.",
+                "ml": "പ്രവർത്തിക്കാൻ അധികാരമുള്ള ഒരാളോട് യഥാർത്ഥ തെറ്റ് സത്യസന്ധമായി അറിയിക്കുന്നത് പാപമല്ല; അവരുടെ പേരിന് കോട്ടം വരുത്താൻ അത് പരത്തുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Cursing",
+              "ml": "ശപിക്കുക",
+              "note": {
+                "en": "An outburst quickly regretted is not the same as deliberately wishing harm upon someone.",
+                "ml": "പെട്ടെന്ന് പശ്ചാത്തപിക്കുന്ന പൊട്ടിത്തെറി, ഒരാൾക്ക് ദോഷം ബോധപൂർവ്വം ആശംസിക്കുന്നതിൽ നിന്ന് വ്യത്യസ്തമാണ്."
+              }
+            },
+            {
+              "en": "Showing partiality / favoritism",
+              "ml": "പക്ഷപാതം കാണിക്കുക",
+              "note": {
+                "en": "Naturally being closer to some people is not the sin; deliberately treating others unjustly because of it is.",
+                "ml": "ചിലരോട് സ്വാഭാവികമായി കൂടുതൽ അടുപ്പം തോന്നുന്നത് പാപമല്ല; അതുമൂലം മറ്റുള്ളവരോട് ബോധപൂർവ്വം അന്യായമായി പെരുമാറുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Encouraging others to sin",
+              "ml": "പാപം ചെയ്യാൻ പ്രേരിപ്പിക്കുക",
+              "note": {
+                "en": "This applies to knowingly and deliberately leading someone toward wrongdoing, not to an innocent suggestion later misused by another.",
+                "ml": "അറിഞ്ഞും ബോധപൂർവ്വവുമായി ഒരാളെ തെറ്റിലേക്ക് നയിക്കുന്നതിനെ സൂചിപ്പിക്കുന്നു, മറ്റൊരാൾ ദുരുപയോഗം ചെയ്ത നിഷ്കളങ്കമായ നിർദ്ദേശത്തെയല്ല."
+              }
+            },
+            {
+              "en": "Not using the talents God has given",
+              "ml": "ദൈവം തന്ന കഴിവുകൾ ഉപയോഗിക്കാതിരിക്കുക",
+              "note": {
+                "en": "Modest, ordinary effort is not the sin; freely and habitually burying your gifts out of laziness or fear is.",
+                "ml": "എളിയതും സാധാരണവുമായ പരിശ്രമം പാപമല്ല; അലസതയാലോ ഭയത്താലോ ദാനങ്ങൾ സ്വതന്ത്രമായും ശീലമായും കുഴിച്ചിടുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Treating the poor and weak without mercy",
+              "ml": "ദരിദ്രരോടും സാധുക്കളോടും കരുണയില്ലാതെ പെരുമാറുക",
+              "note": {
+                "en": "Being unable to help everyone is not the sin; deliberately hardening your heart against those in need is.",
+                "ml": "എല്ലാവരെയും സഹായിക്കാൻ കഴിയാതിരിക്കുന്നത് പാപമല്ല; ആവശ്യമുള്ളവരോട് ബോധപൂർവ്വം ഹൃദയം കഠിനമാക്കുന്നതാണ് ബാധകം."
+              }
+            },
             {
               "en": "Excessive anger",
               "ml": "അമിത കോപം",
@@ -349,13 +1240,62 @@
                 "ml": "കോപം അനുഭവിക്കുന്നത് പാപമല്ല. അതിനെ ബോധപൂർവ്വം വളർത്തുന്നതോ മറ്റുള്ളവരെ ഹനിക്കാൻ പ്രവർത്തിക്കുന്നതോ ആകാം."
               }
             },
-            { "en": "Failing to do the good one should do", "ml": "ചെയ്യേണ്ട നന്മ ചെയ്യാതിരിക്കൽ" },
-            { "en": "Cruelty to animals", "ml": "മൃഗ ദ്രോഹം" },
-            { "en": "Sale of organs", "ml": "അവയവങ്ങളുടെ വിൽപന" },
-            { "en": "Sterilization", "ml": "വന്ധ്യംകരണം" },
-            { "en": "Engaging in ragging / bullying", "ml": "റാഗിംഗ് നടത്തിയത്" },
-            { "en": "If one has obstructed a marriage", "ml": "വിവാഹം മുടക്കിയിട്ടുണ്ടെങ്കിൽ" },
-            { "en": "Engaging in alcohol production or trade", "ml": "മദ്യ നിർമ്മാണം, മദ്യ കച്ചവടം നടത്തിയത്" }
+            {
+              "en": "Failing to do the good one should do",
+              "ml": "ചെയ്യേണ്ട നന്മ ചെയ്യാതിരിക്കൽ",
+              "note": {
+                "en": "Ordinary human limitation is not the sin; freely neglecting a good you clearly could and should have done is.",
+                "ml": "സാധാരണ മാനുഷിക പരിമിതി പാപമല്ല; ചെയ്യാൻ കഴിയുകയും ചെയ്യേണ്ടതുമായ നന്മ സ്വതന്ത്രമായി അവഗണിക്കുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Cruelty to animals",
+              "ml": "മൃഗ ദ്രോഹം",
+              "note": {
+                "en": "Necessary handling of animals (farming, pest control) is not the sin; deliberately inflicting needless suffering on them is.",
+                "ml": "മൃഗങ്ങളെ കൈകാര്യം ചെയ്യേണ്ട ആവശ്യകത (കൃഷി, കീടനിയന്ത്രണം) പാപമല്ല; അനാവശ്യമായി അവയെ ബോധപൂർവ്വം കഷ്ടപ്പെടുത്തുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Sale of organs",
+              "ml": "അവയവങ്ങളുടെ വിൽപന",
+              "note": {
+                "en": "Freely and lawfully donating an organ out of love is not the sin; commercially trafficking in human organs is.",
+                "ml": "സ്നേഹത്തോടെ സ്വതന്ത്രമായും നിയമപരമായും അവയവം ദാനം ചെയ്യുന്നത് പാപമല്ല; മനുഷ്യാവയവങ്ങൾ വാണിജ്യപരമായി കൈമാറ്റം ചെയ്യുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Sterilization",
+              "ml": "വന്ധ്യംകരണം",
+              "note": {
+                "en": "A medically necessary procedure for a grave health reason is not the same as choosing it merely to permanently avoid children.",
+                "ml": "ഗുരുതരമായ ആരോഗ്യകാരണത്താൽ ആവശ്യമായ ചികിത്സ, കുട്ടികളെ സ്ഥിരമായി ഒഴിവാക്കാൻ മാത്രമായി തിരഞ്ഞെടുക്കുന്നതിൽ നിന്ന് വ്യത്യസ്തമാണ്."
+              }
+            },
+            {
+              "en": "Engaging in ragging / bullying",
+              "ml": "റാഗിംഗ് നടത്തിയത്",
+              "note": {
+                "en": "Harmless, mutually welcomed fun among peers is not the sin; deliberately humiliating or harming someone against their will is.",
+                "ml": "സമപ്രായക്കാർക്കിടയിലെ ദോഷമില്ലാത്തതും പരസ്പര സമ്മതത്തോടെയുള്ളതുമായ തമാശ പാപമല്ല; ഒരാളുടെ ഇഷ്ടത്തിന് വിരുദ്ധമായി ബോധപൂർവ്വം അപമാനിക്കുകയോ ഹാനി വരുത്തുകയോ ചെയ്യുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "If one has obstructed a marriage",
+              "ml": "വിവാഹം മുടക്കിയിട്ടുണ്ടെങ്കിൽ",
+              "note": {
+                "en": "Raising a genuine, reasonable concern is not the sin; deliberately and unjustly preventing a marriage out of malice or selfishness is.",
+                "ml": "യഥാർത്ഥവും ന്യായയുക്തവുമായ ആശങ്ക ഉന്നയിക്കുന്നത് പാപമല്ല; ദ്വേഷത്താലോ സ്വാർത്ഥതയാലോ ബോധപൂർവ്വം അന്യായമായി ഒരു വിവാഹം തടയുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Engaging in alcohol production or trade",
+              "ml": "മദ്യ നിർമ്മാണം, മദ്യ കച്ചവടം നടത്തിയത്",
+              "note": {
+                "en": "Lawful, moderate trade in itself is not automatically the sin; knowingly profiting from others' addiction and ruin can be.",
+                "ml": "നിയമപരവും മിതമായതുമായ വ്യാപാരം സ്വയമേവ പാപമല്ല; മറ്റുള്ളവരുടെ ആസക്തിയിൽ നിന്നും നാശത്തിൽ നിന്നും അറിഞ്ഞുകൊണ്ട് ലാഭം നേടുന്നത് ആകാം."
+              }
+            }
           ]
         }
       ]
@@ -367,7 +1307,10 @@
         "en": "Sixth Commandment — You shall not commit adultery",
         "ml": "ആറാം പ്രമാണം — വ്യഭിചാരം ചെയ്യരുത്"
       },
-      "sub": { "en": "Exodus 20:14", "ml": "പുറപ്പാട് 20:14" },
+      "sub": {
+        "en": "Exodus 20:14",
+        "ml": "പുറപ്പാട് 20:14"
+      },
       "verse": {
         "en": "\"You shall not commit adultery.\" — Exodus 20:14",
         "ml": "\"വ്യഭിചാരം ചെയ്യരുത്.\" — പുറപ്പാട് 20:14"
@@ -379,9 +1322,30 @@
             "ml": "ആറാം പ്രമാണത്തിന് എതിരായ പാപങ്ങൾ"
           },
           "sins": [
-            { "en": "Adultery", "ml": "വ്യഭിചാരം" },
-            { "en": "Adultery with another woman", "ml": "പരസ്ത്രീബന്ധം" },
-            { "en": "Adultery with another man", "ml": "പരപുരുഷബന്ധം" },
+            {
+              "en": "Adultery",
+              "ml": "വ്യഭിചാരം",
+              "note": {
+                "en": "A struggle with temptation resisted is not the sin; freely and knowingly acting on it is.",
+                "ml": "ചെറുത്തുനിൽക്കുന്ന പ്രലോഭനവുമായുള്ള മല്ലിടൽ പാപമല്ല; അറിഞ്ഞും സ്വതന്ത്രമായും അതിൽ പ്രവർത്തിക്കുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Adultery with another woman",
+              "ml": "പരസ്ത്രീബന്ധം",
+              "note": {
+                "en": "As above, temptation resisted is not the sin; freely and knowingly acting on it is.",
+                "ml": "മുകളിൽ പറഞ്ഞതുപോലെ, ചെറുത്തുനിൽക്കുന്ന പ്രലോഭനം പാപമല്ല; അറിഞ്ഞും സ്വതന്ത്രമായും പ്രവർത്തിക്കുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Adultery with another man",
+              "ml": "പരപുരുഷബന്ധം",
+              "note": {
+                "en": "As above, temptation resisted is not the sin; freely and knowingly acting on it is.",
+                "ml": "മുകളിൽ പറഞ്ഞതുപോലെ, ചെറുത്തുനിൽക്കുന്ന പ്രലോഭനം പാപമല്ല; അറിഞ്ഞും സ്വതന്ത്രമായും പ്രവർത്തിക്കുന്നതാണ് ബാധകം."
+              }
+            },
             {
               "en": "Have I sexually harassed or pressured another person?",
               "ml": "ഞാൻ മറ്റൊരാളെ ലൈംഗികമായി ഉപദ്രവിക്കുകയോ സമ്മർദ്ദം ചെലുത്തുകയോ ചെയ്തിട്ടുണ്ടോ?",
@@ -390,9 +1354,30 @@
                 "ml": "ഇത് നിങ്ങൾക്കെതിരെ ചെയ്യപ്പെട്ടതാണെങ്കിൽ, പാപം ചെയ്തത് നിങ്ങളല്ല. ഇരകൾ ആക്രമണകാരിയുടെ കുറ്റം ചുമക്കരുത്. വിശ്വസ്തതയുള്ള ഒരാളെ സമീപിക്കുക."
               }
             },
-            { "en": "Masturbation", "ml": "സ്വയംഭോഗം" },
-            { "en": "Homosexual acts", "ml": "സ്വവർഗ്ഗഭോഗം" },
-            { "en": "Bestiality", "ml": "മൃഗഭോഗം" },
+            {
+              "en": "Masturbation",
+              "ml": "സ്വയംഭോഗം",
+              "note": {
+                "en": "An involuntary reaction is not the same as a freely willed and knowingly consented-to act.",
+                "ml": "അനിയന്ത്രിതമായ പ്രതികരണം, സ്വതന്ത്രമായി ഇച്ഛിച്ചും അറിഞ്ഞും സമ്മതിച്ചും ചെയ്യുന്ന പ്രവൃത്തിയിൽ നിന്ന് വ്യത്യസ്തമാണ്."
+              }
+            },
+            {
+              "en": "Homosexual acts",
+              "ml": "സ്വവർഗ്ഗഭോഗം",
+              "note": {
+                "en": "An attraction one did not choose is not itself a sin; a freely willed and knowingly consented-to act is what needs confession.",
+                "ml": "തിരഞ്ഞെടുക്കാത്ത ഒരു ആകർഷണം സ്വയം പാപമല്ല; സ്വതന്ത്രമായി ഇച്ഛിച്ചും അറിഞ്ഞും സമ്മതിച്ചും ചെയ്യുന്ന പ്രവൃത്തിയാണ് ഏറ്റുപറയേണ്ടത്."
+              }
+            },
+            {
+              "en": "Bestiality",
+              "ml": "മൃഗഭോഗം",
+              "note": {
+                "en": "This is always a grave matter when done knowingly and freely.",
+                "ml": "അറിഞ്ഞും സ്വതന്ത്രമായും ചെയ്യുമ്പോൾ ഇത് എപ്പോഴും ഗുരുതരമായ കാര്യമാണ്."
+              }
+            },
             {
               "en": "Have I abused a child in any way?",
               "ml": "ഒരു കുട്ടിയോട് ഞാൻ ദുരുപയോഗം ചെയ്തിട്ടുണ്ടോ?",
@@ -401,29 +1386,190 @@
                 "ml": "ഈ സാഹചര്യത്തിൽ കുട്ടി നിങ്ങളായിരുന്നെങ്കിൽ, പാപം ചെയ്തത് നിങ്ങളല്ല. വിശ്വസ്തതയുള്ള ഒരു മുതിർന്ന വ്യക്തിയെയോ കൗൺസിലറെയോ സമീപിക്കുക."
               }
             },
-            { "en": "Incest", "ml": "രക്തബന്ധത്തിൽ ഉള്ളവരോട് ലൈംഗികബന്ധം" },
-            { "en": "Engaging in impure thoughts, readings, fantasies, conversations, movie scenes, images", "ml": "മ്ലേച്ചമായ ചിന്തകൾ, വായനകൾ, ഭാവനകൾ, സംഭാഷണങ്ങൾ, സിനിമ രംഗങ്ങൾ, ചിത്രങ്ങൾ എന്നിവയിൽ വ്യാപരിക്കുന്നത്" },
-            { "en": "Leading others to sin through dress", "ml": "വസ്ത്രധാരണത്തിലൂടെ മറ്റുള്ളവരെ പാപത്തിലേക്ക് നയിക്കുന്നത്" },
-            { "en": "Looking at a woman or man with lust", "ml": "ആസക്തിയോടെ സ്ത്രീയെ അല്ലെങ്കിൽ പുരുഷനെ നോക്കുന്നത്" },
-            { "en": "Enjoying nudity", "ml": "നഗ്നത കണ്ട് ആസ്വദിക്കുക" },
-            { "en": "Displaying nudity directly or via social media", "ml": "നഗ്നത നേരിട്ടോ സാമൂഹിക മാധ്യമങ്ങൾ വഴിയോ പ്രദർശിപ്പിക്കുന്നത്" },
-            { "en": "Entertaining impure thoughts", "ml": "മോശമായ ചിന്തകളെ താലോലിക്കുക" },
-            { "en": "Marital infidelity", "ml": "ദാമ്പത്യ അവിശ്വസ്തത" },
-            { "en": "Performing marital duty while mentally fantasizing about another", "ml": "അന്യ പുരുഷനെ / അന്യസ്ത്രീയെ മനസ്സിൽ ധ്യാനിച്ച് ദാമ്പത്യ ധർമം അനുഷ്ഠിക്കുക" },
-            { "en": "Fulfilling marital duty while drunk", "ml": "മദ്യപിച്ച് ദാമ്പത്യ ധർമം നിറവേറ്റുക" },
-            { "en": "Polygamy", "ml": "ബഹുഭാര്യത്വം" },
-            { "en": "Watching pornography", "ml": "പോൺ കാണുക" },
-            { "en": "Treating one's spouse in unnatural and impure ways", "ml": "പ്രകൃതിവിരുദ്ധമായും മ്ലേച്ഛമായും പങ്കാളിയോട് പെരുമാറുക" },
-            { "en": "Not fulfilling the duties of the marital relationship", "ml": "ഭാര്യ ഭർത്വ ബന്ധത്തിലെ കടമകൾ നിർവഹിക്കാതിരിക്കുക" },
-            { "en": "Engaging in sexual relations before marriage", "ml": "വിവാഹത്തിനുമുമ്പു ലൈംഗിക ബന്ധത്തിൽ ഏർപ്പെടുക" },
-            { "en": "Sexual relations between unmarried persons", "ml": "അവിവാഹിതർക്കിടയിലെ ലൈംഗിക ബന്ധങ്ങൾ" },
-            { "en": "Extramarital sexual relations", "ml": "വിവാഹേതര ലൈംഗിക ബന്ധങ്ങൾ" },
-            { "en": "Using double-meaning (impure) speech", "ml": "ദ്വയർത്ഥ പ്രയോഗം" },
-            { "en": "Contraception", "ml": "ഗർഭനിരോധനം" },
-            { "en": "Sterilization", "ml": "വന്ധ്യംകരണം" },
-            { "en": "Divorce", "ml": "വിവാഹ മോചനം" },
-            { "en": "Attempting to capture another's privacy", "ml": "അപരന്റെ സ്വകാര്യത പകർത്താൻ ശ്രമിച്ചത്" },
-            { "en": "Leading others into sin through temptation / threats", "ml": "പ്രലോഭനത്തിലൂടെ / ഭീഷണിയിലൂടെ പാപത്തിലേക്ക് നയിച്ചത്" }
+            {
+              "en": "Incest",
+              "ml": "രക്തബന്ധത്തിൽ ഉള്ളവരോട് ലൈംഗികബന്ധം",
+              "note": {
+                "en": "This is always a grave matter when done knowingly and freely.",
+                "ml": "അറിഞ്ഞും സ്വതന്ത്രമായും ചെയ്യുമ്പോൾ ഇത് എപ്പോഴും ഗുരുതരമായ കാര്യമാണ്."
+              }
+            },
+            {
+              "en": "Engaging in impure thoughts, readings, fantasies, conversations, movie scenes, images",
+              "ml": "മ്ലേച്ചമായ ചിന്തകൾ, വായനകൾ, ഭാവനകൾ, സംഭാഷണങ്ങൾ, സിനിമ രംഗങ്ങൾ, ചിത്രങ്ങൾ എന്നിവയിൽ വ്യാപരിക്കുന്നത്",
+              "note": {
+                "en": "A thought or image that arises unbidden and is dismissed is not the sin; deliberately dwelling on or seeking it out is.",
+                "ml": "അറിയാതെ വരുന്നതും ഉടൻ തള്ളിക്കളയുന്നതുമായ ചിന്തയോ ദൃശ്യമോ പാപമല്ല; ബോധപൂർവ്വം അതിൽ തുടരുകയോ അത് തേടുകയോ ചെയ്യുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Leading others to sin through dress",
+              "ml": "വസ്ത്രധാരണത്തിലൂടെ മറ്റുള്ളവരെ പാപത്തിലേക്ക് നയിക്കുന്നത്",
+              "note": {
+                "en": "Ordinary, modest fashion choices are not the sin; deliberately dressing to provoke lust in others is.",
+                "ml": "സാധാരണവും മാന്യവുമായ വസ്ത്രധാരണം പാപമല്ല; മറ്റുള്ളവരിൽ കാമം ഉണർത്താൻ ബോധപൂർവ്വം വസ്ത്രം ധരിക്കുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Looking at a woman or man with lust",
+              "ml": "ആസക്തിയോടെ സ്ത്രീയെ അല്ലെങ്കിൽ പുരുഷനെ നോക്കുന്നത്",
+              "note": {
+                "en": "Noticing someone's appearance is not the sin; deliberately looking with the intention of arousing desire is.",
+                "ml": "ഒരാളുടെ രൂപം ശ്രദ്ധിക്കുന്നത് പാപമല്ല; കാമം ഉണർത്താനുള്ള ഉദ്ദേശ്യത്തോടെ ബോധപൂർവ്വം നോക്കുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Enjoying nudity",
+              "ml": "നഗ്നത കണ്ട് ആസ്വദിക്കുക",
+              "note": {
+                "en": "Incidental exposure is not the sin; deliberately seeking it out for pleasure is.",
+                "ml": "ആകസ്മികമായി കാണുന്നത് പാപമല്ല; ആനന്ദത്തിനായി ബോധപൂർവ്വം അത് തേടുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Displaying nudity directly or via social media",
+              "ml": "നഗ്നത നേരിട്ടോ സാമൂഹിക മാധ്യമങ്ങൾ വഴിയോ പ്രദർശിപ്പിക്കുന്നത്",
+              "note": {
+                "en": "This applies to knowingly and deliberately exposing or sharing such images, not to an accidental exposure.",
+                "ml": "അറിഞ്ഞും ബോധപൂർവ്വവുമായി ഇത്തരം ദൃശ്യങ്ങൾ പ്രദർശിപ്പിക്കുകയോ പങ്കിടുകയോ ചെയ്യുന്നതിനെ സൂചിപ്പിക്കുന്നു, ആകസ്മികമായ പ്രദർശനത്തെയല്ല."
+              }
+            },
+            {
+              "en": "Entertaining impure thoughts",
+              "ml": "മോശമായ ചിന്തകളെ താലോലിക്കുക",
+              "note": {
+                "en": "A thought that arises unbidden and is dismissed is not the sin; deliberately dwelling on it is.",
+                "ml": "അറിയാതെ വരുന്നതും ഉടൻ തള്ളിക്കളയുന്നതുമായ ചിന്ത പാപമല്ല; ബോധപൂർവ്വം അതിൽ തുടരുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Marital infidelity",
+              "ml": "ദാമ്പത്യ അവിശ്വസ്തത",
+              "note": {
+                "en": "A struggle with temptation resisted is not the sin; freely and knowingly acting on it is.",
+                "ml": "ചെറുത്തുനിൽക്കുന്ന പ്രലോഭനവുമായുള്ള മല്ലിടൽ പാപമല്ല; അറിഞ്ഞും സ്വതന്ത്രമായും അതിൽ പ്രവർത്തിക്കുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Performing marital duty while mentally fantasizing about another",
+              "ml": "അന്യ പുരുഷനെ / അന്യസ്ത്രീയെ മനസ്സിൽ ധ്യാനിച്ച് ദാമ്പത്യ ധർമം അനുഷ്ഠിക്കുക",
+              "note": {
+                "en": "A stray thought quickly set aside is not the sin; deliberately dwelling on it during the act is.",
+                "ml": "പെട്ടെന്ന് മാറ്റിവയ്ക്കുന്ന ക്ഷണിക ചിന്ത പാപമല്ല; ആ പ്രവൃത്തിക്കിടയിൽ ബോധപൂർവ്വം അതിൽ തുടരുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Fulfilling marital duty while drunk",
+              "ml": "മദ്യപിച്ച് ദാമ്പത്യ ധർമം നിറവേറ്റുക",
+              "note": {
+                "en": "This concerns freely choosing intoxication in a way that harms the relationship or disrespects one's spouse, not an isolated lapse.",
+                "ml": "ബന്ധത്തെ ഹാനിപ്പെടുത്തുന്നതോ ജീവിതപങ്കാളിയെ അനാദരിക്കുന്നതോ ആയ വിധത്തിൽ ലഹരി സ്വതന്ത്രമായി തിരഞ്ഞെടുക്കുന്നതിനെ സൂചിപ്പിക്കുന്നു, ഒറ്റപ്പെട്ട വീഴ്ചയെയല്ല."
+              }
+            },
+            {
+              "en": "Polygamy",
+              "ml": "ബഹുഭാര്യത്വം",
+              "note": {
+                "en": "This is always a grave matter when knowingly and freely entered into.",
+                "ml": "അറിഞ്ഞും സ്വതന്ത്രമായും ഏർപ്പെടുമ്പോൾ ഇത് എപ്പോഴും ഗുരുതരമായ കാര്യമാണ്."
+              }
+            },
+            {
+              "en": "Watching pornography",
+              "ml": "പോൺ കാണുക",
+              "note": {
+                "en": "Accidentally coming across such material and turning away is not the sin; deliberately seeking it out is.",
+                "ml": "ആകസ്മികമായി ഇത്തരം ദൃശ്യങ്ങൾ കാണുകയും ഒഴിഞ്ഞുമാറുകയും ചെയ്യുന്നത് പാപമല്ല; ബോധപൂർവ്വം അത് തേടുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Treating one's spouse in unnatural and impure ways",
+              "ml": "പ്രകൃതിവിരുദ്ധമായും മ്ലേച്ഛമായും പങ്കാളിയോട് പെരുമാറുക",
+              "note": {
+                "en": "This concerns knowingly and freely acting against your spouse's dignity, not an honest misunderstanding between partners.",
+                "ml": "ജീവിതപങ്കാളിയുടെ അന്തസ്സിനെതിരെ അറിഞ്ഞും സ്വതന്ത്രമായും പ്രവർത്തിക്കുന്നതിനെ സൂചിപ്പിക്കുന്നു, പങ്കാളികൾ തമ്മിലുള്ള സത്യസന്ധമായ തെറ്റിദ്ധാരണയെയല്ല."
+              }
+            },
+            {
+              "en": "Not fulfilling the duties of the marital relationship",
+              "ml": "ഭാര്യ ഭർത്വ ബന്ധത്തിലെ കടമകൾ നിർവഹിക്കാതിരിക്കുക",
+              "note": {
+                "en": "A genuine reason such as illness is not the sin; freely and persistently refusing this duty without cause is.",
+                "ml": "രോഗം പോലുള്ള യഥാർത്ഥ കാരണം പാപമല്ല; കാരണമില്ലാതെ ഈ കടമ സ്വതന്ത്രമായും സ്ഥിരമായും നിഷേധിക്കുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Engaging in sexual relations before marriage",
+              "ml": "വിവാഹത്തിനുമുമ്പു ലൈംഗിക ബന്ധത്തിൽ ഏർപ്പെടുക",
+              "note": {
+                "en": "This is a grave matter whenever done knowingly and freely.",
+                "ml": "അറിഞ്ഞും സ്വതന്ത്രമായും ചെയ്യുമ്പോൾ ഇത് എപ്പോഴും ഗുരുതരമായ കാര്യമാണ്."
+              }
+            },
+            {
+              "en": "Sexual relations between unmarried persons",
+              "ml": "അവിവാഹിതർക്കിടയിലെ ലൈംഗിക ബന്ധങ്ങൾ",
+              "note": {
+                "en": "This is a grave matter whenever done knowingly and freely.",
+                "ml": "അറിഞ്ഞും സ്വതന്ത്രമായും ചെയ്യുമ്പോൾ ഇത് എപ്പോഴും ഗുരുതരമായ കാര്യമാണ്."
+              }
+            },
+            {
+              "en": "Extramarital sexual relations",
+              "ml": "വിവാഹേതര ലൈംഗിക ബന്ധങ്ങൾ",
+              "note": {
+                "en": "A struggle with temptation resisted is not the sin; freely and knowingly acting on it is.",
+                "ml": "ചെറുത്തുനിൽക്കുന്ന പ്രലോഭനവുമായുള്ള മല്ലിടൽ പാപമല്ല; അറിഞ്ഞും സ്വതന്ത്രമായും അതിൽ പ്രവർത്തിക്കുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Using double-meaning (impure) speech",
+              "ml": "ദ്വയർത്ഥ പ്രയോഗം",
+              "note": {
+                "en": "An innocent joke misunderstood by the listener is not the sin; deliberately speaking with impure intent is.",
+                "ml": "കേൾവിക്കാരൻ തെറ്റിദ്ധരിക്കുന്ന നിഷ്കളങ്കമായ തമാശ പാപമല്ല; അശുദ്ധമായ ഉദ്ദേശ്യത്തോടെ ബോധപൂർവ്വം സംസാരിക്കുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Contraception",
+              "ml": "ഗർഭനിരോധനം",
+              "note": {
+                "en": "This concerns a freely chosen decision against the openness of marital love, distinct from Church-approved natural family planning.",
+                "ml": "ദാമ്പത്യസ്നേഹത്തിന്റെ തുറവിക്കെതിരെ സ്വതന്ത്രമായി എടുക്കുന്ന തീരുമാനത്തെ സൂചിപ്പിക്കുന്നു, സഭ അംഗീകരിച്ച സ്വാഭാവിക കുടുംബാസൂത്രണത്തിൽ നിന്ന് ഇത് വ്യത്യസ്തമാണ്."
+              }
+            },
+            {
+              "en": "Sterilization",
+              "ml": "വന്ധ്യംകരണം",
+              "note": {
+                "en": "A medically necessary procedure for a grave health reason differs from choosing it merely to permanently avoid children.",
+                "ml": "ഗുരുതരമായ ആരോഗ്യകാരണത്താൽ ആവശ്യമായ ചികിത്സ, കുട്ടികളെ സ്ഥിരമായി ഒഴിവാക്കാൻ മാത്രമായി തിരഞ്ഞെടുക്കുന്നതിൽ നിന്ന് വ്യത്യസ്തമാണ്."
+              }
+            },
+            {
+              "en": "Divorce",
+              "ml": "വിവാഹ മോചനം",
+              "note": {
+                "en": "Being the abandoned party, or seeking a lawful civil separation for grave reasons (e.g., safety) while remaining open to reconciliation, is not the same as freely initiating a divorce to remarry.",
+                "ml": "ഉപേക്ഷിക്കപ്പെട്ട കക്ഷിയാകുന്നതോ, ഗുരുതരമായ കാരണങ്ങളാൽ (ഉദാ. സുരക്ഷ) നിയമപരമായ വേർപിരിയൽ തേടുന്നതോ, വീണ്ടും വിവാഹം കഴിക്കാൻ സ്വതന്ത്രമായി വിവാഹമോചനം ആരംഭിക്കുന്നതിൽ നിന്ന് വ്യത്യസ്തമാണ്."
+              }
+            },
+            {
+              "en": "Attempting to capture another's privacy",
+              "ml": "അപരന്റെ സ്വകാര്യത പകർത്താൻ ശ്രമിച്ചത്",
+              "note": {
+                "en": "This applies to deliberately and knowingly intruding on someone's private life, not to information shared with you openly.",
+                "ml": "ഒരാളുടെ സ്വകാര്യജീവിതത്തിലേക്ക് അറിഞ്ഞും ബോധപൂർവ്വവുമായി കടന്നുകയറുന്നതിനെ സൂചിപ്പിക്കുന്നു, തുറന്ന് പങ്കിട്ട വിവരത്തെയല്ല."
+              }
+            },
+            {
+              "en": "Leading others into sin through temptation / threats",
+              "ml": "പ്രലോഭനത്തിലൂടെ / ഭീഷണിയിലൂടെ പാപത്തിലേക്ക് നയിച്ചത്",
+              "note": {
+                "en": "This applies to knowingly and deliberately pressuring or threatening someone toward wrongdoing, not to an innocent suggestion misused by another.",
+                "ml": "അറിഞ്ഞും ബോധപൂർവ്വവുമായി ഒരാളെ തെറ്റിലേക്ക് സമ്മർദ്ദം ചെലുത്തുകയോ ഭീഷണിപ്പെടുത്തുകയോ ചെയ്യുന്നതിനെ സൂചിപ്പിക്കുന്നു, മറ്റൊരാൾ ദുരുപയോഗം ചെയ്ത നിഷ്കളങ്കമായ നിർദ്ദേശത്തെയല്ല."
+              }
+            }
           ]
         }
       ]
@@ -435,7 +1581,10 @@
         "en": "Seventh Commandment — You shall not steal",
         "ml": "ഏഴാം പ്രമാണം — മോഷ്ടിക്കരുത്"
       },
-      "sub": { "en": "Exodus 20:15", "ml": "പുറപ്പാട് 20:15" },
+      "sub": {
+        "en": "Exodus 20:15",
+        "ml": "പുറപ്പാട് 20:15"
+      },
       "verse": {
         "en": "\"You shall not steal.\" — Exodus 20:15",
         "ml": "\"മോഷ്ടിക്കരുത്.\" — പുറപ്പാട് 20:15"
@@ -447,33 +1596,222 @@
             "ml": "ഏഴാം പ്രമാണത്തിനെതിരായ പാപങ്ങൾ"
           },
           "sins": [
-            { "en": "Stealing others' goods", "ml": "അന്യൻ്റെ വസ്തുക്കൾ മോഷ്ടിക്കുക" },
-            { "en": "Not returning found items", "ml": "കളഞ്ഞുകിട്ടിയ സാധനങ്ങൾ തിരികെ കൊടുക്കാതിരിക്കുക" },
-            { "en": "Pickpocketing", "ml": "പോക്കറ്റടി" },
-            { "en": "Housebreaking / Burglary", "ml": "ഭവന ഭേദനം" },
-            { "en": "Robbery", "ml": "കവർച്ച" },
-            { "en": "Fraud / Deception", "ml": "വഞ്ചന" },
-            { "en": "Not returning money or land", "ml": "പണം, സ്ഥലം തിരികെ കൊടുക്കാതിരിക്കുക" },
-            { "en": "Stealing items put up for sale", "ml": "വിൽപ്പനക്ക് വെച്ച വസ്തുക്കൾ മോഷ്ടിക്കുക" },
-            { "en": "Taking wages without working", "ml": "പണിയെടുക്കാതെ കൂലി മേടിക്കുക" },
-            { "en": "Charging excessive wages", "ml": "അമിതമായി കൂലി മേടിക്കുക" },
-            { "en": "Adulteration of goods", "ml": "മായംചേർക്കൽ" },
-            { "en": "Tax evasion", "ml": "നികുതിവെട്ടിപ്പ്" },
-            { "en": "Taking / giving bribes", "ml": "കൈക്കൂലി വാങ്ങുക/കൊടുക്കുക" },
-            { "en": "Copying / Plagiarism", "ml": "കോപ്പി അടിക്കുക" },
-            { "en": "Financial fraud", "ml": "സാമ്പത്തിക വഞ്ചന" },
-            { "en": "Not giving parish share and contributions", "ml": "ദേവാലയത്തിനും ശുശ്രൂഷകനും അധ്യക്ഷൻ നിശ്ചയിച്ചിട്ടുള്ള പതവാരം ഓഹരിയും കൊടുക്കാതിരിക്കുക" },
-            { "en": "Destroying others' property", "ml": "മറ്റുള്ളവരുടെ വസ്തുക്കൾ നശിപ്പിക്കുക" },
-            { "en": "Denying what is due / deserved", "ml": "അർഹതപ്പെട്ടത് നിഷേധിക്കുക" },
-            { "en": "Denying justice", "ml": "നീതി നിഷേധിക്കുക" },
-            { "en": "Not paying wages", "ml": "കൂലി കൊടുക്കാതിരിക്കുക" },
-            { "en": "Taking others' goods without permission", "ml": "മറ്റുള്ളവരുടെ വസ്തുക്കൾ അനുവാദമില്ലാതെ സ്വന്തമാക്കുന്നത്" },
-            { "en": "Destroying evidence", "ml": "തെളിവ് നശിപ്പിക്കൽ" },
-            { "en": "Laziness", "ml": "അലസത" },
-            { "en": "Not fulfilling responsibilities and duties", "ml": "ഉത്തരവാദിത്തങ്ങളും കടമകളും നിറവേറ്റാതിരിക്കുക" },
-            { "en": "Moving boundary stones or encroaching on others' property", "ml": "അതിർത്തിക്കല്ല് മാറ്റുകയോ അതിരുമാന്തി അന്യൻ്റെ വസ്തുവകകൾ സ്വന്തമാക്കുകയോ ചെയ്തത്" },
-            { "en": "Using counterfeit currency", "ml": "കള്ള നോട്ട് ഉപയോഗിച്ചത്" },
-            { "en": "Obtaining paid services through dishonest means", "ml": "പണം നൽകി ഉപയോഗിക്കേണ്ട സേവനങ്ങൾ കള്ളത്തരത്തിലൂടെ നേടിയത്" }
+            {
+              "en": "Stealing others' goods",
+              "ml": "അന്യൻ്റെ വസ്തുക്കൾ മോഷ്ടിക്കുക",
+              "note": {
+                "en": "Borrowing something with intent to return it is not the sin; taking what belongs to another without permission and keeping it is.",
+                "ml": "തിരികെ നൽകാൻ ഉദ്ദേശിച്ച് കടം വാങ്ങുന്നത് പാപമല്ല; അനുവാദമില്ലാതെ മറ്റൊരാളുടേത് എടുത്ത് സൂക്ഷിക്കുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Not returning found items",
+              "ml": "കളഞ്ഞുകിട്ടിയ സാധനങ്ങൾ തിരികെ കൊടുക്കാതിരിക്കുക",
+              "note": {
+                "en": "Being genuinely unable to find the owner despite real effort is not the sin; keeping it despite knowing whose it is, is.",
+                "ml": "യഥാർത്ഥ ശ്രമം നടത്തിയിട്ടും ഉടമയെ കണ്ടെത്താൻ കഴിയാതിരിക്കുന്നത് പാപമല്ല; ആരുടേതെന്ന് അറിഞ്ഞിട്ടും സൂക്ഷിക്കുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Pickpocketing",
+              "ml": "പോക്കറ്റടി",
+              "note": {
+                "en": "This is always a grave matter when done knowingly and deliberately.",
+                "ml": "അറിഞ്ഞും ബോധപൂർവ്വവുമായി ചെയ്യുമ്പോൾ ഇത് എപ്പോഴും ഗുരുതരമായ കാര്യമാണ്."
+              }
+            },
+            {
+              "en": "Housebreaking / Burglary",
+              "ml": "ഭവന ഭേദനം",
+              "note": {
+                "en": "This is always a grave matter when done knowingly and deliberately.",
+                "ml": "അറിഞ്ഞും ബോധപൂർവ്വവുമായി ചെയ്യുമ്പോൾ ഇത് എപ്പോഴും ഗുരുതരമായ കാര്യമാണ്."
+              }
+            },
+            {
+              "en": "Robbery",
+              "ml": "കവർച്ച",
+              "note": {
+                "en": "This is always a grave matter when done knowingly and deliberately.",
+                "ml": "അറിഞ്ഞും ബോധപൂർവ്വവുമായി ചെയ്യുമ്പോൾ ഇത് എപ്പോഴും ഗുരുതരമായ കാര്യമാണ്."
+              }
+            },
+            {
+              "en": "Fraud / Deception",
+              "ml": "വഞ്ചന",
+              "note": {
+                "en": "An honest mistake in a transaction is not the sin; deliberately misleading someone for gain is.",
+                "ml": "ഒരു ഇടപാടിലെ സത്യസന്ധമായ പിഴവ് പാപമല്ല; ലാഭത്തിനായി ബോധപൂർവ്വം ഒരാളെ വഞ്ചിക്കുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Not returning money or land",
+              "ml": "പണം, സ്ഥലം തിരികെ കൊടുക്കാതിരിക്കുക",
+              "note": {
+                "en": "A genuine inability to pay despite honest effort is not the sin; freely refusing to return what is owed is.",
+                "ml": "സത്യസന്ധമായ ശ്രമം നടത്തിയിട്ടും തിരികെ നൽകാൻ കഴിയാതിരിക്കുന്നത് പാപമല്ല; കടപ്പെട്ടത് സ്വതന്ത്രമായി തിരികെ നൽകാൻ വിസമ്മതിക്കുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Stealing items put up for sale",
+              "ml": "വിൽപ്പനക്ക് വെച്ച വസ്തുക്കൾ മോഷ്ടിക്കുക",
+              "note": {
+                "en": "This is always a grave matter when done knowingly and deliberately.",
+                "ml": "അറിഞ്ഞും ബോധപൂർവ്വവുമായി ചെയ്യുമ്പോൾ ഇത് എപ്പോഴും ഗുരുതരമായ കാര്യമാണ്."
+              }
+            },
+            {
+              "en": "Taking wages without working",
+              "ml": "പണിയെടുക്കാതെ കൂലി മേടിക്കുക",
+              "note": {
+                "en": "Reasonable breaks within your duties are not the sin; deliberately drawing pay for work you knowingly did not do is.",
+                "ml": "ജോലിക്കിടയിലെ ന്യായമായ ഇടവേളകൾ പാപമല്ല; ചെയ്യാത്ത ജോലിക്ക് അറിഞ്ഞുകൊണ്ട് ബോധപൂർവ്വം കൂലി വാങ്ങുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Charging excessive wages",
+              "ml": "അമിതമായി കൂലി മേടിക്കുക",
+              "note": {
+                "en": "A fair market rate is not the sin; deliberately overcharging someone who has no choice but to pay is.",
+                "ml": "ന്യായമായ വിപണി നിരക്ക് പാപമല്ല; നിവൃത്തിയില്ലാത്ത ഒരാളിൽ നിന്ന് ബോധപൂർവ്വം അമിതമായി ഈടാക്കുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Adulteration of goods",
+              "ml": "മായംചേർക്കൽ",
+              "note": {
+                "en": "This applies to knowingly mixing or misrepresenting goods to deceive a buyer, not to an honest error in production.",
+                "ml": "വാങ്ങുന്നയാളെ വഞ്ചിക്കാൻ അറിഞ്ഞുകൊണ്ട് വസ്തുക്കൾ കലർത്തുകയോ തെറ്റായി അവതരിപ്പിക്കുകയോ ചെയ്യുന്നതിനെ സൂചിപ്പിക്കുന്നു, ഉൽപ്പാദനത്തിലെ സത്യസന്ധമായ പിഴവല്ല."
+              }
+            },
+            {
+              "en": "Tax evasion",
+              "ml": "നികുതിവെട്ടിപ്പ്",
+              "note": {
+                "en": "Legitimate deductions or reliefs allowed by law are not the sin; deliberately concealing income to avoid a lawful tax is.",
+                "ml": "നിയമം അനുവദിക്കുന്ന ന്യായമായ കിഴിവുകൾ പാപമല്ല; നിയമപരമായ നികുതി ഒഴിവാക്കാൻ ബോധപൂർവ്വം വരുമാനം മറച്ചുവയ്ക്കുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Taking / giving bribes",
+              "ml": "കൈക്കൂലി വാങ്ങുക/കൊടുക്കുക",
+              "note": {
+                "en": "This is always a grave matter when done knowingly and deliberately.",
+                "ml": "അറിഞ്ഞും ബോധപൂർവ്വവുമായി ചെയ്യുമ്പോൾ ഇത് എപ്പോഴും ഗുരുതരമായ കാര്യമാണ്."
+              }
+            },
+            {
+              "en": "Copying / Plagiarism",
+              "ml": "കോപ്പി അടിക്കുക",
+              "note": {
+                "en": "Learning from and citing others' work honestly is not the sin; presenting someone else's work as your own is.",
+                "ml": "മറ്റുള്ളവരുടെ പ്രവൃത്തിയിൽ നിന്ന് പഠിച്ച് സത്യസന്ധമായി ഉദ്ധരിക്കുന്നത് പാപമല്ല; മറ്റൊരാളുടെ പ്രവൃത്തി സ്വന്തമായി അവതരിപ്പിക്കുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Financial fraud",
+              "ml": "സാമ്പത്തിക വഞ്ചന",
+              "note": {
+                "en": "An honest mistake in accounts is not the sin; deliberately deceiving someone for financial gain is.",
+                "ml": "കണക്കുകളിലെ സത്യസന്ധമായ പിഴവ് പാപമല്ല; സാമ്പത്തിക നേട്ടത്തിനായി ബോധപൂർവ്വം ഒരാളെ വഞ്ചിക്കുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Not giving parish share and contributions",
+              "ml": "ദേവാലയത്തിനും ശുശ്രൂഷകനും അധ്യക്ഷൻ നിശ്ചയിച്ചിട്ടുള്ള പതവാരം ഓഹരിയും കൊടുക്കാതിരിക്കുക",
+              "note": {
+                "en": "Being genuinely unable to afford it is not the sin; freely withholding what you can afford out of indifference is.",
+                "ml": "യഥാർത്ഥത്തിൽ താങ്ങാൻ കഴിയാതിരിക്കുന്നത് പാപമല്ല; നിസ്സംഗതയാൽ താങ്ങാൻ കഴിയുന്നത് സ്വതന്ത്രമായി പിടിച്ചുവയ്ക്കുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Destroying others' property",
+              "ml": "മറ്റുള്ളവരുടെ വസ്തുക്കൾ നശിപ്പിക്കുക",
+              "note": {
+                "en": "An accidental breakage is not the sin; deliberately damaging what belongs to another is.",
+                "ml": "ആകസ്മികമായ കേടുപാട് പാപമല്ല; മറ്റൊരാളുടേത് ബോധപൂർവ്വം നശിപ്പിക്കുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Denying what is due / deserved",
+              "ml": "അർഹതപ്പെട്ടത് നിഷേധിക്കുക",
+              "note": {
+                "en": "A genuine dispute about what is owed is not the sin; knowingly withholding what someone rightfully deserves is.",
+                "ml": "കടപ്പെട്ടതിനെക്കുറിച്ചുള്ള യഥാർത്ഥ തർക്കം പാപമല്ല; ഒരാൾക്ക് ന്യായമായി അർഹമായത് അറിഞ്ഞുകൊണ്ട് നിഷേധിക്കുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Denying justice",
+              "ml": "നീതി നിഷേധിക്കുക",
+              "note": {
+                "en": "An honest error in judgment is not the sin; deliberately withholding justice out of bias or self-interest is.",
+                "ml": "വിധിന്യായത്തിലെ സത്യസന്ധമായ പിഴവ് പാപമല്ല; പക്ഷപാതത്താലോ സ്വാർത്ഥതയാലോ ബോധപൂർവ്വം നീതി നിഷേധിക്കുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Not paying wages",
+              "ml": "കൂലി കൊടുക്കാതിരിക്കുക",
+              "note": {
+                "en": "A genuine, temporary financial difficulty being honestly resolved is not the sin; freely refusing to pay what is owed is.",
+                "ml": "സത്യസന്ധമായി പരിഹരിക്കുന്ന യഥാർത്ഥവും താൽക്കാലികവുമായ സാമ്പത്തിക ബുദ്ധിമുട്ട് പാപമല്ല; കടപ്പെട്ടത് സ്വതന്ത്രമായി നൽകാൻ വിസമ്മതിക്കുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Taking others' goods without permission",
+              "ml": "മറ്റുള്ളവരുടെ വസ്തുക്കൾ അനുവാദമില്ലാതെ സ്വന്തമാക്കുന്നത്",
+              "note": {
+                "en": "Borrowing something with intent to return it, with reasonable presumed consent, is not the sin; taking it without any right to do so is.",
+                "ml": "തിരികെ നൽകാൻ ഉദ്ദേശിച്ച്, ന്യായമായി അനുമാനിക്കാവുന്ന സമ്മതത്തോടെ കടം വാങ്ങുന്നത് പാപമല്ല; അതിനുള്ള അവകാശമില്ലാതെ എടുക്കുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Destroying evidence",
+              "ml": "തെളിവ് നശിപ്പിക്കൽ",
+              "note": {
+                "en": "This applies to knowingly and deliberately hiding or destroying evidence to obstruct justice or protect wrongdoing.",
+                "ml": "നീതി തടസ്സപ്പെടുത്താനോ തെറ്റ് മറച്ചുവയ്ക്കാനോ അറിഞ്ഞും ബോധപൂർവ്വവുമായി തെളിവ് ഒളിപ്പിക്കുകയോ നശിപ്പിക്കുകയോ ചെയ്യുന്നതിനെ സൂചിപ്പിക്കുന്നു."
+              }
+            },
+            {
+              "en": "Laziness",
+              "ml": "അലസത",
+              "note": {
+                "en": "Needing genuine rest is not the sin; freely neglecting your responsibilities out of an unwillingness to work is.",
+                "ml": "യഥാർത്ഥ വിശ്രമം ആവശ്യമായി വരുന്നത് പാപമല്ല; ജോലി ചെയ്യാനുള്ള മടിയാൽ ഉത്തരവാദിത്തങ്ങൾ സ്വതന്ത്രമായി അവഗണിക്കുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Not fulfilling responsibilities and duties",
+              "ml": "ഉത്തരവാദിത്തങ്ങളും കടമകളും നിറവേറ്റാതിരിക്കുക",
+              "note": {
+                "en": "An honest failure despite real effort is not the sin; freely neglecting your duties out of carelessness is.",
+                "ml": "യഥാർത്ഥ ശ്രമം നടത്തിയിട്ടും ഉണ്ടാകുന്ന പരാജയം പാപമല്ല; അശ്രദ്ധയാൽ ഉത്തരവാദിത്തങ്ങൾ സ്വതന്ത്രമായി അവഗണിക്കുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Moving boundary stones or encroaching on others' property",
+              "ml": "അതിർത്തിക്കല്ല് മാറ്റുകയോ അതിരുമാന്തി അന്യൻ്റെ വസ്തുവകകൾ സ്വന്തമാക്കുകയോ ചെയ്തത്",
+              "note": {
+                "en": "A genuine, honest boundary dispute being resolved fairly is not the sin; deliberately taking another's land is.",
+                "ml": "ന്യായമായി പരിഹരിക്കുന്ന സത്യസന്ധമായ അതിർത്തി തർക്കം പാപമല്ല; മറ്റൊരാളുടെ ഭൂമി ബോധപൂർവ്വം കൈയേറുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Using counterfeit currency",
+              "ml": "കള്ള നോട്ട് ഉപയോഗിച്ചത്",
+              "note": {
+                "en": "Unknowingly receiving and passing on a counterfeit note is not the sin; knowingly using it to deceive others is.",
+                "ml": "അറിയാതെ കള്ളനോട്ട് സ്വീകരിച്ച് കൈമാറുന്നത് പാപമല്ല; അറിഞ്ഞുകൊണ്ട് മറ്റുള്ളവരെ വഞ്ചിക്കാൻ അത് ഉപയോഗിക്കുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Obtaining paid services through dishonest means",
+              "ml": "പണം നൽകി ഉപയോഗിക്കേണ്ട സേവനങ്ങൾ കള്ളത്തരത്തിലൂടെ നേടിയത്",
+              "note": {
+                "en": "A genuine billing error in your favor, corrected once noticed, is not the sin; deliberately deceiving someone to avoid payment is.",
+                "ml": "ശ്രദ്ധയിൽപ്പെട്ടയുടൻ തിരുത്തുന്ന, നിങ്ങൾക്ക് അനുകൂലമായ യഥാർത്ഥ ബില്ലിംഗ് പിഴവ് പാപമല്ല; പണം ഒഴിവാക്കാൻ ബോധപൂർവ്വം ഒരാളെ വഞ്ചിക്കുന്നതാണ് ബാധകം."
+              }
+            }
           ]
         }
       ]
@@ -485,7 +1823,10 @@
         "en": "Eighth Commandment — You shall not bear false witness",
         "ml": "എട്ടാം പ്രമാണം — കള്ളസാക്ഷ്യം പറയരുത്"
       },
-      "sub": { "en": "Exodus 20:16", "ml": "പുറപ്പാട് 20:16" },
+      "sub": {
+        "en": "Exodus 20:16",
+        "ml": "പുറപ്പാട് 20:16"
+      },
       "verse": {
         "en": "\"You shall not bear false witness against your neighbor.\" — Exodus 20:16",
         "ml": "\"നിന്റെ അയൽവാസിക്കെതിരെ കള്ളസാക്ഷ്യം പറയരുത്.\" — പുറപ്പാട് 20:16"
@@ -497,14 +1838,70 @@
             "ml": "എട്ടാം പ്രമാണത്തിനെതിരായ പാപങ്ങൾ"
           },
           "sins": [
-            { "en": "Lying / Telling lies", "ml": "കള്ളം, നുണ പറയുന്നത്" },
-            { "en": "Partiality / Favoritism", "ml": "പക്ഷപാതം" },
-            { "en": "Vain thoughts", "ml": "വ്യർത്ഥ ചിന്തകൾ" },
-            { "en": "Revealing confidential information", "ml": "രഹസ്യ വിവരങ്ങൾ വെളിപ്പെടുത്തുന്നത്" },
-            { "en": "Confessing while hiding sins", "ml": "പാപം മറച്ചുവെച്ച് കുമ്പസാരിക്കുന്നത്" },
-            { "en": "Gossip / Slander", "ml": "പരദൂഷണം പറയുന്നത്" },
-            { "en": "Falsely accusing others of sins they did not commit", "ml": "ചെയ്യാത്ത കുറ്റം മറ്റുള്ളവരുടെ മേൽ കെട്ടി വെയ്ക്കുന്നത്" },
-            { "en": "Receiving Holy Communion in a state of sin", "ml": "പാപത്തോടെ വിശുദ്ധകുർബാന സ്വീകരിക്കുന്നത്" },
+            {
+              "en": "Lying / Telling lies",
+              "ml": "കള്ളം, നുണ പറയുന്നത്",
+              "note": {
+                "en": "A polite social nicety intended to spare feelings, without real harm, is not the same as deliberately deceiving someone to their detriment.",
+                "ml": "വികാരങ്ങളെ വേദനിപ്പിക്കാതിരിക്കാൻ, യഥാർത്ഥ ഹാനിയില്ലാതെയുള്ള മാന്യമായ സാമൂഹിക പെരുമാറ്റം, ഒരാൾക്ക് ഹാനിവരുത്താൻ ബോധപൂർവ്വം വഞ്ചിക്കുന്നതിൽ നിന്ന് വ്യത്യസ്തമാണ്."
+              }
+            },
+            {
+              "en": "Partiality / Favoritism",
+              "ml": "പക്ഷപാതം",
+              "note": {
+                "en": "Naturally being closer to some people is not the sin; deliberately treating others unjustly because of it is.",
+                "ml": "ചിലരോട് സ്വാഭാവികമായി കൂടുതൽ അടുപ്പം തോന്നുന്നത് പാപമല്ല; അതുമൂലം മറ്റുള്ളവരോട് ബോധപൂർവ്വം അന്യായമായി പെരുമാറുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Vain thoughts",
+              "ml": "വ്യർത്ഥ ചിന്തകൾ",
+              "note": {
+                "en": "A distracting thought that comes and goes is not the sin; deliberately dwelling on empty pride or fantasy is.",
+                "ml": "വന്നുപോകുന്ന ശ്രദ്ധ തെറ്റിക്കുന്ന ചിന്ത പാപമല്ല; വ്യർത്ഥമായ അഹങ്കാരത്തിലോ ഭാവനയിലോ ബോധപൂർവ്വം തുടരുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Revealing confidential information",
+              "ml": "രഹസ്യ വിവരങ്ങൾ വെളിപ്പെടുത്തുന്നത്",
+              "note": {
+                "en": "Disclosing something to prevent serious harm, when truly necessary, is not the sin; revealing it out of carelessness or malice is.",
+                "ml": "ഗുരുതരമായ ഹാനി തടയാൻ യഥാർത്ഥത്തിൽ ആവശ്യമായി വരുമ്പോൾ വെളിപ്പെടുത്തുന്നത് പാപമല്ല; അശ്രദ്ധയാലോ ദ്വേഷത്താലോ വെളിപ്പെടുത്തുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Confessing while hiding sins",
+              "ml": "പാപം മറച്ചുവെച്ച് കുമ്പസാരിക്കുന്നത്",
+              "note": {
+                "en": "Genuinely forgetting a sin is not the sin; deliberately hiding one out of shame or fear invalidates the confession.",
+                "ml": "ഒരു പാപം യഥാർത്ഥത്തിൽ മറന്നുപോകുന്നത് പാപമല്ല; ലജ്ജയാലോ ഭയത്താലോ ബോധപൂർവ്വം ഒളിപ്പിക്കുന്നത് കുമ്പസാരത്തെ അസാധുവാക്കുന്നു."
+              }
+            },
+            {
+              "en": "Gossip / Slander",
+              "ml": "പരദൂഷണം പറയുന്നത്",
+              "note": {
+                "en": "Sharing genuinely necessary information with someone who needs it is not the sin; spreading it for entertainment or to damage someone's name is.",
+                "ml": "ആവശ്യമുള്ള ഒരാളോട് യഥാർത്ഥത്തിൽ ആവശ്യമായ വിവരം പങ്കിടുന്നത് പാപമല്ല; വിനോദത്തിനായോ ഒരാളുടെ പേരിന് കോട്ടം വരുത്താനോ അത് പരത്തുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Falsely accusing others of sins they did not commit",
+              "ml": "ചെയ്യാത്ത കുറ്റം മറ്റുള്ളവരുടെ മേൽ കെട്ടി വെയ്ക്കുന്നത്",
+              "note": {
+                "en": "An honest mistake based on incomplete information is not the sin; knowingly making a false accusation is.",
+                "ml": "അപൂർണ്ണമായ വിവരത്തെ അടിസ്ഥാനമാക്കിയുള്ള സത്യസന്ധമായ പിഴവ് പാപമല്ല; അറിഞ്ഞുകൊണ്ട് കള്ള ആരോപണം ഉന്നയിക്കുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Receiving Holy Communion in a state of sin",
+              "ml": "പാപത്തോടെ വിശുദ്ധകുർബാന സ്വീകരിക്കുന്നത്",
+              "note": {
+                "en": "Ordinary imperfections do not bar Communion; knowingly receiving it while conscious of grave, unconfessed sin does.",
+                "ml": "സാധാരണ ബലഹീനതകൾ കുർബാന സ്വീകരണത്തിന് തടസ്സമല്ല; ഗുരുതരവും ഏറ്റുപറയാത്തതുമായ പാപത്തിന്റെ ബോധത്തോടെ അറിഞ്ഞുകൊണ്ട് സ്വീകരിക്കുന്നതാണ് ബാധകം."
+              }
+            },
             {
               "en": "Making accusations",
               "ml": "കുറ്റാരോപണം നടത്തുന്നത്",
@@ -513,13 +1910,62 @@
                 "ml": "ന്യായമായ ഒരു ആശങ്ക പങ്കുവയ്ക്കുന്നതോ യഥാർത്ഥത്തിൽ സംഭവിച്ച ദോഷം റിപ്പോർട്ട് ചെയ്യുന്നതോ പാപമല്ല. വ്യാജ ആരോപണമാണ്."
               }
             },
-            { "en": "Backbiting / Tale-bearing", "ml": "ഏഷണി പറയുന്നത്" },
-            { "en": "Defaming others", "ml": "മറ്റുള്ളവരെ അപകീർത്തിപെടുത്തുന്നത്" },
-            { "en": "Publicly criticizing others", "ml": "മറ്റുള്ളവരെ പരസ്യമായി വിമർശിക്കുന്നത്" },
-            { "en": "Humiliating others", "ml": "മറ്റുള്ളവരെ അവഹേളിക്കുന്നത്" },
-            { "en": "Excessive self-praise", "ml": "അമിതമായ ആത്മപ്രശംസ നടത്തുന്നത്" },
-            { "en": "Deliberately confessing vaguely so the priest does not understand the sin", "ml": "കുമ്പസാരത്തിൽ ബോധപൂർവ്വം അവ്യക്തമായി പാപം ഏറ്റുപറഞ്ഞത് / വൈദികൻ പാപം മനസ്സിലാക്കാതിരിക്കാൻ മറുവാക്കുകൾ ഉപയോഗിച്ചത്" },
-            { "en": "Confessing with the intention of sinning again", "ml": "വീണ്ടും പാപം ചെയ്യാൻ തീരുമാനിച്ചുകൊണ്ട് കുമ്പസാരിച്ചത്" }
+            {
+              "en": "Backbiting / Tale-bearing",
+              "ml": "ഏഷണി പറയുന്നത്",
+              "note": {
+                "en": "Sharing a genuine concern with someone who can help is not the sin; carrying tales to stir up trouble between people is.",
+                "ml": "സഹായിക്കാൻ കഴിയുന്ന ഒരാളോട് യഥാർത്ഥ ആശങ്ക പങ്കുവയ്ക്കുന്നത് പാപമല്ല; ആളുകൾക്കിടയിൽ പ്രശ്നമുണ്ടാക്കാൻ കഥകൾ പരത്തുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Defaming others",
+              "ml": "മറ്റുള്ളവരെ അപകീർത്തിപെടുത്തുന്നത്",
+              "note": {
+                "en": "Honestly reporting a real wrong to someone with authority to act is not the sin; spreading it to damage their reputation is.",
+                "ml": "പ്രവർത്തിക്കാൻ അധികാരമുള്ള ഒരാളോട് യഥാർത്ഥ തെറ്റ് സത്യസന്ധമായി അറിയിക്കുന്നത് പാപമല്ല; അവരുടെ പേരിന് കോട്ടം വരുത്താൻ അത് പരത്തുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Publicly criticizing others",
+              "ml": "മറ്റുള്ളവരെ പരസ്യമായി വിമർശിക്കുന്നത്",
+              "note": {
+                "en": "Fair, constructive feedback given respectfully is not the sin; publicly shaming someone out of malice is.",
+                "ml": "ബഹുമാനത്തോടെ നൽകുന്ന ന്യായവും ക്രിയാത്മകവുമായ അഭിപ്രായം പാപമല്ല; ദ്വേഷത്താൽ ഒരാളെ പരസ്യമായി അപമാനിക്കുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Humiliating others",
+              "ml": "മറ്റുള്ളവരെ അവഹേളിക്കുന്നത്",
+              "note": {
+                "en": "Correcting someone privately and respectfully is not the sin; deliberately shaming or belittling them is.",
+                "ml": "സ്വകാര്യമായും ബഹുമാനത്തോടെയും ഒരാളെ തിരുത്തുന്നത് പാപമല്ല; ബോധപൂർവ്വം അപമാനിക്കുകയോ കൊച്ചാക്കുകയോ ചെയ്യുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Excessive self-praise",
+              "ml": "അമിതമായ ആത്മപ്രശംസ നടത്തുന്നത്",
+              "note": {
+                "en": "Honestly acknowledging your gifts is not the sin; deliberately boasting to belittle others or seek glory for yourself is.",
+                "ml": "സ്വന്തം കഴിവുകൾ സത്യസന്ധമായി അംഗീകരിക്കുന്നത് പാപമല്ല; മറ്റുള്ളവരെ കൊച്ചാക്കാനോ സ്വയം മഹത്വം തേടാനോ ബോധപൂർവ്വം വീമ്പിളക്കുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Deliberately confessing vaguely so the priest does not understand the sin",
+              "ml": "കുമ്പസാരത്തിൽ ബോധപൂർവ്വം അവ്യക്തമായി പാപം ഏറ്റുപറഞ്ഞത് / വൈദികൻ പാപം മനസ്സിലാക്കാതിരിക്കാൻ മറുവാക്കുകൾ ഉപയോഗിച്ചത്",
+              "note": {
+                "en": "Struggling to find the right words out of nervousness is not the sin; deliberately obscuring the truth so the priest cannot understand is.",
+                "ml": "ഭയത്താൽ ശരിയായ വാക്കുകൾ കണ്ടെത്താൻ ബുദ്ധിമുട്ടുന്നത് പാപമല്ല; വൈദികന് മനസ്സിലാകാതിരിക്കാൻ ബോധപൂർവ്വം സത്യം മറച്ചുവയ്ക്കുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Confessing with the intention of sinning again",
+              "ml": "വീണ്ടും പാപം ചെയ്യാൻ തീരുമാനിച്ചുകൊണ്ട് കുമ്പസാരിച്ചത്",
+              "note": {
+                "en": "A realistic fear that you may fall again despite a genuine resolve is not the sin; confessing while firmly planning to sin again invalidates it.",
+                "ml": "യഥാർത്ഥ തീരുമാനത്തോടെയും വീണ്ടും വീഴാമെന്ന യാഥാർത്ഥ്യബോധത്തോടെയുള്ള ഭയം പാപമല്ല; വീണ്ടും പാപം ചെയ്യാൻ ഉറച്ച് തീരുമാനിച്ചുകൊണ്ട് കുമ്പസാരിക്കുന്നത് അതിനെ അസാധുവാക്കുന്നു."
+              }
+            }
           ]
         }
       ]
@@ -531,7 +1977,10 @@
         "en": "Ninth Commandment — You shall not covet your neighbor's wife",
         "ml": "ഒൻപതാം പ്രമാണം — അന്യന്റെ ഭാര്യയെ മോഹിക്കരുത്"
       },
-      "sub": { "en": "Exodus 20:17", "ml": "പുറപ്പാട് 20:17" },
+      "sub": {
+        "en": "Exodus 20:17",
+        "ml": "പുറപ്പാട് 20:17"
+      },
       "verse": {
         "en": "\"You shall not covet your neighbor's wife.\" — Exodus 20:17",
         "ml": "\"അന്യന്റെ ഭാര്യയെ മോഹിക്കരുത്.\" — പുറപ്പാട് 20:17"
@@ -543,15 +1992,78 @@
             "ml": "ഒൻപതാം പ്രമാണത്തിനെതിരായ പാപങ്ങൾ"
           },
           "sins": [
-            { "en": "Looking with lust at another's wife / husband / woman / man", "ml": "അന്യന്റെ ഭാര്യയെ / ഭർത്താവിനെ / സ്ത്രീയെ / പുരുഷനെ ആസക്തിയോടെ നോക്കുക" },
-            { "en": "Desiring to possess another's wife / husband / woman / man", "ml": "അന്യന്റെ ഭാര്യയെ / ഭർത്താവിനെ / സ്ത്രീയെ / പുരുഷനെ സ്വന്തമാക്കാൻ ആഗ്രഹിക്കുക" },
-            { "en": "Not fulfilling marital duty", "ml": "ദാമ്പത്യധർമം നിറവേറ്റാതിരിക്കുക" },
-            { "en": "Praising only the qualities of others' spouses and belittling one's own spouse", "ml": "മറ്റുള്ളവരുടെ ജീവിത പങ്കാളികളുടെ ഗുണങ്ങൾ മാത്രം പുകഴ്ത്തി പറയുകയും സ്വന്തം ജീവിതപങ്കാളിയുടെ മേന്മയെ ഇകഴ്ത്തി കാണിക്കുകയും ചെയ്യുന്നത്" },
-            { "en": "Giving another person a place between spouses", "ml": "ദമ്പതികളുടെ ഇടയിൽ മറ്റൊരാൾക്ക് സ്ഥാനം നൽകുന്നത്" },
-            { "en": "Entertaining carnal desires", "ml": "ജഡികാസക്തികളെ താലോലിക്കുന്നത്" },
-            { "en": "Thinking of sexual acts with others instead of seeking joy in one's own spouse", "ml": "സ്വപങ്കാളിയിൽ സന്തോഷം തേടാതെ അന്യരുമൊത്തുള്ള ലൈംഗിക പ്രവർത്തികൾ ചിന്തിക്കുന്നത്" },
-            { "en": "Swapping life partners", "ml": "ജീവിത പങ്കാളികളെ പരസ്പരം കൈമാറുന്നത്" },
-            { "en": "Fulfilling marital duty while watching obscene pictures / videos", "ml": "അശ്ലീല ചിത്രങ്ങൾ / വീഡിയോസ് കണ്ട് ദാമ്പത്യ ധർമം അനുഷ്ഠിക്കുന്നത്" }
+            {
+              "en": "Looking with lust at another's wife / husband / woman / man",
+              "ml": "അന്യന്റെ ഭാര്യയെ / ഭർത്താവിനെ / സ്ത്രീയെ / പുരുഷനെ ആസക്തിയോടെ നോക്കുക",
+              "note": {
+                "en": "Noticing someone's appearance is not the sin; deliberately looking with the intention of arousing desire is.",
+                "ml": "ഒരാളുടെ രൂപം ശ്രദ്ധിക്കുന്നത് പാപമല്ല; കാമം ഉണർത്താനുള്ള ഉദ്ദേശ്യത്തോടെ ബോധപൂർവ്വം നോക്കുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Desiring to possess another's wife / husband / woman / man",
+              "ml": "അന്യന്റെ ഭാര്യയെ / ഭർത്താവിനെ / സ്ത്രീയെ / പുരുഷനെ സ്വന്തമാക്കാൻ ആഗ്രഹിക്കുക",
+              "note": {
+                "en": "A stray thought quickly dismissed is not the sin; deliberately dwelling on and wishing for it is.",
+                "ml": "പെട്ടെന്ന് തള്ളിക്കളയുന്ന ക്ഷണിക ചിന്ത പാപമല്ല; ബോധപൂർവ്വം അതിൽ തുടരുകയും ആഗ്രഹിക്കുകയും ചെയ്യുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Not fulfilling marital duty",
+              "ml": "ദാമ്പത്യധർമം നിറവേറ്റാതിരിക്കുക",
+              "note": {
+                "en": "A genuine reason such as illness is not the sin; freely and persistently refusing this duty without cause is.",
+                "ml": "രോഗം പോലുള്ള യഥാർത്ഥ കാരണം പാപമല്ല; കാരണമില്ലാതെ ഈ കടമ സ്വതന്ത്രമായും സ്ഥിരമായും നിഷേധിക്കുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Praising only the qualities of others' spouses and belittling one's own spouse",
+              "ml": "മറ്റുള്ളവരുടെ ജീവിത പങ്കാളികളുടെ ഗുണങ്ങൾ മാത്രം പുകഴ്ത്തി പറയുകയും സ്വന്തം ജീവിതപങ്കാളിയുടെ മേന്മയെ ഇകഴ്ത്തി കാണിക്കുകയും ചെയ്യുന്നത്",
+              "note": {
+                "en": "Genuinely admiring another couple is not the sin; deliberately belittling your own spouse by comparison is.",
+                "ml": "മറ്റൊരു ദമ്പതികളെ യഥാർത്ഥത്തിൽ പ്രശംസിക്കുന്നത് പാപമല്ല; താരതമ്യത്തിലൂടെ സ്വന്തം പങ്കാളിയെ ബോധപൂർവ്വം ഇകഴ്ത്തുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Giving another person a place between spouses",
+              "ml": "ദമ്പതികളുടെ ഇടയിൽ മറ്റൊരാൾക്ക് സ്ഥാനം നൽകുന്നത്",
+              "note": {
+                "en": "A close friendship kept within proper limits is not the sin; deliberately letting another person come between you and your spouse is.",
+                "ml": "ശരിയായ പരിധിക്കുള്ളിലുള്ള അടുത്ത സൗഹൃദം പാപമല്ല; മറ്റൊരാളെ ബോധപൂർവ്വം നിങ്ങൾക്കും പങ്കാളിക്കും ഇടയിൽ വരാൻ അനുവദിക്കുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Entertaining carnal desires",
+              "ml": "ജഡികാസക്തികളെ താലോലിക്കുന്നത്",
+              "note": {
+                "en": "A passing bodily impulse is not the sin; deliberately dwelling on and indulging it in thought is.",
+                "ml": "ക്ഷണിക ശാരീരിക പ്രേരണ പാപമല്ല; ബോധപൂർവ്വം ചിന്തയിൽ അതിൽ തുടരുകയും ആസ്വദിക്കുകയും ചെയ്യുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Thinking of sexual acts with others instead of seeking joy in one's own spouse",
+              "ml": "സ്വപങ്കാളിയിൽ സന്തോഷം തേടാതെ അന്യരുമൊത്തുള്ള ലൈംഗിക പ്രവർത്തികൾ ചിന്തിക്കുന്നത്",
+              "note": {
+                "en": "A stray thought quickly set aside is not the sin; deliberately dwelling on it during the act is.",
+                "ml": "പെട്ടെന്ന് മാറ്റിവയ്ക്കുന്ന ക്ഷണിക ചിന്ത പാപമല്ല; ആ പ്രവൃത്തിക്കിടയിൽ ബോധപൂർവ്വം അതിൽ തുടരുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Swapping life partners",
+              "ml": "ജീവിത പങ്കാളികളെ പരസ്പരം കൈമാറുന്നത്",
+              "note": {
+                "en": "This is always a grave matter when knowingly and freely done.",
+                "ml": "അറിഞ്ഞും സ്വതന്ത്രമായും ചെയ്യുമ്പോൾ ഇത് എപ്പോഴും ഗുരുതരമായ കാര്യമാണ്."
+              }
+            },
+            {
+              "en": "Fulfilling marital duty while watching obscene pictures / videos",
+              "ml": "അശ്ലീല ചിത്രങ്ങൾ / വീഡിയോസ് കണ്ട് ദാമ്പത്യ ധർമം അനുഷ്ഠിക്കുന്നത്",
+              "note": {
+                "en": "This concerns freely and deliberately choosing to do so, not an isolated lapse quickly regretted.",
+                "ml": "ബോധപൂർവ്വം സ്വതന്ത്രമായി ഇത് തിരഞ്ഞെടുക്കുന്നതിനെ സൂചിപ്പിക്കുന്നു, പെട്ടെന്ന് പശ്ചാത്തപിക്കുന്ന ഒറ്റപ്പെട്ട വീഴ്ചയെയല്ല."
+              }
+            }
           ]
         }
       ]
@@ -563,7 +2075,10 @@
         "en": "Tenth Commandment — You shall not covet your neighbor's goods",
         "ml": "പത്താം പ്രമാണം — അന്യന്റെ വസ്തുക്കൾ മോഹിക്കരുത്"
       },
-      "sub": { "en": "Exodus 20:17 · Matthew 6:21", "ml": "പുറപ്പാട് 20:17 · മത്തായി 6:21" },
+      "sub": {
+        "en": "Exodus 20:17 · Matthew 6:21",
+        "ml": "പുറപ്പാട് 20:17 · മത്തായി 6:21"
+      },
       "verse": {
         "en": "\"You shall not covet your neighbor's goods.\" — Exodus 20:17",
         "ml": "\"അന്യന്റെ വസ്തുക്കൾ മോഹിക്കരുത്.\" — പുറപ്പാട് 20:17"
@@ -575,19 +2090,110 @@
             "ml": "പത്താം പ്രമാണത്തിനെതിരായ പാപങ്ങൾ"
           },
           "sins": [
-            { "en": "The desire to possess everything one sees", "ml": "കാണുന്നതെല്ലാം സ്വന്തമാക്കണമെന്ന മോഹം" },
-            { "en": "Excessive desire and fascination for luxury items, clothes, wealth, gold, etc.", "ml": "ആഡംബര വസ്തുക്കൾ, വസ്ത്രങ്ങൾ, സമ്പത്ത്, സ്വർണം തുടങ്ങിയവയോട് അമിതമായ ആശ, ഭ്രമം" },
-            { "en": "Envy", "ml": "അസൂയ" },
-            { "en": "Gluttony / Greed for food", "ml": "ഭക്ഷണാസക്തി / കൊതി" },
-            { "en": "Excessive greed", "ml": "അതിമോഹം" },
-            { "en": "Apathy / Indifference", "ml": "നിസംഗത" },
-            { "en": "Desire to possess others' goods", "ml": "അന്യന്റെ വസ്തുക്കൾ സ്വന്തമാക്കണമെന്ന ആഗ്രഹം" },
-            { "en": "Being envious of others' progress", "ml": "മറ്റുള്ളവരുടെ ഉയർച്ചയിൽ അസൂയപെടുക" },
-            { "en": "Wasting money and time", "ml": "പണവും സമയവും ദുർവ്യയം ചെയ്യുക" },
-            { "en": "Spending money unnecessarily", "ml": "അനാവശ്യമായി പണം ചെലവഴിക്കുക" },
-            { "en": "Not showing mercy to the poor", "ml": "ദരിദ്രരോട് കരുണ കാണിക്കാതിരിക്കുക" },
-            { "en": "Not thanking for favors received", "ml": "ലഭിച്ച ഉപകാരത്തിന് നന്ദി പറയാതിരിക്കുക" },
-            { "en": "Desiring excessive reward for one's own responsibilities", "ml": "സ്വന്തം ഉത്തരവാദിത്തങ്ങൾക്ക് അമിതമായ പ്രതിഫലം ആഗ്രഹിക്കുന്നത്" }
+            {
+              "en": "The desire to possess everything one sees",
+              "ml": "കാണുന്നതെല്ലാം സ്വന്തമാക്കണമെന്ന മോഹം",
+              "note": {
+                "en": "Appreciating something beautiful is not the sin; a restless craving to own everything you see is.",
+                "ml": "മനോഹരമായത് ആസ്വദിക്കുന്നത് പാപമല്ല; കാണുന്നതെല്ലാം സ്വന്തമാക്കണമെന്ന അസ്വസ്ഥമായ മോഹമാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Excessive desire and fascination for luxury items, clothes, wealth, gold, etc.",
+              "ml": "ആഡംബര വസ്തുക്കൾ, വസ്ത്രങ്ങൾ, സമ്പത്ത്, സ്വർണം തുടങ്ങിയവയോട് അമിതമായ ആശ, ഭ്രമം",
+              "note": {
+                "en": "Enjoying nice things within your means is not the sin; an excessive, consuming fascination with them is.",
+                "ml": "കഴിവിനുള്ളിൽ നല്ല വസ്തുക്കൾ ആസ്വദിക്കുന്നത് പാപമല്ല; അവയോടുള്ള അമിതവും വിഴുങ്ങുന്നതുമായ ഭ്രമമാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Envy",
+              "ml": "അസൂയ",
+              "note": {
+                "en": "Being inspired by someone's blessings is good; feeling resentment or sorrow at their good fortune is the sin.",
+                "ml": "ഒരാളുടെ അനുഗ്രഹത്താൽ പ്രചോദിതരാകുന്നത് നല്ലതാണ്; അവരുടെ നല്ല ഭാഗ്യത്തിൽ വിദ്വേഷമോ ദുഃഖമോ തോന്നുന്നതാണ് പാപം."
+              }
+            },
+            {
+              "en": "Gluttony / Greed for food",
+              "ml": "ഭക്ഷണാസക്തി / കൊതി",
+              "note": {
+                "en": "Enjoying a good meal is not the sin; deliberately overindulging to excess out of self-indulgence is.",
+                "ml": "നല്ലൊരു ഭക്ഷണം ആസ്വദിക്കുന്നത് പാപമല്ല; സ്വയം സുഖഭോഗത്തിനായി ബോധപൂർവ്വം അമിതമായി ഭക്ഷിക്കുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Excessive greed",
+              "ml": "അതിമോഹം",
+              "note": {
+                "en": "Reasonable ambition to provide for your future is not the sin; an insatiable, deliberate craving for more is.",
+                "ml": "ഭാവിക്കായി കരുതാനുള്ള ന്യായമായ ആഗ്രഹം പാപമല്ല; കൂടുതൽ കൂടുതൽ വേണമെന്ന അടങ്ങാത്ത, ബോധപൂർവ്വമായ മോഹമാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Apathy / Indifference",
+              "ml": "നിസംഗത",
+              "note": {
+                "en": "Needing rest from a demanding effort is not the sin; a settled, deliberate indifference to your duties and to others' needs is.",
+                "ml": "ആവശ്യപ്പെടുന്ന പ്രയത്നത്തിൽ നിന്ന് വിശ്രമം വേണ്ടിവരുന്നത് പാപമല്ല; ഉത്തരവാദിത്തങ്ങളോടും മറ്റുള്ളവരുടെ ആവശ്യങ്ങളോടും ബോധപൂർവ്വമായ, സ്ഥിരമായ നിസ്സംഗതയാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Desire to possess others' goods",
+              "ml": "അന്യന്റെ വസ്തുക്കൾ സ്വന്തമാക്കണമെന്ന ആഗ്രഹം",
+              "note": {
+                "en": "Admiring what someone else has is not the sin; deliberately coveting it and wishing to take it for yourself is.",
+                "ml": "മറ്റൊരാൾക്കുള്ളത് ആസ്വദിക്കുന്നത് പാപമല്ല; ബോധപൂർവ്വം അത് മോഹിച്ച് സ്വന്തമാക്കാൻ ആഗ്രഹിക്കുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Being envious of others' progress",
+              "ml": "മറ്റുള്ളവരുടെ ഉയർച്ചയിൽ അസൂയപെടുക",
+              "note": {
+                "en": "Being inspired by someone's success is good; feeling resentment or sorrow at their progress is the sin.",
+                "ml": "ഒരാളുടെ വിജയത്താൽ പ്രചോദിതരാകുന്നത് നല്ലതാണ്; അവരുടെ ഉയർച്ചയിൽ വിദ്വേഷമോ ദുഃഖമോ തോന്നുന്നതാണ് പാപം."
+              }
+            },
+            {
+              "en": "Wasting money and time",
+              "ml": "പണവും സമയവും ദുർവ്യയം ചെയ്യുക",
+              "note": {
+                "en": "Reasonable leisure and rest are not the sin; habitually and carelessly squandering what could serve real needs is.",
+                "ml": "ന്യായമായ വിശ്രമവും വിനോദവും പാപമല്ല; യഥാർത്ഥ ആവശ്യങ്ങൾക്ക് ഉപകരിക്കാവുന്നത് ശീലമായി അശ്രദ്ധമായി പാഴാക്കുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Spending money unnecessarily",
+              "ml": "അനാവശ്യമായി പണം ചെലവഴിക്കുക",
+              "note": {
+                "en": "An occasional treat within your means is not the sin; habitually spending carelessly while neglecting real responsibilities is.",
+                "ml": "കഴിവിനുള്ളിലുള്ള ഇടയ്ക്കുള്ള ആഡംബരം പാപമല്ല; യഥാർത്ഥ ഉത്തരവാദിത്തങ്ങൾ അവഗണിച്ചുകൊണ്ട് ശീലമായി അശ്രദ്ധമായി ചെലവഴിക്കുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Not showing mercy to the poor",
+              "ml": "ദരിദ്രരോട് കരുണ കാണിക്കാതിരിക്കുക",
+              "note": {
+                "en": "Being unable to help everyone is not the sin; deliberately hardening your heart against those in need is.",
+                "ml": "എല്ലാവരെയും സഹായിക്കാൻ കഴിയാതിരിക്കുന്നത് പാപമല്ല; ആവശ്യമുള്ളവരോട് ബോധപൂർവ്വം ഹൃദയം കഠിനമാക്കുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Not thanking for favors received",
+              "ml": "ലഭിച്ച ഉപകാരത്തിന് നന്ദി പറയാതിരിക്കുക",
+              "note": {
+                "en": "Forgetting to say thanks in the moment is not the sin; a settled ingratitude that never acknowledges kindness is.",
+                "ml": "ആ നിമിഷത്തിൽ നന്ദി പറയാൻ മറന്നുപോകുന്നത് പാപമല്ല; ദയ ഒരിക്കലും അംഗീകരിക്കാത്ത സ്ഥിരമായ നന്ദികേടാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Desiring excessive reward for one's own responsibilities",
+              "ml": "സ്വന്തം ഉത്തരവാദിത്തങ്ങൾക്ക് അമിതമായ പ്രതിഫലം ആഗ്രഹിക്കുന്നത്",
+              "note": {
+                "en": "Expecting fair compensation for your work is not the sin; deliberately demanding more than is just for duties already owed is.",
+                "ml": "ജോലിക്ക് ന്യായമായ പ്രതിഫലം പ്രതീക്ഷിക്കുന്നത് പാപമല്ല; ഇതിനകം കടപ്പെട്ട ഉത്തരവാദിത്തങ്ങൾക്ക് ന്യായത്തിലധികം ബോധപൂർവ്വം ആവശ്യപ്പെടുന്നതാണ് ബാധകം."
+              }
+            }
           ]
         }
       ]
@@ -609,7 +2215,10 @@
       },
       "groups": [
         {
-          "title": { "en": "Capital Sins", "ml": "മൂലപാപങ്ങൾ" },
+          "title": {
+            "en": "Capital Sins",
+            "ml": "മൂലപാപങ്ങൾ"
+          },
           "sins": [
             {
               "en": "Pride — Self-exaltation, contempt for others",
@@ -619,8 +2228,22 @@
                 "ml": "ഒരു ക്ഷണിക സംതൃപ്തി ഈ പാപമല്ല. ബോധപൂർവ്വം സ്വയത്തെ ദൈവത്തിനോ മറ്റുള്ളവർക്കോ മീതെ വയ്ക്കുന്നതാണ്."
               }
             },
-            { "en": "Avarice / Greed — Money as the goal of life", "ml": "ദ്രവ്യാഗ്രഹം — പണം ജീവിത ലക്ഷ്യമാക്കൽ" },
-            { "en": "Lust — Uncontrolled impure desires", "ml": "മോഹം — അനിയന്ത്രിതമായ ദുർമ്മോഹങ്ങൾ" },
+            {
+              "en": "Avarice / Greed — Money as the goal of life",
+              "ml": "ദ്രവ്യാഗ്രഹം — പണം ജീവിത ലക്ഷ്യമാക്കൽ",
+              "note": {
+                "en": "Reasonable ambition to provide for your family is not the sin; deliberately making money the ultimate goal of your life is.",
+                "ml": "കുടുംബത്തിനുവേണ്ടിയുള്ള ന്യായമായ ആഗ്രഹം പാപമല്ല; ബോധപൂർവ്വം പണത്തെ ജീവിതത്തിന്റെ പരമമായ ലക്ഷ്യമാക്കുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Lust — Uncontrolled impure desires",
+              "ml": "മോഹം — അനിയന്ത്രിതമായ ദുർമ്മോഹങ്ങൾ",
+              "note": {
+                "en": "A struggle with temptation resisted is not the sin; freely and knowingly giving in to uncontrolled impure desire is.",
+                "ml": "ചെറുത്തുനിൽക്കുന്ന പ്രലോഭനവുമായുള്ള മല്ലിടൽ പാപമല്ല; അനിയന്ത്രിതമായ അശുദ്ധമോഹത്തിന് അറിഞ്ഞും സ്വതന്ത്രമായും കീഴടങ്ങുന്നതാണ് ബാധകം."
+              }
+            },
             {
               "en": "Wrath / Anger — Uncontrolled anger leading to harm",
               "ml": "കോപം — ദോഷത്തിലേക്ക് നയിക്കുന്ന അനിയന്ത്രിത കോപം",
@@ -629,9 +2252,30 @@
                 "ml": "പ്രധാന വാക്കുകൾ 'അനിയന്ത്രിതം', 'ദോഷത്തിലേക്ക് നയിക്കുന്നത്'. കോപം അനുഭവിക്കുന്നത് പാപമല്ല."
               }
             },
-            { "en": "Gluttony — Eating/drinking to excess", "ml": "കൊതി — അമിതമായ ഭക്ഷണ-പാനീയങ്ങൾ" },
-            { "en": "Envy — Sorrow at others' good, joy at their harm", "ml": "അസൂയ — അന്യരുടെ നന്മയിൽ ദുഃഖം, തിന്മയിൽ സന്തോഷം" },
-            { "en": "Sloth — Laziness in doing good", "ml": "അലസത — നന്മ ചെയ്യുന്നതിൽ അലസത" }
+            {
+              "en": "Gluttony — Eating/drinking to excess",
+              "ml": "കൊതി — അമിതമായ ഭക്ഷണ-പാനീയങ്ങൾ",
+              "note": {
+                "en": "Enjoying a good meal is not the sin; deliberately overindulging in food or drink to excess is.",
+                "ml": "നല്ലൊരു ഭക്ഷണം ആസ്വദിക്കുന്നത് പാപമല്ല; ഭക്ഷണത്തിലോ പാനീയത്തിലോ ബോധപൂർവ്വം അമിതമായി ഏർപ്പെടുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Envy — Sorrow at others' good, joy at their harm",
+              "ml": "അസൂയ — അന്യരുടെ നന്മയിൽ ദുഃഖം, തിന്മയിൽ സന്തോഷം",
+              "note": {
+                "en": "Being inspired by someone's good fortune is not the sin; feeling sorrow at their good or joy at their harm is.",
+                "ml": "ഒരാളുടെ നല്ല ഭാഗ്യത്താൽ പ്രചോദിതരാകുന്നത് പാപമല്ല; അവരുടെ നന്മയിൽ ദുഃഖവും തിന്മയിൽ സന്തോഷവും തോന്നുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Sloth — Laziness in doing good",
+              "ml": "അലസത — നന്മ ചെയ്യുന്നതിൽ അലസത",
+              "note": {
+                "en": "Needing genuine rest is not the sin; a settled, deliberate reluctance to do the good you are capable of is.",
+                "ml": "യഥാർത്ഥ വിശ്രമം ആവശ്യമായി വരുന്നത് പാപമല്ല; ചെയ്യാൻ കഴിയുന്ന നന്മയോടുള്ള സ്ഥിരവും ബോധപൂർവ്വവുമായ വൈമുഖ്യമാണ് ബാധകം."
+              }
+            }
           ]
         }
       ]
@@ -653,12 +2297,43 @@
       },
       "groups": [
         {
-          "title": { "en": "Bad Confession", "ml": "കള്ളക്കുമ്പസാരം" },
+          "title": {
+            "en": "Bad Confession",
+            "ml": "കള്ളക്കുമ്പസാരം"
+          },
           "sins": [
-            { "en": "Hiding a sin deliberately", "ml": "പാപം മറച്ചുവച്ച് കുമ്പസാരിക്കുന്നത്" },
-            { "en": "Speaking vaguely / without sorrow", "ml": "ബോധപൂർവ്വം അവ്യക്തമായി പറയുന്നത്" },
-            { "en": "Not intending to avoid near occasions of sin", "ml": "വൈദികൻ പാപം മനസ്സിലാക്കാതിരിക്കാൻ മറുവാക്കുകൾ ഉപയോഗിക്കുന്നത്" },
-            { "en": "Firmly deciding to sin again", "ml": "വീണ്ടും പാപം ചെയ്യാൻ തീരുമാനിച്ച് കൊണ്ട് കുമ്പസാരിക്കുന്നത്" }
+            {
+              "en": "Hiding a sin deliberately",
+              "ml": "പാപം മറച്ചുവച്ച് കുമ്പസാരിക്കുന്നത്",
+              "note": {
+                "en": "Genuinely forgetting a sin does not invalidate confession; knowingly and deliberately hiding one does.",
+                "ml": "ഒരു പാപം യഥാർത്ഥത്തിൽ മറന്നുപോകുന്നത് കുമ്പസാരത്തെ അസാധുവാക്കുന്നില്ല; അറിഞ്ഞും ബോധപൂർവ്വവുമായി ഒളിപ്പിക്കുന്നത് അസാധുവാക്കുന്നു."
+              }
+            },
+            {
+              "en": "Speaking vaguely / without sorrow",
+              "ml": "ബോധപൂർവ്വം അവ്യക്തമായി പറയുന്നത്",
+              "note": {
+                "en": "Struggling to find the right words out of nervousness is not the sin; deliberately staying vague to avoid true sorrow or clarity is.",
+                "ml": "ഭയത്താൽ ശരിയായ വാക്കുകൾ കണ്ടെത്താൻ ബുദ്ധിമുട്ടുന്നത് പാപമല്ല; യഥാർത്ഥ പശ്ചാത്താപമോ വ്യക്തതയോ ഒഴിവാക്കാൻ ബോധപൂർവ്വം അവ്യക്തമായി തുടരുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Not intending to avoid near occasions of sin",
+              "ml": "വൈദികൻ പാപം മനസ്സിലാക്കാതിരിക്കാൻ മറുവാക്കുകൾ ഉപയോഗിക്കുന്നത്",
+              "note": {
+                "en": "A realistic awareness that avoiding all risk of falling again is difficult is not the sin; refusing to make any genuine effort to avoid clear occasions of sin is.",
+                "ml": "വീണ്ടും വീഴാനുള്ള എല്ലാ സാധ്യതയും ഒഴിവാക്കുക പ്രയാസമാണെന്ന യാഥാർത്ഥ്യബോധം പാപമല്ല; പാപത്തിന്റെ വ്യക്തമായ അവസരങ്ങൾ ഒഴിവാക്കാൻ ഒരു യഥാർത്ഥ ശ്രമവും നടത്താൻ വിസമ്മതിക്കുന്നതാണ് ബാധകം."
+              }
+            },
+            {
+              "en": "Firmly deciding to sin again",
+              "ml": "വീണ്ടും പാപം ചെയ്യാൻ തീരുമാനിച്ച് കൊണ്ട് കുമ്പസാരിക്കുന്നത്",
+              "note": {
+                "en": "A realistic fear that you may fall again despite a genuine resolve is not the sin; confessing while firmly planning to sin again invalidates it.",
+                "ml": "യഥാർത്ഥ തീരുമാനത്തോടെയും വീണ്ടും വീഴാമെന്ന യാഥാർത്ഥ്യബോധത്തോടെയുള്ള ഭയം പാപമല്ല; വീണ്ടും പാപം ചെയ്യാൻ ഉറച്ച് തീരുമാനിച്ചുകൊണ്ട് കുമ്പസാരിക്കുന്നത് അതിനെ അസാധുവാക്കുന്നു."
+              }
+            }
           ]
         }
       ]

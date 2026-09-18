@@ -475,7 +475,7 @@
   .sin-tooltip::after {
     content: '';
     position: absolute;
-    left: 50%;
+    left: var(--arrow-left, 50%);
     transform: translateX(-50%);
     width: 0;
     height: 0;
@@ -1935,7 +1935,8 @@ function toggleSinNote(btn) {
   const tooltipW = tooltipRect.width;
   const tooltipH = tooltipRect.height;
 
-  let left = rect.left + (rect.width / 2) - (tooltipW / 2);
+  const btnCenter = rect.left + (rect.width / 2);
+  let left = btnCenter - (tooltipW / 2);
 
   let top = rect.top - tooltipH - 14;
   let placeBelow = false;
@@ -1953,6 +1954,14 @@ function toggleSinNote(btn) {
 
   tooltip.style.top = top + 'px';
   tooltip.style.left = left + 'px';
+
+  // Keep the arrow pointing at the button even after the box gets
+  // nudged to stay on-screen, clamped so it stays within the box's
+  // rounded corners instead of sliding off the edge.
+  const arrowMargin = 14;
+  let arrowLeft = btnCenter - left;
+  arrowLeft = Math.max(arrowMargin, Math.min(tooltipW - arrowMargin, arrowLeft));
+  tooltip.style.setProperty('--arrow-left', arrowLeft + 'px');
 }
 
 function hideSinNote() {

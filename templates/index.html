@@ -320,30 +320,53 @@
   }
   .gentle-note.summary-note { margin: 1rem 0 1.4rem; }
 
+  /* Pastoral care panel — collapsible dropdown on Welcome */
   .care-panel {
     font-family: 'Noto Sans Malayalam', 'Cormorant Garamond', serif;
     background: var(--care-bg);
     border: 1px solid var(--care-border);
     border-left: 4px solid var(--care);
     border-radius: 8px;
-    padding: 1.1rem 1.3rem 1.2rem;
+    padding: 0;
     margin: 1.5rem auto 0;
     max-width: 640px;
     text-align: left;
     color: var(--text);
     line-height: 1.75;
     font-size: 0.98rem;
+    overflow: hidden;
   }
-  .care-panel .care-title {
-    font-family: 'Noto Sans Malayalam', 'Cormorant Garamond', serif;
-    font-size: 1.05rem;
+  .care-panel summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 1rem 1.3rem;
     font-weight: 600;
     color: var(--care);
-    margin-bottom: 0.6rem;
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+    user-select: none;
   }
-  .care-panel p { margin-bottom: 0.6rem; }
-  .care-panel p:last-child { margin-bottom: 0; }
+  .care-panel summary::-webkit-details-marker { display: none; }
+  .care-panel summary::after {
+    content: '▾';
+    font-size: 0.9rem;
+    color: var(--care);
+    transition: transform 0.2s ease;
+    flex-shrink: 0;
+  }
+  .care-panel[open] summary::after { transform: rotate(180deg); }
+  .care-panel summary:hover { background: #ffefe4; }
+  .care-panel summary:focus-visible {
+    outline: 2px solid var(--care);
+    outline-offset: -2px;
+  }
+  .care-panel .care-body {
+    padding: 0 1.3rem 1.2rem;
+  }
+  .care-panel .care-body p { margin-bottom: 0.6rem; }
+  .care-panel .care-body p:last-child { margin-bottom: 0; }
   .care-panel .care-lines {
     font-family: system-ui, sans-serif;
     font-size: 0.92rem;
@@ -646,7 +669,9 @@
     .floating-nav .fn-page { font-size: 0.75rem; min-width: 60px; padding: 0 0.3rem; }
     .gentle-note { font-size: 0.9rem; padding: 0.7rem 0.85rem; }
     .sin-tooltip { max-width: 260px; font-size: 0.85rem; }
-    .care-panel { padding: 0.95rem 1rem; font-size: 0.93rem; }
+    .care-panel { font-size: 0.93rem; }
+    .care-panel summary { padding: 0.85rem 1rem; }
+    .care-panel .care-body { padding: 0 1rem 1rem; }
   }
 
   .nav-row {
@@ -1102,7 +1127,7 @@ const UI = {
     welcomeBody: 'This is a quiet place to prepare for the Sacrament of Reconciliation. You will walk through the Ten Commandments and other examinations of conscience, then pray the prayers of the penitent before confession.\n\nEverything stays on your device. Nothing is sent to any server.',
     welcomeScripture: '"If we confess our sins, he is faithful and just, and will forgive our sins and cleanse us from all unrighteousness." — 1 John 1:9',
     welcomeGuardrail: 'You do not need to remember every sin. The goal is to help you prepare your heart, not to produce a perfect list. If you forget something, that is okay — God already knows, and His mercy is greater than any list.',
-    careTitle: 'If you are suffering, please read this',
+    careTitle: 'If you are suffering or have experienced abuse',
     careBody: 'This tool is for preparing for confession. It is not a substitute for professional help or pastoral care.',
     careBody2: 'If you are thinking about harming yourself, if you have been abused, or if you are carrying a wound that feels too heavy to bear alone — please do not go through it alone. Speak to a priest, a doctor, a counsellor, or someone you trust. You are not alone, and what happened to you is not your sin.',
     careLines: 'In India, you can reach iCall at 9152987821, or the AASRA helpline at 9820466726. If you are outside India, search for a local crisis line in your area.',
@@ -1157,7 +1182,7 @@ Your selections, notes, and generated PDF are processed on your device and are n
     welcomeBody: 'കുമ്പസാരക്കൂദാശയ്ക്ക് ഒരുങ്ങാൻ ഇതൊരു ശാന്തമായ സ്ഥലമാണ്. പത്തു പ്രമാണങ്ങളും മറ്റു ആത്മശോധനകളും ചുറ്റി നടന്ന ശേഷം, കുമ്പസാരത്തിനു മുമ്പ് പശ്ചാത്താപിയുടെ പ്രാർത്ഥനകൾ ചൊല്ലാം.\n\nഎല്ലാം നിങ്ങളുടെ ഉപകരണത്തിൽ തന്നെ നിലനിൽക്കുന്നു. ഒന്നും ഒരു സെർവറിലേക്കും അയയ്ക്കുന്നില്ല.',
     welcomeScripture: '"നാം പാപങ്ങൾ ഏറ്റുപറയുന്നെങ്കിൽ, അവൻ വിശ്വസ്തനും നീതിമാനുമാകയാൽ, പാപങ്ങൾ ക്ഷമിക്കുകയും എല്ലാ അനീതികളിൽ നിന്നു നമ്മെ ശുദ്ധീകരിക്കുകയും ചെയ്യും." — 1 യോഹന്നാൻ 1:9',
     welcomeGuardrail: 'എല്ലാ പാപവും ഓർത്തുവയ്ക്കേണ്ടതില്ല. ഹൃദയം ഒരുക്കാൻ സഹായിക്കുക എന്നതാണ് ലക്ഷ്യം — പൂർണ്ണമായ ഒരു പട്ടിക തയ്യാറാക്കുക എന്നതല്ല. എന്തെങ്കിലും മറന്നുപോയാൽ കുഴപ്പമില്ല — ദൈവം എല്ലാം അറിയുന്നു, അവിടുത്തെ കരുണ ഏതൊരു പട്ടികയെക്കാളും വലുതാണ്.',
-    careTitle: 'നിങ്ങൾ കഷ്ടത അനുഭവിക്കുന്നുണ്ടെങ്കിൽ, ഇത് വായിക്കുക',
+    careTitle: 'നിങ്ങൾ കഷ്ടത അനുഭവിക്കുന്നുണ്ടെങ്കിൽ അല്ലെങ്കിൽ ദുരുപയോഗത്തിന് ഇരയായിട്ടുണ്ടെങ്കിൽ',
     careBody: 'ഈ ഉപകരണം കുമ്പസാരത്തിന് ഒരുങ്ങാനുള്ളതാണ്. ഇത് വൈദ്യസഹായത്തിനോ ആത്മീയ പരിചരണത്തിനോ പകരമല്ല.',
     careBody2: 'സ്വയം ഹാനി വരുത്താൻ ചിന്തിക്കുന്നുണ്ടെങ്കിൽ, നിങ്ങൾ ദുരുപയോഗത്തിന് ഇരയായിട്ടുണ്ടെങ്കിൽ, അല്ലെങ്കിൽ തനിച്ച് ചുമക്കാൻ കഴിയാത്ത ഒരു മുറിവ് നിങ്ങൾ വഹിക്കുന്നുണ്ടെങ്കിൽ — ഒരിക്കലും തനിച്ച് ഇതിലൂടെ കടന്നുപോകരുത്. ഒരു വൈദികനെയോ, ഡോക്ടറെയോ, കൗൺസിലറെയോ, അല്ലെങ്കിൽ നിങ്ങൾ വിശ്വസിക്കുന്ന ഒരാളെയോ സമീപിക്കുക. നിങ്ങൾ ഒറ്റയ്ക്കല്ല, നിങ്ങൾക്ക് സംഭവിച്ചത് നിങ്ങളുടെ പാപമല്ല.',
     careLines: 'ഇന്ത്യയിൽ, iCall: 9152987821, അല്ലെങ്കിൽ AASRA: 9820466726. ഇന്ത്യയ്ക്ക് പുറത്താണെങ്കിൽ, നിങ്ങളുടെ പ്രദേശത്തെ ഒരു ക്രൈസിസ് ഹെൽപ്‌ലൈൻ കണ്ടെത്തുക.',
@@ -1455,13 +1480,15 @@ function renderWelcome() {
   html += '<p class="scripture">' + UI[t].welcomeScripture + '</p>';
   html += '<div class="gentle-note welcome-note">' + UI[t].welcomeGuardrail + '</div>';
 
-  html += '<div class="care-panel">';
-  html += '<span class="care-title">' + UI[t].careTitle + '</span>';
+  html += '<details class="care-panel">';
+  html += '<summary>' + UI[t].careTitle + '</summary>';
+  html += '<div class="care-body">';
   html += '<p>' + UI[t].careBody + '</p>';
   html += '<p>' + UI[t].careBody2 + '</p>';
   html += '<p class="care-lines">' + UI[t].careLines + '</p>';
   html += '<p><strong>' + UI[t].careClose + '</strong></p>';
   html += '</div>';
+  html += '</details>';
 
   html += '<div class="welcome-actions">';
   html += '<button class="btn btn-primary" onclick="startFlow()">' + UI[t].beginBtn + '</button>';
